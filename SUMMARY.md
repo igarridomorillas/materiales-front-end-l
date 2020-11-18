@@ -43,9 +43,11 @@
 - [1.14 Accesibilidad y Sistemas de diseño](modulo_1/1_14_accesibilidad_sistemas_de_diseno.md)
 - [Repaso final](modulo_1/1_repaso.md)
 
-<!-- ## Módulo 2: Programando la web
+## Módulo 2: Programando la web
 
-- [2.1 Intro a la programación](modulo_2/2_1_intro_a_la_programacion.md)
+- Próximamente...
+
+<!-- - [2.1 Intro a la programación](modulo_2/2_1_intro_a_la_programacion.md)
 - [2.2 Intro a la programación 2](modulo_2/2_2_intro_a_la_programacion_2.md)
 - [2.3 Condicionales](modulo_2/2_3_condicionales.md)
 - [2.4 Funciones](modulo_2/2_4_funciones.md)
@@ -64,9 +66,11 @@
 - [Sintaxis de JavaScript](modulo_2/2_sintaxis_de_js.md)
 - [Ejercicio: tienda de camisetas](modulo_2/2_ejercicio_global_tienda_de_camisetas.md) -->
 
-<!-- ## Módulo 3
+## Módulo 3: React
 
-- [3.1 Clases de ES6](modulo_3/3_1_clases_es6.md)
+- Próximamente...
+
+<!-- - [3.1 Clases de ES6](modulo_3/3_1_clases_es6.md)
 - [3.2 Intro a React](modulo_3/3_2_intro_react.md)
 - [3.3 Intro a React II](modulo_3/3_3_intro_react_2.md)
 - [3.4 Componentes en React](modulo_3/3_4_componentes_react.md)
@@ -84,6 +88,10 @@
 - [Repaso final](modulo_3/3_repaso.md)
 - [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md) -->
 
+## Módulo 4: Back end
+
+- Próximamente...
+
 <!-- ## Proyectos
 
 - [Proyecto 1. Web grupal](proyectos/p1_proyecto.md)
@@ -91,5 +99,7 @@
 - [Proyecto 2. Awesome profile-cards](proyectos/p2_proyecto.md)
   - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/p2_anexo.md)
 - [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md) -->
+
+## Módulo 6: Después del curso
 
 - [Después de acabar el curso](guias/despues_de_acabar_el_curso.md)
