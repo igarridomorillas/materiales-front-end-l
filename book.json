@@ -1,0 +1,10 @@
+{
+  "gitbook": "3.2.3",
+  "structure": {
+    "readme": "README.md"
+  },
+  "title": "Curso de programación front-end 2020",
+  "description": "Curso para mujeres sin conocimientos técnicos previos que desean reinventarse como programadoras",
+  "author": "Asociación Adalab",
+  "language": "es"
+}
