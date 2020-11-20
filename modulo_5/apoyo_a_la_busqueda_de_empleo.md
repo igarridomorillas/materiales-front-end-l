@@ -6,3 +6,5 @@ Una vez hayas acabado los 4 módulos de programación impartiremos un módulo m�
 - Mejorar nuestro linkedin
 - Saber cómo encarar una entrevista de trabajo
 - Y muchas cosas más...
+
+Los recursos de este módulo os los facilitaremos a través de otros canales. Por ello no los encontrarás aquí.
