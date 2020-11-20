@@ -19,7 +19,7 @@
   - [Guía para enfrentarse a problemas técnicos de manera autónoma](guias/busqueda_de_soluciones.md)
   - [Agile](guias/agile.md)
   - [Scrum](guias/scrum.md)
-  - [Comandos de Git](guias/comandos_de_git.md)
+  - [Comandos de Git](guias/git_github.md)
 - [Información de interés](guias/informacion_de_interes.md)
 
 ## Módulo 1: HTML y CSS

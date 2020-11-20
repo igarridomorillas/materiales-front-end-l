@@ -591,7 +591,7 @@ Aparte de ver qué es programar también hemos visto:
 
 ## Recursos
 
-Al igual que ya hicimos con [Git](../guias/comandos_de_git.md) hemos recopilado [toda la sintaxis de JS que vemos durante el curso en una página](./2_sintaxis_de_js.md) para que os sirva de guía.
+Al igual que ya hicimos con [Git](../guias/git_github.md) hemos recopilado [toda la sintaxis de JS que vemos durante el curso en una página](./2_sintaxis_de_js.md) para que os sirva de guía.
 
 ## Sabemos lo que estás pensando...
 
