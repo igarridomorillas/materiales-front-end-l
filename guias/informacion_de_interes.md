@@ -2,9 +2,9 @@
 
 ## Repositorios
 
-Durante el curso vamos a utilizar los siguientes repositorios:
+Durante el curso vamos a utilizar los siguientes repositorios de Git / GitHub:
 
-- **https://github.com/adalab/soluciones-alumnas-l:** repositorio para que alumnas subáis las soluciones de los ejercicios que queráis compartir con las compañeras.
+- **https://github.com/adalab/soluciones-alumnas-l:** repositorio para que alumnas subáis las soluciones de los ejercicios que queráis compartir con las compañeras. Os recomendamos que cuando terminéis un ejercicio lo subáis a este repositorio, las compañeras os lo agradecerán.
 - **https://github.com/adalab/ejercicios-en-clase-l:** repositorio donde los profesores vamos a subir los ejercicios hechos en clase de esta promoción.
 - **https://github.com/adalab/ejercicios-extra:** repositorio con enunciados y ejercicios extras resueltos de todas las promociones.
 - **https://github.com/adalab/adalab-web-starter-kit:** repositorio con el proyecto base que utilizaremos en el módulo 1 y 2.

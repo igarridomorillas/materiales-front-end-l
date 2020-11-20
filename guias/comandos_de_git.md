@@ -235,22 +235,6 @@ ivan@adalab:~/ejemplo-git$ git log --oneline
 c725fe8 Un cambio
 ```
 
-## git init
-
-Crea un repositorio desde cero en nuestro ordenador:
-
-```bash
-git init
-```
-
-## git add remote
-
-Enlaza un repositorio de nuestro ordenadro con un repositorio remoto:
-
-```bash
-git remote add origin url-del-repositorio-que-me-da-github
-```
-
 # Vídeos de Git
 
 ## Crear un repositorio

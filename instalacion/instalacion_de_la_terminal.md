@@ -40,6 +40,14 @@ A continuación vamos a configurar VS Code para que siempre trabaje con esta ter
 1. En dicha parte inferior hay un desplegable, ábrelo y pulsa en **Select default shell**.
 1. Selecciona la opción **WSL Bash**.
 
+### Problemas al instalar la terminal en Windows 10
+
+A veces desde Windows 10 abrimos una terminal en VS Code y esta aparece vacía, no aparece ningún texto.
+
+Nos hemos dado cuenta que algunos antivirus bloquean la terminal. **Nuestra recomendación es desinstalar el antivirus y reiniciar el ordenador.** En el 99% de los casos se soluciona.
+
+Si aún así, la terminal sigue sin funcionar, **te ayudaremos a que funcione** durante los primeros días de clase.
+
 ## Usar la terminal dentro de VS Code
 
 En Mac, Windows y Ubuntu tenemos dos formas de utilizar la terminal:

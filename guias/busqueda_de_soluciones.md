@@ -19,30 +19,24 @@ Vamos a ver algunos ejemplos, cuando buscamos información y cuando buscamos un 
 
 ### Buscar información
 
-1. Nos suena que el método `split()` nos va a solucionar la vida pero no sabemos o no nos acordamos cómo usarlo, ni dónde estará la documentación:
-
-[js split](https://www.google.com/search?hl=en&q=js%20split)
-
-2. Estamos a tope con un tema de checkbox pero no nos aclaramos a comprobar cuándo un checkbox está marcado:
-
-[js check if a checkbox is checked](https://www.google.com/search?hl=en&q=js%20check%20if%20a%20checkbox%20is%20checked%20)
-
-¡Espera! esta búsqueda no me sirve porque todos los resultados hablan de JQuery
+- Nos suena que el método `split()` nos va a solucionar la vida pero no sabemos o no nos acordamos cómo usarlo, ni dónde estará la documentación:
+  - [js split](https://www.google.com/search?hl=en&q=js%20split)
+- Estamos a tope con un tema de radio buttons pero no nos aclaramos a comprobar cuándo un radio button está marcado:
+  - [js check if a radio button is checked](https://www.google.com/search?q=js+check+if+a+radio+button+is+checked&oq=js+check+if+a+radio+button+is+checked&aqs=chrome..69i57j0i22i30l7.388j0j7&sourceid=chrome&ie=UTF-8)
+- ¡Espera! esta búsqueda no me sirve porque todos los resultados hablan de JQuery
 Pues nada, sin JQuery:
-
-[js check if a checkbox is checked -jquery](https://www.google.com/search?hl=en&q=js%20check%20if%20a%20checkbox%20is%20checked%20-jquery)
+  - [js check if a radio button is checked -jquery](https://www.google.com/search?q=js+check+if+a+radio+button+is+checked+-jquery&oq=js+check+if+a+radio+button+is+checked+-jquery&aqs=chrome..69i57j69i64.751j0j9&sourceid=chrome&ie=UTF-8)
 
 ### Buscar un error concreto
 
 A veces nos van a saltar errores que podríamos no entender. Una opción es copiar el error, meterlo entre cadenas y hacer una búsqueda a ver qué sale.
 
-En este ejemplo hemos intentado reasignar una constante y en la consola nos aparece `Assignment to constant variable.`. Vamos a suponer que no entendemos que pasa y nos vamos a nuestro buscador favorito:
-
-[Assignment to constant variable. javascript](https://www.google.com/search?q=Assignment+to+constant+variable.+javascript&oq=Assignment+to+constant+variable.+javascript&aqs=chrome..69i57j0l6.642j0j7&sourceid=chrome&ie=UTF-8)
+- En este ejemplo hemos intentado reasignar una constante y en la consola nos aparece el error `Assignment to constant variable.`. Vamos a suponer que no entendemos que pasa y nos vamos a nuestro buscador favorito:
+   - [Assignment to constant variable. javascript](https://www.google.com/search?q=Assignment+to+constant+variable.+javascript&oq=Assignment+to+constant+variable.+javascript&aqs=chrome..69i57j0l6.642j0j7&sourceid=chrome&ie=UTF-8)
 
 ### Filtrando por fecha
 
-Cuando buscamos en Google es una buena idea filtrar por fecha para obtener resultados publicados durante el último año. La tecnología evoluciona muy rápido y lo que era válido en 2014 quizás ya no aplique 4 años después.
+Cuando buscamos en Google es una buena idea filtrar por fecha para obtener resultados publicados durante el último año. La tecnología evoluciona muy rápido y lo que era válido en 2014 quizás ya no aplique 7 años después.
 
 Podemos hacerlo utilizando el menú bajo la caja de búsqueda y seleccionando 'Herramientas'.
 
@@ -66,17 +60,20 @@ una página muy útil para compartir conocimientos.
 Lo más probable es que alguien ya haya realizado la misma pregunta o una muy similar y que la comunidad le haya ayudado a resolverla. Veamos lo básico de Stack Overflow.
 
 1. Cuando una respuesta tiene un check verde (a su izquierda), la persona que preguntó la ha marcado como válida porque le ayudó a solucionar el problema.
-
-2. A la izquierda de cada pregunta y respuesta también aparece el número de votos que ha recibido de otros desarrolladores. Esto es muy útil, ya que a veces respuestas no marcadas como validas tienen más votos que la elegida con check verde. ¿Y eso? Puede que haya pasado mucho tiempo desde que se resolvió la pregunta y nuevas soluciones hayan aparecido, o sencillamente la comunidad tienen una opinión diferente a la persona que preguntó. Así que nunca está de más hacer un poquito de scroll y ver respuestas alternativas.
-
-3. Muchas veces una pregunta viene marcada como duplicada, con un enlace a otra pregunta muy similar.
-
-4. Si no encontramos la respuesta a nuestra pregunta, siempre podemos realizar una nueva, ¡es gratis! Además Stack Overflow te dará algunas pistas para realizar tu pregunta de manera correcta.
+1. A la izquierda de cada pregunta y respuesta también aparece el número de votos que ha recibido de otros desarrolladores. Esto es muy útil, ya que a veces respuestas no marcadas como validas tienen más votos que la elegida con check verde. ¿Y eso? Puede que haya pasado mucho tiempo desde que se resolvió la pregunta y nuevas soluciones hayan aparecido, o sencillamente la comunidad tienen una opinión diferente a la persona que preguntó. Así que nunca está de más hacer un poquito de scroll y ver respuestas alternativas.
+1. Muchas veces una pregunta viene marcada como duplicada, con un enlace a otra pregunta muy similar.
+1. Si no encontramos la respuesta a nuestra pregunta, siempre podemos realizar una nueva, ¡es gratis! Además Stack Overflow te dará algunas pistas para realizar tu pregunta de manera correcta.
 
 ## Comunidad
 
 Cuando todo lo demás ha fallado, o hemos encontrado una solución pero no estamos del todo conformes con ella hay que recurrir a la comunidad más cercana, preguntando:
 
 1. A compañeras de trabajo
-2. En canales de Slack
-3. En Twitter (pegunta abierta a la comunidad)
+1. En canales de Slack
+1. En Twitter (pregunta abierta a la comunidad)
+
+## Buscar, buscar, buscar en Internet
+
+Internet tiene todos los conocimientos del mundo y te va a enseñar más que los profesores. Acostúmbrate a buscar en Google desde el primer día. **Aprenderás más deprisa y te volverás independiente y autodidacta.**
+
+**El principal objetivo de los profes es que seas una programadora autónoma, capaz de aprender por si misma.**

@@ -20,8 +20,6 @@
   - [Agile](guias/agile.md)
   - [Scrum](guias/scrum.md)
   - [Comandos de Git](guias/comandos_de_git.md)
-  - [Fases de la programación](guias/fases_de_un_programa_js.md)
-  - [Preguntas de entrevista](guias/preguntas_de_entrevista.md)
 - [Información de interés](guias/informacion_de_interes.md)
 
 ## Módulo 1: HTML y CSS
@@ -100,6 +98,11 @@
   - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/p2_anexo.md)
 - [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md) -->
 
+## Módulo 5: Apoyo a la búsqueda de empleo
+
+- [Apoyo a la búsqueda de empleo](modulo_5/apoyo_a_la_busqueda_de_empleo.md)
+
 ## Módulo 6: Después del curso
 
-- [Después de acabar el curso](guias/despues_de_acabar_el_curso.md)
+- [Después de acabar el curso](modulo_6/despues_de_acabar_el_curso.md)
+  - [Preguntas de entrevista](modulo_6/preguntas_de_entrevista.md)

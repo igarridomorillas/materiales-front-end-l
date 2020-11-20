@@ -10,7 +10,7 @@ Saber trabajar en remoto tiene muchas ventajas, ya que nos permite trabajar desd
 - Cumplir con los acuerdos y procesos a los que haya llegado el equipo de trabajo.
 - Conocer el potencial de las herramientas que usamos en el día a día.
 
-Los primeros días de clase os daremos una charla sobre cómo trabajar en remodo de forma óptima en una empresa.
+Los primeros días de clase **os daremos una charla sobre cómo trabajar en remodo** de forma óptima en una empresa.
 
 Vamos a explicar cuáles son los procesos que usamos en Adalab.
 
@@ -47,24 +47,24 @@ A continuación vamos a explicar cómo nos vamos a conectar a través de Zoom. P
 
 En Adalab contamos con las siguientes salas de Zoom:
 
-- Sala: Promo K: todas las alumnas
-- Sala: Promo K: parejas de la 1 a la 7
-- Sala: Promo K: parejas de la 8 a la 13
-- Sala: Promo K: parejas de la 14 a la 21
-- Sala: Promo K: equipos del 1 al 3
-- Sala: Promo K: equipos del 3 al 6
-- Sala: Promo K: equipos del 7 al 9
+- Sala: Promo L: todas las alumnas
+- Sala: Promo L: parejas de la 1 a la 7
+- Sala: Promo L: parejas de la 8 a la 13
+- Sala: Promo L: parejas de la 14 a la 21
+- Sala: Promo L: equipos del 1 al 3
+- Sala: Promo L: equipos del 3 al 6
+- Sala: Promo L: equipos del 7 al 9
 
-Vamos a utilizar la **Sala: Promo K: todas las alumnas** cuando estemos dando clase para todas las alumnas. En esta sala estaremos las tres profesoras. También utilizaremos esta sala para las sesiones de desarrollo profesional.
+Vamos a utilizar la **Sala: Promo L: todas las alumnas** cuando estemos dando clase para todas las alumnas. En esta sala estaremos las tres profesoras. También utilizaremos esta sala para las sesiones de desarrollo profesional.
 
-Vamos a utilizar la **Sala: Promo K: parejas de la 1 a la 7**, la **Sala: Promo K: parejas de la 8 a la 13** y la **Sala: Promo K: parejas de la 14 a la 21** para cuando estemos trabajando en parejas o en equipos. En este caso en cada sala habrá un tercio de las alumnas y una sola profesora. Cada alumna tiene en todo momento asignado un número de pareja y equipo para saber a que sala debe ir.
+Vamos a utilizar las **Salas de parejas y equipos** para cuando estemos trabajando en parejas o en equipos. En este caso en cada sala habrá un tercio de las alumnas y una sola profesora. Cada alumna tiene en todo momento asignado un número de pareja y equipo para saber a que sala debe ir.
 
-**Lo más importante** que debemos saber es que al empezar el día a las 8:30 de la mañana, después de cada descanso y los días que haya clases de desarrollo profesional por las tardes, siempre, siempre, siempre debemos entrar en la **Sala: Promo K: todas las alumnas**. En ese momento las profesoras os diremos qué vamos a hacer a continuación y os diremos a qué sala debe ir cada persona.
+**Lo más importante** que debemos saber es que al empezar el día a las 8:30 de la mañana, después de cada descanso y los días que haya clases de desarrollo profesional por las tardes, siempre, siempre, siempre debemos entrar en la **Sala: Promo L: todas las alumnas**. En ese momento las profesoras os diremos qué vamos a hacer a continuación y os diremos a qué sala debe ir cada persona.
 
 ### A tener en cuenta
 
-- Para que te podamos enviar a las mini salas es importante que **el email con el que te has registrado en Zoom sea el mismo que nos has facilitado a Adalab**.
-- Si por lo que sea te sales de una mini sala y no puedes volver a entrar, lo que debes hacer es salir cerrar la reunión de Zoom y volver a entrar. Aparecerás en la sala principal y el profesor te meterá en la mini sala que te corresponda.
+- Para que te podamos enviar a las mini salas es importante que **el email de Gmail con el que te has registrado en Zoom sea el mismo que nos has facilitado a Adalab**.
+- Si por lo que sea te sales de una mini sala y no puedes volver a entrar, lo que debes hacer es salir de la reunión de Zoom y volver a entrar. Aparecerás en la sala principal y el profesor te meterá en la mini sala que te corresponda.
 - Este no es el procedimiento más cómodo del mundo, pero sí nos permite **que las tres profesoras demos soporte a la vez y además podamos grabar todo** por Zoom. Posteriormente el resto de alumnas podéis ver las grabaciones, repasar y resolver dudas fácilmente. Si se te ocurre una forma más óptima de trabajar, dínoslo.
 
 ## Trabajo en remoto fuera de las horas de clase
@@ -74,7 +74,7 @@ Para trabajar en remoto fuera del horario de clase os recomendamos:
 - Para comunicarte por chat usa Slack.
 - Para comunicarte por vídeo usa:
    - **Slack para grupos pequeños**, por ejemplo con tu pareja o equipo.
-   - La sala de Zoom **Promo K: todas las alumnas** para grupos grandes. Las alumnas solo debéis usar esta sala cuando no se esté usando para dar clase.
+   - La sala de Zoom **Promo L: todas las alumnas** para grupos grandes. Las alumnas solo debéis usar esta sala cuando no se esté usando para dar clase.
 
 ## Bonus: herramientas
 
