@@ -235,7 +235,7 @@ Para movernos por los últimos comandos ejecutados usamos la teclas de flecha pa
 
 ### Ayuda y opciones
 
-Si no sabemos cómo funciona un comando podemos **buscar en Internet** o pediremos ayuda a la terminal. Por ejemplo para saber cómo funciona el comando `ls` escribimos:
+Si no sabemos cómo funciona un comando podemos **buscar en Internet (siempre muy útil)** o pediremos ayuda a la terminal. Por ejemplo para saber cómo funciona el comando `ls` escribimos la opción `--help`:
 
 ```shell
 ls --help
@@ -249,9 +249,11 @@ ls -a
 
 Es decir, las letras que pongamos después del guión `-` son las opciones. Y podemos poner una o varias.
 
+Todos los comandos tienen la ayuda en `--help`.
+
 ## A practicar
 
-Durante los primeros días del curso os explicaremos en detalle cómo se usa la terminal y sus comandos. Pero es interesante que empieces a familiarizarte un poco, así que te recomendamos que hagas el siguiente ejercicio:
+Durante los primeros días del curso te explicaremos en detalle cómo se usa la terminal y sus comandos. Pero es interesante que empieces a familiarizarte un poco, así que te recomendamos que hagas el siguiente ejercicio:
 
 1. Crea una carpeta en tu ordenador como lo has hecho siempre:
    1. Botón derecho
@@ -259,8 +261,8 @@ Durante los primeros días del curso os explicaremos en detalle cómo se usa la 
    1. ...
 1. Abre la carpeta desde VS Code.
 1. Abre una terminal y desde ahí practica algunos comandos como...
-1. Crea una subcarpeta
-1. Entra en la subcarpeta
-1. Sube desde la subcarpeta a la carpeta superior
-1. Lista el contenido de la carpeta
+1. Crea una subcarpeta.
+1. Entra en la subcarpeta.
+1. Sube desde la subcarpeta a la carpeta superior.
+1. Lista el contenido de la carpeta.
 1. Trastea y prueba cosas...
