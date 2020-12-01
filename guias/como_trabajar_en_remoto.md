@@ -2,7 +2,7 @@
 
 ## Introducción al trabajo en remoto
 
-Más o menos **la mitad del tiempo** que las alumnas dedicáis al curso lo hacéis fuera del horario de clase. Por ello una de las soft skills que aprendemos en Adalab es a **trabajar bien en remoto**.
+**Gran parte del tiempo** que las alumnas dedicáis al curso lo hacéis en remoto. Por ello una de las soft skills que aprendemos en Adalab es a **trabajar bien en remoto**.
 
 Saber trabajar en remoto tiene muchas ventajas, ya que nos permite trabajar desde diferentes sitios, pero además nos permite trabajar para empresas de cualquier parte del mundo. Y para trabajar bien lo más importante son 3 cosas:
 
@@ -55,16 +55,16 @@ En Adalab contamos con las siguientes salas de Zoom:
 - Sala: Promo L: equipos del 3 al 6
 - Sala: Promo L: equipos del 7 al 9
 
-Vamos a utilizar la **Sala: Promo L: todas las alumnas** cuando estemos dando clase para todas las alumnas. En esta sala estaremos las tres profesoras. También utilizaremos esta sala para las sesiones de desarrollo profesional.
+Vamos a utilizar la **Sala: Promo L: todas las alumnas** cuando estemos dando clase para todas las alumnas. En esta sala también estaremos las tres profesoras. También utilizaremos esta sala para las sesiones de desarrollo profesional.
 
-Vamos a utilizar las **Salas de parejas y equipos** para cuando estemos trabajando en parejas o en equipos. En este caso en cada sala habrá un tercio de las alumnas y una sola profesora. Cada alumna tiene en todo momento asignado un número de pareja y equipo para saber a que sala debe ir.
+Vamos a utilizar las **Salas de parejas y equipos** para cuando estemos trabajando en parejas o en equipos. En este caso en cada sala habrá un tercio de las alumnas y una sola profesora. Cada alumna tiene en todo momento asignado un número de pareja y un número de equipo para saber a que sala debe ir.
 
 **Lo más importante** que debemos saber es que al empezar el día a las 8:30 de la mañana, después de cada descanso y los días que haya clases de desarrollo profesional por las tardes, siempre, siempre, siempre debemos entrar en la **Sala: Promo L: todas las alumnas**. En ese momento las profesoras os diremos qué vamos a hacer a continuación y os diremos a qué sala debe ir cada persona.
 
 ### A tener en cuenta
 
 - Para que te podamos enviar a las mini salas es importante que **el email de Gmail con el que te has registrado en Zoom sea el mismo que nos has facilitado a Adalab**.
-- Si por lo que sea te sales de una mini sala y no puedes volver a entrar, lo que debes hacer es salir de la reunión de Zoom y volver a entrar. Aparecerás en la sala principal y el profesor te meterá en la mini sala que te corresponda.
+- Si por lo que sea te sales de una mini sala y no puedes volver a entrar, lo que debes hacer es salir de la reunión de Zoom y volver a entrar. Aparecerás en la sala principal y la profesora te meterá en la mini sala que te corresponda.
 - Este no es el procedimiento más cómodo del mundo, pero sí nos permite **que las tres profesoras demos soporte a la vez y además podamos grabar todo** por Zoom. Posteriormente el resto de alumnas podéis ver las grabaciones, repasar y resolver dudas fácilmente. Si se te ocurre una forma más óptima de trabajar, dínoslo.
 
 ## Trabajo en remoto fuera de las horas de clase

@@ -4,9 +4,9 @@
 
 Git es un sistema de **control de versiones** de código además de una **herramienta para compartir** código.
 
-El control de versiones nos sirve para ver el histórico de cambios que hemos hecho en el código. Es útil pasar saber por ejemplo que hace un mes nuestra compañera MariCarmen añadió un determinado código al proyecto. **Git nos dice quién, cuándo, por qué y dónde se cambió el código del un proyecto.**
+El control de versiones nos sirve para ver el histórico de cambios que hemos hecho en el código. Es útil pasar saber por ejemplo que hace un mes nuestra compañera Mari Carmen añadió un determinado código al proyecto. **Git nos dice quién, cuándo, por qué y dónde se cambió cada línea de código de un proyecto.**
 
-También es una herramienta para compartir código entre nuestra compañeras de programación de los proyectos de Adalab, nuestros profes o la empresa en la que trabajaremos. **Es como el Drive o Dropbox de los programadores.**
+También es una herramienta para compartir código entre nuestras compañeras de programación de los proyectos de Adalab, nuestros profes o la empresa en la que trabajaremos. **Es como el Drive o Dropbox de los programadores.**
 
 ## Qué es GitHub
 
@@ -80,7 +80,7 @@ Una vez instalado Git tenemos crearnos una cuenta en GitHub y configurar nuestro
 En los 3 sistemas operativos tenemos que configurar el nombre de usuario y el email. Para ello abre una terminal y escribe los siguientes comandos un por uno. Sustituye el nombre y el email por tus datos:
 
 ```bash
-git config --global user.name "Maria del Carmen"
+git config --global user.name "María del Carmen"
 ```
 
 ```bash
@@ -151,7 +151,7 @@ Una vez hayamos realizado ese paso, no necesitaremos hacer ningún cambio más.
 
 ## Clonar y crear un repositorio
 
-Con el objetivo de empezar a trabajar de manera óptima en remoto desde el primer día de curso vamos a aprender lo básico sobre Git y GitHub. Para lo cuál os pedimos que veáis y sigáis los pasos de estos dos vídeos:
+Con el objetivo de empezar a trabajar de manera óptima en remoto desde el primer día de curso vamos a aprender lo básico sobre Git y GitHub. En los primeros días de clase también os lo explicaremos en detalle. Para lo cuál os pedimos que veáis y sigáis los pasos de estos dos vídeos:
 
 #### Cómo clonar un repositorio de Git
 
@@ -186,7 +186,7 @@ git push
 
 Os recomendamos que vuestro repositorio de `ejercicios-de-adalab` cumpla con las siguientes características:
 
-- Cada ejercicio que hagamos en una carpeta. **Nunca se deben hacer dos ejercicios en la misma carpeta**, da muchos errores.
+- Cada ejercicio que hagamos en una carpeta. **Nunca se deben hacer dos ejercicios en la misma carpeta**, da muchos errores. **Insistimos, nunca haremos dos ejercicios en la misma carpeta.**
 - El nombre de la carpeta que sea `modulo-x-leccion-y-ejercicio-z-descripcion`. Por ejemplo:
   - `modulo-1-leccion-04-ejercicio-03-flexbox`
   - `modulo-1-leccion-12-ejercicio-10-grid`

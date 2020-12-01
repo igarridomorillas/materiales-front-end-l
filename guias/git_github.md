@@ -5,6 +5,8 @@ Git es una herramienta que **se aprende con el uso y la práctica**.
 
 Está guía está dividida en tres partes: principales comandos de Git, vídeos y Git stash.
 
+> **Nota:** no hace falta que leas esta guía antes de empezar el curso. Pero durante el curso, cuando tengas dudas, ven aquí y encontrarás la solución.
+
 # Principales comandos de Git
 
 ## git *command* --help

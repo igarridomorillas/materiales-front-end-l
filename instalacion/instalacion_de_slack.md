@@ -9,10 +9,3 @@ Puedes usar su versión web o instalar su aplicación. Te pedimos que instales l
 Para descargarlo desde Windows y Mac [entra aquí](https://slack.com).
 
 Desde Ubuntu, la forma más cómoda es acceder al instalador de aplicaciones desde el menú, y ahí buscar **Slack** e instalarlo.
-
-## Consejos para usar Slack
-
-### Usa hilos
-
-- Con el fin de no mezclar todas las conversaciones en el hilo principal, cuando quieras tratar un tema, **crea un mensaje nuevo y desde dicho mensaje crea un hilo** para separar la conversación del resto de conversaciones.
-- Si tienes que hacer varias preguntas sobre un tema, **escríbelas en mensajes separados** con el fin de que te puedan **constestar en hilos separados**.

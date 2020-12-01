@@ -11,7 +11,6 @@
   - [Instalación de Zoom](instalacion/instalacion_de_zoom.md)
   - [Instalación de Chrome](instalacion/instalacion_de_chrome.md)
   - [Instalación de Slack](instalacion/instalacion_de_slack.md)
-  - [Creación de cuenta en Trello](instalacion/creacion_de_cuenta_en_trello.md)
 
 - Guías
   - [Código de conducta en Adalab](guias/codigo_de_conducta.md)
