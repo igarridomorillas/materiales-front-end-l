@@ -105,7 +105,7 @@ Cuando una persona utiliza un programa como Spotify o Chrome está utilizando **
 
 ### Partes de la terminal
 
-![Terminal de VS Code](assets/images/terminal-code.png)
+![Terminal en VS Code](assets/images/terminal-code.png)
 
 En la imagen vemos una terminal abierta desde el programa VS Code. Vamos a explicar con este ejemplo las partes de la terminal.
 
@@ -126,30 +126,6 @@ En el ejemplo también hemos escrito el comando `ls -la` y le hemos dado a intro
 Y ahora que ya sabemos cómo escribir comandos en la terminal vamos a ver los más comunes y usados en programación:
 
 ## Comandos (más usados) de la terminal
-
-### pwd (print working directory)
-
-Principalmente usaremos la terminal para movernos por el sistema de archivos y carpetas del ordenador. Así que es fundamental saber dónde estamos en cada momento. El comando `pwd` se encargará de mostrarnos en qué carpeta nos encontramos. Si escribimos:
-
-```shell
-pwd
-```
-
-La terminal mostrará la ruta absoluta de la carpeta en la que estemos, con este aspecto:
-
-```shell
-/user/nombre-de-usuario
-```
-
-Nos estaría indicando que nos encontramos en la carpeta `nombre-de-usuario`, que está dentro de la carpeta `user`, que está en la carpeta raíz de nuestro equipo.
-
-Si estás trabajando en un Ubuntu integrado dentro de Windows 10 y pruebas `pwd` verás que el resultado es:
-
-```shell
-/mnt/c/Users/nombre-de-usuario
-```
-
-Es decir, en Windows 10 las unidades de nuestro ordenador como `c:\` se montan dentro de `/mnt/`, por ello la ruta `c:\Users\maricarmen` corresponde con `/mnt/c/Users/maricarmen`.
 
 ### ls (list)
 
@@ -229,6 +205,30 @@ A veces pasa que hemos introducido muchos comandos y sería genial poder limpiar
 clear
 ```
 
+### pwd (print working directory)
+
+Principalmente usaremos la terminal para movernos por el sistema de archivos y carpetas del ordenador. Así que es fundamental saber dónde estamos en cada momento. El comando `pwd` se encargará de mostrarnos en qué carpeta nos encontramos. Si escribimos:
+
+```shell
+pwd
+```
+
+La terminal mostrará la ruta absoluta de la carpeta en la que estemos, con este aspecto:
+
+```shell
+/user/nombre-de-usuario
+```
+
+Nos estaría indicando que nos encontramos en la carpeta `nombre-de-usuario`, que está dentro de la carpeta `user`, que está en la carpeta raíz de nuestro equipo.
+
+Si estás trabajando en un Ubuntu integrado dentro de Windows 10 y pruebas `pwd` verás que el resultado es:
+
+```shell
+/mnt/c/Users/nombre-de-usuario
+```
+
+Es decir, en Windows 10 las unidades de nuestro ordenador como `c:\` se montan dentro de `/mnt/`, por ello la ruta `c:\Users\maricarmen` corresponde con `/mnt/c/Users/maricarmen`.
+
 ### Historial de comandos
 
 Para movernos por los últimos comandos ejecutados usamos la teclas de flecha para arriba ⬆️ y para abajo ⬇️. Así nos ahorramos volver a escribir lo mismo muchas veces.
@@ -248,3 +248,19 @@ ls -a
 ```
 
 Es decir, las letras que pongamos después del guión `-` son las opciones. Y podemos poner una o varias.
+
+## A practicar
+
+Durante los primeros días del curso os explicaremos en detalle cómo se usa la terminal y sus comandos. Pero es interesante que empieces a familiarizarte un poco, así que te recomendamos que hagas el siguiente ejercicio:
+
+1. Crea una carpeta en tu ordenador como lo has hecho siempre:
+   1. Botón derecho
+   1. Crear carpeta
+   1. ...
+1. Abre la carpeta desde VS Code.
+1. Abre una terminal y desde ahí practica algunos comandos como...
+1. Crea una subcarpeta
+1. Entra en la subcarpeta
+1. Sube desde la subcarpeta a la carpeta superior
+1. Lista el contenido de la carpeta
+1. Trastea y prueba cosas...
