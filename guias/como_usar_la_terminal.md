@@ -70,6 +70,8 @@ Los dos puntos `..` nos permite subir a la carpeta madre, esto es, ir a la carpe
 cd ..
 ```
 
+> **Nota:** Todo lo que aprendimos sobre [rutas relativas y absolutas](./que_son_las_rutas_de_las_carpetas.md) lo usamos mucho con los comandos de la terminal, en especial con el con el comando `cd`.
+
 ### mkdir (make directory)
 
 Nos permite crear una carpeta. Pero no entra en la carpeta, solo la crea.
