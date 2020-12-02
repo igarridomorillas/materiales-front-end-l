@@ -105,3 +105,4 @@
 
 - [Después de acabar el curso](modulo_6/despues_de_acabar_el_curso.md)
   - [Preguntas de entrevista](modulo_6/preguntas_de_entrevista.md)
+  - [Git stash](modulo_6/git_stash.md)
