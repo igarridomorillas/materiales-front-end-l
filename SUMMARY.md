@@ -12,16 +12,15 @@
   - [Instalación de Chrome](instalacion/instalacion_de_chrome.md)
   - [Instalación de Slack](instalacion/instalacion_de_slack.md)
 
-- Guías
+- [Guías](guias/intro.md)
   - [Código de conducta en Adalab](guias/codigo_de_conducta.md)
+  - [Guía para enfrentarse a problemas técnicos de manera autónoma](guias/busqueda_de_soluciones.md)
   - [Cómo trabajar en remoto](guias/como_trabajar_en_remoto.md)
   - [Qué son las rutas de las carpetas](guias/que_son_las_rutas_de_las_carpetas.md)
   - [Cómo usar la terminal](guias/como_usar_la_terminal.md)
-  - [Cómo orgnanizar un proyecto](guias/como_organizar_un_proyecto.md)
-  - [Guía para enfrentarse a problemas técnicos de manera autónoma](guias/busqueda_de_soluciones.md)
+  - [Cómo trabajar con Git / GitHub](guias/git_github.md)
   - [Agile](guias/agile.md)
   - [Scrum](guias/scrum.md)
-  - [Git / GitHub](guias/git_github.md)
 - [Información de interés](guias/informacion_de_interes.md)
 
 ## Módulo 1: HTML y CSS

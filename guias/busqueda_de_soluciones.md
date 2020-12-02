@@ -34,16 +34,6 @@ A veces nos van a saltar errores que podríamos no entender. Una opción es copi
 - En este ejemplo hemos intentado reasignar una constante y en la consola nos aparece el error `Assignment to constant variable.`. Vamos a suponer que no entendemos que pasa y nos vamos a nuestro buscador favorito:
    - [Assignment to constant variable. javascript](https://www.google.com/search?q=Assignment+to+constant+variable.+javascript&oq=Assignment+to+constant+variable.+javascript&aqs=chrome..69i57j0l6.642j0j7&sourceid=chrome&ie=UTF-8)
 
-### Filtrando por fecha
-
-Cuando buscamos en Google es una buena idea filtrar por fecha para obtener resultados publicados durante el último año. La tecnología evoluciona muy rápido y lo que era válido en 2014 quizás ya no aplique 7 años después.
-
-Podemos hacerlo utilizando el menú bajo la caja de búsqueda y seleccionando 'Herramientas'.
-
-![Filtrar por fecha](../assets/images/busqueda-por-fecha.png)
-
-Si la búsqueda no devuelve nada interesante, habría que modificar el filtro utilizando un intervalo personalizado de 3 o 4 años. Si esto sigue sin funcionar, toca quitar el filtro y buscar "a las bravas".
-
 ### En inglés
 
 Siempre es mejor buscar en inglés, intenta no complicarte con sentencias muy elaboradas. Usa palabras claves sencillas y lo más probable es que Google te sugiera autocompletar la búsqueda en base a lo que han buscado otras personas.
@@ -68,9 +58,9 @@ Lo más probable es que alguien ya haya realizado la misma pregunta o una muy si
 
 Cuando todo lo demás ha fallado, o hemos encontrado una solución pero no estamos del todo conformes con ella hay que recurrir a la comunidad más cercana, preguntando:
 
-1. A compañeras de trabajo
+1. A compañeras de curso
 1. En canales de Slack
-1. En Twitter (pregunta abierta a la comunidad)
+1. A las profesoras
 
 ## Buscar, buscar, buscar en Internet
 

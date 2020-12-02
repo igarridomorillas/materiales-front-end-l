@@ -45,7 +45,7 @@ Ahora pensemos que estoy en la carpeta `proyectos/` y quiero *caminar* hasta la 
 
 Ahora pensemos que estoy en la carpeta `css/` y quiero entrar en la carpeta `images/`. La ruta a usar es `../images/`. Primero subo a la carpeta madre que es `modulo-1/` pero no necesito indicar el nombre de la carpeta madre porque madre no hay más que una y me vale con poner `../`. Después desde la carpeta madre entro en la carpeta `images/`.
 
-### Rutas dentro de ficheros
+## Rutas dentro de ficheros
 
 Cuando nos movemos por la terminal podemos usar rutas absolutas o relativas.
 Pero **cuando escribimos la ruta desde dentro de un fichero a otro fichero debemos usar siempre rutas relativas**. Esto se debe a que cuando estamos programando una página, los ficheros están en mi ordenador. Pero si los comparto con una compañera, ella los colocará donde quiera, y su ruta absoluta será diferente a la mía.
