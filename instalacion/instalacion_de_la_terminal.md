@@ -77,7 +77,7 @@ Es probable que al instalar programas la consola muestre un error diciendo que n
 
 Cuando nos pase esto y sepamos que el error es porque se necesitan permisos de administración para instalar el programa, **usaremos el comando mágico `sudo`**.
 
-### Instalar con sudo
+## Instalar con sudo
 
 El comando `sudo` nos permite instalar programas con permisos de administrador. Para ello escribiremos el comando `sudo` delante del comando que queramos ejecutar, por ejemplo:
 

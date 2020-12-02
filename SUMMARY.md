@@ -2,7 +2,7 @@
 
 ## Información de interés
 
-- [Antes de empezar el curso](guias/antes_de_empezar_el_curso.md)
+- [Antes de empezar el curso](instalacion/antes_de_empezar_el_curso.md)
   - [Instalación de ordenadores](instalacion/instalacion_de_ordenadores.md)
   - [Instalación de VS Code](instalacion/instalacion_de_vscode.md)
   - [Instalación de la terminal](instalacion/instalacion_de_la_terminal.md)
@@ -15,6 +15,8 @@
 - Guías
   - [Código de conducta en Adalab](guias/codigo_de_conducta.md)
   - [Cómo trabajar en remoto](guias/como_trabajar_en_remoto.md)
+  - [Cómo usar la terminal](guias/como_usar_la_terminal.md)
+  - [Cómo orgnanizar un proyecto](guias/como_organizar_un_proyecto.md)
   - [Guía para enfrentarse a problemas técnicos de manera autónoma](guias/busqueda_de_soluciones.md)
   - [Agile](guias/agile.md)
   - [Scrum](guias/scrum.md)
