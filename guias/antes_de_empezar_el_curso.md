@@ -6,13 +6,7 @@ Si estás leyendo esto es porque has sido admitida en el Curso Intensivo de Adal
 
 Antes de empezar te pedimos que [**pongas a punto tu ordenador**](../instalacion/instalacion_de_ordenadores.md) instalando y configurando todos los programas que utilizaremos durante el curso. Si tienes cualquier problema instalando los programas no te preocupes, tenemos una sesión dedicada a solucionar problemas el día de bienvenida.
 
-Y también te pedimos que leas nuestras guías:
-
-- [Código de conducta en Adalab](codigo_de_conducta.md)
-- [Guía para enfrentarse a problemas técnicos de manera autónoma](busqueda_de_soluciones.md)
-- [Cómo trabajar en remoto](como_trabajar_en_remoto.md)
-- [Agile](agile.md)
-- [Scrum](scrum.md)
+Y también te pedimos que leas nuestras [guías](./).
 
 Por último en [información de interés](informacion_de_interes.md) dispones de recursos que vamos a usar durante todo el curso.
 
