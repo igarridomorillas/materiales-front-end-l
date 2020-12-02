@@ -15,6 +15,7 @@
 - Guías
   - [Código de conducta en Adalab](guias/codigo_de_conducta.md)
   - [Cómo trabajar en remoto](guias/como_trabajar_en_remoto.md)
+  - [Qué son las rutas de las carpetas](guias/que_son_las_rutas_de_las_carpetas.md)
   - [Cómo usar la terminal](guias/como_usar_la_terminal.md)
   - [Cómo orgnanizar un proyecto](guias/como_organizar_un_proyecto.md)
   - [Guía para enfrentarse a problemas técnicos de manera autónoma](guias/busqueda_de_soluciones.md)
