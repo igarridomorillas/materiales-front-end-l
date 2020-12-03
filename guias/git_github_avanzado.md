@@ -1,6 +1,6 @@
 En esta guía **estamos recopilando todo lo que enseñamos en el curso** sobre Git y GitHub. Mucha de esta información y de estos vídeos están también en algunas de las lecciones de los módulos 1 y 2.
 
-> **Nota:** no es necesario que leas esta guía antes de empezar el curso de Adalab, os lo iremos enseñando poco a poco. La idea es que vengas aquí para resolver problemas puntuales.
+> **Nota:** no es necesario que leas esta guía antes de empezar el curso de Adalab, te lo iremos enseñando poco a poco. La idea es que vengas aquí para resolver problemas puntuales.
 
 Git es una herramienta que **se aprende con el uso y la práctica**.
 
