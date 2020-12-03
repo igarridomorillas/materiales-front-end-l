@@ -14,9 +14,11 @@ También es una herramienta para compartir código entre nuestras compañeras de
 
 ## Qué es GitHub
 
-![Git](assets/images/github-logo.png)
+![GitHub](assets/images/github-logo.png)
 
 Si Git es el sistema o programa para compartir código, [GitHub](https://github.com) es una de tantas empresas que hay para usar Git. A través de su web podemos crear proyectos y compartirlos con otras personas. También funciona como red social de programación.
+
+Muchos de los servicios que ofrece GitHub (que por cierto ha sido recientemente comprada por MicroSoft) son gratuitos y otros son de pago.
 
 ## Cómo clonar un repositorio de otra persona
 
@@ -34,11 +36,11 @@ git clone https://github.com/adalab/ejercicios-en-clase-X
 git pull
 ```
 
-Ahora que ya sabes clonar un repositorio de otra persona, te recomendamos que te clones todos los repositorios que usaremos durante el curso. Las direcciones de estos repositorios están en la [sección Información de interés](../instalacion/antes_de_empezar_el_curso.md).
+Ahora que ya sabes clonar un repositorio de otra persona, te recomendamos que te clones todos los repositorios que usaremos durante el curso. Las direcciones de estos repos están en la [sección Información de interés](./informacion_de_interes.md).
 
 ## Cómo crear mi repositorio de Git
 
-A continuación te pedimos que crees tu propio repositorio en GitHub donde durante el curso irás subiendo los ejercicios que hagas en clase:
+A continuación te pedimos que crees tu propio repositorio en GitHub donde durante el curso irás subiendo los ejercicios que hagas en clase. Al subirlos a la nube podrás compartirlos con tus compañeras y ellas contigo. En programación lo compartimos todo!!!
 
 {% embed url="https://www.youtube.com/watch?v=UazjdwT9Xvg" %}
 
@@ -84,4 +86,4 @@ A continuación decido modificar el fichero de mi repo `guias/intro_a_git_github
 
 Es decir, me está diciendo que tengo un fichero modificado y un fichero que acabo de añadir. Además me sugiere varios comandos que puedo utilizar para añadir los cambios al repo o para deshacer los cambios.
 
-Te recomendamos que para acostumbrarte a utilizar Git y para asimilar bien cómo funciona internamente, cada vez que ejecutes un comando leas lo que responde la terminal. Y después de ejecutar un comando cualquiera ejecuta `git status` y lee la info que te da la terminal.
+Es importante que para acostumbrarte a utilizar Git y para asimilar bien cómo funciona internamente, cada vez que ejecutes un comando leas lo que responde la terminal. Y después de ejecutar un comando cualquiera ejecuta `git status` para ver en qué estado estás.
