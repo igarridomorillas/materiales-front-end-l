@@ -70,5 +70,18 @@ Os recomendamos que vuestro repositorio de `ejercicios-de-adalab` cumpla con las
 
 Ya sabemos usar los comandos de Git `clone`, `add`, `commit`, `pull` y `push`. Solo nos queda por aprender un comando importante: `git status`.
 
-`git status` nos dice el estado actual en el que está nuestro repo.
+`git status` nos dice el estado actual en el que está nuestro repo. Es muy útil para saber lo que tenemos que hacer, o porqué estamos teniendo un problema que no nos deja avanzar.
 
+Supongamos que yo acabo de de subir mi código con un `git add -A`, `git commit -m "My message"` y `git push` al repositorio remoto. Es decir mi repo local y el remoto están igual. Si yo escribo el comando `git status` me aperecerá:
+
+![Git status](assets/images/git-status-up-to-date.png)
+
+Es decir, `git status` me está diciendo que estoy actualizado.
+
+A continuación decido modificar el fichero de mi repo `guias/intro_a_git_github.md` y añado un fichero nuevo que se llama `guias\assets\images\git-status-with-changes.png` y ejecuto el comando `git status`. En la terminal aparecerá algo como:
+
+![Git status](assets/images/git-status-with-changes.png)
+
+Es decir, me está diciendo que tengo un fichero modificado y un fichero que acabo de añadir. Además me sugiere varios comandos que puedo utilizar para añadir los cambios al repo o para deshacer los cambios.
+
+Te recomendamos que para acostumbrarte a utilizar Git y para asimilar bien cómo funciona internamente, cada vez que ejecutes un comando leas lo que responde la terminal. Y después de ejecutar un comando cualquiera ejecuta `git status` y lee la info que te da la terminal.
