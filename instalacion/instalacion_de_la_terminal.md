@@ -8,6 +8,8 @@ La terminal, también conocida como consola o shell, es una de nuestras herramie
 
 Hay diferentes tipos de terminales, nosotras utilizaremos la terminal **Bash**.
 
+> **Nota:** antes de continuar debes conocer una peculiaridad de la terminal. Estamos acostumbrados a que cuando escribimos una contraseña en cualquier sitio, la contraseña aparece con asteríscos: *********. Sin embargo cuando la terminal nos pide que escribamos nuestra contraseña no pone asterístos, en realidad no pone nada. Pero aún así sí estamos escribiendo la contraseña. Por ello cuando te pida la contraseña, escríbela y pulsa intro. Esto son frikadas de la programación.
+
 ## Instalación de la terminal
 
 ### Instalación en Mac y Ubuntu
