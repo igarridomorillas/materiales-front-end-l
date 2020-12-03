@@ -28,6 +28,15 @@ La propiedad [`float` de CSS](https://developer.mozilla.org/es/docs/Web/CSS/floa
 
 En JavaScript existe un tipo de `if` especial, que en algunos casos nos ayuda a tener un código más legible. Te recomendamos que [le eches un ojo](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/switch). Es muy fácil de entender.
 
+### JS: Async / Await
+
+[Async / Await](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/funcion_asincrona) es una forma de trabajar con funciones asíncronas. Es muy parecido a las promesas pero hay alguna mínima diferencia. Te recomendamos que lo estudies ya que es fácil de aprender y además es algo muy usado últimamente en JS.
+
+### React: Hooks
+
+Durante el curso os enseñamos los Hooks de React `useState` y `useEffect`. Estos dos Hooks son los más usados, pero hay unos cuantos más. Es interensante que leáis la [documentación de React](https://es.reactjs.org/docs/hooks-intro.html) para que conozcáis por encima el resto de Hooks. Además en esta sección se explica cómo crear nuestros propios Hooks personalizados.
+
 ### React: Bootstrap
 
 En el módulo 1 os enseñamos un poquito de [Bootstrap](https://getbootstrap.com/). Ahora que ya sabes React, te recomendamos que le eches un ojo a [React Bootstrap](https://react-bootstrap.github.io/), una librería con todos los componentes de Bootstrap preparados para ser usados en React. Te ayudará a entender mejor cómo organizar una aplicación en componentes pequeños.
+
