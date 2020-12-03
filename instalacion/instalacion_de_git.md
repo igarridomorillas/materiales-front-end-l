@@ -1,6 +1,6 @@
-![Git](assets/images/git-logo.jpg)
-
 ## Qué es Git
+
+![Git](assets/images/git-logo.jpg)
 
 Git es un sistema de **control de versiones** de código además de una **herramienta para compartir** código.
 

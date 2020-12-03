@@ -36,8 +36,6 @@ git clone https://github.com/adalab/ejercicios-en-clase-X
 git pull
 ```
 
-Ahora que ya sabes clonar un repositorio de otra persona, te recomendamos que te clones todos los repositorios que usaremos durante el curso. Las direcciones de estos repos están en la [sección Información de interés](./informacion_de_interes.md).
-
 ## Cómo crear mi repositorio de Git
 
 A continuación te pedimos que crees tu propio repositorio en GitHub donde durante el curso irás subiendo los ejercicios que hagas en clase. Al subirlos a la nube podrás compartirlos con tus compañeras y ellas contigo. En programación lo compartimos todo!!!
@@ -87,3 +85,13 @@ A continuación decido modificar el fichero de mi repo `guias/intro_a_git_github
 Es decir, me está diciendo que tengo un fichero modificado y un fichero que acabo de añadir. Además me sugiere varios comandos que puedo utilizar para añadir los cambios al repo o para deshacer los cambios.
 
 Es importante que para acostumbrarte a utilizar Git y para asimilar bien cómo funciona internamente, cada vez que ejecutes un comando leas lo que responde la terminal. Y después de ejecutar un comando cualquiera ejecuta `git status` para ver en qué estado estás.
+
+## Repositorios de Adalab
+
+Durante el curso vamos a utilizar los siguientes repositorios de Git / GitHub. Te recomendamos que los clones en tu ordenador y hagas `git pull` frecuentemente.
+
+- **https://github.com/adalab/ejercicios-en-clase-l:** repositorio donde las profesoras vamos a subir los ejercicios hechos en clase de esta promoción.
+- **https://github.com/adalab/soluciones-alumnas-l:** repositorio para que alumnas subáis las soluciones de los ejercicios que queráis compartir con las compañeras. Os recomendamos que cuando terminéis un ejercicio lo subáis a este repositorio, las compañeras os lo agradecerán.
+- **https://github.com/adalab/ejercicios-extra:** repositorio con enunciados y ejercicios extras resueltos, de todas las promociones.
+- **https://github.com/adalab/adalab-web-starter-kit:** repositorio con el proyecto base que utilizaremos en el módulo 1 y 2.
+- **https://github.com/adalab/recursos-de-las-alumnas:** recursos técnicos creados por las alumnas.

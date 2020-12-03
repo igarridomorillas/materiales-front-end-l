@@ -22,7 +22,6 @@
   - [Git / GitHub: avanzado](guias/git_github_avanzado.md)
   - [Agile](guias/agile.md)
   - [Scrum](guias/scrum.md)
-- [Información de interés](guias/informacion_de_interes.md)
 
 ## Módulo 1: HTML y CSS
 
