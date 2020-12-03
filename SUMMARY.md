@@ -83,7 +83,8 @@
 - [3.13 Testing con JavaScript](modulo_3/3_13_testing_js.md)
 - [3.14 Refactoring](modulo_3/3_14_refactoring.md)
 - [Repaso final](modulo_3/3_repaso.md)
-- [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md) -->
+- [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md)
+-->
 
 ## Módulo 4: Back end
 
