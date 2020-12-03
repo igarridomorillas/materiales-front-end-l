@@ -18,7 +18,7 @@
   - [Cómo trabajar en remoto](guias/como_trabajar_en_remoto.md)
   - [Qué son las rutas de las carpetas](guias/que_son_las_rutas_de_las_carpetas.md)
   - [Cómo usar la terminal](guias/como_usar_la_terminal.md)
-  - [Cómo trabajar con Git / GitHub](guias/git_github.md)
+  - [Intro a Git / GitHub](guias/intro_a_git_github.md)
   - [Agile](guias/agile.md)
   - [Scrum](guias/scrum.md)
 - [Información de interés](guias/informacion_de_interes.md)
