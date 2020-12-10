@@ -21,7 +21,11 @@ A través de nuestro Curso Intensivo en programación front-end las alumnas inic
 
 ## Objetivos generales
 
-El objetivo del curso es que todas las participantes sean autónomas en maquetación, conozcan las bases de JavaScript, y sean capaces de hacer SPAs en React, siendo su curva de aprendizaje para aprender otros frameworks o librerías de JavaScript. Además contarán con conocimientos básicos de back-end que les permitan desarrollar aplicaciones básicas para servidor, y comunicarse de forma fluida con programadores back-end. Por último, que puedan integrarse fácilmente en un equipo de trabajo bajo una filosofía ágil siguiendo marcos de trabajo como Scrum.
+El objetivo del curso es que todas las participantes sean autónomas en maquetación, conozcan las bases de JavaScript, y sean capaces de hacer SPAs en React, siendo su curva de aprendizaje para aprender otros frameworks o librerías de JavaScript.
+
+Además contarán con conocimientos básicos de back-end que les permitan desarrollar aplicaciones básicas para servidor, y comunicarse de forma fluida con programadores back-end.
+
+Por último, que puedan integrarse fácilmente en un equipo de trabajo bajo una filosofía ágil siguiendo marcos de trabajo como Scrum.
 
 ## Stack tecnológico
 
