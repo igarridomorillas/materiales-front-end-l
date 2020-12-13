@@ -23,11 +23,11 @@ Lo primero que tenemos que hacer es instalar Git en nuestro ordenador.
 Abre una terminal y ejecuta las siguientes líneas de una en una:
 
 ```bash
-sudo apt update
+sudo add-apt-repository ppa:git-core/ppa
 ```
 
 ```bash
-sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
 ```
 
 ```bash
@@ -39,11 +39,11 @@ sudo apt install git
 Abre una terminal y ejecuta las siguientes líneas de una en una:
 
 ```bash
-sudo apt update
+sudo add-apt-repository ppa:git-core/ppa
 ```
 
 ```bash
-sudo add-apt-repository ppa:git-core/ppa
+sudo apt update
 ```
 
 ```bash
