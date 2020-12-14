@@ -10,6 +10,7 @@
    - Puesto que vamos a trabajar con módulos de NPM necesitamos un package.json
    - Explicar que toda petición a servidor está compuesta por una petición y una respuesta
    - Dentro de la petición y la respuesta hay muchas formas de enviar los datos
+   - Todo lo que vamos a ver sobre express, son explicaciones sueltas que se pueden combinar unas con otras
 
 ## Ejemplo de servidor en Express
 
