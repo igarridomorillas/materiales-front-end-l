@@ -37,3 +37,7 @@ Vamos a crear una aplicación de servidor
 1. Creamos un endpoint que se llame `api/users`. Este endpoint debe devolver:
    - Si recibe la query param filterByName debe devolver un array con aquellos usuarios coincidentes
    - Si no recibe la query param o está vacía debe devolver todo el array
+
+### Calculadora
+
+1. Suma dos números
