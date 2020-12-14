@@ -18,6 +18,7 @@
    - Mostrar un ejemplo de GET y transformarlo a POST, usando PostMan
    - Qué pasa si no enviamos un body param, pues que nos retorna undefined
    - Siempre son de tipo texto
+   - Siempre son de tipo JSON es decir, objeto o array
    - Case insensitive
 
 ## Headers params en la response

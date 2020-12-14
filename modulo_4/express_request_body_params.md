@@ -11,7 +11,7 @@
    - Explciar qué son los body params
    - Mostrar un ejemplo de POST y transformarlo a PUT, usando PostMan
    - Qué pasa si no enviamos un body param, pues que nos retorna undefined
-   - Siempre son de tipo texto
+   - Siempre son de tipo JSON es decir, objeto o array
 
 ## Ejercicios
 

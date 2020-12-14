@@ -8,6 +8,7 @@
 - Como va en la url se puede poner en todos endpoints (GET, POST...)
 - Tiene mucho sentido usarla con GET
 - No confundir con los URL params
+- Son útiles porque si lo usamos en una petición get, esta la podemos usar desde fetch o desde la url del navegador
 
 ## Query params
 
