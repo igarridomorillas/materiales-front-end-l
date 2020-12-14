@@ -24,8 +24,8 @@
    - Explicar que tenemos la req y la res
    - Explicar que la req que tiene la info del post
    - Explicar que la res tiene métodos para responder la info
-   - Explicar que aquí hemos elegidor res.json, pero hay otros como res.send
-   - Explicar que el orden de los endpoints es importante como si fuera un if else
+   - Explicar que aquí hemos elegido res.json, pero hay otros como res.send
+   - En el momento que res.json se responde la petición y ya no podemos añadir más cosas a la respuesta
    - Enseñar devtools network
 
 ## Ejercicios

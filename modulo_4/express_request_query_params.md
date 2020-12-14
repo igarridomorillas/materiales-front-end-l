@@ -15,6 +15,7 @@
    - Explciar qué son los query params
    - Mostrar un ejemplo de GET y transformarlo a POST, usando PostMan
    - Qué pasa si no enviamos un query param, pues que nos retorna undefined
+   - Siempre son de tipo texto
 
 ## Ejercicios
 

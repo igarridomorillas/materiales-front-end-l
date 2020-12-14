@@ -2,7 +2,7 @@
 
 ## Qué son los body params
 
-- Son los datos que ponemos en el cuerpo de
+- Son los datos que ponemos en el cuerpo de la petición
 - Puede ir con todos los verbos menos en el GET que no tiene body
 
 ## Body params
@@ -11,6 +11,7 @@
    - Explciar qué son los body params
    - Mostrar un ejemplo de POST y transformarlo a PUT, usando PostMan
    - Qué pasa si no enviamos un body param, pues que nos retorna undefined
+   - Siempre son de tipo texto
 
 ## Ejercicios
 
