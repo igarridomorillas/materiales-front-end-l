@@ -107,3 +107,11 @@
 - [Después de acabar el curso](modulo_6/despues_de_acabar_el_curso.md)
   - [Preguntas de entrevista](modulo_6/preguntas_de_entrevista.md)
   - [Git stash](modulo_6/git_stash.md)
+
+## Proyectos
+
+- [Proyecto 1. Web grupal](proyectos/p1_proyecto.md)
+  - [Anexo. Diseña tu web desde cero](proyectos/p1_anexo.md)
+<!-- - [Proyecto 2. Awesome profile-cards](proyectos/p2_proyecto.md)
+  - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/p2_anexo.md) -->
+<!-- - [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md) -->
