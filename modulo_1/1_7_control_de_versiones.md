@@ -415,7 +415,7 @@ Una vez que tenemos las dos el repositorio en nuestro equipo vamos a modificar i
 
 \_\_\_\_\_\_\_\_\_\_
 
-## BONUS: Paquete de Code para Git
+## BONUS 1: Paquete de Code para Git
 
 Code trae por defecto un paquete para integración con Git y GitHub que nos ayuda con las tareas de control de versiones de nuestro día a día.
 
@@ -434,3 +434,36 @@ Este paquete también facilita una herramienta gráfica para resolver conflictos
 Además nos permite ver qué se ha modificado en nuestro proyecto solo haciendo click en el icono lateral: ![VS Code & Git](./assets/images/1-8/vscode-git.png)
 
 Podéis leer más sobre las posibilidades de [VS Code y Git](https://code.visualstudio.com/docs/introvideos/versioncontrol).
+
+## BONUS 2: git remote
+
+Hemos aprendido que nuestro repo local está asociado a un repo en GitHub. Pero git nos permite asociar y sincronizar un repo local a varios repositorios remotos. Por ejemplo:
+
+- uno puede ser nuestro repositorio en GitHub
+- otro el repositorio de nuestra empresa
+- y, un tercero, asociado con un servicio de hosting como Heroku
+
+Cada una de esas asociaciones se le llama **remote** y tendrá asociadas dos URL del repositorio (una para hacer push y otra para hacer fetch/pull, pero suelen ser la misma). Cuando, al principio, clonamos un repositorio se crea el primer remote que se llamará **origin**. Podemos ver los remotes que tiene nuestro repositorio con este comando:
+
+```bash
+  git remote -v
+```
+
+Mostrará algo como lo siguiente:
+
+```bash
+origin  https://github.com/usuariogithub/nombre-repo.git (fetch)
+origin  https://github.com/usuariogithub/nombre-repo.git (push)
+```
+
+Podremos añadir un nuevo remoto con el comando `git remote add`:
+
+```bash
+git remote add nombreremoto https://servidorgitremoto.adalab/rutagitremoto.gt
+```
+
+Y luego, para subir nuestro código a ese Git remoto haríamos un `git push` indicando el remoto al que lo queremos subir (por defecto será a origin):
+
+```bash
+git push ramalocal nombreremoto:master
+```
