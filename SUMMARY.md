@@ -42,9 +42,7 @@
 
 ## Módulo 2: Programando la web
 
-- Próximamente...
-
-<!-- - [2.1 Intro a la programación](modulo_2/2_1_intro_a_la_programacion.md)
+- [2.1 Intro a la programación](modulo_2/2_1_intro_a_la_programacion.md)
 - [2.2 Intro a la programación 2](modulo_2/2_2_intro_a_la_programacion_2.md)
 - [2.3 Condicionales](modulo_2/2_3_condicionales.md)
 - [2.4 Funciones](modulo_2/2_4_funciones.md)
@@ -61,7 +59,7 @@
 - [2.14 Asincronía y temporizadores](modulo_2/2_14_asincronia.md)
 - [Repaso final](modulo_2/2_repaso.md)
 - [Sintaxis de JavaScript](modulo_2/2_sintaxis_de_js.md)
-- [Ejercicio: tienda de camisetas](modulo_2/2_ejercicio_global_tienda_de_camisetas.md) -->
+- [Ejercicio: tienda de camisetas](modulo_2/2_ejercicio_global_tienda_de_camisetas.md)
 
 ## Módulo 3: React
 
