@@ -12,6 +12,8 @@
 - [EJERCICIO 6](#ejercicio-6)
 - [EJERCICIO 7](#ejercicio-7)
 - [EJERCICIO 8](#ejercicio-8)
+- [EJERCICIO 9](#ejercicio-9)
+- [EJERCICIO 10](#ejercicio-10)
 
 <!-- /TOC -->
 
@@ -24,8 +26,6 @@ git add -A
 git commit -m "Message commit"
 git push
 ```
-
-También sabemos cómo publicar nuestro trabajo a través del sistema de hosting de GitHub: **GitHub Pages**.
 
 Hoy vamos a ver cómo mejorar nuestros repos y trabajar en grupo sobre el mismo proyecto y sus archivos.
 
@@ -45,7 +45,7 @@ Ejemplos de readme.md:
 - [Editor de código VS Code](https://github.com/Microsoft/vscode)
 - [Gulp (Automatizador de tareas)](https://github.com/gulpjs/gulp)
 
-Os recomendamos que cuando tengáis tiempo le pongáis un buen README.md a todos vuestros repositorios. Las empresas que están buscando Adalabers lo agradecerán.
+Os recomendamos que cuando tengáis tiempo le **pongáis un buen README.md** a todos vuestros repositorios. Las empresas que están buscando Adalabers lo agradecerán.
 
 ### .gitignore
 
@@ -231,7 +231,7 @@ Una vez que hemos terminado el trabajo en nuestra nueva rama y lo hemos subido a
 
 Para ello nos vamos a la rama destino (en este caso `master`) con `git checkout master`,  y escribiremos:
 
-```
+```bash
 git merge nombre-de-la-rama
 ```
 
@@ -329,11 +329,59 @@ Si ahora hacemos un `git log` podemos ver cómo queda el historial de commits:
 
 ![Git revert paso 3](assets/images/1-8/commit-revert-3.png)
 
-## Issues
+## GitHub Pages
 
-Github, como otros servicios de control de versiones, tiene un sistema de tickets, los issues. Te permiten crear pequeñas tareas donde solicitas información, avisar de un problema o de alguna mejora. Además, nos permiten asignar responsables, clasificarlas por etiquetas... Es un sistema similar a las tarjetas de Trello.
+GitHub ofrece un servicio llamado [GitHub Pages](https://pages.GitHub.com) que pueden utilizar los usuarios como hosting gratuito para los proyectos que estén alojados en GitHub.
+
+Un **hosting** es un servicio de almacenamiento de ficheros para poder tener tu web en un servidor y que esté disponible en Internet y esto es lo que ofrece exactamente GitHub Pages.
+
+Para activar el servicio de GitHub Pages en un repositorio hay que:
+
+1. Ir al repositorio en GitHub.
+1. Ir a la pestaña settings.
+1. Ir al apartado GitHub Pages.
+1. Seleccionar la opción **Master branch**.
+1. Al hacerlo nos genera una URL donde podemos ver nuestro repositorio.
+1. Normalmente tarda 5 minutos en publicar el repositorio, así que espera 5 minutos y...
+1. Entra en la URL que ha generado, verás tu página.
+   - Si ves el contenido del README.md es porque no tienes un fichero `index.html`.
+1. Para facilitarle la vida a los usuarios que vean tu repo vamos poner la URL en la portada del repo:
+   1. Vamos a la página principal del repo.
+   1. Debajo de la pestaña de **Settings** hay un botón que pone **Edit**, púlsalo.
+   1. Ahí puedes editar la descripción y URL del proyecto.
+   1. Pega la URL que te ha generado GitHub Pages en Website.
 
 #### EJERCICIO 5
+
+**Publicando nuestra web en GitHub Pages**
+
+Publica tu repo con GitHub Pages (usando la rama main/master y la carpeta `/`) y pon la URL en la descripción que hay arriba y a la derecha en la portada del repo.
+
+\_\_\_\_\_\_\_\_\_\_
+
+## Github Classroom
+
+GitHub Classroom es un "módulo" de GitHub que permite automatizar el control de acceso y la creación de repositorios. Durante este curso lo usaremos para asignar ejercicios.
+
+#### EJERCICIO 6
+
+**Nuevo repositorio asociado a GitHub Classroom**
+
+Haz clic en el siguiente enlace [https://classroom.github.com/a/cdZUSdeT](https://classroom.github.com/a/cdZUSdeT) para crear tu primer repositorio a través de GitHub Classroom, y luego:
+
+1. Clónalo en tu equipo.
+1. Crea un archivo `README.md`.
+1. Dentro, escribe tu nombre precedido de un `#`: `# PEPA HERRERA`.
+1. Haz `add` y `commit`.
+1. Haz un `push` al repo remoto :)
+
+\_\_\_\_\_\_\_\_\_\_
+
+## Issues
+
+Github, como otros servicios de control de versiones, tiene un sistema de tickets, los **issues**. Te permiten crear pequeñas tareas donde solicitas información, avisar de un problema o de alguna mejora. Además, nos permiten asignar responsables, clasificarlas por etiquetas... Si alguna de vosotras conocéis Trello, éste es un sistema de tarjetas similar a Trello.
+
+#### EJERCICIO 7
 
 **Crear repositorio en GitHub**
 
@@ -343,7 +391,7 @@ Hay que crear un repositorio vacío en GitHub:
 
 \_\_\_\_\_\_\_\_\_\_
 
-#### EJERCICIO 6
+#### EJERCICIO 8
 
 **Clonar repositorio**
 
@@ -351,7 +399,7 @@ Clonaremos el repositorio de nuestra compañera y le pondremos o abriremos un is
 
 \_\_\_\_\_\_\_\_\_\_
 
-#### EJERCICIO 7
+#### EJERCICIO 9
 
 **Eliminar un repositorio**
 
@@ -359,7 +407,7 @@ No es tan habitual pero de tanto en tanto querremos hacer limpieza en nuestra cu
 
 \_\_\_\_\_\_\_\_\_\_
 
-#### EJERCICIO 8
+#### EJERCICIO 10
 
 **Solucionar un conflicto**
 
@@ -367,7 +415,7 @@ Una vez que tenemos las dos el repositorio en nuestro equipo vamos a modificar i
 
 \_\_\_\_\_\_\_\_\_\_
 
-## BONUS: Paquete de Code para Git
+## BONUS 1: Paquete de Code para Git
 
 Code trae por defecto un paquete para integración con Git y GitHub que nos ayuda con las tareas de control de versiones de nuestro día a día.
 
@@ -386,3 +434,36 @@ Este paquete también facilita una herramienta gráfica para resolver conflictos
 Además nos permite ver qué se ha modificado en nuestro proyecto solo haciendo click en el icono lateral: ![VS Code & Git](./assets/images/1-8/vscode-git.png)
 
 Podéis leer más sobre las posibilidades de [VS Code y Git](https://code.visualstudio.com/docs/introvideos/versioncontrol).
+
+## BONUS 2: git remote
+
+Hemos aprendido que nuestro repo local está asociado a un repo en GitHub. Pero git nos permite asociar y sincronizar un repo local a varios repositorios remotos. Por ejemplo:
+
+- uno puede ser nuestro repositorio en GitHub
+- otro el repositorio de nuestra empresa
+- y, un tercero, asociado con un servicio de hosting como Heroku
+
+Cada una de esas asociaciones se le llama **remote** y tendrá asociadas dos URL del repositorio (una para hacer push y otra para hacer fetch/pull, pero suelen ser la misma). Cuando, al principio, clonamos un repositorio se crea el primer remote que se llamará **origin**. Podemos ver los remotes que tiene nuestro repositorio con este comando:
+
+```bash
+  git remote -v
+```
+
+Mostrará algo como lo siguiente:
+
+```bash
+origin  https://github.com/usuariogithub/nombre-repo.git (fetch)
+origin  https://github.com/usuariogithub/nombre-repo.git (push)
+```
+
+Podremos añadir un nuevo remoto con el comando `git remote add`:
+
+```bash
+git remote add nombreremoto https://servidorgitremoto.adalab/rutagitremoto.gt
+```
+
+Y luego, para subir nuestro código a ese Git remoto haríamos un `git push` indicando el remoto al que lo queremos subir (por defecto será a origin):
+
+```bash
+git push ramalocal nombreremoto:master
+```
