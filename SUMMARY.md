@@ -42,24 +42,25 @@
 
 ## Módulo 2: Programando la web
 
-- [2.1 Intro a la programación](modulo_2/2_1_intro_a_la_programacion.md)
-- [2.2 Intro a la programación 2](modulo_2/2_2_intro_a_la_programacion_2.md)
-- [2.3 Condicionales](modulo_2/2_3_condicionales.md)
-- [2.4 Funciones](modulo_2/2_4_funciones.md)
-- [2.5 Eventos](modulo_2/2_5_eventos.md)
-- [2.6 Objetos](modulo_2/2_6_objetos.md)
-- [2.7 Arrays y bucles](modulo_2/2_7_arrays_y_bucles.md)
-- [Repaso intermedio](modulo_2/2_repaso_intermedio.md)
-- [2.8 Trabajo colaborativo en Git](modulo_2/2_8_trabajo_colaborativo_en_git.md)
-- [2.9 Arrays y bucles 2](modulo_2/2_9_array_y_bucles_2.md)
-- [2.10 Peticiones al servidor](modulo_2/2_10_peticiones_al_servidor.md)
-- [2.11 Peticiones al servidor 2](modulo_2/2_11_peticiones_al_servidor_2.md)
-- [2.12 DOM avanzado](modulo_2/2_12_dom_avanzado.md)
-- [2.13 Métodos funcionales de array](modulo_2/2_13_metodos_funcionales_array.md)
-- [2.14 Asincronía y temporizadores](modulo_2/2_14_asincronia.md)
-- [Repaso final](modulo_2/2_repaso.md)
-- [Sintaxis de JavaScript](modulo_2/2_sintaxis_de_js.md)
-- [Ejercicio: tienda de camisetas](modulo_2/2_ejercicio_global_tienda_de_camisetas.md)
+- JavaScript:
+  - [2.1 Intro a la programación](modulo_2/2_1_intro_a_la_programacion.md)
+  - [2.2 Intro a la programación 2](modulo_2/2_2_intro_a_la_programacion_2.md)
+  - [2.3 Condicionales](modulo_2/2_3_condicionales.md)
+  - [2.4 Funciones](modulo_2/2_4_funciones.md)
+  - [2.5 Eventos](modulo_2/2_5_eventos.md)
+  - [2.6 Objetos](modulo_2/2_6_objetos.md)
+  - [2.7 Arrays y bucles](modulo_2/2_7_arrays_y_bucles.md)
+  - [Repaso intermedio](modulo_2/2_repaso_intermedio.md)
+  - [2.8 Trabajo colaborativo en Git](modulo_2/2_8_trabajo_colaborativo_en_git.md)
+  - [2.9 Arrays y bucles 2](modulo_2/2_9_array_y_bucles_2.md)
+  - [2.10 Peticiones al servidor](modulo_2/2_10_peticiones_al_servidor.md)
+  - [2.11 Peticiones al servidor 2](modulo_2/2_11_peticiones_al_servidor_2.md)
+  - [2.12 DOM avanzado](modulo_2/2_12_dom_avanzado.md)
+  - [2.13 Métodos funcionales de array](modulo_2/2_13_metodos_funcionales_array.md)
+  - [2.14 Asincronía y temporizadores](modulo_2/2_14_asincronia.md)
+  - [Repaso final](modulo_2/2_repaso.md)
+  - [Sintaxis de JavaScript](modulo_2/2_sintaxis_de_js.md)
+  - [Ejercicio: tienda de camisetas](modulo_2/2_ejercicio_global_tienda_de_camisetas.md)
 
 ## Módulo 3: React
 
@@ -86,8 +87,9 @@
 
 ## Módulo 4: Back end
 
-- [4 Introducción al módulo](modulo_4/4_0_intro.md)
-- [4.1 Comunicación entre front y back](modulo_4/4_1_intro_comunicacion_front_back.md)
+- Node JS
+  - [4 Introducción al módulo](modulo_4/4_0_intro.md)
+  - [4.1 Comunicación entre front y back](modulo_4/4_1_intro_comunicacion_front_back.md)
 
 <!-- ## Proyectos
 
