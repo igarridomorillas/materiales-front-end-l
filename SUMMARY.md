@@ -86,7 +86,8 @@
 
 ## Módulo 4: Back end
 
-- Próximamente...
+- [4 Introducción al módulo](modulo_4/4_0_intro.md)
+- [4.1 Comunicación entre front y back](modulo_4/4_1_intro_comunicacion_front_back.md)
 
 <!-- ## Proyectos
 
