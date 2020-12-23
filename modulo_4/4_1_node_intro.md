@@ -68,7 +68,7 @@ Vamos a ver varios ejemplos de cómo se usa:
 
 ## Ejercicios
 
-### Suma
+### 1: Suma
 
 1. Crea un `index.js`.
 1. Crea una función `add`:
@@ -76,7 +76,7 @@ Vamos a ver varios ejemplos de cómo se usa:
    - La función debe retornar el resultado de la suma.
 1. Ejecuta y consolea el resultado.
 
-### Escribir en un fichero
+### 2: Escribir en un fichero
 
 1. Crea un `index.js`.
 1. Crea una constante con el texto que tú quieras, ej: **Lorem ipsum**.
@@ -88,6 +88,8 @@ Vamos a ver varios ejemplos de cómo se usa:
       textLenght: 11
    }
    ```
+   - La propiedad `changedContent` es igual a la propiedad `originalContent` pero pasada a mayúsculas.
+   - La propiedad `textLenght` es la longitud de la propiedad `originalContent`.
 1. Consolea el objeto en modo objeto.
 1. Guarda el objeto tal cual en el fichero de destino:
    - ¿Qué error te muestra?
@@ -95,19 +97,21 @@ Vamos a ver varios ejemplos de cómo se usa:
    - Pista: ¿Recuerdas lo que teníamos que hacer para guardar en el local storage un objeto en formato texto?
 1. Guarda el objeto en modo texto en el fichero de destino y verás que sí funciona.
 
-### Leer de un fichero, modificar los datos y escribirlos en otro fichero
+### 3: Leer de un fichero, modificar los datos y escribirlos en otro fichero
 
 1. Crea un fichero `input-file.txt` con un texto, ej: **Lorem ipsum**.
 1. Crea un `index.js`.
    1. Lee el contenido del fichero `input-file.txt`.
    1. Crea en un objeto que tenga los siguientes campos:
-   ```js
-   {
-      originalContent: 'Lorem ipsum',
-      changedContent: 'LOREM IPSUM',
-      textLenght: 11
-   }
-   ```
+      ```js
+      {
+         originalContent: 'Lorem ipsum',
+         changedContent: 'LOREM IPSUM',
+         textLenght: 11
+      }
+      ```
+   La propiedad `changedContent` es igual a la propiedad `originalContent` pero pasada a mayúsculas.
+   - La propiedad `textLenght` es la longitud de la propiedad `originalContent`.
    1. Guarda el objeto en modo texto en un fichero de destino llamado `output-file.json`.
 
 > **Pista:** la asincronía es importante, debes guardar en el fichero de destino después de leer del fichero de origen.
