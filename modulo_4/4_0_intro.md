@@ -33,4 +33,4 @@ Para acceder al código fuente de los ejercicios usados en los vídeos de este m
 
 1. Clona el repo https://github.com/adalab/ejercicios-de-los-materiales.
 1. Entra en la carpeta de tu promoción.
-1. Abre, usa, trastea, rompe y juega el código de cada mini lección Ten en cuenta que el código subido a este repo es el código al final de cada vídeo.
+1. Abre, usa, trastea, rompe y juega con el código de cada mini lección Ten en cuenta que el código subido a este repo es el código al final de cada vídeo.
