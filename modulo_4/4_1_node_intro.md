@@ -24,17 +24,17 @@ En resumen, nos interesa aprender de Node JS aquellos conocimientos que son úni
 
 ## Qué es Node JS
 
-En este [vídeo](https://www.youtube.com/watch?v=3rQggXHyjmU) explicamos qué es Node JS y ejecutamos nuestro primer programa:
+En este vídeo explicamos qué es Node JS y ejecutamos nuestro primer programa:
 
 {% embed url="https://www.youtube.com/watch?v=3rQggXHyjmU" %}
 
-> Ejercicio del vídeo: [node-intro](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro)
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/intro)
 
 ## Y tú ¿has utilizado alguna vez Node JS?
 
 {% embed url="https://www.youtube.com/watch?v=dO2cv7OpBGk" %}
 
-Recuerda lo que hemos comentado en este [vídeo](https://www.youtube.com/watch?v=dO2cv7OpBGk), pulsando **Ctrl+C** en la terminal, puedes forzar que un programa de Node JS finalice.
+Recuerda lo que hemos comentado en este vídeo, pulsando **Ctrl+C** en la terminal, puedes forzar que un programa de Node JS finalice.
 
 ## Acceso al sistema de ficheros
 
@@ -46,25 +46,25 @@ Vamos a ver varios ejemplos de cómo se usa:
 
 {% embed url="https://www.youtube.com/watch?v=gHf6SXXdi_0" %}
 
-> Ejercicio del vídeo: [node-fs-read-file](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-fs-read-file)
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/fs-read-file)
 
 ### Leer ficheros JSON
 
 {% embed url="https://www.youtube.com/watch?v=A54Y8S9pdLI" %}
 
-> Ejercicio del vídeo: [node-fs-read-file-json](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-fs-read-file-json)
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/fs-read-file-json)
 
 ### Escribir en ficheros
 
 {% embed url="https://www.youtube.com/watch?v=YE09MWJcVLA" %}
 
-> Ejercicio del vídeo: [node-fs-write-file](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-fs-write-file)
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/fs-write-file)
 
 ### Leer y escribir en ficheros
 
 {% embed url="https://www.youtube.com/watch?v=yfsCFBGjQuc" %}
 
-> Ejercicio del vídeo: [node-fs-read-and-write-file](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-fs-read-and-write-file)
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/fs-read-and-write-file)
 
 ## Ejercicios
 
