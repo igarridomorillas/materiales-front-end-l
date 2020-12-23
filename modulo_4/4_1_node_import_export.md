@@ -1,0 +1,196 @@
+# Módulos en Node JS
+
+## ¿Qué son los módulos?
+
+Un módulo, también llamado paquete, **es un librería de código con una funcionalidad concreta**, que han creado otras personas, para que nosotras lo utilicemos dentro de nuestro código. Esas personas pueden ser los creadores de Node JS o cualquier otra programadora.
+
+La funcionalidad que puede tener un módulo puede ser muy diversa, por ejemplo:
+
+- Funcionalidades que nos ayudan a trabajar más fácilmente con datos complejos.
+- Funcionalidades que procesan imágenes y reducen su tamaño para que pensen menos, y así cuando el navegador las carga la usuaria gaste menos datos de su conexión y las imágenes se carguen más rápidamente.
+- Funcionalidades que nos ayudan a subir un fichero desde el navegador de la usuaria al servidor.
+
+No tiene sentido que tengamos que volver a programar en nuestras aplicaciones código que ya hemos creado en aplicaciones anteriores, o que ya ha creado otra persona en otro proyecto. **¡¡¡Compartir es vivir!!!**
+
+## ¿Para qué son útiles los módulos?
+
+Los módulos son útiles para:
+
+- Separar el código en diferentes partes y ficheros y así organizar la aplicación mejor. Es mejor tener muchos ficheros pequeños que pocos grandes.
+- Separar la responsabilidad del código. Cada módulo o fichero se encarga de hacer solo una cosa.
+- Tener código privado. Desde fuera de un código solo podemos acceder al código que el módulo publica a través del export. El código no publicado es privado.
+- Reutilizar código llevándonos el módulo a otro proyecto.
+
+## Módulos antiguos VS módulos modernos
+
+### Módulos modernos
+
+En React ya hemos utilizado los módulos. Los utilizamos para crear componentes de React en diferentes ficheros. Si recuerdas la sintaxis para importar un componente es:
+
+```js
+import Header from './Header.js';
+```
+
+Y en el fichero `Header.js` la sintaxis para exportar el componente es:
+
+```js
+export default Header;
+```
+
+**Esta forma con la sintaxis `import` y `export` es la moderna.** El problema es que Node JS todavía no ha terminado de implementar esta sintaxis. Hasta que Node JS no implemente los módulos modernos no podemos utilizarlos.
+
+### Módulos antiguos
+
+La forma antigua de hacerlo es cambiando la sintaxis por:
+
+```js
+const Header = require('./Header.js'); // que equivale a: import Header from './Header.js';
+```
+
+y
+
+```js
+module.exports = Header; // que equivale a: export default Header;
+```
+
+Como veréis es símplemente un cambio de sintaxis, nada más. **Esta sintaxis antigua es la que debemos usar en Node JS.**
+
+## Tipos de módulos
+
+Hay 4 tipos de módulos y los vamos a explicar a continuación:
+
+- Mis propios módulos
+- Nativos de Node JS
+- Instalados con NPM
+- Módulos especiales de tipo JSON
+
+## ¿Qué son y para qué sirven los módulos?
+
+{% embed url="https://www.youtube.com/watch?v=JuGTMdY46IU" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-modules/intro)
+
+## Mis propios módulos
+
+{% embed url="https://www.youtube.com/watch?v=5OlpaVurK6A" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-modules/custom)
+
+## Módulos nativos de node
+
+{% embed url="https://www.youtube.com/watch?v=2RLYdyGqMeE" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-modules/native)
+
+## Módulos instalados con NPM
+
+<!-- - Vídeo
+   - Buscar paquetes en la plataforma npm, los puede crear cualquier persona
+      - Buscar React
+      - Buscar y entrar en lodash
+   - Para que node sepa qué módulos vamos a utilizar en nuestro programa se lo tenemos que indicar en el package.json
+   - El package.json lo podemos crear a mano o
+   - Lo podemos crear package.json con npm init
+      - Para crear el package.json npm necesita varios datos de información y configuración que son opcionales
+   - Instalar lodash, se añade al package.json y se crea la carpeta node_modules
+      - node_modules tiene los ficheros de lodash, los que han programado los creadores de lodash
+   - En la mayoría de los proyectos vamos a tener un package.json porque casi siempre necesitamos especificar los módulos y otras configuraciones
+   - A partir de ahí lodash es como si fuera un módulo nativo
+   - Explicar que lodash se suele representar con un guión bajo -->
+
+## Módulos JSON
+
+<!-- - Vídeo
+   - Tipo especial de módulo porque no está programado en JS, sino en JSON y no es una librería con funciones o métodos si no que solo son datos.
+   - También lo explicamos porque la sintanxis es la misma que se utiliza para importar los otros tipos de módulos.
+   - Estos JSON los solemos crear nosotras en nuestros programas
+   - Aunque es un JSON que has creado tú, para poder usarlo tiene que ser un objeto de JS. Por ello node lo importa y lo parsea automáticamente antes de guardarlo en la constante.
+   - Muy usado para ficheros de configuración o ficheros de datos
+   - De esa forma separamos los datos por un lado y la programación por otro
+   - Explicar ejercicio node-modules-json -->
+
+## Ejercicios
+
+### 1. Librería de file system
+
+1. Mira, ejecuta y entiende los ejemplos que están en las carpetas `node-modules-read-and-write-files-with-one-module` y `node-modules-read-and-write-files-with-two-modules`.
+1. Piensa y justifica si te gusta más que las dos funciones estén en un solo módulo o separadas en dos módulos.
+
+### 2. Mi propia librería Math
+
+1. Crea un `math.js` que sea un módulo.
+   - Exporta dos funciones, una para sumar y otra para restar.
+   - Estas dos funciones deben recibir dos números como parámetros.
+   - Estas dos funciones deben retornar el resultado de la operación.
+1. Crea un `index.js`. e importa el módulo `math.js`.
+   - Usa el módulo importado para hacer una suma y consolea el resultado.
+   - Usa el módulo importado para hacer una resta y consolea el resultado.
+
+### 3. Librería Math avazado: módulos que usan otros módulos
+
+1. Crea un `math-add.js` que sea un módulo que exporta una función de suma.
+1. Crea un `math-sub.js` que es un módulo que exporta una función de resta.
+1. Crea un `math.js` que es un módulo que importa los dos módulos anteriores y los exporta dentro de un objeto.
+1. Crea un `index.js`.
+   - Importa en `index.js` el módulo `math.js`.
+   - Haz una suma y consolea el resultado.
+   - Haz una resta y consolea el resultado.
+
+### 4. Lodash: obtener la unión
+
+En [NPM](https://www.npmjs.com/package/lodash) hay un módulo que se llama [Lodash](https://lodash.com/) que nos ayuda a trabajar fácilmente con grandes cantidades de datos.
+
+1. Crea un index.js
+   1. Importa el módulo `Lodash`.
+   1. Crea dos constantes para los arrays: `[1, 2, 3]` y `[2, 3, 4]`.
+   1. Usa el módulo lodash para hallar la unión de estos dos ficheros. Para ello necesitas buscar en la [documentación de Lodash](https://lodash.com/docs/4.17.15).
+   1. Si consoleas el resultado que te devuelve la función de Lodash el resultado debe ser `[1, 2, 3, 4]`.
+
+### 5. Lodash: ordenar una colección
+
+Una colección es un array de objetos.
+
+1. Crea un `index.js` e importa el módulo `Lodash`.
+   1. Crea una constante con la colección:
+   ```js
+      const students = [
+        {
+          name: 'Sofía',
+          promo: 'k'
+        },
+        {
+          name: 'María',
+          promo: 'l'
+        },
+        {
+          name: 'Lucía',
+          promo: 'j'
+        },
+        {
+          name: 'Julia',
+          promo: 'l'
+        }
+      ];
+   ```
+   1. Usa el módulo Lodash para ordenar este array, primero por la letra de la promo y después por el nombre de la alumna.
+   1. Si consoleas el retorno de la función de Lodash debería ser:
+   ```js
+   [
+     {
+       name: 'Lucía',
+       promo: 'j'
+     },
+     {
+       name: 'Sofía',
+       promo: 'k'
+     },
+     {
+       name: 'Julia',
+       promo: 'l'
+     },
+     {
+       name: 'María',
+       promo: 'l'
+     }
+   ]
+   ```
