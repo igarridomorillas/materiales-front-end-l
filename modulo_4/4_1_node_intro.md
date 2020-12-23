@@ -114,5 +114,5 @@ Vamos a ver varios ejemplos de cómo se usa:
    - La propiedad `textLenght` es la longitud de la propiedad `originalContent`.
    1. Guarda el objeto en modo texto en un fichero de destino llamado `output-file.json`.
 
-> **Pista:** la asincronía es importante, debes guardar en el fichero de destino después de leer del fichero de origen.
+**Pista:** la asincronía es importante, debes guardar en el fichero de destino después de leer del fichero de origen.
 
