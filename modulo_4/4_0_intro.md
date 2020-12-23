@@ -25,7 +25,7 @@ Hemos decidido cambiar un poco la estructura de estos materiales y básicamente 
 
 ## ¿Qué vamos a estudiar cada día?
 
-Cada día vamos a estudiar varias mini lecciones. Por ejemplo el primer día del módulo vamos a estudiar y a explicar en clase las lecciones que empiezan por 4.1. El segundo día las que empiezan por 4.2 y así sucesivamente.
+Cada día vamos a estudiar varias mini lecciones. Por ejemplo el primer día del módulo vamos a estudiar y a explicar en clase las lecciones que empiezan por **4.1**. El segundo día las que empiezan por **4.2** y así sucesivamente. Fíjate en el menú de la izquierda para saber qué debes estudiar cada día.
 
 ## Código fuente de los vídeos
 

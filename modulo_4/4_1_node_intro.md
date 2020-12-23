@@ -42,8 +42,6 @@ Otra funcionalidad muy útil y usada es el [**File system (también conocido com
 
 Vamos a ver varios ejemplos de cómo se usa:
 
-> Ejercicio del vídeo: [node-intro](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro)
-
 ### Leer ficheros
 
 {% embed url="https://www.youtube.com/watch?v=gHf6SXXdi_0" %}
