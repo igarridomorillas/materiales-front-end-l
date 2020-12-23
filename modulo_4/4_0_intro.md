@@ -23,6 +23,10 @@ Hemos decidido cambiar un poco la estructura de estos materiales y básicamente 
 - **Contenidos visuales:** cada mini lección está compuesta de una mínima explicación escrita, uno o varios vídeos y ejercicios.
 - **Aprendizaje autónomo:** la mayoría de las mini lecciones las vamos a explicar en clase, pero algunas de ellas las dejamos para que las aprendas cuando quieras, por ejemplo después de terminar el curso. La razón es que estas mini lecciones son menos importantes o menos usadas en el día a día de las programadoras.
 
+## ¿Qué vamos a estudiar cada día?
+
+Cada día vamos a estudiar varias mini lecciones. Por ejemplo el primer día del módulo vamos a estudiar y a explicar en clase las lecciones que empiezan por 4.1. El segundo día las que empiezan por 4.2 y así sucesivamente.
+
 ## Código fuente de los vídeos
 
 Para acceder al código fuente de los ejercicios usados en los vídeos de este módulo:
