@@ -9,6 +9,8 @@ Vamos a ver este [vídeo](https://www.youtube.com/watch?v=knnzF-d0V1I) para ente
 {% embed url="https://www.youtube.com/watch?v=knnzF-d0V1I" %}
 
 <!--
+Guión para los vídeos
+
 - Vídeo:
    - Bienvenidas al nuevo módulo de back end
    - Vamos a hacer una introducción explicando qué es el back y cómo se comunica con el front
@@ -25,8 +27,7 @@ Vamos a ver este [vídeo](https://www.youtube.com/watch?v=knnzF-d0V1I) para ente
          - Dominio
          - Extensión de dominio
          - Puerto
-         - Carpeta / s
-         - Ficheros
+         - Carpeta / Ficheros
       - Entrar en Adalab.es
    - Similitudes entre front y back:
       - Son programas escritos en lenguajes de programación
