@@ -29,6 +29,11 @@
    - En el momento que res.json se responde la petición y ya no podemos añadir más cosas a la respuesta
    - Enseñar devtools network
 
+## Errores más comunes
+
+- Vídeo
+   - Explicar que si el servidor no responde es que se nos ha olvidado responder
+
 ## Ejercicios
 
 ### Cambio de las rutas
