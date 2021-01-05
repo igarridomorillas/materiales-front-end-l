@@ -88,7 +88,7 @@
 ## Módulo 4: Back end
 
 - Node JS
-  - [4 Introducción al módulo](modulo_4/4_0_intro.md)
+  - [4.0 Introducción al módulo](modulo_4/4_0_intro.md)
   - [4.1.1 Comunicación entre front y back](modulo_4/4_1_intro_comunicacion_front_back.md)
   - [4.1.2 Introducción a Node JS](modulo_4/4_1_node_intro.md)
   - [4.1.3 Módulos de Node JS](modulo_4/4_1_node_modules.md)
