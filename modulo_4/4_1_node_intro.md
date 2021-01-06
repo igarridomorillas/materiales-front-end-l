@@ -48,6 +48,8 @@ Vamos a ver varios ejemplos de cómo se usa:
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/fs-read-file)
 
+> **Nota:** por cierto no se si te has fichajo pero los datos que consoleamos se muestran en la terminal.
+
 ### Leer ficheros JSON
 
 {% embed url="https://www.youtube.com/watch?v=A54Y8S9pdLI" %}
@@ -115,4 +117,3 @@ Vamos a ver varios ejemplos de cómo se usa:
    1. Guarda el objeto en modo texto en un fichero de destino llamado `output-file.json`.
 
 **Pista:** la asincronía es importante, debes guardar en el fichero de destino después de leer del fichero de origen.
-
