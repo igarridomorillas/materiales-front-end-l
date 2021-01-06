@@ -13,51 +13,20 @@ Hay 4 formas de enviar datos desde el navegador al servidor:
 
 Con este vídeo vamos a aprender cómo se envían datos a través de **query params**.
 
-- Vídeo
-   - Qué explicamos en este vídeo
-      - Como ya sabemos lo que estamos viendo en este módulo es cómo intercambiar información entre el front y el back
-      - En este vídeo vamos a ver cómo enviar datos desde el navegador al servidor
-      - La información que enviamos desde el navegador al servidor se envía a través de la petición
-      - El servidor debe coger esa información de la petición y luego lo que haga con ella y con qué datos responda es un problema independiente
-      - Esto que estamos enseñando aplica a cuando programamos un API, es decir, cuando hacemos una petición a través de fetch (enseñar diagrama)
-      - Esto también aplica a los servidores de ficheros dinámicos, pero lo explicaremos más adelante
-   - Qué son los query params
-      - Veamos los query params que usa twitter, buscar por oidoenadalab
-      - Son los parámetros o datos que van al final de la URL
-      - Son los datos que van después de la ?
-      - Para poder enviar varios datos los separamos por &
-      - Por cierto os acordáis de esta página, pues vosotras ya habéis utilizado query params antes
-      - Por cierto, el servidor siempre va a recibir estos datos como string
-      - Enseñar una búsqueda en google buscando 123
-      - Si queremos recoger un número tendríamos que hacer un parseInt o un parseFloat
-   - Qué tipo de peticiones podemos hacer
-      - Puesto que todas las peticiones las de tipo GET, POST... tienen URL todas pueden llevar query params
-   - Ejemplo:
-      - Arrancamos el servidor
-      - Cuando pulsemos en enviar se va a ejecutar el main.js
-         - Recogo los datos del formulario
-         - Creo a mano los query params
-         - Los concateno a la URL del fetch
-         - El fetch es de tipo post
-      - Ya sabemos lo que hace la primera parte del código
-      - Lo que nos interesa es el endpoint /user
-      - Cuando hacemos una petición con query params desde el navegador recogemos los datos desde req.query que es un objeto
-      - Los pusheamos al array users
-      - Si trabajásemos con bases de datos esto no sería un array sino una base de datos, pero para este vídeo nos da igual
-      - El endpoints /users simplemente devuelve el array de usuarias
-   - Postman
-      - Podemos hacer lo mismo desde Postman
-      - Fijaos que Postman nos ayuda a crear más fácilmente las query params
+{% embed url="https://www.youtube.com/watch?v=D7brnaBc6hM" %}
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-request-query-params)
 
 ## Características de los query params
 
-- Se añaden al final de la URL.
-- Empiezan con el símbolo `?`: http://localhost:3000/user?userName=maricarmen
-- Si queremos enviar varios query params los separamos con `&`: http://localhost:3000/user?userName=maricarmen&userEmail=mari@gmail.com
-- Se pueden utilizar con cualquier verbo (GET, POST, PUT, PATCH...) ya que todas las peticiones tienen URL.
-- Todos los datos enviados por query param se reciben en el servidor como **string**.
+- Desde el navegador:
+   - Se añaden al final de la URL.
+   - Empiezan con el símbolo `?`: http://localhost:3000/user?userName=maricarmen
+   - Si queremos enviar varios query params los separamos con `&`: http://localhost:3000/user?userName=maricarmen&userEmail=mari@gmail.com
+   - Se pueden utilizar con cualquier verbo (GET, POST, PUT, PATCH...) ya que todas las peticiones tienen URL.
+- En el servidor:
+   - Recibimos los datos en `req.query`.
+   - Todos los datos enviados por query param se reciben en el servidor como **string**.
 
 ## Ejercicios
 
