@@ -95,6 +95,7 @@
   - [4.1.4 Nodemon](modulo_4/4_1_node_nodemon.md)
   - [4.2.1 Introducción a Express JS](modulo_4/4_2_express_basic.md)
   - [4.2.2 Postman](modulo_4/4_2_express_postman.md)
+  - [4.2.3 Peticiones con query params](modulo_4/4_2_express_request_query_params.md)
 
 <!-- ## Proyectos
 

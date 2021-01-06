@@ -20,13 +20,14 @@ Con este vídeo vamos a aprender cómo se envían datos a través de **query par
       - La información que enviamos desde el navegador al servidor se envía a través de la petición
       - El servidor debe coger esa información de la petición y luego lo que haga con ella y con qué datos responda es un problema independiente
       - Esto que estamos enseñando aplica a cuando programamos un API, es decir, cuando hacemos una petición a través de fetch (enseñar diagrama)
-      - Esto también lo veremos cuando expliquemos el servidor de ficheros dinámicos
+      - Esto también aplica a los servidores de ficheros dinámicos, pero lo explicaremos más adelante
    - Qué son los query params
-      - Veamos los query params que usa google, buscar por Adalab
+      - Veamos los query params que usa twitter, buscar por oidoenadalab
       - Son los parámetros o datos que van al final de la URL
       - Son los datos que van después de la ?
       - Para poder enviar varios datos los separamos por &
-      - Por cierto El servidor siempre va a recibir estos datos como string
+      - Por cierto os acordáis de esta página, pues vosotras ya habéis utilizado query params antes
+      - Por cierto, el servidor siempre va a recibir estos datos como string
       - Enseñar una búsqueda en google buscando 123
       - Si queremos recoger un número tendríamos que hacer un parseInt o un parseFloat
    - Qué tipo de peticiones podemos hacer
