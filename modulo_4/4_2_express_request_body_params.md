@@ -2,17 +2,6 @@
 
 En esta lección vamos a explicar cómo enviar datos a través de body params. Es exactamente lo mismo que enviar datos con query params, pero por otro sitio.
 
-- Vídeo:
-   - Ya sabemos cómo enviar datos al servidor a través de query params
-   - Los body params son otra forma de enviar datos al servidor
-   - Por qué hay varias formas
-   - Porque ya sabéis que los lenguajes de programación nos dan muchas formas de hacer lo mismo y nosotras debemos saber cuál usar en cada momento
-   - La diferencia principal es que los body params van en el cuerpo de la petición, no en la URL
-   - Por ello las usuarias no pueden ver la información que estamos enviando
-   - Por ejemplo es muy útil cuando hacemos un login y no queremos que en la URL aparezca el email o la contraseña que estamos enviando al servidor.
-   - Se pueden hacer con cualquier verbo o método como por ejemplo POST, pero no se pueden hacer con GET
-   - Por cierto esto solo aplica al API
-
 {% embed url="https://www.youtube.com/watch?v=3qyVgwQ2I58" %}
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-request-body-params)
