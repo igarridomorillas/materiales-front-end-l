@@ -1,36 +1,38 @@
-# Express: query params
+# Express: body params
 
-Ya sabemos que básicamente nuestro trabajo cuando programamos un servidor es enviar datos desde el navegador, recibirlos en el servidor y responder con otros datos.
+En esta lección vamos a explicar cómo enviar datos a través de body params. Es exactamente lo mismo que enviar datos con query params, pero por otro sitio.
 
-En esta mini lección nos vamos a centrar en enviar datos desde el navegador al servidor. Lo que responda el servidor es un problema que abordaremos en otra lección.
-
-Hay 4 formas de enviar datos desde el navegador al servidor:
-
-- Query params
-- Body params
-- URL params
-- Header params
-
-Con este vídeo vamos a aprender cómo se envían datos a través de **query params**.
+- Vídeo:
+   - Ya sabemos cómo enviar datos al servidor a través de query params
+   - Los body params son otra forma de enviar datos al servidor
+   - Por qué hay varias formas
+   - Porque ya sabéis que los lenguajes de programación nos dan muchas formas de hacer lo mismo y nosotras debemos saber cuál usar en cada momento
+   - La diferencia principal es que los body params van en el cuerpo de la petición, no en la URL
+   - Por ello las usuarias no pueden ver la información que estamos enviando
+   - Por ejemplo es muy útil cuando hacemos un login y no queremos que en la URL aparezca el email o la contraseña que estamos enviando al servidor.
+   - Se pueden hacer con cualquier verbo o método como por ejemplo POST, pero no se pueden hacer con GET
+   - Por cierto esto solo aplica al API
 
 {% embed url="https://www.youtube.com/watch?v=D7brnaBc6hM" %}
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-request-query-params)
 
-## Características de los query params
+
+## Características de los body params
 
 - Desde el navegador:
-   - Se añaden al final de la URL.
-   - Empiezan con el símbolo `?`: http://localhost:3000/user?userName=maricarmen
-   - Si queremos enviar varios query params los separamos con `&`: http://localhost:3000/user?userName=maricarmen&userEmail=mari@gmail.com
-   - Se pueden utilizar con cualquier verbo (GET, POST, PUT, PATCH...) ya que todas las peticiones tienen URL.
+   - Se añaden en el cuerpo del fetch.
+   - Se envían en formato JSON pero en string, es decir, con:
+      ```js
+         fetch('http://localhost:3000/user', {
+           method: 'POST',
+           body: JSON.stringify(bodyParams)
+         })
+      ```
+   - Se pueden utilizar con cualquier verbo (POST, PUT, PATCH...) excepto GET.
 - En el servidor:
-   - Recibimos los datos en `req.query`.
-   - Todos los datos enviados por query param se reciben en el servidor como **string**.
-
-## URL compartible
-
-Puesto que las query params van al final de la URL, podemos crear una URL con query params y compartirla con quien queramos. Por ejemplo si envías por Slack o Whatsapp la URL https://twitter.com/search?q=oidoEnAdalab la persona que la reciba puede acceder directamente a Twitter con la búsqueda ya hecha.
+   - Recibimos los datos en `req.body`.
+   - Tenemos que acordarnos de poner `server.use(express.json());`. Si no, el objeto `req.body` estará vacío.
 
 ## Ejercicios
 
