@@ -24,25 +24,9 @@ Para instalar Postman en tu ordenador:
 
 ## ¿Cómo usar Postman?
 
-- Vídeo:
-   - Qué es postman
-   - Cuándo es útil
-   - Arranco mi servidor
-      - Lo hago con npm run dev porque en el package.json tengo este script configurado para arrancarlo con nodemon
-      - Así me acostumbro a usar nodemon
-   - Abro postman y elijo:
-      - Verbo
-      - Url
-      - Llamo a https://google.es
-      - Y datos si es necesario
-   - Para probar mi servidor:
-      - Descargo, instalo y arranco el servidor
-      - Cómo hacer una petición normal /users
-      - Cómo hacer una petición enviando datos /new-user
-        - Petición con datos
-        - Poner JSON
+{% embed url="https://www.youtube.com/watch?v=CWBF6lgZIGk" %}
 
-[Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-basic)
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-postman)
 
 ## Enviar datos a en una petición con Postman
 
@@ -61,7 +45,7 @@ Para instalar Postman en tu ordenador:
 
 ### 1. Usa Postman
 
-1. Descarga, instala y arranca el [ejercicio de Intro a Express JS](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-basic).
+1. Descarga, instala y arranca este [ejercicio](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-postman).
 1. Abre la página http://localhost:3000.
    1. Abre Devtools > Network y mira qué peticiones se hacen cuando pulsamos en los botones de la página.
 1. Realiza las mismas peticiones desde Postman y comprueba que la respuesta que muestra Postman es la misma que muestra la pestaña de Devtools > Network.
