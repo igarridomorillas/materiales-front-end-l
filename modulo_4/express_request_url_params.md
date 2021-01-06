@@ -5,6 +5,7 @@
 - Son los datos que ponemos en la url de la petición, pero no los query
 - Puede ir con todos los verbos
 - Son útiles porque si lo usamos en una petición get, esta la podemos usar desde fetch o desde la url del navegador
+- No confundir con los query params
 
 ## Url params
 

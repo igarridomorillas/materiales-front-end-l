@@ -93,6 +93,7 @@
   - [4.1.2 Introducción a Node JS](modulo_4/4_1_node_intro.md)
   - [4.1.3 Módulos de Node JS](modulo_4/4_1_node_modules.md)
   - [4.2.1 Introducción a Express JS](modulo_4/4_2_express_basic.md)
+  - [4.2.2 Postman](modulo_4/4_2_express_postman.md)
 
 <!-- ## Proyectos
 
