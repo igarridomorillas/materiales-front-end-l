@@ -2,13 +2,13 @@
 
 Es muy frecuente que cuando programamos un servidor no tengamos programada la correspondiente web que va a comunicarse con el servidor.
 
-En ese momento tenemos el problema de programar un servidor y no tener la web para probar que lo que estamos programando funciona bien.
+En ese momento tenemos el problema de programar un servidor y no tener la web para probar que lo que estamos haciendo funciona bien.
 
 Para ello existe una herramienta muy útil que nos permite hacer cualquier petición a un servidor. Es como si fuera una web universal que se puede comunicar con cualquier servidor del mundo.
 
 ![](assets/images/postman.png)
 
-Esa herramienta se llama Postman y es muy muy útil mientras estamos programando.
+Esa herramienta se llama **Postman** y es muy muy útil mientras estamos programando.
 
 ## Instalación de Postman
 
@@ -27,6 +27,9 @@ Para instalar Postman en tu ordenador:
 - Vídeo:
    - Qué es postman
    - Cuándo es útil
+   - Arranco mi servidor
+      - Lo hago con npm run dev porque en el package.json tengo este script configurado para arrancarlo con nodemon
+      - Así me acostumbro a usar nodemon
    - Abro postman y elijo:
       - Verbo
       - Url
@@ -37,6 +40,7 @@ Para instalar Postman en tu ordenador:
       - Cómo hacer una petición normal /users
       - Cómo hacer una petición enviando datos /new-user
         - Petición con datos
+        - Poner JSON
 
 [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-basic)
 
@@ -55,7 +59,7 @@ Para instalar Postman en tu ordenador:
 
 ## Ejercicios
 
-### 1. Usando Postman
+### 1. Usa Postman
 
 1. Descarga, instala y arranca el [ejercicio de Intro a Express JS](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-basic).
 1. Abre la página http://localhost:3000.
