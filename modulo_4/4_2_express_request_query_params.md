@@ -28,6 +28,10 @@ Con este vídeo vamos a aprender cómo se envían datos a través de **query par
    - Recibimos los datos en `req.query`.
    - Todos los datos enviados por query param se reciben en el servidor como **string**.
 
+## URL compartible
+
+Puesto que las query params van al final de la URL, podemos crear una URL con query params y compartirla con quien queramos. Por ejemplo si envías por Slack o Whatsapp la URL https://twitter.com/search?q=oidoEnAdalab la persona que la reciba puede acceder directamente a Twitter con la búsqueda ya hecha.
+
 ## Ejercicios
 
 ### 1. Filtrar usuarias por nombre
