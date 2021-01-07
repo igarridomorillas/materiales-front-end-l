@@ -2,7 +2,9 @@
 
 Hasta ahora hemos visto cómo puede un servidor de Express JS recoger los datos de una petición. **En esta lección vamos a ver cómo puede Express JS responder a una petición.**
 
-En la [documentación de Express JS](https://expressjs.com/en/4x/api.html#res) podemos ver las diferentes formas de responder a una petición. En el siguiente vídeo vamos a ver las formas más importantes y más usadas:
+En la [documentación de Express JS](https://expressjs.com/en/4x/api.html#res) podemos ver las diferentes formas de responder a una petición. En el siguiente vídeo vamos a ver las formas más importantes y más usadas.
+
+> **Nota:** hasta ahora hemos utilizado `const server = express();` para que sepáis que lo que devuelve la función `express();` es un servidor. Pero normalmente todo el mundo llama a esta constante **app**. Para que os acostumbréis a verlo así, a partir de este vídeo vamos a utilizar `const app = express();`, `app.listen(...)`, `app.get()`...
 
 {% embed url="https://www.youtube.com/watch?v=yxZfpmOURtQ" %}
 
