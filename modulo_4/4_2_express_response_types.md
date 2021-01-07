@@ -8,27 +8,19 @@ En la [documentación de Express JS](https://expressjs.com/en/4x/api.html#res) p
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-response-types)
 
-- Vídeo
-   - En este vídeo vamos a ver las diferentes formas con las que un servidor puede responder a una petición
-   - Debemos conocer un poco todas las formas que hay para luego saber cuál elegir en cada momento
-   - En este vídeo tenemos un montón de peticiones GET a varios endpoints
-   - Aquí no nos importa con qué verbo se realiza la petición ni con qué datos
-   - En el ejercicio están los principales tipos
-   - JSON
-      - Está pensado para responder a una llamada a un API desde un fetch
-   - Redirect
-      - A veces nos interesa que cuando una usuaria entra en una página la podamos redireccionar a otra página de nuestro servidor o de otro servidor
-   - sendFile
-      - A veces nos interesa enviar un fichero que no sea un html, que sea por ejemplo un PDF
-   - download
-      - A veces nos interesa en vez de enviar un fichero que este se descargue automáticamente
-      - Tenemos que indicar la ruta del fichero a enviar y el nombre del fichero con el que queremos que se descargue
-   - send
-      - Otras veces nos interesa
-   - status
-      - Todas estas peticiones las está respondiendo con el código de respuesta HTTP 200
-      - Si no sabes lo que son los códigos HTTP de respuesta no te preocupes ya te lo explicaremos
-      - El código 200 es el código de respuesta por defecto
-      - Pero si queremos cambiar el código de respuesta no tenemos más que poner status(404) antes de llamar a json, sendFile, send...
+Te recomiendo leer más información sobre [los códigos HTTP de respuesta](https://developer.mozilla.org/es/docs/Web/HTTP/Status).
 
-https://developer.mozilla.org/es/docs/Web/HTTP/Status
+## Ejercicios
+
+### 1. Responder muchas cosas
+
+Vamos a crear un servidor para diferentes tipos de respuesta:
+
+- Cuando la usuaria haga un GET a `/response-a` debemos responder `{ result: 'ok' }`.
+- Cuando la usuaria haga un GET a `/response-b` debemos responder con una página HTML en la que el `h1` ponga **Esta es una página de prueba**.
+- Cuando la usuaria haga un GET a `/response-c` debemos calcular un número aleatorio entre 0 y 10 y redireccionar a:
+   - Youtube si el número es par.
+   - Instagram si el número es impar.
+- Cuando la usuaria haga un GET a `/response-d`
+   - con un query param `user=1` o `user=2` debe responder con un json con status 200 y respuesta `{ result: 'ok' }`.
+   - si se llama a este endpoint sin query param o con un query param diferente de `user=1` o `user=2` debe responder un json `{ result: 'error: invalid query param' }` con el status **404**.
