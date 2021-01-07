@@ -46,3 +46,12 @@ Vamos a crear un servidor para diferentes tipos de respuesta:
 - Cuando la usuaria haga un GET a `/response-d`
    - con un query param `user=1` o `user=2` debe responder con un json con status 200 y respuesta `{ result: 'ok' }`.
    - si se llama a este endpoint sin query param o con un query param diferente de `user=1` o `user=2` debe responder un json `{ result: 'error: invalid query param' }` con el status **404**.
+
+### 2. Todo el mundo usa códigos HTTP para informar sobre errores
+
+Entra en esta [página que no existe](https://www.google.es/pagina-que-no-existe) y:
+
+- Mira qué información nos muestra la página
+- Abre devtools > network, refresca la página y mira qué código de respuesta está devolviendo el servidor de Google.
+
+Entra en esta [otra página que tampoco existe](https://github.com/otra-pagina-que-no-existe) y repite los pasos anteriores.
