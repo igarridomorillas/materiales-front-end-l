@@ -1,14 +1,36 @@
 # Express: tipos de respuestas
 
-Hasta ahora hemos visto cómo puede un servidor de Express JS recoger los datos de una petición. En **esta lección vamos a ver cómo puede Express JS responder a una petición.**
+Hasta ahora hemos visto cómo puede un servidor de Express JS recoger los datos de una petición. **En esta lección vamos a ver cómo puede Express JS responder a una petición.**
 
 En la [documentación de Express JS](https://expressjs.com/en/4x/api.html#res) podemos ver las diferentes formas de responder a una petición. En el siguiente vídeo vamos a ver las formas más importantes y más usadas:
 
 {% embed url="https://www.youtube.com/watch?v=yxZfpmOURtQ" %}
 
-> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-response-types)
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-response-types/examples)
 
-Te recomiendo leer más información sobre [los códigos HTTP de respuesta](https://developer.mozilla.org/es/docs/Web/HTTP/Status).
+Los tipos de respuestas que hemos visto en este vídeo son:
+
+- [res.json](https://expressjs.com/en/4x/api.html#res.json)
+- [res.redirect](https://expressjs.com/en/4x/api.html#res.redirect)
+- [res.sendFile](https://expressjs.com/en/4x/api.html#res.sendFile)
+- [res.download](https://expressjs.com/en/4x/api.html#res.download)
+- [res.send](https://expressjs.com/en/4x/api.html#res.send)
+
+Y para cambiar el código de estado de la respuesta usamos:
+
+- [res.status](https://expressjs.com/en/4x/api.html#res.status)
+
+También te recomendamos leer más información sobre [los códigos HTTP de respuesta](https://developer.mozilla.org/es/docs/Web/HTTP/Status).
+
+## Errores comunes
+
+Responder dos veces a la misma petición:
+
+{% embed url="https://www.youtube.com/watch?v=Tqtn4B4J1YE" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-response-types/error-headers-sent)
+
+Más información sobre [res.headerSent](https://expressjs.com/en/4x/api.html#res.headersSent).
 
 ## Ejercicios
 
