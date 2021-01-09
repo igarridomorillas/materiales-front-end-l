@@ -96,10 +96,10 @@
   - [4.2.1 Introducción a Express JS](modulo_4/4_2_express_basic.md)
   - [4.2.2 Postman](modulo_4/4_2_express_postman.md)
   - [4.2.3 Peticiones con query params](modulo_4/4_2_express_request_query_params.md)
-  - [4.2.3 Peticiones con body params](modulo_4/4_2_express_request_body_params.md)
-  - [4.2.3 Peticiones con URL params](modulo_4/4_2_express_request_url_params.md)
-  - [4.2.4 Tipos de respuestas](modulo_4/4_2_express_response_types.md)
-  - [4.2.5 Servidor de estáticos](modulo_4/4_2_express_static_server.md)
+  - [4.2.4 Peticiones con body params](modulo_4/4_2_express_request_body_params.md)
+  - [4.2.5 Peticiones con URL params](modulo_4/4_2_express_request_url_params.md)
+  - [4.2.6 Tipos de respuestas](modulo_4/4_2_express_response_types.md)
+  - [4.2.7 Servidor de estáticos](modulo_4/4_2_express_static_server.md)
 
 <!-- ## Proyectos
 

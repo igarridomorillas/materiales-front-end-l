@@ -6,7 +6,7 @@ Depurar es ejecutar paso a paso cada una de las líneas del código de un progra
 
 Cuando programamos una página web con JavaScript le estamos diciendo al navegador lo que queremos que haga, pero ya sabemos que nuestro código nunca funciona bien a la primera. Si utilizamos el depurador, el navegador nos va a decir lo que está entendiendo y por lo tanto podemos saber en qué nos estamos equivocando.
 
-El depurador nos enseña más que cualquier profesor sobre cómo se comporta el lenguaje de programación. Nos explica cómo se funciona el lenguaje. Nos ayuda a escuchar y entender el lenguaje. Nos dice al oído cómo se siente. 
+El depurador nos enseña más que cualquier profesor sobre cómo se comporta el lenguaje de programación. Nos explica cómo funciona el lenguaje. Nos ayuda a escuchar y entender el lenguaje. **Nos dice al oído cómo se siente.**
 
 Además nos ayuda a encontrar errores más rápido y a programar más deprisa. Dicho de otra forma, la programadora que no depura va andando. La programadora que sí depura va en moto.
 
@@ -18,7 +18,7 @@ Además nos ayuda a encontrar errores más rápido y a programar más deprisa. D
 
 En esta lección vamos a aprender a depurar Node JS. Node JS es el mismo lenguaje que JavaScript, por ello lo único que necesitamos para saber cómo depurar es saber cómo arrancar el depurador de Node JS.
 
-Así como el depurador de JavaScript está en las Devtools de Chrome, el depurador de Node JS está integrado en el VS Code.
+Así como el depurador de JavaScript está en las Devtools de Chrome, **el depurador de Node JS está integrado en el VS Code**.
 
 Lo que vamos a ver en el siguiente ejercicio funciona para Mac y para Ubuntu, pero es necesario que lo veas aunque estés trabajando en Windows.
 
