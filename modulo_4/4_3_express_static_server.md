@@ -16,7 +16,7 @@ Vamos a crear un servidor de ficheros estáticos usando [express.static()](http:
 
 {% embed url="https://www.youtube.com/watch?v=uEr3B_F8eaE" %}
 
-> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-static-server)
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-3-express-static-server)
 
 ## Ficheros por defecto: index.html
 
@@ -52,20 +52,20 @@ Si la petición es gestionada por `app.get('*', (req, res) => { ... })` signific
 
 Ahora que ya sabemos montar un servidor de estáticos qué mejor forma de celebrarlo que creando con tus propias páginas:
 
-1. Crea un servidor de estáticos. Si quieres utiliza el [ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-static-server).
+1. Crea un servidor de estáticos. Si quieres utiliza el [ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-3-express-static-server).
 1. Elije una de las páginas que hayas hecho durante el curso:
    - Si elijes una página hecha con el starter kit de Adalab tienes que copiar dentro de `public/` los ficheros generados en la carpeta `docs/` con `npm run docs`.
    - Si elijes una página hecha con React abre el proyecto, ejecuta `npm run build` y copia en `public/` el contenido de la carpeta `build/`.
 
 ### 2. Rutas amigables
 
-Partiendo del [ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-static-server) cambia el código que necesites en `src/index.js` y `public/index.html` para que las usuarias puedan entrar la dirección http://localhost:3000/contact y así hacerles la vida más cómoda.
+Partiendo del [ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-3-express-static-server) cambia el código que necesites en `src/index.js` y `public/index.html` para que las usuarias puedan entrar la dirección http://localhost:3000/contact y así hacerles la vida más cómoda.
 
 ### 3. Dos servidores de estáticos en un solo servidor
 
 Es poco común pero nos puede interesar tener dos servidores de estáticos en el mismo servidor. Por ejemplo uno para servir las páginas públicas y otro para servir las páginas del área de administración.
 
-Partiendo del [ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-static-server):
+Partiendo del [ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-3-express-static-server):
 
 1. Añade una carpeta hermana de `public/` que se llame `admin/`.
 1. Añade dentro de `admin/` dos ficheros, un `index.html` y un `admin.html`.
