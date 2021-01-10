@@ -35,7 +35,9 @@ Express JS divide la funcionalidad de los motores de plantillas en **dos partes*
       - Nosotras debemos elegir uno, instalarlo en nuestro proyecto, configurarlo y usarlo.
       - En este módulo vamos a usar [EJS](https://ejs.co/).
 
-## Motores de plantilla: básico
+## Motores de plantilla
+
+### Ejemplo básico
 
 {% embed url="https://www.youtube.com/watch?v=6Q2PjHavDYA" %}
 
@@ -52,9 +54,9 @@ En el vídeo hemos visto:
 - La sintaxis para añadir un partial es `<%- include('ruta-relativa-del-partial'); %>`. No hace falta poner la extensión `.ejs`.
 - La sintaxis para añadir a la plantilla un dato es `<%= nombreDeMiVariableOPropiedad %>`.
 
-## Motores de plantillas: condicionales
+### Ejemplo con condicionales
 
-{% embed url="https://www.youtube.com/watch?v=uEr3B_F8eaE" %}
+{% embed url="https://www.youtube.com/watch?v=mhu-Wa5oMjY" %}
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-3-express-template-engine/template-if)
 
@@ -69,7 +71,7 @@ En el vídeo hemos visto:
 - Que a EJS no le gustan las comparaciones con `undefined`, por lo que `<% if (country !== undefined) { %>` no le gusta.
 - Que es mejor asegurarnos de que existen todas las variables que va a utilizar EJS antes de llamar al renderizado. Por ello en `src/index.js` nos aseguramos de que la variable existe poniendo `filmData.country = filmData.country || '';`
 
-## Motores de plantillas: bucles
+### Ejemplo con bucles
 
 {% embed url="https://www.youtube.com/watch?v=V5LoZpgi3Yo" %}
 
