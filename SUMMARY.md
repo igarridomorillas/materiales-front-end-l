@@ -100,7 +100,7 @@
   - [4.2.5 Peticiones con URL params](modulo_4/4_2_express_request_url_params.md)
   - [4.2.6 Tipos de respuestas](modulo_4/4_2_express_response_types.md)
   - [4.3.1 Servidor de estáticos](modulo_4/4_3_express_static_server.md)
-  - [4.3.1 Motores de plantillas](modulo_4/4_3_express_template_engine.md)
+  - [4.3.2 Motores de plantillas](modulo_4/4_3_express_template_engine.md)
 
 <!-- ## Proyectos
 
