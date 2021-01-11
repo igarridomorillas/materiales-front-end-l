@@ -102,14 +102,6 @@
   - [4.3.1 Servidor de estáticos](modulo_4/4_3_express_static_server.md)
   - [4.3.2 Motores de plantillas](modulo_4/4_3_express_template_engine.md)
 
-<!-- ## Proyectos
-
-- [Proyecto 1. Web grupal](proyectos/p1_proyecto.md)
-  - [Anexo. Diseña tu web desde cero](proyectos/p1_anexo.md)
-- [Proyecto 2. Awesome profile-cards](proyectos/p2_proyecto.md)
-  - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/p2_anexo.md)
-- [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md) -->
-
 ## Módulo 5: Apoyo a la búsqueda de empleo
 
 - [Apoyo a la búsqueda de empleo](modulo_5/apoyo_a_la_busqueda_de_empleo.md)
@@ -124,6 +116,7 @@
 
 - [Proyecto 1. Web grupal](proyectos/p1_proyecto.md)
   - [Anexo. Diseña tu web desde cero](proyectos/p1_anexo.md)
+- [Proyecto 4.](proyectos/p4_proyecto.md)
 <!-- - [Proyecto 2. Awesome profile-cards](proyectos/p2_proyecto.md)
   - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/p2_anexo.md) -->
 <!-- - [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md) -->
