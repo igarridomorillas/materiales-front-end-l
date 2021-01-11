@@ -84,3 +84,7 @@ Si vemos la [documentación del API de Rick y Morty](https://rickandmortyapi.com
 - [Obtener un personaje](https://rickandmortyapi.com/documentation/#get-a-single-character)
 - [Obtener un episodio](https://rickandmortyapi.com/documentation/#get-a-single-episode)
 - [Obtener una localización](https://rickandmortyapi.com/documentation/#get-a-single-location)
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

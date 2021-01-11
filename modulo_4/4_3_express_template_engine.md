@@ -132,3 +132,7 @@ Partiendo del [ejercicio básico del vídeo](https://github.com/Adalab/ejercicio
 1. Añade este partial a los partials de la cabecera y el footer. Para ello elije bien la ruta relativa.
 
 Si consigues que se vea el formulario en la página el ejercicio estará bien.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

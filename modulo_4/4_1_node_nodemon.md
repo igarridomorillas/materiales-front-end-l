@@ -25,3 +25,7 @@ La diferencia es que a partir de ahora cada vez que modifiquemos el fichero `ind
 ### 1. Prueba Nodemon
 
 Abre un de ejercicio de los vídeos anteriores o uno que hayas creado tú y arráncalo con Nodemon. Haz algún cambio en tus ficheros y verás que al guardarlo, en la terminal se reiniciará tu proyecto.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

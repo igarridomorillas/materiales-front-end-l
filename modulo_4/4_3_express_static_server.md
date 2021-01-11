@@ -77,3 +77,7 @@ Partiendo del [ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los
 1. Arranca el servidor y
    1. Entra en http://localhost:3000. ¿Qué fichero te está devolviendo el servidor, el `public/index.html` o el `admin/index.html`? ¿Por qué?
    1. Entra en http://localhost:3000/admin.html y mira qué fichero está devolviendo.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

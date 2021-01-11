@@ -57,3 +57,7 @@ Entra en esta [página que no existe](https://www.google.es/pagina-que-no-existe
 - Abre devtools > network, refresca la página y mira qué código de respuesta está devolviendo el servidor de Google.
 
 Entra en esta [otra página que tampoco existe](https://github.com/otra-pagina-que-no-existe) y repite los pasos anteriores.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

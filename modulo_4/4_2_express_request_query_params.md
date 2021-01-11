@@ -63,3 +63,7 @@ Partiendo del ejercicio anterior:
 
 1. Añade un segundo campo de texto a la web para filtrar por email y envíalo también por query params al servidor.
 1. Añade un segundo filtro en el servidor en la función `server.get('/users', (req, res) => {...})` para que el servidor solo devuelva aquellas usuarias cuyo nombre contenga el texto del filtro de nombre y cuyo email contenga el texto del filtro de email.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

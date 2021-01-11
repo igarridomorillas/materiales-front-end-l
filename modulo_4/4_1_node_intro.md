@@ -117,3 +117,7 @@ Vamos a ver varios ejemplos de cómo se usa:
    1. Guarda el objeto en modo texto en un fichero de destino llamado `output-file.json`.
 
 **Pista:** la asincronía es importante, debes guardar en el fichero de destino después de leer del fichero de origen.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

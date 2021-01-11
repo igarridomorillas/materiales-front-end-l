@@ -36,3 +36,7 @@ Lo que vamos a ver en el siguiente ejercicio funciona para Mac y para Ubuntu, pe
     - Por cierto te has fijado que cuando estamos depurando la barra inferior del Code está naranja.
     - Cuando estamos depurando también podemos pulsar en la pestaña Run y ver
        - Las variables locales, el call stack
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

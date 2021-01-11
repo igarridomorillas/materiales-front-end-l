@@ -49,3 +49,7 @@ Para instalar Postman en tu ordenador:
 1. Abre la página http://localhost:3000.
    1. Abre Devtools > Network y mira qué peticiones se hacen cuando pulsamos en los botones de la página.
 1. Realiza las mismas peticiones desde Postman y comprueba que la respuesta que muestra Postman es la misma que muestra la pestaña de Devtools > Network.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.
