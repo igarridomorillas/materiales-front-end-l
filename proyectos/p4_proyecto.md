@@ -1,6 +1,6 @@
 # Proyecto 4: Servidor del Awesome profile cards
 
-- [Resumen (TL;DR)](#resumen-tldr)
+- [Resumen (TL;DR)](#resumen-tl-dr)
 - [Objetivos](#objetivos)
 - [Caso de uso](#caso-de-uso)
 - [Especificaciones](#especificaciones)
@@ -11,7 +11,7 @@
 
 En este proyecto vamos a desarrollar nuestro primer servidor web. Durante el módulo 3 hemos desarrollado una web que usaba un servidor creado por las profesoras de Adalab, que para nosotras es una caja negra. **Hasta ahora no sabíamos cómo funcionaba por dentro.**
 
-Ahora tenemos que crear un servidor que tenga la misma funcionalidad que el servidor creado por las profesoras de Adalab. **Al finalizar el desarrollo podremos utilizar la página del módulo 3 con el servidor realizado en este módulo.**
+Ahora queremos que crear un servidor que tenga la misma funcionalidad que el servidor creado por las profesoras de Adalab. **Al finalizar el desarrollo podremos utilizar la página del módulo 3 con el servidor realizado en este módulo.**
 
 Para saber que el nuevo servidor está bien programado, **este debe responder con exactamente los mismos datos y ficheros con los que responde el servidor creado por las profesoras de Adalab**.
 
@@ -21,7 +21,7 @@ Para saber que el nuevo servidor está bien programado, **este debe responder co
 1. Consolidar el aprendizaje de SQL para trabajar con bases de datos y guardar los datos de las usuarias de forma persistente.
 1. Consolidar el aprendizaje de API Rest para saber cómo estructurar y organizar las comunicaciones entre un navegador y un servidor de forma óptima.
 1. Ser capaces de realizar un proyecto web completo, sin necesidad de solicitar ayuda a ningún otro equipo de desarrollo.
-1. Ser capaces de poner en producción un proyecto completo: front end + back en.
+1. Ser capaces de poner en producción un proyecto completo: front end + back end.
 1. Mejorar la comunicación entre los miembros del equipo y con otros equipos de desarrollo.
 
 ## Caso de uso
@@ -30,13 +30,13 @@ Con este servidor podréis demostrar que tenéis un perfil **full stack** (front
 
 ## Especificaciones
 
-En los módulo 3 hemos utilizado un servidor desarrollado por las profesoras de Adalab. Puesto que el objetivo de este proyecto es replicar la funcionlidad de dicho servidor, vamos a utilizarlo de guía para saber qué debemos desarrollar.
+En el módulo 3 hemos utilizado un servidor desarrollado por las profesoras de Adalab. Puesto que el objetivo de este proyecto es replicar la funcionlidad de dicho servidor, vamos a utilizarlo de guía para saber qué debemos desarrollar.
 
 Si analizamos qué comunicaciones se realizan entre la web y el servidor desarrollado por las profesoras de Adalab del proyecto **Awesome profile cards** vemos que:
 
 ### API
 
-La web envía una [petición con datos al servidor para crear una tarjeta](p2_anexo.md). Por cada una de estas peticiones el servidor debe:
+La web envía una [petición con datos al servidor para crear una tarjeta](./p2_anexo.md). Por cada una de estas peticiones el servidor debe:
 
 - Comprobar que los datos recibidos desde el navegador son correctos.
 - En caso de que los datos **no** sean correctos, el servidor debe devolver una respuesta de error.
