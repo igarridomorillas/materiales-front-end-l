@@ -36,7 +36,7 @@ Si analizamos qué comunicaciones se realizan entre la web y el servidor desarro
 
 ### API
 
-La web envía una [petición con datos al servidor para crear una tarjeta](p2_anexo.md). Por cada una de estas peticiones el servidor debe:
+La web envía una petición con datos al servidor para crear una tarjeta. La información de esta petición la podemos ver en el anexo del proyecto del módulo 2. Por cada una de estas peticiones el servidor debe:
 
 - Comprobar que los datos recibidos desde el navegador son correctos.
 - En caso de que los datos **no** sean correctos, el servidor debe devolver una respuesta de error.
