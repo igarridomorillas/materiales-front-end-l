@@ -36,13 +36,13 @@ Si analizamos qué comunicaciones se realizan entre la web y el servidor desarro
 
 ### API
 
-La web envía una [petición con datos al servidor para crear una tarjeta](./p2_anexo.md). Por cada una de estas peticiones el servidor debe:
+La web envía una [petición con datos al servidor para crear una tarjeta](p2_anexo.md). Por cada una de estas peticiones el servidor debe:
 
 - Comprobar que los datos recibidos desde el navegador son correctos.
 - En caso de que los datos **no** sean correctos, el servidor debe devolver una respuesta de error.
 - En caso de que los datos **sí** sean correctos, el servidor debe:
    - Guardar los datos en base de datos.
-   - Generar una URL pública para que cuando se acceda a ella se visualice la tarjeta creada por la usuaria.
+   - Generar una URL para que cuando se acceda a ella se visualice la tarjeta creada por la usuaria.
    - Devolver una respuesta al navegador con esta URL.
 
 ### Motor de plantillas
@@ -62,14 +62,14 @@ Cuando se accede a esta URL el servidor debe mostrar una página con los datos d
 En el módulo 3 estamos utilizando el servidor GitHub Pages para publicar nuestras web. Ahora vamos a crear nuestro propio servidor. No tiene sentido utilizar GitHub Pages para la parte front y otro servidor para la parte de back.
 
 - Una vez acabado nuestro servidor debemos poder meter dentro de nuestro servidor los ficheros de nuestra página hecha en el módulo 3 de React.
-- En la página del módulo 3 solo debemos hacer un cambio en el código.
-   - Este cambio es únicamente cambiar la dirección del `fetch`.
+- En la página del módulo 3 solo debemos hacer un cambio en el código:
+   - Este cambio es únicamente cambiar la URL del `fetch`.
    - En el módulo 3 la web se comunicaba con el servidor programado por las profesoras de Adalab, es decir, con https://us-central1-awesome-cards-cf6f0.cloudfunctions.net.
    - En el módulo 4 la web se debe comunicar con el servidor que vamos a crear, es decir, con https://url-de-nuestro-servidor.
 
 ### Servidor de producción
 
-Una vez finalizado el servidor los publicaremos o lo desplegaremos (que es lo mismo) en un servidor real, para que cualquier usuaria pueda acceder a nuestra página.´
+Una vez finalizado el servidor lo publicaremos o lo desplegaremos (que es lo mismo) en un servidor real, para que cualquier usuaria pueda acceder a nuestra página.´
 
 En módulos anteriores hemos usado GitHub Pages que es un servidor para front. En este módulo desplegaremos nuestro servidor en [Heroku](https://heroku.com), que es un servidor para front + back.
 
@@ -92,7 +92,7 @@ Para la gestión del proyecto, usaremos _historias de usuario_, que es una herra
 #### Primera. API
 
 - Creación de un servidor básico.
-- Creación de un API para poder crear tarjetas, guardándolas en un array del servidor.
+- Creación de un API Rest para poder crear tarjetas, guardándolas en un array del servidor.
 
 #### Segunda. Servidor de estáticos
 
@@ -114,7 +114,7 @@ El formato de entrega de este proyecto será mediante la subida de este a la pla
 
 - La palabra **project**.
 - Letra de la promoción **promo-l**.
-- Número del módulo **module-1**.
+- Número del módulo **module-4**.
 - Número del equipo **team-X**.
 
 Por ejemplo:
