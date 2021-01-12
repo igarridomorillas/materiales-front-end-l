@@ -72,7 +72,7 @@ _Definir mediante tres palabras los atributos que se quieran asociar al producto
 
 En esta sección siempre viene bien hacer una tabla de opuestos para ayudarnos a entender como queremos que sea nuestra marca y solventar bloqueos. A continuación se muestra una imagen de ejemplo:
 
-![Tabla de opuestos](../assets/images/tabla_opuestos_briefing.png)
+![Tabla de opuestos](assets/images/tabla_opuestos_briefing.png)
 
 
 #### Público objetivo o target
@@ -130,12 +130,11 @@ Tras hacer el ejercicio de reflexionar acerca de como queremos organizar el cont
 
 - Sitemap: Un sitemap es la representación visual de la estructura de páginas de nuestra web y cómo están relacionadas. En él definimos páginas y subpáginas y permite ver a simple vista la organización de nuestra web. Hay gente que incluye en el sitemap las secciones de cada página, es decir, si tienes una página inicial con cuatro apartados, esos apartados se mostrarían en el sitemap. Nosotros mostraremos en el sitemap solo las páginas y dejaremos las secciones para la parte de estructura del contenido, así tendremos una vista global de las páginas y su relación sin entrar al detalle de qué es lo que contiene cada una.
 
-![sitemap](../assets/images/mapa_web.jpg)
+![sitemap](assets/images/mapa_web.jpg)
 
 - Estructura del contenido de las webs: En esta parte, reflejaremos cuál va a ser el contenido de cada página a grandes rasgos, es decir, mostraremos que bloques irán en cada página, el orden que tendrán, el tamaño (aproximado siempre ) y la importancia. Esto no será algo definitivo, sino más bien una guía pero nos servirá para facilitarnos la tarea de ver cómo vamos a crear la web. Crearemos la estructura de contenido de cada página para tener claro cómo serán todas ellas. En la imagen se puede ver que se establecen ya los tamaños y las partes más importantes, el color no tiene relación con el que se usará en el diseño final, simplemente sirve para reflejar que esa sección será destacada.
 
-![Estructura de contenido](../assets/images/estructura_de_contenido.png)
-
+![Estructura de contenido](assets/images/estructura_de_contenido.png)
 
 ### 3. Realizar bocetos en papel de la página
 
@@ -147,7 +146,7 @@ Si se decide diseñar la versión para pantallas de ordenador, es importante que
 
 Es importante que en esta pensemos solo en elementos, no en diseño final. Es decir, no hace falta hacer un diseño con acabados muy cuidados porque estos serán solo de referencia para saber qué vamos a poner en cada sitio.
 
-![Bocetos de ejemplo de diseño en papel para pantallas móviles](../assets/images/bocetos_diseno.jpg)
+![Bocetos de ejemplo de diseño en papel para pantallas móviles](assets/images/bocetos_diseno.jpg)
 
 ### 4. Creación de los low-fidelity wireframes
 
@@ -157,7 +156,7 @@ Una vez hechos los bocetos en papel, lo normal es pasar esos bocetos a un diseñ
 
 Este paso es muy parecido al anterior de realizar bocetos, pero en este caso se busca una solución con mayor calidad y un poco más de detalle, que permitirá crear los diseños finales de forma más rápida.
 
-![Low-fidelity wireframes](../assets/images/low_fidelity_wireframes.png)
+![Low-fidelity wireframes](assets/images/low_fidelity_wireframes.png)
 
 
 ### 5. Diseño de la identidad y la linea gráfica de la web
@@ -180,7 +179,7 @@ Tenemos los conceptos y los atributos de la marca y tenemos las referencias, es 
 
 Una vez hemos jugado y probado varias opciones y tenemos ya clara cual queremos, es el momento de realizar una guía de estilos que cuadre con la marca y tenga relación con esta. Además, en esta fase añadiremos color a la marca y elegiremos una tipografía (fuente) que transmita los atributos que hemos escogido. El resultado final será una guia de estilos que servirá como referencia a la hora de diseñar los wireframes (las vistas) finales de la web.
 
-![Guía de estilos de ejemplo](../assets/images/styleguide.png)
+![Guía de estilos de ejemplo](assets/images/styleguide.png)
 
 
 Ahora que tenemos la guía de estilos y la marca, ya tenemos la referencia visual que nos servirá como referencia para aplicar los estilos al resto de la web.

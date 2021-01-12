@@ -7,7 +7,7 @@ Antes de empezar a escribir código os recomendamos que pintéis en una papel un
 
 Os mostramos un ejemplo:
 
-![Wireframe de baja fidelidad](../assets/images/wireframe.jpg)
+![Wireframe de baja fidelidad](../assets/wireframe.jpg)
 
 Una vez que hemos realizado nuestro boceto en papel es hora de empezar a trabajar y escribir el código (HTML y CSS) de la página desde fuera (elementos más grandes) hacia dentro (elementos más pequeños). Debido a la herencia de CSS los estilos que damos a los elementos más grandes influyen en los de dentro.
 
@@ -33,13 +33,13 @@ Basándonos en nuestro wireframe continuamos identificando aquellos elementos de
 
 Tenemos que agrupar dentro de un contenedor (ya sea un `<div/>`, `<section />`, `<article />`... o cualquier otra etiqueta que nos sirva para agrupar) aquellos elementos que hemos identificado como un grupo o unidad.
 
-Y debemos poner clases lo más descriptivas posibles a estos contenedores que hemos creado. 
+Y debemos poner clases lo más descriptivas posibles a estos contenedores que hemos creado.
 
 ### 4. Maquetar el esqueleto
 
-Una vez que hemos creado el esqueleto de la página vamos a empezar a maquetarlo. 
+Una vez que hemos creado el esqueleto de la página vamos a empezar a maquetarlo.
 
-Lo primero de todo antes de empezar a añadir estilos, tenemos que incluir normalize.css para que todos los navegadores interpreten los estilos de la misma manera. 
+Lo primero de todo antes de empezar a añadir estilos, tenemos que incluir normalize.css para que todos los navegadores interpreten los estilos de la misma manera.
 
 Después recuerda que cada etiqueta conlleva una serie de estilos por defecto (margins, paddings...) los cuales debemos resetear para que todo se vea correctamente.
 
