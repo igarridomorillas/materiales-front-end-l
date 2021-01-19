@@ -4,7 +4,7 @@
 
 [Node JS](https://nodejs.org) es un lenguaje programación que nos sirve para **ejecutar JavaScript en la terminal de un ordenador**.
 
-Existen muchísimos lenguajes de programación de back end (como PHP, Java, Python, .NET...). Nosotras vamos a aprender Node JS porque ya sabemos JavaScript y sabemos el 80% de los conocimientos que se necesitan. Cuando en el futuro quieras aprender otro lenguaje de back end te costará mucho menos.
+Existen muchísimos lenguajes de programación de back end (como PHP, Java, Python, .NET...). Nosotras vamos a aprender Node JS porque ya sabemos JavaScript y tenemos el 80% de los conocimientos que se necesitan. Cuando en el futuro quieras aprender otro lenguaje de back end te costará mucho menos.
 
 Hasta ahora estamos acostumbradas a ejecutar nuestro código JavaScript en un navegador como Chrome. Gracias a Node JS podemos ejecutar JavaScript en una terminal y que este haga tareas como leer y escribir en los ficheros del ordenador, o podemos crear una aplicación de servidor.
 
@@ -13,12 +13,12 @@ Hasta ahora estamos acostumbradas a ejecutar nuestro código JavaScript en un na
 Las diferencias entre un código de JavaScript ejecutado en un navegador y en una terminal son las características propias de cada uno de estos dos entornos. Por ejemplo:
 
 - En un navegador las usuarias producen eventos (click, keyUp, scroll...) pero esto no tiene sentido en una terminal. Es decir, **una terminal no tiene una interfaz gráfica que puedan usar las usuarias**.
-- **Una terminal tienen muchos más permisos para acceder a servicios del ordenador**, como acceder a los ficheros del ordenador, abrir puertos de Internet, instalar otros programas... todas estas cosas no se pueden hacer desde un navegador por temas de permisos y seguridad.
+- **Una terminal tiene muchos más permisos para acceder a servicios del ordenador**, como acceder a los ficheros del ordenador, abrir puertos de Internet, instalar otros programas... todas estas cosas no se pueden hacer desde un navegador por temas de permisos y seguridad.
 - Node JS no va a ejecutar o interpretar HTML, CSS, imágenes... Pero sí que los va a gestionar, a crear, a modificar, a servir a aquellas páginas web que los pidan. **En Node JS solo se ejecutan ficheros de JavaScript.**
 
 ## Similitudes entre JavaScript y Node JS
 
-Todo lo demás es común entre JavaScript y Node JS. Es decir, en Node JS también vamos a trabajar con nuestras variables y constantes, nuestros ifs, nuestros **amados** arrays y bucles, vamos a dividir el código en diferentes ficheros que vamos a exportar e importar, vamos a poder **depurar** nuestras aplicaciones... También vamos a trabajar con **asíncronía** que es especialmente útil en un servidor.
+Todo lo demás es común entre JavaScript y Node JS. Es decir, en Node JS también vamos a trabajar con nuestras variables, constantes, ifs, nuestros **amados** arrays y bucles, dividiremos el código en diferentes ficheros para exportar e importar, vamos a poder **depurar** nuestras aplicaciones... También trabajaremos con **asíncronía** que es especialmente útil en un servidor.
 
 En resumen, nos interesa aprender de Node JS aquellos conocimientos que son únicos de Node JS. También nos interesa aprender a pensar en cómo funciona un servidor.
 
