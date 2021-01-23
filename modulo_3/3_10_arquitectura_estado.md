@@ -146,8 +146,18 @@ class MurrayList extends React.Component {
     this.state = {
       loading: true
     };
-    //Simulamos que los datos se han cargado tras 2 segundos
+    
+    // Nos aseguramos de que este callback se ejecute siempre sobre el componente enlazándolo a la instancia con "bind"
+    this.handleClick = this.handleClick.bind(this);
+    
+    // Simulamos que los datos se han cargado tras 2 segundos
     setTimeout(() => this.setState({ loading: false }), 2000);
+  }
+
+  handleClick() {
+    this.setState({loading: true})
+    setTimeout(() => this.setState({loading: false}), 2000);
+    // Se ejecutará el método `render()` de MurrayList, que hará a su vez que se ejecute de nuevo el método `render()` de los hijos
   }
 
   render() {
