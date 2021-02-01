@@ -60,6 +60,7 @@
    1. Ya tengo los datos y hago con ellos lo que quiero
    1. Cambiar orden de los productos
 
+
 # SQL 2
 
 Repetir el tema de: primary key, autoincrement, unique
