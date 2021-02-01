@@ -14,7 +14,7 @@ Además en [este repositorio](https://github.com/Adalab/recursos-de-las-alumnas)
 
 ### CSS: calc()
 
-La [función calc() de CSS](https://developer.mozilla.org/es/docs/Web/CSS/calc() ) nos permite calcular dinámicamente cuánto debe medir una etiqueta de HTML. Es otra forma muy útil para adaptar los diseños de nuestras webs.
+La función calc https://developer.mozilla.org/es/docs/Web/CSS/calc() nos permite calcular dinámicamente cuánto debe medir una etiqueta de HTML. Es otra forma muy útil para adaptar los diseños de nuestras webs.
 
 ### CSS: más pseudo clases
 
