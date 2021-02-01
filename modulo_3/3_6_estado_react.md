@@ -166,9 +166,9 @@ Vamos a partir de una web sencilla con un input de tipo texto y un párrafo vac�
 
 **El cuadrado parpadeante**
 
-Vamos a crear una página con una cuadrado de tamaño fijo (por ejemplo un `div`) con un color de fondo azul. Vamos a hacer que al hacer clic sobre el cuadrado, su color de fondo cambie a rojo. Si volvemos a hacer clic, pasa de nuevo a azul, y así sucesivamente. Vamos a implementar este cuadrado parpadeante usando el estado del componente (podemos almacenar el color o un booleano).
+Vamos a crear una página con un cuadrado de tamaño fijo (por ejemplo un `div`) con un color de fondo azul. Vamos a hacer que al hacer clic sobre el cuadrado, su color de fondo cambie a rojo. Si volvemos a hacer clic, pasa de nuevo a azul, y así sucesivamente. Implementaremos este cuadrado parpadeante usando el estado del componente (podemos almacenar el color como un string o un booleano).
 
-> PISTA: Al escuchar el evento de clic para comprobar de qué color estaba anteriormente el cuadrado, usaremos la versión de `setState` que toma como parámetro el `prevState`
+> PISTA: Al escuchar el evento de clic para comprobar de qué color estaba anteriormente el cuadrado, usaremos la versión anterior del estado que toma el  parámetro el `prevState` de la función callback que le pasamos a `setState` 
 
 \_\_\_\_\_\_\_\_\_\_
 
@@ -181,6 +181,8 @@ Hace unas semanas, la empresa Time2Sleep nos encargó una página que mostrase s
 Vamos a crear un componente reloj (`Clock`) que nos muestre la hora en cada momento. Tendrá un método `updateClock()` en el componente para actualizar el estado con `setState(/* objeto */)`, que actualizará la hora con `new Date()`. En el constructor del componente declararemos un `setInterval()` que ejecute `updateClock` cada segundo.
 
 > PISTA: para obtener la información de la hora con un objeto de tipo fecha, podemos usar los métodos `getHours`, `getMinutes` y `getSeconds` como se explica en [la página de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+> NOTA: al hacer cambios en el componente una vez que hayas puesto el setInterval, recarga la página completamente de forma manual. De otro modo, seguirán ejecutándose todos los `setInterval` que hemos ido definiendo y puede sobrecargarse la página. Este problema podremos controlarlo a través del código cuando veamos el ciclo de vida de los componentes React.
 
 \_\_\_\_\_\_\_\_\_\_
 
