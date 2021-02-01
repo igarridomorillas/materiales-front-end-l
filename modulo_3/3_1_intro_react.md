@@ -12,9 +12,268 @@
 
 ## Introducción
 
+[wp-poo]: https://es.wikipedia.org/wiki/Programaci%C3%B3n_orientada_a_objetos
+[wp-paradigma]: https://es.wikipedia.org/wiki/Paradigma_de_programaci%C3%B3n
+
+En esta sesión veremos el concepto de clases, que está muy relacionado con la [programación orientada a objetos][wp-poo] (OOP, según sus siglas en inglés). La POO es una manera consensuada de pensar la programación (un [paradigma][wp-paradigma]) que se usa en una gran variedad de lenguajes de programación.
+
+En la última sección, veremos cómo reutilizar nuestro código entre distintos proyectos, o importar código ajeno.
+
+## Clases y objetos
+
+Ya sabemos lo que es un objeto en programación: es una entidad que contiene unas propiedades dadas, que pueden ser valores o funciones. Cuando tenemos un puñado de objetos parecidos porque tienen las mismas propiedades, podemos decir que esos objetos son del mismo tipo. Es decir, son de la misma "clase". Una clase es justo eso, una abstracción de los objetos que nos indica qué tienen en común.
+
+```js
+class Dog {
+  // class body
+}
+
+const laika = new Dog();
+const hachiko = new Dog();
+```
+
+Una instancia es un objeto de una clase que hayamos especificado. En el ejemplo anterior, `hachiko` y `laika` son instancias de la clase `Dog`. Dándole la vuelta, cuando creamos un objeto de una clase con el operador `new`, entonces estamos **instanciando** una clase. Las instancias comparten los métodos y atributos de la clase.
+
+## Métodos y atributos
+
+Los objetos se caracterizan por sus propiedades, que pueden ser funciones o valores. En las clases, llamaremos _métodos_ a las funciones de una clase, y _atributos_ a los valores. Veremos cómo declarar atributos en la sección sobre el constructor. De momento, vamos a declarar un método para la clase `Dog`:
+
+```js
+class Dog {
+  bark() {
+    console.log("Woof, woof!");
+  }
+}
+
+const laika = new Dog();
+const hachiko = new Dog();
+
+laika.bark(); // Woof, woof!
+hachiko.bark(); // Woof, woof!
+```
+
+> **Nota**: Debes notar que para declarar un método en una clase, no usamos la palabra `function` sino directamente el nombre del método
+
+## El constructor y `this`
+
+El `constructor()` es un método especial de las clases. El constructor es el método encargado de inicializar la instancia, es decir, de preparar todo lo necesario para su creación. El constructor recibe los parámetros que se pasan al instanciar la clase con `new`:
+
+```js
+class Dog {
+  constructor(name) {
+    console.log(`(I have a conscience now. My name is ${name})`);
+  }
+}
+
+const laika = new Dog("Laika"); // (I have a conscience now. My name is Laika)
+```
+
+En el constructor, además, es donde se declaran los atributos de la clase. Vamos a declarar el parámetro `name` como un atributo:
+
+```js
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+}
+
+const laika = new Dog("Laika");
+const hachiko = new Dog("Hachiko");
+
+console.log(laika.name); // 'Laika'
+console.log(hachiko.name); // 'Hachiko'
+```
+
+La palabra clave `this` dentro de la declaración de una clase hace referencia a la instancia de la clase que crearemos. Cuando declaramos atributos en el constructor con `this.miAtributo` como en el ejemplo anterior, estamos efectivamente declarando que "la instancia resultante (`this`) tendrá la propiedad `miAtributo`". Una vez creada la instancia, para acceder a los atributos lo hacemos directamente como en el ejemplo, `laika.name`.
+
+De igual manera que los declaramos, con `this` podemos acceder a esos atributos desde los métodos:
+
+```js
+class Dog {
+  constructor(name) {
+    this.name = name;
+  }
+
+  bark() {
+    console.log("Woof, woof!");
+  }
+
+  reactToCall(shout) {
+    if (shout.includes(this.name)) {
+      console.log(`${this.name} wags its tail, happily.`);
+    } else {
+      this.bark();
+    }
+  }
+}
+
+const laika = new Dog("Laika");
+
+laika.reactToCall("Hey, Laika!"); // 'Laika wags its tail, happily.'
+laika.reactToCall("Hey, Hachiko!"); // 'Woof, woof!'
+```
+
+## Módulos de JS
+
+Los módulos nos facilitan dividir nuestro código en pequeñas partes reutilizables. Podemos dividir nuestro código en partes tanto para **organizar** un proyecto, **compartir** código entre distintos proyectos nuestros o para **usar librerías** de terceros.
+
+**dog.js**:
+
+```js
+class Dog {
+  bark() {
+    console.log("Wan, wan!");
+  }
+}
+
+const FAMOUS_DOGS = ["Hachiko", "Laika", "101 Dalmatians"];
+
+export { Dog, FAMOUS_DOGS };
+```
+
+**main.js**:
+
+```js
+import { Dog, FAMOUS_DOGS } from "./dog.js";
+
+const hachiko = new Dog();
+
+console.log(`Some famous dogs in history: ${FAMOUS_DOGS.join(", ")}...`); // 'Some famous dogs in history: Hachiko, Laika, 101 Dalmatians...'
+hachiko.bark(); // 'Wan, wan!'
+```
+
+### `export`
+
+Todo lo que hay dentro de un módulo de JavaScript pertenece exclusivamente al módulo por defecto. Nada se puede acceder desde fuera excepto si se **exporta**. La palabra clave `export` nos permite exportar una variable (`var`, `let` o `const`), función o clase que podrá ser **importada** por otro código más tarde.
+
+Podemos exportar de varias maneras. Podemos exportar individualmente valores que ya hayamos declarado:
+
+**module.js**:
+
+```js
+export const aConstant = "constant";
+
+export function aFunction() {
+  /* function body */
+}
+```
+
+También podemos exportar todo de una sola vez (como un objeto envoltorio), que mejora la legibilidad del código cuando es extenso:
+
+**module.js**:
+
+```js
+const aConstant = "constant";
+
+function aFunction() {
+  /* function body */
+}
+
+export { aConstant, aFunction };
+```
+
+Por último, podemos declarar un valor exportado por defecto, si queremos. Solo puede haber un valor exportado por defecto en cada módulo, y puede o no tener nombre:
+
+**module_default-unnamed.js**:
+
+```js
+export default function () {
+  /* function body */
+}
+```
+
+**module_default-named.js**:
+
+```js
+export default aFunction;
+```
+
+> **Nota:** Siempre hay que escribir `export` después de la variable, constante, función... que estamos exportando. Por ello es una buena practica escribir los `export` al final de nuestro fichero.
+
+### `import`
+
+Para usar código de un módulo, primero tendremos que importarlo en nuestro código. Como es normal en JavaScript, tenemos varias maneras distintas de importar módulos.
+
+Podemos seleccionar, por su nombre, qué valores exportados importar. Importaremos solo uno de la siguiente manera:
+
+**main.js**:
+
+```js
+import { aConstant } from "./module.js";
+
+console.log(aConstant); // 'constant'
+```
+
+E importaremos varios valores así:
+
+**main.js**:
+
+```js
+import { aConstant, aFunction } from "./module.js";
+
+aFunction(); // do things as declared in module.js
+console.log(aConstant); // 'constant'
+```
+
+Si queremos cambiarle el nombre a algún valor, lo podemos hacer con `as`:
+
+**main.js**:
+
+```js
+import { aFunction as functionFromModule } from "./module.js";
+
+functionFromModule(); // do things as declared in module.js
+```
+
+```js
+import { aConstant, aFunction as functionFromModule } from "./module.js";
+
+functionFromModule(); // do things as declared in module.js
+console.log(aConstant); // 'constant'
+```
+
+```js
+import {
+  aConstant as constantFromModule,
+  aFunction as functionFromModule,
+} from "./module.js";
+
+functionFromModule(); // do things as declared in module.js
+console.log(constantFromModule); // 'constant'
+```
+
+También podemos importar todo el contenido de un módulo con `*`. Esto nos importa todos los valores dentro de un objeto envoltorio al que debemos darle nombre con `as`:
+
+**main.js**:
+
+```js
+import * as module from "./module.js";
+
+module.aFunction(); // do things as declared in module.js
+console.log(module.aConstant); // 'constant'
+```
+
+> **Nota:** Siempre hay que escribir `import` antes de usar la variable, constante, función... que estamos importando. Por ello es una buena practica escribir los `import` al principio de nuestro fichero.
+
+### Declarar módulos
+
+Podemos declarar archivos de JavaScript como módulos en el HTML de la siguiente manera:
+
+**index.html**:
+
+```html
+<script type="module" src="route/to/module.js"></script>
+```
+
+En el ejemplo, declararíamos **main.js** de esta manera.
+
+Sin embargo, esta forma de trabajo [no está completamente soportada aún](https://caniuse.com/#feat=es6-module) por los navegadores: un 90% de las últimas versiones de los navegadores lo soporta (en marzo de 2020). Sin embargo, no tendremos ningún problema cuando usemos _module bundlers_ o [Babel](http://babeljs.io/) para compilar nuestro código, y en estos casos no será necesario declarar los módulos en el HTML.
+
+## React
+
 [react]: https://reactjs.org/
 
-En esta sesión nos iniciaremos en la librería [React.js][react]. React es una librería para crear interfaces de usuario que se creó en 2013 en el seno de Facebook y goza de buena salud en el ecosistema de JavaScript.
+En este módulo trabajaremos en la librería [React.js][react]. React es una librería para crear interfaces de usuario que se creó en 2013 en el seno de Facebook y goza de buena salud en el ecosistema de JavaScript.
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
@@ -61,20 +320,33 @@ React es una librería que nos permite hacer componentes gráficos con los que e
 
 Es intuitivo hacer webs con React porque todo son componentes que llaman a otros componentes. El flujo es unidireccional (de arriba abajo), así que es fácil entender y solucionar los errores que pueda haber: si el error no está en mi componente, está en quien ha llamado a mi componente y cómo.
 
-## Estructura de un proyecto en React
+## "Hola, mundo" con `create-react-app`
 
-Un proyecto en React, en principio, tendrá un solo archivo HTML, y al menos un archivo JavaScript desde el que importaremos la librería de React. Así que un proyecto mínimo tendrá la siguiente estructura:
+Vamos a crear nuestro primer "¡Hola, mundo!" con React. Usaremos `create-react-app`, una herramienta generador que nos automatiza instalar React y Babel, que transformará código ES6 en ES5, y nos preconfigura un proyecto. ¡Manos a la obra!
 
-```
-my-react-project
-├── index.html
-├── index.js
-└── <dependencies>/
-    ├── react.js
-    └── react-dom.js
+Necesitaremos Node.js instalado, pero esto ya lo tenemos. Primero instalamos de forma global la utilidad de `create-react-app`, y luego creamos nuestro proyecto de React 'my-react-project' ejecutando esto en un terminal:
+
+```sh
+npm install -g create-react-app
+create-react-app my-react-project
 ```
 
-Sin embargo, trabajaremos con una estructura bien organizada para crear proyectos de mediano tamaño con `node` y `npm` más parecida a esta:
+> **NOTA:** Recuerda que si al instalar algo en la consola nos da un error **EACCES** es porque necesitamos hacerlo con permisos de super administrador y para ello usamos `sudo`.
+
+Esto nos creará una carpeta `my-react-project` y dentro tendremos todo listo. Para verlo, entramos dentro de la carpeta y ejecutaremos el proyecto con `npm`:
+
+```sh
+cd my-react-project
+npm start
+```
+
+`create-react-app` nos ha instalado un _live-server_, así que sin cerrar el navegador ni el terminal, vamos a abrir el archivo `my-react-project/src/App.js` y probar a cambiar la frase **Edit src/App.js and save to reload** por **¡Hola, mundo!**. Guardamos y cambiamos al navegador.
+
+!["Hola, mundo" en React](assets/images/3_4_react-hello-world.png)
+
+## Estructura de un proyecto React creado con `create-react-app`
+
+Un proyecto en React, en principio, tendrá un solo archivo HTML, y al menos un archivo JavaScript desde el que importaremos la librería de React.Sin embargo, trabajaremos con una estructura bien organizada para crear proyectos de mediano tamaño con `node` y `npm` más parecida a esta:
 
 ```
 my-react-project
@@ -102,32 +374,6 @@ Nuestro código se agrupará dentro de la carpeta `src`, excepto el único archi
 Nuestros componentes de React irán en la carpeta `src/components`, cada uno en su fichero.
 
 Basta de cháchara: ¡empecemos!
-
-## "Hola, mundo" con `create-react-app`
-
-Vamos a crear nuestro primer "¡Hola, mundo!" con React. Usaremos `create-react-app`, una herramienta generador que nos automatiza instalar React y Babel, que transformará código ES6 en ES5, y nos preconfigura un proyecto. ¡Manos a la obra!
-
-Necesitaremos Node.js instalado, pero esto ya lo tenemos. Primero instalamos de forma global la utilidad de `create-react-app`, y luego creamos nuestro proyecto de React 'my-react-project' ejecutando esto en un terminal:
-
-```sh
-npm install -g create-react-app
-create-react-app my-react-project
-```
-
-> **NOTA:** Recuerda que si al instalar algo en la consola nos da un error **EACCES** es porque necesitamos hacerlo con permisos de super administrador y para ello usamos `sudo`.
-
-Esto nos creará una carpeta `my-react-project` y dentro tendremos todo listo. Para verlo, entramos dentro de la carpeta y ejecutaremos el proyecto con `npm`:
-
-```sh
-cd my-react-project
-npm start
-```
-
-`create-react-app` nos ha instalado un _live-server_, así que sin cerrar el navegador ni el terminal, vamos a abrir el archivo `my-react-project/src/App.js` y probar a cambiar la frase **Edit src/App.js and save to reload** por **¡Hola, mundo!**. Guardamos y cambiamos al navegador.
-
-!["Hola, mundo" en React](assets/images/3_4_react-hello-world.png)
-
-## Estructura de un proyecto React creado con `create-react-app`
 
 Cuando creamos un proyecto nuevo de React se nos crea una estructura la estructura de ficheros y carpetas que hemos visto antes. Vamos a ver cuáles son los ficheros principales que necesitamos conocer.
 
@@ -262,7 +508,87 @@ render() {
 
 \_\_\_\_\_\_\_\_\_\_
 
-## Interfaz declarativa VS imperativa
+## Usando Sass en nuestro proyecto de React
+
+Durante el curso hemos usado `gulp` para compilar Sass en nuestro proyectos. En el caso de los proyectos de React, que creamos con `create-react-app`, ya tienen su propio sistema de automatización de tareas que convierte los ficheros en ES6 a ES5 con Babel, y lanza un servidor local. Es mejor que, por tanto, en vez de incluir más herramientas como `gulp` usemos el sistema de automatización que ya tenemos (basado en [webpack](https://webpack.js.org/), por cierto) para observar los ficheros SCSS y compilarlos a CSS.
+
+Para utilizar SASS en nuestro proyecto REACT simplemente podemos enlazar ficheros `.scss` desde nuestros componentes y webpack se encargará de hacer la conversión a CSS. El único paso adicional es instalar `node-sass`, cuando lo hagamos nos aparecerá este warning al intentar usar Sass por primera vez.
+
+```
+To import Sass files, you first need to install node-sass.
+Run `npm install node-sass@4.14.1` or `yarn add node-sass` inside your workspace.
+```
+
+Así que si ejecutamos `npm install node-sass` en nuestra terminal la primera vez, tendremos listo nuestro proyecto para utilizar SASS.
+
+### ¿Y cómo quedará esto en nuestros proyectos?
+
+Vamos a partir del proyecto base que nos crea `create-react-app` y vamos a cambiar nuestro `App.css` a `App.scss`, ahora enlazamos directamente nuestro scss:
+
+**App.js**
+
+```js
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.scss';
+
+class App extends Component {
+  ···
+}
+
+export default App;
+```
+
+Vale, ¿y si quiero tener archivos importados para usar variables y parciales?
+
+Pues igual que siempre, en el mismo ejemplo: Desde `App.scss` vamos a importar un archivo de variables `_vars.scss`, y a usarlo!
+
+**\_vars.scss**
+
+```scss
+$bg: #282c34;
+```
+
+**App.scss**
+
+```scss
+@import 'vars';
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: $bg;
+  ···
+}
+```
+
+y `App.js` se mantiene igual que antes:
+
+```js
+import React, { Component } from 'react';
+import logo from './logo.svg';
+import './App.scss';
+
+class App extends Component {
+  ···
+}
+
+export default App;
+```
+
+#### EJERCICIO 3
+
+Vamos a modificar el ejercicio anterior de la tarjeta para hacerlo con Sass dentro de nuestro proyecto de React.
+
+\_\_\_\_\_\_\_\_\_\_
+
+## BONUS: Interfaz declarativa VS imperativa
 
 Con React haremos interfaces declarativas, en vez de imperativas. La programación declarativa nos permite focalizarnos en **el resultado final** de lo que programamos, en vez de en los detalles específicos de cómo se lleva a cabo el resultado.
 
@@ -272,10 +598,10 @@ No tendremos que seleccionar qué elemento del DOM tiene que cambiar cuando se c
 const person = {
   fullName: {
     name: "Ada",
-    lastName: "Lovelace"
+    lastName: "Lovelace",
   },
   title: "Countess of Lovelace",
-  areas: ["Mathematics", "Computing"]
+  areas: ["Mathematics", "Computing"],
 };
 const personCardElement = document.getElementById("person-card");
 
@@ -302,7 +628,7 @@ const personCardComponent = (
       {person.fullName.name}, {person.title}
     </h2>
     <ul className="card-area-list">
-      {person.areas.map(area => (
+      {person.areas.map((area) => (
         <li className="card-area">{area}</li>
       ))}
     </ul>
@@ -313,80 +639,6 @@ ReactDOM.render(personCardComponent, personCardElement);
 ```
 
 Este flujo es más útil cuando creamos una aplicación web compleja que cambie mucho con la interacción del usuario o si recibimos **datos dinámicos** de un servidor. No importa lo que recibamos, una vez hayamos declarado lo que pintar en función a un formato dado, se pintará _solo_.
-
-## Usando Sass en nuestro proyecto de React
-
-Durante el curso hemos usado `gulp` para compilar Sass en nuestro proyectos. En el caso de los proyectos de React, que creamos con `create-react-app`, ya tienen su propio sistema de automatización de tareas que convierte los ficheros en ES6 a ES5 con Babel, y lanza un servidor local. Es mejor que, por tanto, en vez de incluir más herramientas como `gulp` usemos el sistema de automatización que ya tenemos (basado en [webpack](https://webpack.js.org/), por cierto) para observar los ficheros SCSS y compilarlos a CSS.
-
-Para utilizar SASS en nuestro proyecto REACT simplemente podemos enlazar ficheros `.scss` desde nuestros componentes y webpack se encargará de hacer la conversión a CSS. El único paso adicional es instalar `node-sass`, cuando lo hagamos nos aparecerá este warning al intentar usar Sass por primera vez.
-
-```
-To import Sass files, you first need to install node-sass.
-Run `npm install node-sass@4.14.1` or `yarn add node-sass` inside your workspace.
-```
-
-Así que si ejecutamos `npm install node-sass` en nuestra terminal la primera vez, tendremos listo nuestro proyecto para utilizar SASS.
-
-### ¿Y cómo quedará esto en nuestros proyectos?
-
-Vamos a partir del proyecto base que nos crea `create-react-app` y vamos a cambiar nuestro `App.css` a `App.scss`, ahora enlazamos directamente nuestro scss:
-
-**App.js**
-```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.scss';
-
-class App extends Component {
-  ···
-}
-
-export default App;
-```
-
-Vale, ¿y si quiero tener archivos importados para usar variables y parciales?
-
-Pues igual que siempre, en el mismo ejemplo: Desde `App.scss` vamos a importar un archivo de variables `_vars.scss`, y a usarlo!
-
-**_vars.scss**
-```scss
-$bg: #282c34;
-```
-
-**App.scss**
-```scss
-@import 'vars';
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: $bg;
-  ···
-}
-```
-
-y `App.js` se mantiene igual que antes:
-```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.scss';
-
-class App extends Component {
-  ···
-}
-
-export default App;
-```
-
-#### EJERCICIO 3
-
-Vamos a modificar el ejercicio anterior de la tarjeta para hacerlo con Sass dentro de nuestro proyecto de React.
 
 \_\_\_\_\_\_\_\_\_\_
 
