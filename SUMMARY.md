@@ -98,9 +98,10 @@
   - [4.2.3 Peticiones con query params](modulo_4/4_2_3_express_request_query_params.md)
   - [4.2.4 Peticiones con body params](modulo_4/4_2_4_express_request_body_params.md)
   - [4.2.5 Peticiones con URL params](modulo_4/4_2_5_express_request_url_params.md)
-  - [4.2.6 Tipos de respuestas](modulo_4/4_2_6_express_response_types.md)
-  - [4.3.1 Servidor de estáticos](modulo_4/4_3_1_express_static_server.md)
-  - [4.3.2 Motores de plantillas](modulo_4/4_3_2_express_template_engine.md)
+  - [4.2.6 Peticiones con header params](modulo_4/4_2_6_express_request_header_params.md)
+  - [4.3.1 Tipos de respuestas](modulo_4/4_3_1_express_response_types.md)
+  - [4.3.2 Servidor de estáticos](modulo_4/4_3_2_express_static_server.md)
+  - [4.3.3 Motores de plantillas](modulo_4/4_3_3_express_template_engine.md)
 
 ## Módulo 5: Apoyo a la búsqueda de empleo
 

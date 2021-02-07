@@ -4,6 +4,15 @@ Ya sabemos que básicamente nuestro trabajo cuando programamos un servidor es en
 
 En esta mini lección nos vamos a centrar en enviar datos desde el navegador al servidor. Lo que responda el servidor es un problema que abordaremos en otra lección.
 
+## Partes de una petición
+
+Toda petición a un servidor (y toda respuesta de este al navegador) está compuesta de dos partes:
+
+- Cabecera o header, que contiene información relativa a la petición en sí misma como la URL, información sobre el navegador y usuario que hace la petición, tipo de petición (GET, POST...), tipos de datos que se puenden enviar y recibir (texto, HTML, JSON...).
+- Cuerpo o body, que contiene información relativa al contenido o datos que se quiere enviar y recibir. Suelen ser los datos que enviamos al servidor y los datos y ficheros que recibe el navegador.
+
+## Formas de enviar datos al servidor
+
 Hay 4 formas de enviar datos desde el navegador al servidor:
 
 - Query params
@@ -11,7 +20,7 @@ Hay 4 formas de enviar datos desde el navegador al servidor:
 - URL params
 - Header params
 
-Con este vídeo vamos a aprender cómo se envían datos a través de **query params**.
+Con este vídeo vamos a aprender cómo se envían datos a través de **query params**. En las próximas lecciones veremos cómo se envían el resto de tipos.
 
 {% embed url="https://www.youtube.com/watch?v=D7brnaBc6hM" %}
 
