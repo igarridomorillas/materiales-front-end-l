@@ -1,0 +1,35 @@
+[
+  {
+    "user": {
+      "id": 1,
+      "email": "admin@adalab.es",
+      "password": "12345678",
+      "name": "Administrador de Adalab",
+      "isAdmin": true
+    }
+  },
+  {
+    "user": {
+      "id": 2,
+      "email": "miguel@adalab.es",
+      "password": "qwertyui",
+      "name": "Miguel"
+    }
+  },
+  {
+    "user": {
+      "id": 3,
+      "email": "dayana@adalab.es",
+      "password": "mnbvcdfgu",
+      "name": "Dayana"
+    }
+  },
+  {
+    "user": {
+      "id": 4,
+      "email": "ivan@adalab.es",
+      "password": "poiuytre",
+      "name": "Iván"
+    }
+  }
+]
