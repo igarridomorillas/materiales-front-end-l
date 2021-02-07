@@ -198,6 +198,24 @@ Desarrolla un componente `HalfPage` que todo su contenido lo ponga en la mitad i
 
 \_\_\_\_\_\_\_\_\_\_
 
+## Fragments
+
+Los fragments son un **patrón de diseño** (una forma de programar común y ampliamente usada) propio de React muy útil. Como habéis visto, tenemos la limitación de que cada componente tiene que devolver en su método `render()` un único elemento que contiene al resto. Pero esto muchas veces nos obliga a tener que meter contenedores (`<div>`) que muchas veces no queremos. Para solucionar este problema tenemos los Fragments, que nos permiten agrupar elementos sin tener que introducir ningún contenedor en el HTML.
+
+En este ejemplo, nuestro render puede devolver 3 componentes agrupados en un Fragment que no introduce ningún contenedor adicional en HTML.
+
+```js
+render() {
+  return (
+    <React.Fragment>
+      <ChildA />
+      <ChildB />
+      <ChildC />
+    </React.Fragment>
+  );
+}
+```
+
 ## Valores por defecto de las `props`
 
 En ocasiones querremos definir que algunas `props` no sean obligatorias, y cuando no se pasen querremos usar un valor por defecto. Esto se puede conseguir en React con `defaultProps`. Será un objeto con el nombre de las `props` que queremos que tengan valor por defecto y su correspondiente valor, y cuando se instancie el componente, se cogerán las `props` que falten de ese objeto. Lo definimos como una propiedad del componente, `NombreDelComponente.defaultProps = {}`, después de declarar la clase:
