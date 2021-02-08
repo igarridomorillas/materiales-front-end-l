@@ -42,7 +42,7 @@ Crearemos un archivo dentro de esta carpeta llamado `RandomCat.js`. Tendremos qu
 **RandomCat.js**:
 
 ```js
-import React from 'react';
+import React from "react";
 // ...
 // ...AQUÍ ESCRIBIREMOS NUESTRO COMPONENTE
 // ...
@@ -80,8 +80,8 @@ _¡Ya está!_ Ahora para ver el resultado tendremos que decirle a React que lo p
 **App.js**:
 
 ```js
-import React from 'react';
-import RandomCat from './RandomCat';
+import React from "react";
+import RandomCat from "./RandomCat";
 ```
 
 > Para importar de un archivo local, utilizaremos el prefijo `./` antes de la ruta. Sin embargo, no pondremos el prefijo cuando sea una dependencia en `npm`, como nos preconfigura `create-react-app` para `react` y `react-dom`.
@@ -93,7 +93,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <RandomCat/>
+        <RandomCat />
       </div>
     );
   }
@@ -105,7 +105,7 @@ class App extends React.Component {
 **RandomCat.js**:
 
 ```js
-import React from 'react';
+import React from "react";
 
 class RandomCat extends React.Component {
   render() {
@@ -123,14 +123,14 @@ export default RandomCat;
 **App.js**:
 
 ```js
-import React from 'react';
-import RandomCat from './RandomCat';
+import React from "react";
+import RandomCat from "./RandomCat";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <RandomCat/>
+        <RandomCat />
       </div>
     );
   }
@@ -156,7 +156,7 @@ Actualmente, y dado que React es una tecnología muy nueva que aún está evoluc
 Vamos a ver cómo sería nuestro componente Greeting escrito como clase:
 
 ```js
-import React from 'react';
+import React from "react";
 
 class Greetings extends React.Component {
   render() {
@@ -170,9 +170,9 @@ export default Greetings;
 Ahora echa un vistazo a cómo sería Greeting escrito como componente funcional:
 
 ```js
-import React from 'react';
+import React from "react";
 
-const Greetings = props => {
+const Greetings = (props) => {
   return <h1>Hello, {props.name}!</h1>;
 };
 
@@ -180,6 +180,7 @@ export default Greetings;
 ```
 
 > **IMPORTANTE:** Como se puede ver en los dos ejemplos de código anteriores:
+>
 > - Las props en un componente de clase se usan con `this.props.name`. Las props están en `this` porque **son un atributo** de una clase de JavaScript.
 > - Las props en un componente funcional se usan con `props.name`. Aquí las props son **el primer argumento de la función** y son un argumento de tipo objeto.
 >
@@ -188,9 +189,9 @@ export default Greetings;
 Si lo combinamos con el _return_ implícito de las _arrow functions_ podríamos incluso hacer una estructura más corta, quedando así:
 
 ```js
-import React from 'react';
+import React from "react";
 // "arrow function" sin llaves, con "return" implícito
-const Greetings = props => <h1>Hello, {props.name}!</h1>;
+const Greetings = (props) => <h1>Hello, {props.name}!</h1>;
 
 export default Greetings;
 ```
@@ -217,8 +218,6 @@ class Greeting extends React.Component {
 }
 
 const componentToRender = <Greeting name="María Moliner" />;
-
-ReactDOM.render(componentToRender, document.getElementById('root'));
 ```
 
 Estos datos se llaman `props` y se guardan en un atributo de las instancias del mismo nombre. Podemos acceder a él a través de `this.props`, en el caso de los componentes de clase o directamente usando `props` en el caso de un componente funcional. Es un objeto que contiene las claves y los valores de estos "atributos". Mira este ejemplo de props usadas en un componente de clase.
@@ -270,7 +269,7 @@ En nuestra carpeta components vamos a crear un nuevo archivo `CatList.js`:
 **components/CatList.js**:
 
 ```js
-import React from 'react';
+import React from "react";
 
 class CatList extends React.Component {
   // class body
@@ -309,8 +308,8 @@ Como queremos usar `RandomCat` dentro de `CatList`, tendremos que importarlo en 
 **components/CatList.js**:
 
 ```js
-import React from 'react';
-import RandomCat from './RandomCat';
+import React from "react";
+import RandomCat from "./RandomCat";
 // ...
 ```
 
@@ -339,14 +338,14 @@ Finalmente, en el componente principal `App.js` importaremos el componente `CatL
 **App.js**:
 
 ```js
-import React from 'react';
-import CatList from './CatList';
+import React from "react";
+import CatList from "./CatList";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <CatList/>
+        <CatList />
       </div>
     );
   }
@@ -360,9 +359,9 @@ Ahora se verán tres gatos iguales por la caché de los navegadores web (la dire
 **RandomCat.js**:
 
 ```js
-import React from 'react';
+import React from "react";
 
-const getRandomInteger = maxNumber => Math.floor(Math.random() * maxNumber);
+const getRandomInteger = (maxNumber) => Math.floor(Math.random() * maxNumber);
 const NUMBER_OF_CATS = 10;
 // ...
 ```
@@ -389,14 +388,14 @@ render() {
 **components/App.js**:
 
 ```js
-import React from 'react';
-import CatList from './CatList';
+import React from "react";
+import CatList from "./CatList";
 
 class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <CatList/>
+        <CatList />
       </div>
     );
   }
@@ -408,8 +407,8 @@ export default App;
 **components/CatList.js**:
 
 ```js
-import React from 'react';
-import RandomCat from './RandomCat';
+import React from "react";
+import RandomCat from "./RandomCat";
 
 class CatList extends React.Component {
   render() {
@@ -438,9 +437,9 @@ export default CatList;
 **components/RandomCat.js**:
 
 ```js
-import React from 'react';
+import React from "react";
 
-const getRandomInteger = maxNumber => Math.floor(Math.random() * maxNumber);
+const getRandomInteger = (maxNumber) => Math.floor(Math.random() * maxNumber);
 const NUMBER_OF_CATS = 10;
 
 class RandomCat extends React.Component {

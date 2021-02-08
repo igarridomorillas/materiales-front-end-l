@@ -66,23 +66,23 @@
 ## Módulo 3: React
 
 - React
-- [3.1 Intro a React](modulo_3/3_2_intro_react.md)
-- [3.2 Intro a React II](modulo_3/3_3_intro_react_2.md)
-- [3.4 Componentes en React](modulo_3/3_4_componentes_react.md)
-- [3.5 Eventos en React](modulo_3/3_5_eventos_react.md)
-- [3.6 Estado en React](modulo_3/3_6_estado_react.md)
-- [3.7 React Hooks](modulo_3/3_7_react_hooks.md)
-- [Repaso intermedio](modulo_3/3_repaso_intermedio.md)
-- [3.8 Formularios en React](modulo_3/3_8_formularios_en_react.md)
-- [3.9 Buenas prácticas](modulo_3/3_9_buenas_practicas.md)
-- [3.10 Arquitectura de aplicaciones React](modulo_3/3_10_arquitectura_estado.md)
-- [3.11 React router](modulo_3/3_11_react_router.md)
-- [3.12 Ciclo de vida de componentes](modulo_3/3_12_ciclo_vida_componentes_react.md)
-- [3.13 Testing con JavaScript](modulo_3/3_13_testing_js.md)
-- [3.14 Refactoring](modulo_3/3_14_refactoring.md)
-- [Repaso final](modulo_3/3_repaso.md)
-- [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md)
-  <!-- - [3.1 Clases de ES6](modulo_3/3_1_clases_es6.md) -->
+  - [3.1 Intro a React](modulo_3/3_1_intr_react.md)
+  - [3.2 Intro a React II](modulo_3/3_2_intro_react_2.md)
+  - [3.4 Componentes en React](modulo_3/3_4_componentes_react.md)
+  - [3.5 Eventos en React](modulo_3/3_5_eventos_react.md)
+  - [3.6 Estado en React](modulo_3/3_6_estado_react.md)
+  - [3.7 React Hooks](modulo_3/3_7_react_hooks.md)
+  - [Repaso intermedio](modulo_3/3_repaso_intermedio.md)
+  - [3.8 Formularios en React](modulo_3/3_8_formularios_en_react.md)
+  - [3.9 Buenas prácticas](modulo_3/3_9_buenas_practicas.md)
+  - [3.10 Arquitectura de aplicaciones React](modulo_3/3_10_arquitectura_estado.md)
+  - [3.11 React router](modulo_3/3_11_react_router.md)
+  - [3.12 Ciclo de vida de componentes](modulo_3/3_12_ciclo_vida_componentes_react.md)
+  - [3.13 Testing con JavaScript](modulo_3/3_13_testing_js.md)
+  - [3.14 Refactoring](modulo_3/3_14_refactoring.md)
+  - [Repaso final](modulo_3/3_repaso.md)
+  - [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md)
+    <!-- - [3.1 Clases de ES6](modulo_3/3_1_clases_es6.md) -->
 
 ## Módulo 4: Back end
 
