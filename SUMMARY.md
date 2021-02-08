@@ -66,7 +66,7 @@
 ## Módulo 3: React
 
 - React
-  - [3.1 Intro a React](modulo_3/3_1_intr_react.md)
+  - [3.1 Intro a React](modulo_3/3_1_intro_react.md)
   - [3.2 Intro a React II](modulo_3/3_2_intro_react_2.md)
   - [3.4 Componentes en React](modulo_3/3_4_componentes_react.md)
   - [3.5 Eventos en React](modulo_3/3_5_eventos_react.md)
