@@ -3,6 +3,7 @@
 ## Información de interés
 
 - [Antes de empezar el curso](instalacion/antes_de_empezar_el_curso.md)
+
   - [Instalación de ordenadores](instalacion/instalacion_de_ordenadores.md)
   - [Instalación de VS Code](instalacion/instalacion_de_vscode.md)
   - [Instalación de la terminal](instalacion/instalacion_de_la_terminal.md)
@@ -66,9 +67,10 @@
 
 - Próximamente...
 
-<!-- - [3.1 Clases de ES6](modulo_3/3_1_clases_es6.md)
-- [3.2 Intro a React](modulo_3/3_2_intro_react.md)
-- [3.3 Intro a React II](modulo_3/3_3_intro_react_2.md)
+<!-- - [3.1 Clases de ES6](modulo_3/3_1_clases_es6.md) -->
+
+- [3.1 Intro a React](modulo_3/3_2_intro_react.md)
+- [3.2giti Intro a React II](modulo_3/3_3_intro_react_2.md)
 - [3.4 Componentes en React](modulo_3/3_4_componentes_react.md)
 - [3.5 Eventos en React](modulo_3/3_5_eventos_react.md)
 - [3.6 Estado en React](modulo_3/3_6_estado_react.md)
@@ -83,7 +85,7 @@
 - [3.14 Refactoring](modulo_3/3_14_refactoring.md)
 - [Repaso final](modulo_3/3_repaso.md)
 - [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md)
--->
+  -->
 
 ## Módulo 4: Back end
 
@@ -119,5 +121,5 @@
   - [Anexo. Diseña tu web desde cero](proyectos/p1_anexo.md)
 - [Proyecto 2. Awesome profile-cards](proyectos/p2_proyecto.md)
   - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/p2_anexo.md)
-<!-- - [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md) -->
+  <!-- - [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md) -->
 - [Proyecto 4.](proyectos/p4_proyecto.md)
