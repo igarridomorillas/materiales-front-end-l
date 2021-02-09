@@ -4,7 +4,7 @@ En esta sección recopilamos algunos errores comunes que nos encontramos en nues
 
 ## Mixed Content: HTTP vs HTTPS
 
-##### Problema
+#### Problema
 
 Un día cualquiera estás programando tu web y estás pidiendo datos a un API con un `fetch` o estás importando ficheros. Lo normal es que escribas el siguiente código:
 
@@ -28,7 +28,7 @@ Pruebas tu código en un servidor y de repente fallan cosas, abres la consola de
 
 ![Mixed content](./assets/images/error-mixed-content.png)
 
-##### Explicación
+#### Explicación
 
 El problema es que estás probando tu página desde una dirección que empieza por `https://...`, es decir, es una página con protocolo **HTTP seguro**. Desde una página **segura** estás utilizando recursos **inseguros** que empiezan por `http://...`.
 
@@ -36,11 +36,11 @@ El problema es que estás probando tu página desde una dirección que empieza p
 
 Los navegadores no permiten esto debido a que si yo como usuario entro en una página segura, espero que todos los datos y ficheros de esa página se sirvan desde una dirección segura.
 
-##### Solución 1: pon todo con https://...
+#### Solución 1: pon todo con https://...
 
 Revisa todos los `fetch` y ficheros que usas en tu web y cambia todos los `http://...` por `https://...`.
 
-##### Solución 2: quita todos los http y https
+#### Solución 2: quita todos los http y https
 
 Sustituye tus:
 
