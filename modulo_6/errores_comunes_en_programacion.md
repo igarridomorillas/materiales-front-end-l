@@ -32,7 +32,7 @@ Pruebas tu código en un servidor y de repente fallan cosas, abres la consola de
 
 El problema es que estás probando tu página desde una dirección que empieza por `https://...`, es decir, es una página con protocolo **HTTP seguro**. Desde una página **segura** estás utilizando recursos **inseguros** que empiezan por `http://...`.
 
-> **Nota**: HTTP seguro significa que toda la información que se envía y recibe desde tu web está **cifrada**. Es decir, que si alguien se ha colado en tu wifi no puede desencriptar la información que envías y recibes. [Más info aquí](./assets/error-mixed-content-2.jpg).
+> **Nota**: HTTP seguro significa que toda la información que se envía y recibe desde tu web está **cifrada**. Es decir, que si alguien se ha colado en tu wifi no puede desencriptar la información que envías y recibes. [Más info aquí](./assets/images/error-mixed-content-2.jpg).
 
 Los navegadores no permiten esto debido a que si yo como usuario entro en una página segura, espero que todos los datos y ficheros de esa página se sirvan desde una dirección segura.
 
