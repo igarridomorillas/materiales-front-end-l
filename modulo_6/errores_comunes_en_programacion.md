@@ -36,11 +36,11 @@ El problema es que estás probando tu página desde una dirección que empieza p
 
 Los navegadores no permiten esto debido a que si yo como usuario entro en una página segura, espero que todos los datos y ficheros de esa página se sirvan desde una dirección segura.
 
-#### Solución 1: pon todo con https://...
+##### Solución 1: pon todo con https://...
 
 Revisa todos los `fetch` y ficheros que usas en tu web y cambia todos los `http://...` por `https://...`.
 
-#### Solución 2: quita todos los http y https
+##### Solución 2: quita todos los http y https
 
 Sustituye tus:
 
