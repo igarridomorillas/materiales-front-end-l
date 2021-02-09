@@ -1,5 +1,21 @@
 # Introducción a bases de datos
 
+Una base de datos es un programa que **se está ejecutando en todo momento en nuestro servidor**, ya sea nuestro servidor local de desarrollo o el servidor de producción donde subiremos nuestro código.
+
+Cuando reiniciamos nuestro ordenador, si volvemos a arrancar una aplicación de **Node JS se ejecuta como si fuera la primera vez**. Es decir no guarda nada de una ejecución a otra.
+
+Cuando trabajamos con una base de datos, los cambios que hacemos sobre ella se guardan en un fichero. Por ello si reiniciamos el ordenador y volvemos a abrir la base de datos, esta mantiene los datos que tenía la última vez que se ejecutó. **Por ello las bases de datos nos permiten guardar datos de forma permanente.**
+
+En la base de datos vamos a almacenar **todos los datos de nuestra aplicación y de nuestros usuarios** como por ejemplo:
+
+- Email, contraseña, nombre... de nuestras usuarias registrados.
+- Tweets de Twitter.
+- Comentarios de los vídeos de Youtube.
+- Artículos de un blog.
+- En resumen, todos los datos que no tenemos a la hora de programar.
+
+Vamos a charlar un poquito sobre bases de datos:
+
 - Qué es un base de datos
    - Una base de datos es el programa que gestiona y almacena los datos de un servidor.
    - ¿Qué datos? Pues todo tipo de datos de nuestros usuarios:
