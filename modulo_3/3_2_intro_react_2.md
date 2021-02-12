@@ -204,6 +204,19 @@ Los conceptos que manejamos en los dos tipos de componentes, props, eventos, dat
 Los componentes de clase son antiguos. React ha decidido utilizar componentes funcionales porque son más sencillos y cómodos.
 Por desgracia, hay muchas empresas que usan los componentes de clase y por ello tenemos que enseñar la versión antigua y la nueva. Puedes trabajar en un proyecto que maneje componentes de clase y es esencial que entiendas cómo se comportan hasta que el uso de hooks y componentes funcionales esté completamente extendido.
 
+### Método render
+
+Es de suma importancia tener en cuenta que el método render solo puede tener un hijo o contendor directo, y a partir de él sí que puede tener tantos nietos como sea necesario, esto es porque dicho método render contiene un return y solo puede retornar un elemento o contenedor. Por lo tanto algo como lo siguiente NO puede ocurrir, donde podemos observar que hay un return con dos hijos directos:
+
+```js
+render () {
+  return (
+    <p>Lorem</p>
+    <h2>Lorem</h2>
+  );
+}
+```
+
 ## Las `props` para personalizar un componente
 
 Hasta aquí todo bien, pero ¿y si queremos que `RandomCat` no sea siempre igual? De la misma manera que pasamos atributos a los elementos del DOM, podemos pasar datos a los componentes de React.
