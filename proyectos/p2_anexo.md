@@ -4,7 +4,7 @@
 
 La URL base del servicio es
 
-`https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/`
+`https://awesome-profile-cards.herokuapp.com/`
 
 El API sigue una convención tipo REST para la gestión de tarjetas: creación y acceso a las mismas. Las acciones implementadas por este API son las siguientes:
 
