@@ -101,6 +101,7 @@
   - [4.3.1 Tipos de respuestas](modulo_4/4_3_1_express_response_types.md)
   - [4.3.2 Servidor de estáticos](modulo_4/4_3_2_express_static_server.md)
   - [4.3.3 Motores de plantillas](modulo_4/4_3_3_express_template_engine.md)
+  - [4.3.3 Intro a bases de datos](modulo_4/4_4_1_sql_intro.md)
 
 ## Módulo 5: Apoyo a la búsqueda de empleo
 
