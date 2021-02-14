@@ -73,16 +73,7 @@
 - [3.5 Estado en React](modulo_3/3_5_estado_react.md)
 - [3.6 React Hooks](modulo_3/3_6_react_hooks.md)
 - [Repaso intermedio](modulo_3/3_repaso_intermedio.md)
-<!-- - [3.7 Formularios en React](modulo_3/3_7_formularios_en_react.md)
-- [3.8 Buenas prácticas](modulo_3/3_8_buenas_practicas.md)
-- [3.9 Arquitectura de aplicaciones React](modulo_3/3_9_arquitectura_estado.md)
-- [3.10 React router](modulo_3/3_10_react_router.md)
-- [3.11 Ciclo de vida de componentes](modulo_3/3_11_ciclo_vida_componentes_react.md)
-- [3.12 Testing con JavaScript](modulo_3/3_12_testing_js.md)
-- [3.13 Refactoring](modulo_3/3_13_refactoring.md)
-- [Repaso final](modulo_3/3_repaso.md) -->
 - [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md)
-  <!-- - [3.1 Clases de ES6](modulo_3/3_1_clases_es6.md) -->
 
 ## Módulo 4: Back end
 
@@ -101,7 +92,7 @@
   - [4.3.1 Tipos de respuestas](modulo_4/4_3_1_express_response_types.md)
   - [4.3.2 Servidor de estáticos](modulo_4/4_3_2_express_static_server.md)
   - [4.3.3 Motores de plantillas](modulo_4/4_3_3_express_template_engine.md)
-  - [4.3.3 Intro a bases de datos](modulo_4/4_4_1_sql_intro.md)
+  - [4.4.1 Intro a bases de datos](modulo_4/4_4_1_sql_intro.md)
 
 ## Módulo 5: Apoyo a la búsqueda de empleo
 
