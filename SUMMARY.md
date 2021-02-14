@@ -44,24 +44,25 @@
 
 ## Módulo 2: Programando la web
 
-- [2.1 Intro a la programación](modulo_2/2_1_intro_a_la_programacion.md)
-- [2.2 Intro a la programación 2](modulo_2/2_2_intro_a_la_programacion_2.md)
-- [2.3 Condicionales](modulo_2/2_3_condicionales.md)
-- [2.4 Funciones](modulo_2/2_4_funciones.md)
-- [2.5 Eventos](modulo_2/2_5_eventos.md)
-- [2.6 Objetos](modulo_2/2_6_objetos.md)
-- [2.7 Arrays y bucles](modulo_2/2_7_arrays_y_bucles.md)
-- [Repaso intermedio](modulo_2/2_repaso_intermedio.md)
-- [2.8 Trabajo colaborativo en Git](modulo_2/2_8_trabajo_colaborativo_en_git.md)
-- [2.9 Arrays y bucles 2](modulo_2/2_9_array_y_bucles_2.md)
-- [2.10 Peticiones al servidor](modulo_2/2_10_peticiones_al_servidor.md)
-- [2.11 Peticiones al servidor 2](modulo_2/2_11_peticiones_al_servidor_2.md)
-- [2.12 DOM avanzado](modulo_2/2_12_dom_avanzado.md)
-- [2.13 Métodos funcionales de array](modulo_2/2_13_metodos_funcionales_array.md)
-- [2.14 Asincronía y temporizadores](modulo_2/2_14_asincronia.md)
-- [Repaso final](modulo_2/2_repaso.md)
-- [Sintaxis de JavaScript](modulo_2/2_sintaxis_de_js.md)
-- [Ejercicio: tienda de camisetas](modulo_2/2_ejercicio_global_tienda_de_camisetas.md)
+- JavaScript
+   - [2.1 Intro a la programación](modulo_2/2_1_intro_a_la_programacion.md)
+   - [2.2 Intro a la programación 2](modulo_2/2_2_intro_a_la_programacion_2.md)
+   - [2.3 Condicionales](modulo_2/2_3_condicionales.md)
+   - [2.4 Funciones](modulo_2/2_4_funciones.md)
+   - [2.5 Eventos](modulo_2/2_5_eventos.md)
+   - [2.6 Objetos](modulo_2/2_6_objetos.md)
+   - [2.7 Arrays y bucles](modulo_2/2_7_arrays_y_bucles.md)
+   - [Repaso intermedio](modulo_2/2_repaso_intermedio.md)
+   - [2.8 Trabajo colaborativo en Git](modulo_2/2_8_trabajo_colaborativo_en_git.md)
+   - [2.9 Arrays y bucles 2](modulo_2/2_9_array_y_bucles_2.md)
+   - [2.10 Peticiones al servidor](modulo_2/2_10_peticiones_al_servidor.md)
+   - [2.11 Peticiones al servidor 2](modulo_2/2_11_peticiones_al_servidor_2.md)
+   - [2.12 DOM avanzado](modulo_2/2_12_dom_avanzado.md)
+   - [2.13 Métodos funcionales de array](modulo_2/2_13_metodos_funcionales_array.md)
+   - [2.14 Asincronía y temporizadores](modulo_2/2_14_asincronia.md)
+   - [Repaso final](modulo_2/2_repaso.md)
+   - [Sintaxis de JavaScript](modulo_2/2_sintaxis_de_js.md)
+   - [Ejercicio: tienda de camisetas](modulo_2/2_ejercicio_global_tienda_de_camisetas.md)
 
 ## Módulo 3: React
 
@@ -73,14 +74,14 @@
   - [3.5 Estado en React](modulo_3/3_5_estado_react.md)
   - [3.6 React Hooks](modulo_3/3_6_react_hooks.md)
   - [Repaso intermedio](modulo_3/3_repaso_intermedio.md)
-  - [3.7 Formularios en React](modulo_3/3_7_formularios_en_react.md)
+  <!-- - [3.7 Formularios en React](modulo_3/3_7_formularios_en_react.md)
   - [3.8 Buenas prácticas](modulo_3/3_8_buenas_practicas.md)
   - [3.9 Arquitectura de aplicaciones React](modulo_3/3_9_arquitectura_estado.md)
   - [3.10 React router](modulo_3/3_10_react_router.md)
   - [3.11 Ciclo de vida de componentes](modulo_3/3_11_ciclo_vida_componentes_react.md)
   - [3.12 Testing con JavaScript](modulo_3/3_12_testing_js.md)
   - [3.13 Refactoring](modulo_3/3_13_refactoring.md)
-  - [Repaso final](modulo_3/3_repaso.md)
+  - [Repaso final](modulo_3/3_repaso.md) -->
   - [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md)
     <!-- - [3.1 Clases de ES6](modulo_3/3_1_clases_es6.md) -->
 
