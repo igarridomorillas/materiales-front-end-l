@@ -195,24 +195,6 @@ class MurrayList extends React.Component {
 
 &rtrif; [Puedes jugar con el ejemplo en Codepen](https://codepen.io/adalab/pen/qLrZJz?editors=0010).
 
-## Fragments
-
-Otro patrón propio de React muy útil son los `Fragments`. Como sabéis tenemos la limitación de tener cada componente debe devolver en su método render un único elemento que contiene al resto. Pero esto muchas veces nos obliga a tener que meter contenedores (div) que muchas veces no queremos. Para solucionar este problema tenemos los Fragments, que nos permiten agrupar elementos sin tener que introducir ningún contenedor en el HTML.
-
-En este ejemplo, nuestro render puede devolver 3 componentes agrupados en un Fragment que no introduce ningún contenedor adicional en HTML.
-
-```js
-render() {
-  return (
-    <React.Fragment>
-      <ChildA />
-      <ChildB />
-      <ChildC />
-    </React.Fragment>
-  );
-}
-```
-
 #### EJERCICIO 1
 
 **Directorio**
