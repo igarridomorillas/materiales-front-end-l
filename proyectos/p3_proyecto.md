@@ -98,20 +98,20 @@ Para la gestión del proyecto, usaremos _historias de usuario_, que es una herra
 El formato de entrega de este proyecto será mediante la subida de este a la plataforma de GitHub. Para subirlo, se creará un repositorio **en la organización de Adalab**. El nombre del repositorio deberá estar compuesto de las siguientes partes, todo ello separado por guiones:
 
 - La palabra **project**.
-- Letra de la promoción **promo-k**.
+- Letra de la promoción **promo-l**.
 - Número del módulo **module-3**.
 - Número del equipo **team-x**.
 
 Por ejemplo:
 
-- Adalab/project-promo-k-module-3-team-1
-- Adalab/project-promo-k-module-3-team-3
+- Adalab/project-promo-l-module-3-team-1
+- Adalab/project-promo-l-module-3-team-3
 
-De manera adicional, se deberá activar "GitHub Pages" en el proyecto para que este pueda ser visualizado como una web, es decir, que en el caso anterior, si alguien introdujese la dirección "https://beta.adalab.es/project-promo-k-module-3-team-X/" en un navegador web, este mostraría la web que se genera con el código del repositorio.
+De manera adicional, se deberá activar "GitHub Pages" en el proyecto para que este pueda ser visualizado como una web, es decir, que en el caso anterior, si alguien introdujese la dirección "https://beta.adalab.es/project-promo-l-module-3-team-X/" en un navegador web, este mostraría la web que se genera con el código del repositorio.
 
-- **Entrega del primer sprint (sprint review):** 12 de noviembre
-- **Entrega del segundo sprint (sprint review):** 23 de noviembre
-- **Demo del proyecto (presentación final):** 30 de noviembre
+- **Entrega del primer sprint (sprint review):** 24 de febrero
+- **Entrega del segundo sprint (sprint review):** 4 de marzo
+- **Demo del proyecto (presentación final módulos 3 y 4):** 18 de marzo 
 
 En las sprint review se revisarán que se hayan solucionado todas las tareas técnicas asociadas a la entrega de esos sprints, si algo quedara pendiente se arrastraría al siguiente sprint.
 
