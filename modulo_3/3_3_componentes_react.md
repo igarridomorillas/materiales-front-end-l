@@ -126,7 +126,7 @@ const students = [
 ];
 ```
 
-1. ¿Sabrías pintar el listado con React?
+1. ¿Sabrías pintar el listado de estudiantes con su nombre y edad con React?
 1. A continuación antes de pintar ¿sabrías filtrar las estudiantes por las que pertenezcan a la promo A?
 
 \_\_\_\_\_\_\_\_\_\_
