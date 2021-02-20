@@ -388,6 +388,7 @@ Documentación oficial de React (en inglés).
   - [Lista completa de tipos y validadores con `PropTypes`](https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes)
   - [Valores por defecto](https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values)
 - [Lists and keys](https://reactjs.org/docs/lists-and-keys.html)
+- [Fragments](https://reactjs.org/docs/fragments.html)
 
 ### Egghead
 

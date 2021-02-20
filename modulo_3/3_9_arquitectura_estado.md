@@ -234,5 +234,3 @@ Serie de clases en vídeo que introduce y explora los fundamentos básicos de Re
 ### React patterns
 
 - [React patterns](https://reactpatterns.com/)
-
-- [Fragments](https://reactjs.org/docs/fragments.html)
