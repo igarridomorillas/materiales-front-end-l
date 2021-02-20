@@ -24,9 +24,9 @@ Hemos visto ya las funcionalidades más básicas de la librería. En esta sesió
 
 Ya sabemos que existen un montón de formas de hacer las cosas en programación, y con React no es una excepción. Pero hay algunas formas que funcionan mejor que otras para construir frontales basados en componentes.
 
-En esta sesión vamos a proponeros una arquitectura concreta para trabajar con componentes web con estado. También cómo estructurar una aplicación React que trabaja tanto con componentes como con _servicios_, es decir, partes de código JS que no son componentes visuales.
+En esta sesión vamos a proponeros una arquitectura concreta para **trabajar con componentes web con estado**. También cómo **estructurar una aplicación React** que trabaja tanto con componentes como con _servicios_, es decir, partes de código JS que no son componentes visuales.
 
-También nos servirá para ver prácticas de programación muy comunes que nos permiten escribir un código de React más legible y usando el "React way", es decir, haciéndolo de la forma en que lo hacen los desarrolladores de React.
+También nos servirá para ver **prácticas de programación** muy comunes que nos permiten escribir un código de React más legible y usando el **"React way"**, es decir, haciéndolo de la forma en que lo hacen los desarrolladores de React.
 
 ## Arquitectura de software
 
@@ -260,7 +260,7 @@ Hemos realizado ambas operaciones encadenando un `map` que añade 1 a cada núme
 
 **Numeritos**
 
-Vamos a crear una aplicación de React que, dado un listado de números como el del ejemplo anterior, los pinta en pantalla (usaremos un `ul` y sus `li`s ¡por supuesto!). Para pintarlos vamos a usar la función `.map` para pasar de un listado de números a un listado de elementos de JSX.
+Vamos a crear una aplicación de React que, dado un listado de números como el del ejemplo anterior (`const numbers = [1, 4, 6, 8, 45, 89];`), los pinta en pantalla (usaremos un `ul` y sus `li`s ¡por supuesto!). Para pintarlos vamos a usar la función `.map` para pasar de un listado de números a un listado de elementos de JSX.
 
 a) Vamos a añadir un formulario a la página, que contiene un input donde podemos introducir un número. Si ponemos, por ejemplo un 6, se mostrarán en pantalla solo los números mayores de 6. Usaremos `filter` y el patrón _chaining_ para conseguirlo.
 
@@ -579,7 +579,7 @@ Voilà!
 
 **Destructurando props y estado**
 
-Vamos a partir del ejercicio **Formulario para pelis** de la sesión **Estado en React 2** y a hacer destructuring de los objetos `this.props` y `this.state`.
+Vamos a partir del ejercicio **Formulario para pelis** (ejercicio 1) de la sesión **3.7 Formularios en React** y a hacer destructuring de los objetos `this.props` y `this.state`.
 
 \_\_\_\_\_\_\_\_\_\_
 
