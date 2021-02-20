@@ -98,7 +98,9 @@ Siguiendo con el ejemplo anterior, os proponemos usar una carpeta `services` con
 ```js
 const ENDPOINT = 'https://...';
 
-const fetchReasons = () => fetch(ENDPOINT).then(response => response.json());
+const fetchReasons = () => {
+  return fetch(ENDPOINT).then(response => response.json()); // Devuelve la Promise que genera el fetch
+}
 
 export { fetchReasons };
 ```
@@ -112,8 +114,8 @@ class AppRoot extends React.Component {
 
   ...
 
-  fetchNewReasons() {
-    fetchReasons()
+  handleFetch() {
+    fetchReasons()    // Continuamos añadiendo .then() a la Promise del fetch
       .then(data => {
         this.setState({
           reasonsStore: data.reasons
