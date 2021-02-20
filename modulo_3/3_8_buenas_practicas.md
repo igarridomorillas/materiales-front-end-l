@@ -91,14 +91,20 @@ return data && <p>Bienvenido, {data.name || 'invitado'}</p>;
 
 En este ejemplo dejamos la primera comprobación de que `data` no sea null; y luego, si el nombre no está definido, usamos el valor de `'invitado'`.
 
-### `null` no pinta nada
+### `null` y `undefined` no pintan nada
 
-Para terminar estos ejemplos sencillos de pintado condicional, debemos saber que si una expresión dentro de JSX devuelve `null` no se pintará nada en pantalla.
+Para terminar estos ejemplos sencillos de pintado condicional, debemos saber que si una expresión dentro de JSX devuelve `null`, o ponemos una variable que no tiene valor (contendrá `undefined`) o una función/método que no tiene return (devolverá `undefined` por defecto) no se pintará nada en la página:
 
 ```js
 const { quixoteFan } = this.state;
 
 return quixoteFan ? <p>En un lugar de La Mancha ...</p> : null;
+```
+
+```js
+let index;
+
+return <em>Está en la posición <span>{index}</span></em>;
 ```
 
 #### EJERCICIO 2
