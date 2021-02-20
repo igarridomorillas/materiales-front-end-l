@@ -117,48 +117,6 @@ Vamos a partir de nuestro ya [querido JSON con un listado de paletas](https://be
 
 \_\_\_\_\_\_\_\_\_\_
 
-## Listados y keys
-
-Cuando manejamos listados de datos en React, normalmente convertimos estos arrays en arrays de elementos JSX para poder pintarlos. Para ayudar a que la librería de React tenga mejor rendimiento, es importante indicar un atributo `key` que sea único en los listado de componentes JSX. De hecho, seguramente ya te habrás topado con errores en la consola que React advierte por este motivo.
-
-Para solucionarlo, debemos indicar un atributo `key` que sea único en ese array (no en la página).
-
-```js
-const fruits = ['orange', 'pear', 'apple'];
-
-return (
-  <ul>
-    {fruits.map(fruit => (
-      <li key={fruit}>{fruit}</li>
-    ))}
-  </ul>
-);
-```
-
-Cuando no tenemos un identificador único, como último recurso podemos hacer uso del índice del elemento dentro del array.
-
-```js
-const fruits = ['orange', 'pear', 'apple', 'orange'];
-
-return (
-  <ul>
-    {fruits.map((fruit, index) => (
-      <li key={index}>{fruit}</li>
-    ))}
-  </ul>
-);
-```
-
-#### EJERCICIO 3
-
-**Keys or not keys**
-
-a) Para terminar, vamos a repasar los ejercicios anteriores y comprobar que no tenemos errores en la consola debidos a la ausencia de keys.
-
-b) En el ejercicio anterior vamos a extraer un nuevo componente llamado `ColapsiblePalette`. ¿Dónde hay que poner el `key` ahora?
-
-\_\_\_\_\_\_\_\_\_\_
-
 ## Destructuring
 
 La sintaxis _destructuring_ de ES6 nos facilita recoger valores de una estructura de datos, como los arrays o los objetos. Simulando la sintaxis de un array o de un objeto, en cada caso, podemos declarar varias variables a la vez, ¡y en una sola línea! Vemos unos ejemplos a continuación:
@@ -425,5 +383,4 @@ En el ejercicio anterior ¿localizas algún otro objeto dónde hacer destructuri
 ## Recursos externos
 
 - [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
-- [Lists and keys](https://reactjs.org/docs/lists-and-keys.html)
 - [Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)
