@@ -32,12 +32,12 @@ INSERT INTO users (email, password) VALUES ('celia@gmail.com', 'fas09fn32');
 
 La tabla quedará así:
 
-| id  | email              | password     | name  |
-| --- | ------------------ | ------------ | ----- |
-| 1   | maria@gmail.com    | 987widJYVxyh | María |
-| 2   | lucia@hotmail.com  | qwertyui     | Lucía |
-| 3   | sofia@yahoo.com    | mnbvcdfgu    | Sofía |
-| 4   | celia@gmail.com    | fas09fn32    |       |
+| id  | email               | password      | name  |
+| --- | ------------------- | ------------- | ----- |
+| 1   | maria@gmail.com     | 987widJYVxyh  | María |
+| 2   | lucia@hotmail.com   | qwertyui      | Lucía |
+| 3   | sofia@yahoo.com     | mnbvcdfgu     | Sofía |
+| 4   | **celia@gmail.com** | **fas09fn32** |       |
 
 Al no haber añadido la columna `name` en la query, la usuaria 4 no tiene nombre.
 
@@ -50,13 +50,13 @@ Si a continuación añadimos otro registro con la query:
 INSERT INTO users (email, password, name) VALUES ('tania@gmail.com', '09df34D43', 'Tania');
 ```
 
-| id  | email              | password     | name  |
-| --- | ------------------ | ------------ | ----- |
-| 1   | maria@gmail.com    | 987widJYVxyh | María |
-| 2   | lucia@hotmail.com  | qwertyui     | Lucía |
-| 3   | sofia@yahoo.com    | mnbvcdfgu    | Sofía |
-| 4   | celia@gmail.com    | fas09fn32    |       |
-| 5   | tania@gmail.com    | 09df34D43    | Tania |
+| id  | email               | password      | name  |
+| --- | ------------------- | ------------- | ----- |
+| 1   | maria@gmail.com     | 987widJYVxyh  | María |
+| 2   | lucia@hotmail.com   | qwertyui      | Lucía |
+| 3   | sofia@yahoo.com     | mnbvcdfgu     | Sofía |
+| 4   | celia@gmail.com     | fas09fn32     |       |
+| 5   | **tania@gmail.com** | **09df34D43** | Tania |
 
 ### Orden de las columnas
 
