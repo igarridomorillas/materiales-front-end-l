@@ -74,15 +74,14 @@
   - [3.5 Estado en React](modulo_3/3_5_estado_react.md)
   - [3.6 React Hooks](modulo_3/3_6_react_hooks.md)
   - [Repaso intermedio](modulo_3/3_repaso_intermedio.md)
-  <!-- - [3.7 Formularios en React](modulo_3/3_7_formularios_en_react.md)
+  - [3.7 Formularios en React](modulo_3/3_7_formularios_en_react.md)
   - [3.8 Buenas prácticas](modulo_3/3_8_buenas_practicas.md)
   - [3.9 React router](modulo_3/3_9_react_router.md)
   - [3.10 Ciclo de vida de componentes](modulo_3/3_10_ciclo_vida_componentes_react.md)
   - [3.11 Testing con JavaScript](modulo_3/3_11_testing_js.md)
-  - [3.12 Refactoring](modulo_3/3_12_refactoring.md)
-  - [Repaso final](modulo_3/3_repaso.md) -->
+  - [Repaso final](modulo_3/3_repaso.md)
   - [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md)
-    <!-- - [3.1 Clases de ES6](modulo_3/3_1_clases_es6.md) -->
+
 
 ## Módulo 4: Back end
 
