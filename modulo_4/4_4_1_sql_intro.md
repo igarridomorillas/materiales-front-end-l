@@ -37,7 +37,7 @@ El mundo de las bases de datos es inmenso y nosotras vamos a aprender solo una p
 Hay muchísimos tipos de bases de datos. Cada tipo está orientado a una cosa, por ejemplo:
 
 - Hay bases de datos que guardan datos importantes como por ejemplo las de los bancos, que almacenan todos nuestros movimientos bancarios. Están pensadas para ser muy seguras y no perder información bajo ningún concepto.
-- Hay otras que están pensadas para guardar información efímera. Al ser información efímera el tamaño de la base de datos es pequeño. Al ser pequeño, las búsquedas que se hacen sobre esa base de datos son muy rápidas. Un ejemplo son las bases de datos que guardan las notificaciones emergentes de WhatsApp que muestran en tu móvil. Cuando una amiga te envía un WhatsApp, se añade la notificación a una base de datos. Horas después tu enciences el móvil y WhatsApp te envía la notificación. Por último borra la notificación de su base de datos para siempre jamás.
+- Hay otras que están pensadas para guardar información efímera. Al ser información efímera el tamaño de la base de datos es pequeño. Al ser pequeño, las búsquedas que se hacen sobre esa base de datos son muy rápidas. Un ejemplo son las bases de datos que guardan las notificaciones emergentes de WhatsApp que muestran en tu móvil. Cuando una amiga te envía un WhatsApp, se añade la notificación a una base de datos. Horas después tu enciences el móvil y WhatsApp comprueba que en su base de datos tienes notificaciones pendientes y te envía la notificación. Por último el servidor de WhatsApp borra la notificación de su base de datos para siempre jamás.
 
 A nosotras nos interesa saber los tipos de bases de datos que hay **en función de cómo estructuran los datos**.
 
@@ -76,12 +76,12 @@ En esta base de datos vemos que las 3 alumnas tiene un `id`, un `email`, un `pas
 
 Sabemos que los objetos de JSON pueden tener la estructura que queramos, por ello podemos guardar los datos que queramos de una alumna. **Y cada alumna puede tener diferentes datos.**
 
-Las principales características de las bases de datos de tipo JSON son:
+### Principales características de las bases de datos de tipo JSON
 
 - Los datos se guardan en **colecciones, es decir arrays de objetos**.
-- Estos objetos pueden estar compuestos de otros números, strings, arrays, objetos...
-- No tienen una estructura fija de los datos, por ello somos libres de guardar lo que queramos fácilmente.
-- Unas usuarias pueden tener unos datos y otras otros.
+- **Cada colección puede ser diferente.** Por ejemplo unas usuarias pueden tener unos datos y otras otros.
+- Estos objetos **pueden estar compuestos de otros datos**: números, strings, arrays, objetos...
+- **No tienen una estructura fija** de los datos, por ello **somos libres** de guardar lo que queramos fácilmente.
 - Al no tener una estructura fija a veces es más difícil hacer búsquedas de datos en ellas.
 - Una base de datos puede estar compuesta de muchas colecciones, por ejemplo una para alumnas, otra para promociones, otra para profes, otra para las empresas de la bolsa de empleo...
 
@@ -97,29 +97,31 @@ Ahora supongamos que queremos guardar los datos de las alumnas de Adalab en una 
 | 2   | lucia@hotmail.com  | qwertyui     | Lucía | false |          |         |
 | 3   | sofia@yahoo.com    | mnbvcdfgu    | Sofía | true  | 54       | Lenovo  |
 
-Como véis esto es muy parecido a guardar los datos en un documento de Excel. Las principales características de las bases de datos de tipo tabla son:
+Como véis esto es muy parecido a guardar los datos en un documento de Excel.
+
+### Principales características de las bases de datos de tipo tabla
 
 - Los datos se guardan en **tablas, es decir filas y columnas**.
-- Todos las filas o registros de una tabla tienen que tener los mismos campos, aunque algunos puedan estar vacíos.
-- Si queremos añadir un dato más a una fila, tenemos que añadir una columna más, y por ello todas las filas tendrán ese campo, aunque esté vacío. Dicho de otra forma, o todas las usuarias tienen una columna o no la tiene ninguna.
-- La estructura de datos es fija.
-- Al ser una estructura fija las búsquedas son más rápidas, porque la base de datos sabe qué datos hay y cómo buscarlos.
-- Al ser una estructura fija se pueden configurar muchas cosas. Por ejemplo esta tabla se podría configurar para que si la columna `pc` es `true`, las columnas `pcNumber` y `pcBrand` deben estar rellenas, si es `false` deben estar vacías.
-- Las columnas tienen un tipo de dato, por ejemplo `id` y `pcNumber` son números y el resto son `strings`.
-- Una base de datos puede estar compuesta de muchas tablas, por ejemplo una para alumnas, otra para promociones, otra para profes, otra para las empresas de la bolsa de empleo...
+- **Todas las filas o registros de una tabla tienen que tener los mismos campos**, aunque algunos puedan estar vacíos.
+- Si queremos añadir un dato más a una fila, tenemos que añadir una columna más, y por ello todas las filas tendrán ese campo, aunque esté vacío. Dicho de otra forma, **o todas las usuarias tienen una columna o no la tiene ninguna**.
+- **La estructura de datos es fija.**
+- Al ser una estructura fija **las búsquedas son más rápidas**, porque la base de datos sabe qué datos hay y cómo buscarlos.
+- Al ser una estructura fija **se pueden configurar muchas cosas**. Por ejemplo esta tabla se podría configurar para que si la columna `pc` es `true`, las columnas `pcNumber` y `pcBrand` deben estar rellenas, si es `false` deben estar vacías.
+- **Las columnas tienen un tipo de dato**, por ejemplo `id` y `pcNumber` son números, `pc` es un booleano y el resto son `strings`.
+- **Una base de datos puede estar compuesta de muchas tablas**, por ejemplo una para alumnas, otra para promociones, otra para profes, otra para las empresas de la bolsa de empleo...
 
 A estas bases de datos se les llama **SQL** (Structured Query Language).
 
 En Adalab vamos a aprender a usas las bases de datos SQL porque:
 
 - Son más fáciles de aprender.
-- Son más antiguas (pero no están anticuadas) y por ello se usan más.
+- Son más antiguas (pero no están anticuadas ni mucho menos) y por ello se usan más.
 
 ## SQL vs NoSQL
 
-Las bases de datos NoSQL no tienen una estructura fija, por ello nos dan mucha libertad para trabajar como queramos. Esto nos obliga a tener mucho cuidado para que dicha libertad no se convierta en libertinaje y que los datos se nos vayan de las manos.
+Las bases de datos NoSQL no tienen una estructura fija, por ello nos dan mucha libertad para trabajar como queramos. Esto nos obliga a tener mucho cuidado para que dicha libertad no se convierta en libertinaje y que no perdamos el control sobre qué datos estamos guardando, cosa que si no se tiene cuidado puede pasar.
 
-Las base de datos SQL sí tienen una estructura fija, por ello son más estrictas. Tenemos las manos más atadas a la hora de meter datos. Pero a cambio la base de datos sabe qué datos guarda y por ello se pueden configurar muchas cosas, automatizar tareas, hacer búsquedas más óptimas...
+Las base de datos SQL sí tienen una estructura fija, por ello son más estrictas. Tenemos las manos más atadas a la hora de meter datos. Pero a cambio la base de datos sabe qué datos guarda y por ello se pueden configurar muchas cosas, automatizar tareas, hacer búsquedas más óptimas, prohibir que se guarden datos por error...
 
 ## ¿Qué base de datos usar en mi proyecto?
 

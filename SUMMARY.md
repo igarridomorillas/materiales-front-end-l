@@ -93,6 +93,13 @@
   - [4.3.2 Servidor de estáticos](modulo_4/4_3_2_express_static_server.md)
   - [4.3.3 Motores de plantillas](modulo_4/4_3_3_express_template_engine.md)
   - [4.4.1 Intro a bases de datos](modulo_4/4_4_1_sql_intro.md)
+  - [4.4.2 SQL y SQLite](modulo_4/4_4_2_sql_sqite.md)
+  - [4.4.3 Select con SQLite browser](modulo_4/4_4_3_sql_select_sqlite_browser.md)
+  - [4.4.4 Select con Node JS](modulo_4/4_4_4_sql_select_node.md)
+  - [4.4.5 Update](modulo_4/4_4_5_sql_update.md)
+  - [4.4.6 Insert](modulo_4/4_4_6_sql_insert.md)
+  - [4.4.7 Delete](modulo_4/4_4_7_sql_delete.md)
+  - [4.5.1 Tipos de campos](modulo_4/4_5_1_sql_fields_types.md)
 
 ## Módulo 5: Apoyo a la búsqueda de empleo
 

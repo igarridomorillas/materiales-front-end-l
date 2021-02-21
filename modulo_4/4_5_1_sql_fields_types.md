@@ -2,11 +2,13 @@
 
 Como hemos comentado en las primeras lecciones de SQL, ésta es una **base de datos con una estructura muy estricta**. Esto nos permite controlar muy bien qué datos se están guardando en nuestras tablas.
 
-Cuando estamos creando las tablas de nuestra base de datos podemos elegir **qué tipo de dato** se puede guardar en cada columna.
+Cuando estamos creando las tablas de nuestra base de datos podemos elegir **qué tipo de dato** se puede guardar **en cada columna**.
 
 ## Tipos de datos en SQLite
 
-SQLite tiene los siguientes tipos de datos:
+Podemos configurar el tipo de dato de cada columna de cada tabla de SQLite. Se configuran editando la tabla como muestra esta imagen:
+
+![Tipos de columnas en SQLite](./assets/images/sqlite-tipos.png)
 
 - **INTEGER:** para números enteros, positivos y negativos.
 - **TEXT:** para textos de cualquier tamaño.
@@ -14,15 +16,19 @@ SQLite tiene los siguientes tipos de datos:
 - **REAL:** para guardar números con muchos decimales sin exactitud. Esto de la exactitud es una movida muy chunga de cómo se guardan los datos en el disco duro de un ordenador.
 - **NUMERIC:** para guardar números con muchos decimales con exactitud, booleanos, fechas...
 
-**SQLite no es tan estricta como otras bases de datos:**
+### SQLite no es tan estricta como otras bases de datos:
 
-- Si intentamos guardar el `string` `'1'` en un campo `integer` lo intenta convertir a número y va a guardar como el entero 1. Es decir, lo va a guardar con el tipo de dato que hemos configurado.
-- Si intentamos guardar el `string` `'Hola'` en un campo `integer` no lo puede convertir a número y va a guardar el `string` `'Hola'`. Es decir, no lo guarda con el tipo de dato que hemos configurado. Es nuestra responsabilidad no hacer esto.
+- Si intentamos guardar el `string` `'1'` en un campo `integer` en una columna, lo intenta convertir a número y va a guardar como el entero 1. Es decir, lo va a guardar con el tipo de dato que hemos configurado en dicha columna.
+- Si intentamos guardar el `string` `'Hola'` en un campo `integer` en una columna, no lo puede convertir a número y va a guardar el `string` `'Hola'`. Es decir, no lo guarda con el tipo de dato que hemos configurado en dicha columna. **Es nuestra responsabilidad no hacer esto.**
 - Si intentamos guardar el `string` `'Hola'` en el campo `id` que es de tipo `integer` nos lanzará un error. Esto es porque necesita que todos los `id` sean enteros.
+
+### Seleccionar bien los tipos de columnas
+
+Cuando creamos o editamos una tabla tenemos que pensar muy bien qué tipo de dato queremos guardar en cada columna. Si empezamos a guardar los datos en un tipo de datos inadecuado, nos será muy difícil cambiarlo en el futuro sin perder datos.
 
 ## Tipos de datos en MySQL
 
-Por poner un ejemplo de otra familia vamos a ver los tipos de datos que se pueden configurar en MySQL:
+Ya sabemos que dentro de SQL hay muchas familias. Por poner un ejemplo de otra familia vamos a ver los tipos de datos que se pueden configurar en **MySQL**:
 
 - Tipos de datos de texto:
    - **CHAR:** para guardar caracteres sueltos: `a`, `z`, `A`, `Z`, `1`, `@`, `€`...
@@ -31,10 +37,10 @@ Por poner un ejemplo de otra familia vamos a ver los tipos de datos que se puede
    - **TEXT:** para guardar textos de un máximo de 65535 caracteres.
    - **MEDIUMTEXT:** para guardar textos de un máximo de 16777215 caracteres.
    - **LONGTEXT:** para guardar textos de un máximo de 4294967295 caracteres.
-   - **SET:** para guardar textos de un determinado conjunto. Por ejemplo podemos indicar que solo se puede guardar los textos: user, admin y customer.
+   - **SET:** para guardar textos de un determinado conjunto. Por ejemplo si queremos guardar el rol del usuario, podemos indicar que solo se puedan guardar los textos: `user`, `admin` y `customer`. Si guardamos otro `string` diferente MySQL lanzará un error.
 - Tipos de datos numéricos:
+   - **BOOL:** para guardar los números enteros 0 o 1. Muy útil para guardar booleanos. Si guardamos un 0 estamos guardando un `false`, si guardamos un 1 estamos guardando un `true`.
    - **TINYINT:** para guardar enteros entre 0 y 255.
-   - **BOOL:** para guardar enteros entre 0 y 1. Muy útil para guardar booleanos.
    - **SMALLINT:** para guardar enteros entre 0 y 65535.
    - **MEDIUMINT:** para guardar enteros entre 0 y 16777215.
    - **INTEGER:** para guardar enteros entre 0 y 4294967295.
@@ -55,7 +61,9 @@ MySQL es muy estricta, y si intentamos guardar un dato en una columna que no cor
 
 Como habéis visto en MySQL cada dato tiene un tamaño máximo. **Eso significa que la base de datos reserva espacio en el disco duro del ordenador para cada dato.**
 
-Si queremos guardar la edad de nuestras usuarias en base de datos deberemos utilizar el tipo de dato **TINYINT**, porque queremos guardar un número entero entre 0 y 255. Si en vez de configurar nuestra columna con un **TINYINT** la configuramos con un **BIGINT (enteros entre 0 y 9223372036854775807)** la base de datos estará reservando mucho espacio en el disco duro de nuestro ordenador para edades que nunca serán tan grandes.
+Supongamos que estamos trabajando con una **base de datos MySQL** y queremos guardar la edad de nuestras usuarias. Deberemos utilizar el tipo de dato **TINYINT**, porque queremos guardar una edad que es un número entero entre 0 y 255. No creo que nadie llegue a los 255 años de edad, pero no tenemos un tipo de datos más pequeño que **TINYINT**.
+
+Si en vez de configurar nuestra columna con un **TINYINT** la configuramos con un **BIGINT (enteros entre 0 y 9223372036854775807)** la base de datos estará reservando mucho espacio en el disco duro de nuestro ordenador para edades que nunca serán tan grandes. Estoy seguro de que nadie ha cumplido nunca los 9223372036854775807 años.
 
 Pensad que las aplicaciones que vosotras haréis cuando trabajéis en una empresa pueden tener varios miles de usuarios, lo que equivale a varios GigaBytes de espacio. La base de datos de GitHub puede tener muchos TeraBytes. Como no optimicemos bien el espacio lo estaremos desperdiciando. **Por cierto los discos duros cuestan dinero.** Si optimizas bien la base de datos le estás ahorrando a tu empresa varios cientos de euros al mes.
 
@@ -65,11 +73,13 @@ También pensad cuánto tardaría tu ordenador en abrir con SQLite una base de d
 
 Cada vez que lees o escribes en una base de datos, ésta tiene que buscar entre todos los registros cuál es el registro que quieres leer o modificar.
 
-Piensa que al abrir un email de Gmail los servidores de Google estarán haciendo entre 20 y 50 accesos a sus bases de datos. Si no optimizamos las bases de datos las aplicaciones tienen un cuello de botella en el acceso a sus datos.
+Piensa que al abrir un email de Gmail los servidores de Google estarán haciendo entre 20 y 50 accesos a sus bases de datos.
+
+**Si no optimizamos** las bases de datos las aplicaciones **tienen un cuello de botella** en el acceso a sus datos.
 
 ## Tipos de datos nulos
 
-SQLite tiene una opción para indicar que una columna debe tener siempre datos:
+SQLite tiene una opción para indicar que una columna debe tener siempre datos, es decir, ningún registro de esta tabla puede tener vacío el campo de esa columna:
 
 ![SQLite Not null](./assets/images/sqlite-not-null.png)
 
@@ -85,7 +95,7 @@ Esta columna funciona como un identificador único de cada registro. Es el DNI d
 
 No es obligatorio tener una columa `id` en una tabla, pero es muy muy recomendable. Así que siempre que creamos una nueva tabla le vamos a poner como primera columna el `id`.
 
-Tampoco es obligatorio que esta columan se llame `id`, puede llamarse `userId`, `user_id` o como queramos.
+Tampoco es obligatorio que esta columan se llame `id`, puede llamarse `userId`, `user_id`, `emailId`, `tweetId` o como queramos.
 
 También te abrás fijado que en la columna `id` activamos siempre las opciones `PK`, `AI` y `U`. **Tú debes activar estas tres opciones en todas las columnas `id` de todas tus tablas.**
 
@@ -100,15 +110,15 @@ Gracias a esto podemos relacionar unas tablas con otras y automatizar tareas.
 Supongamos que tenemos dos tablas en una base de datos de una tienda online:
 
 - `users` que tiene la `PK` activada en la columna `id`.
-- `orders` que guarda los pedidos de las usuarias y que tiene una columna llamada `userId` en la que indicamos que un pedido pertenece a una usuaria.
+- `orders` que guarda los pedidos de las usuarias y que tiene una columna llamada `userId` en la que indicamos que un pedido pertenece a una usuaria en concreto.
 
-Gracias a primary key de `users` y a un poco de configuración podríamos automatizar tareas, como por ejemplo que si borramos una usuaria de la tabla `users` automáticamente se borren todos los pedidos de esa usuaria en la tabla `orders`. De esta forma no habría nunca pedidos "huérfanos".
+Gracias a primary key de `users` y a un poco de configuración podríamos automatizar tareas, como por ejemplo que si borramos una usuaria de la tabla `users` automáticamente la base de datos borrará todos los pedidos de esa usuaria en la tabla `orders`. De esta forma no habría nunca pedidos "huérfanos".
 
 ### Autoincrement (AI)
 
 Te habrás fijado que al crear un nuevo registro nunca indicamos el `id` que debe tener. Eso es porque lo añade SQLite automáticamente. Lo hace por nosotras.
 
-Y cómo sabe qué `id` debe asignar al nuevo registro, pues porque le hemos dicho que es auto incremental. La primera vez que añadimos un registro ya sea desde SQLite browser o desde Node JS le asigna el `id`. La segunda vez el 2...
+Y cómo sabe qué `id` debe asignar al nuevo registro, pues porque le hemos dicho que es auto incremental. La primera vez que añadimos un registro ya sea desde SQLite browser o desde Node JS le asigna el `id = 1`. La segunda vez el `id = 2`...
 
 Así cada registro tiene un `id` único que no se repite.
 
@@ -118,7 +128,7 @@ Como hemos dicho el `id` debe ser único. Pues si configuramos el `id` como `uni
 
 Si intentamos modificar el `id` de un registro y ya existe otro con el mismo `id` SQLite nos lanzará un error y no ejecutará la query.
 
-Esto también es útil para otras columnas como el email. Si consideramos que no puede haber dos usuarias en nuestra web con el mismo email podemos marcar la opción `U` en la columna email. Si la misma usuaria intenta registrarse dos veces con el mismo email SQLite lanzará un error y no permitirá.
+Esto también es útil para otras columnas como el email. Si consideramos que no puede haber dos usuarias en nuestra web con el mismo email podemos marcar la opción `U` en la columna email. Si la misma usuaria intenta registrarse dos veces con el mismo email SQLite lanzará un error y no lo permitirá.
 
 ## Otras opciones de SQLite
 

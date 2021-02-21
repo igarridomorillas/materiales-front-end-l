@@ -1,10 +1,12 @@
 # Borrar registros de una base de datos: DELETE
 
+`DELETE` nos permite **borrar uno o varios registros de una tabla** de la base de datos a través de una query.
+
 Así como leer registros de una tabla no modifica la base de datos, borrar uno o varios registros sí que la modifica.
 
 ## Sintaxis de DELETE en SQL y SQLite browser
 
-`DELETE` nos permite **borrar uno o varios registros de una tabla** de la base de datos a través de una query. Y la sintaxis es:
+La sintaxis de un `DELETE` es:
 
 ```sql
 DELETE FROM nombre_de_la_tabla WHERE condicion_que_cumplen_los_registros_a_borrar
@@ -21,7 +23,7 @@ Supongamos que tenemos esta tabla llamada `users`:
 Con la query:
 
 ```sql
--- Añadir un nuevo registro indicando algunas columnas y el valor de cada columna
+-- Borrar un registro indicando indicando el id del registro a borrar
 DELETE FROM users WHERE id = 2;
 ```
 
@@ -34,19 +36,21 @@ La tabla quedará así:
 
 ### DELETE sin WHERE igual a muerte, destrucción y caos!!!
 
-Si hacemos una query para borrar registros de una tabla y no indicamos la condición `WHERE` **se borrarán todos los registros de la tabla**. Todos!!!
+Si hacemos una query para borrar registros de una tabla y no indicamos la condición `WHERE` **se borrarán todos los registros de la tabla**. Todos!!! Esto es porque todos los registros cumplen la condición vacía.
 
 La condición `WHERE` no es obligatoria, pero no se nos debe olvidar nunca a no ser que lo que queramos sea vaciar una tabla.
 
 Con `DELETE` y `WHERE` podemos borrar uno o varios registros en una sola query. Todo depende de la condición que pongamos en el `WHERE`.
 
+<!-- - Vídeo -->
+
 ## Sintaxis de DELETE en Node JS y Better SQLite 3
 
 Antes de borrar un nuevo registro desde Node JS, deberíamos seguir los pasos que hemos aprendido para trabajar con **Better SQLite 3**:
 
-1. Instalar Better SQLite 3 en el proyecto con `npm install better-sqlite3`.
-1. Importar Better SQLite 3 en el proyecto con `const Database = require('better-sqlite3');`.
-1. Iniciar y configurar la base de datos con `const db = new Database('./src/database.db' });`.
+1. **Instalar Better SQLite 3** en el proyecto con `npm install better-sqlite3`.
+1. **Importar Better SQLite 3** en el proyecto con `const Database = require('better-sqlite3');`.
+1. **Iniciar y configurar la base de datos** con `const db = new Database('./src/database.db' });`.
 
 Una vez hecho esto ya podemos borrar registros. La forma de trabajar es igual que con `SELECT`:
 
@@ -80,7 +84,7 @@ app.delete('/users', (req, res) => {
 
 ### query.run()
 
-En estas queries no estamos leyendo datos de la tabla, por ello no utilizamos `query.all()` ni `query.get()`. En esta query utilizamos `query.run()` porque lo que queremos es borrar registros. Los creadores de Better SQLite 3 han elegido esta forma de trabajar porque les ha apetecido.
+En estas queries no estamos leyendo datos de la tabla, por ello no utilizamos `query.all()` ni `query.get()`. En esta query utilizamos `query.run()` porque lo que queremos es borrar registros. Los creadores de Better SQLite 3 han elegido esta forma de trabajar porque les ha apetecido, pero si lo piensas tiene bastante sentido.
 
 ### Información retornada por query.run()
 
@@ -105,3 +109,5 @@ Si en la tabla no hubiese ningún registro con el `id` 2, `query.run()` nos reto
 ```
 
 Lo que significa que no hemos modificado la tabla de la base de datos.
+
+<!-- - Vídeo -->
