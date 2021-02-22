@@ -25,145 +25,143 @@ En esta sesión veremos cómo definir componentes más completos y robustos, y e
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
-Según vayamos creando aplicaciones web más grandes con React, necesitaremos definir mayor número de componentes que se relacionarán entre sí. Veremos cómo se relacionan los componentes padre/madre con los componentes hijo/hija, y un tipo especial de componente que tendrá más componentes arbitrarios en su interior.
+Según vayamos creando aplicaciones web más grandes con React, necesitaremos definir mayor número de componentes que se relacionarán entre sí. Veremos cómo se relacionan los componentes madre con los componentes hija, y un tipo especial de componente que tendrá más componentes arbitrarios en su interior.
 
 También necesitaremos crear componentes con mayores garantías de funcionar. Para eso veremos `propTypes`, para obligar a las `props` a ser de un tipo de dato concreto, y cómo asignarles valores por defecto para hacer `props` opcionales.
 
-## Componentes padre e hijo (madre e hija)
+## Componentes madre e hija
 
 Vimos en la sesión anterior cómo usar un componente dentro de otro: el componente `CatList` renderizaba tres componentes `RandomCat`. Para referirnos a componentes que renderizan otros usaremos el término **componente padre o madre**, y para referirnos a componentes que son renderizados por otros, **componente hijo o hija**.
 
-> No debemos confundir esta terminología con la terminología de la herencia de clases. Aunque las dos tengan jerarquía, esta terminología representa relaciones de **composición**, no de herencia. En React solo existe herencia en el hecho de que todos los componentes son subclases de `React.Component`.
-
-Los componentes padre/madre pueden tener múltiples componentes hijo/hija, pero los componentes hijo/hija solo tienen un componente padre/madre. Cabe destacar que un componente puede ser hijo/hija de un componente padre/madre y a la vez ser padre/madre de otros componentes hijo/hija.
+Los componentes madre pueden tener múltiples componentes hija, pero los componentes hija solo tienen un componente madre. Cabe destacar que un componente puede ser hija de un componente madre y a la vez ser madre de otros componentes hija.
 
 ![CatList](assets/images/3_4_catlist.png)
 
-Estas relaciones forman una jerarquía importante para entender React. Desde los componentes padre/madre podremos pasar datos _hacia abajo_ a los componentes hijo/hija, mediante las `props`, pero **no al revés**. Un hijo/a no podrá pasar datos _hacia arriba_ libremente. Veremos en una sesión posterior cómo "solucionar" los problemas que _a priori_ parece generar este **flujo unidireccional**.
+Estas relaciones forman una jerarquía importante para entender React. Desde los componentes madre podremos pasar datos **hacia abajo** a los componentes hija, mediante las `props`, pero **no al revés**. Un componente no podrá pasar datos _hacia arriba_ libremente. Veremos en una sesión posterior cómo "solucionar" los problemas que _a priori_ parece generar este **flujo unidireccional**.
 
-## Ejemplos de app con varios componentes y cómo se pasan datos con las `props`
+## Pintar listado en React
 
-Vamos a ver un ejemplo para entender mejor el paso de información de un componente a sus hijas. Partimos de un componente `Item` que es un artículo que tenemos en una lista de la compra:
-
-![Item example](./assets/images/4_4_item.png)
-
-Como vemos en la imagen, un item tiene estas propiedades:
-
-- nombre
-- descripción
-- cantidad
-- categoría
-- precio
-
-Vamos a crear un componente `Item` con estas características, pero que los valores de esas propiedades le lleguen por `props`:
+Cuando tenemos que pintar un listado (un `ul` con varios `li`) los podemos pintar a mano. Pero si son 1000 `li` tenemos un problema, nos vamos a cansar un poquito. Cuando tenemos que pintar un listado de datos que nos vienen de un API no sabemos cuántos `li` tenemos que pintar cuando estamos programando la web. En definitiva cuando tenemos que pintar un listado cuyos datos están en un array podemos hacer lo siguiente:
 
 ```js
-class Item extends React.Component {
+import React from 'react';
+
+class App extends React.Component {
   render() {
+    const items = [
+      {
+        name: 'Cereales con chocolate',
+        description: 'Cereales rellenos de chocolate',
+        quantity: 2,
+        category: 'Cereales',
+        price: 5
+      },
+      {
+        name: 'Hamburguesa con queso',
+        description: 'Hamburguesa rica y saludable',
+        quantity: 1,
+        category: 'Fast-food',
+        price: 15
+      },
+      {
+        name: 'Agua mineral',
+        description: 'Agua de un charco del Himalaya',
+        quantity: 2,
+        category: 'Bebida',
+        price: 5
+      }
+    ];
     return (
-      <div className="item">
-        <h5 className="quantity">{this.props.quantity}</h5>
-        <div>
-          <h5>{this.props.name}</h5>
-          <h6 className="text-muted">{this.props.description}</h6>
-        </div>
-        <div className="badge badge-info">{this.props.category}</div>
-        <h5 className="price">{this.props.price}€</h5>
+      <div>
+        <h1>Pintar listados con React:</h1>
+        {/* con este map iteramos iteramos el array de items */}
+        {items.map(item => {
+          // cada return retorna un li
+          return (
+            <li>
+              <h2>Nombre: {item.name}</h2>
+              <p>Descripción: {item.description}</p>
+              <p>Cantidad: {item.quantity}</p>
+              <p>Categoría: {item.category}</p>
+              <p>Precio: {item.price}</p>
+            </li>
+          );
+          // el map retorna un array de li, es decir, un listado de HTML
+        })}
       </div>
     );
   }
 }
+
+export default App;
 ```
 
-Ahora, desde un componente padre para crear un item y pasarle la información por `props`, lo hacemos así (recordad que esto es JSX pero es la sintaxis de HTML que ya conocemos):
+Por supuesto el `li` lo podemos cambiar por cualquier otra cosa, como por ejemplo un componente de React.
 
-```js
-<Item
-  name="Cereales con chocolate"
-  description="Cereales rellenos de chocolate"
-  quantity={2}
-  category="Cereales"
-  price={5}
-/>
-```
+### Pintar listado en React: el problema de las keys
 
-Fíjate que cuando queremos pasar datos distintos a una string, tendremos que usar los {} para incrustar JS, en este caso, para meter un número.
-
-> NOTA: el valor de los atributos de un componente en JSX debe ser **SIEMPRE** una cadena (entre comillas) o una expresión JS (entre llaves)
-
-Para ver mejor cómo funciona, hemos creado otro componente `ItemList` que nos sirve para manejar listas de items. En este caso, va a crear varios items:
-
-```js
-class ItemList extends React.Component {
-  render() {
-    return (
-      <ul className="item-list">
-        <li>
-          <Item
-            name="Cereales con chocolate"
-            description="Cereales rellenos de chocolate"
-            quantity={2}
-            category="Cereales"
-            price={5}
-          />
-        </li>
-        <li>
-          <Item
-            name="Hamburguesa con queso"
-            description="Hamburguesa rica y saludable"
-            quantity={1}
-            category="Fast-food"
-            price={15}
-          />
-        </li>
-        //...
-      </ul>
-    );
-  }
-}
-```
+Si ejecutas este código, verás un **warning** en consola. ¿Sabrías solucionar este **warning** siguiendo el enlace que te sugiere React?
 
 #### EJERCICIO 1
 
-Echa un ojo al [ejemplo anterior en codepen][codepen-props-example], e intenta añadir un nuevo `Item` a la lista.
-
-Ahora tenemos los datos de cada item en un array de objetos (como variable global):
+Partiendo de este array:
 
 ```js
-const arrayOfItems = [
+const students = [
   {
-    name: 'Cereales con chocolate',
-    description: 'Cereales rellenos de chocolate',
-    quantity: 2,
-    category: 'Cereales',
-    price: 5
+    promo: 'A',
+    name: 'Sofía',
+    age: 20
   },
   {
-    name: 'Hamburguesa con queso',
-    description: 'Hamburguesa rica y saludable',
-    quantity: 1,
-    category: 'Fast-food',
-    price: 15
+    promo: 'B',
+    name: 'María',
+    age: 21
   },
   {
-    name: 'Agua mineral',
-    description: 'Agua de un charco del Himalaya',
-    quantity: 2,
-    category: 'Bebida',
-    price: 5
+    promo: 'A',
+    name: 'Lucía',
+    age: 22
   }
 ];
 ```
 
-a) ¿Serías capaz de crear el JSX que devuelve el método `render` de `ItemList` usando un bucle o un `map`? Para hacerlo debes saber que para pintar varios componentes en JSX basta con crear un array con cada JSX y devolverlo en una expresión entre {}.
-
-b) Ahora vamos a filtrar el array antes convertirlo a JSX con `map`, tirando de nuestra amiga `filter`. Mostraremos en la página solo los productos cuyo precio es inferior a 10.
+1. ¿Sabrías pintar el listado de estudiantes con su nombre y edad con React?
+1. A continuación antes de pintar ¿sabrías filtrar las estudiantes por las que pertenezcan a la promo A?
 
 \_\_\_\_\_\_\_\_\_\_
 
 ## Uso de `children` para acceder a los componentes hijo cuando no los conoces
 
-Algunas veces, al declarar un componente no sabremos o no nos importará qué otros componentes podrá contener dentro. Por ejemplo, un componente `Popup` o un componente genérico `Header`. En esos casos podremos usar una `prop` especial, `children`, para pasar directamente elementos:
+Algunas veces, al declarar un componente no sabremos o no nos importará qué otros componentes podrá contener dentro.
+
+Un ejemplo es un componente Colapsable. Este componente se tiene que encargar de mostrar una cabecera, que si la pulsamos debe des/colapsar el contenido del colapsable. Pero a la hora de programar no vamos a saber cuál será dicho contenido. O en un sitio de nuestra página puede tener un contenido y en otro sitio otro. Dicho de otra forma el colapsable es el contenedor de un contenido que no conocemos.
+
+
+Otro ejemplo es un componente `Popup` que gestiona una ventana (maquetada en HTML) que se pone por encima del resto de cosas de la página (con posición fija y esas cosas que ya sabemos).
+
+En esos casos podremos usar una `prop` especial, `children`, para pasar directamente elementos:
+
+
+```js
+import React from 'react';
+import Popup from './Popup';
+
+class App extends React.Component {
+  render() {
+    return (
+      <div>
+        <Popup title="Esto es un popup">
+          <h3>Soy el título del contenido</h3>
+          <p>Y yo el texto del contenido</p>
+        </Popup>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
 
 ```js
 import React from 'react';
@@ -171,52 +169,103 @@ import React from 'react';
 class Popup extends React.Component {
   render() {
     return (
-      <div className={`alert alert-${this.props.styling}`} role="alert">
-        {this.props.children}
+      <div>
+        <h2>{this.props.title}</h2>
+        <div className="popup__content">
+          {this.props.children}
+        </div>
       </div>
     );
   }
 }
 
-ReactDOM.render(
-  <Popup styling="info">
-    <h1 className="horizontal-center">Welcome</h1>
-    <p>Thank you for visiting our webpage!</p>
-    <p>We hope you enjoy our new shiny site!</p>
-  </Popup>,
-  document.getElementById('root')
-);
+export default Popup;
 ```
 
-[&rtrif; Componentes y `children` en Codepen][codepen-component-children]
+Como se puede observar en `App.js` estamos pasando a `<Popup>` dos props:
 
-Como se puede observar en el ejemplo, inyectaremos `props.children` en el JSX del componente genérico como una variable cualquiera. Cuando usemos el componente, escribiremos el contenido en JSX dentro de sus etiquetas de apertura (`<Popup>`) y de cierre (`</Popup>`).
+- `title="Esto es un popup"`:
+   - Que es una prop "normal"
+   - En este cado es de tipo texto
+- `<h3>Soy el título del contenido</h3><p>Y yo el texto del contenido</p>`
+   - Que es una prop "especial".
+   - Hasta ahora habíamos pasado props a nuestras hijas de tipo texto, número... en general cualquier tipo de variable o constante de JS.
+   - También podemos pasar código JSX, es decir, etiquetas de HTML, textos y otros componentes de React.
+   - Lo que pasemos a nuestra hija **entre las etiquetas de apertura y cierre de un componente** es recibido por el componente hija en `this.props.children`.
+   - La componente hija debe encargarse de rendedirzarlo donde quiera. En el ejemplo anterior dentro del `div` con la clase `popup__content`.
 
 #### EJERCICIO 2
 
-Desarrolla un componente `HalfPage` que todo su contenido lo ponga en la mitad izquierda de la pantalla (mitad de ancho y todo el alto). Usa `children` para introducir todo el contenido entre la apertura y cierre de `HalfPage` en su interior. Crea 2 componentes `HalfPage` con algo de contenido HTML (en JSX) para ver cómo se posiciona en una mitad y la otra.
+1. Desarrolla un componente `HalfPage` que mida el 50% de ancho del viewport. Este componente debe recibir de su componente madre código JSX.
+1. Desde el componente madre `App` usa el componente `HalfPage` y pásale un `H1` y un párrafo que ponga "Estoy en la izquierda".
+1. Desde el componente madre `App` añade un segundo `HalfPage` y pásale un `H2` y otro párrafo que ponga "Estoy en la derecha".
+
+El resultado debería ser que en la mitad izquierda de la página debe aparecer el `H1` y el "Estoy en la izquierda" y el la mitad derecha el `H2` y el "Estoy en la derecha".
 
 \_\_\_\_\_\_\_\_\_\_
 
 ## Fragments
 
-Los fragments son un **patrón de diseño** (una forma de programar común y ampliamente usada) propio de React muy útil. Como habéis visto, tenemos la limitación de que cada componente tiene que devolver en su método `render()` un único elemento que contiene al resto. Pero esto muchas veces nos obliga a tener que meter contenedores (`<div>`) que muchas veces no queremos. Para solucionar este problema tenemos los Fragments, que nos permiten agrupar elementos sin tener que introducir ningún contenedor en el HTML.
+Anteiormente en Adalab... os hemos comentado que todo componente debe tener una única etiqueta HTML como hija directa del `render()`.
 
-En este ejemplo, nuestro render puede devolver 3 componentes agrupados en un Fragment que no introduce ningún contenedor adicional en HTML.
+Si tenemos que meter dos etiquetas hermanas estamos obligadas a meter una etiqueta contenedora, por ejemplo un `<div>`;
+
+Pero a veces eso nos rompe la estructura HTML de la página. Por ejemplo, si en el componente madre tenemos:
 
 ```js
 render() {
   return (
-    <React.Fragment>
-      <ChildA />
-      <ChildB />
-      <ChildC />
-    </React.Fragment>
+    <ul>
+      <Item />
+    </ul>
   );
 }
 ```
 
+Y en el componente hija `Item` queremos tener:
+
+```js
+render() {
+  return (
+    <li>Uno</li>
+    <li>Dos</li>
+  );
+}
+```
+
+Esto provocará un error. Y React nos pedirá que metamos una etiqueta que agrupe los dos `li`, de esta forma:
+
+```js
+render() {
+  return (
+    <div>
+      <li>Uno</li>
+      <li>Dos</li>
+    </div>
+  );
+}
+```
+
+Esto es pecado mortal de necesidad porque el hijo directo de un `ul` siempre debe ser `li`. Pero no te preocupes, tenemos la solución:
+
+```js
+render() {
+  return (
+    <> {/* a esto se le llama fragment */}
+      <li>Uno</li>
+      <li>Dos</li>
+    </>
+  );
+}
+```
+
+Con la etiqueta de apertura especial de React `<>` y la de cierre `</>` podemos agrupar los dos `li` en un contenedor único y el `render()` solo tendrá un único hijo directo.
+
+Solo si te atreves... prueba este código en una web e inspecciona con DevTools, para ver qué código HTML está generando. Mañana me dices si te mola o no.
+
 ## Valores por defecto de las `props`
+
+> **Nota:** lo que vamos a explicar sobre `defaultProps` nos ayuda a la hora de programar. A nuestras usuarias finales no les aporta nada.
 
 En ocasiones querremos definir que algunas `props` no sean obligatorias, y cuando no se pasen querremos usar un valor por defecto. Esto se puede conseguir en React con `defaultProps`. Será un objeto con el nombre de las `props` que queremos que tengan valor por defecto y su correspondiente valor, y cuando se instancie el componente, se cogerán las `props` que falten de ese objeto. Lo definimos como una propiedad del componente, `NombreDelComponente.defaultProps = {}`, después de declarar la clase:
 
@@ -244,9 +293,14 @@ Button.defaultProps = {
 };
 ```
 
-[&rtrif; Valores por defecto en Codepen][codepen-default-values]
+> **Nota:** una `defautlProps` solo se aplica si desde el componente madre no nos están pasando una `prop`. Si nos pasan la `prop` con un `string` vacío, un `null`, un `undefined` o cualquier otro valor, React no aplicará el valor por defecto.
 
-> No hace falta importar el paquete `prop-types` para usar valores por defecto
+Esto nos ayuda a:
+
+- No tener que pasar una `prop` a una componente hija, si la mayoría de las veces va a tener el mismo valor.
+- Si otra compañera llega nueva al proyecto, le es muy fácil identificar qué props son opcionales (que son las que estén en `defaultProps`) y cuáles obligatorias (que son el resto).
+
+> Esta funcionalidad viene instalada ya dentro de React, no hace falta instalar nada nuevo.
 
 #### EJERCICIO 3
 
@@ -256,12 +310,18 @@ Partiendo del código del ejercicio 1, usa las `defaultProps` para que la descri
 
 ## `props` tipadas con `propTypes`
 
-JavaScript no tiene un sistema de tipado fuerte, lo que significa que nuestras variables pueden almacenar cualquier tipo de valor. Podemos declarar una variable `const nameOfAPerson` que debería almacenar una `string` y, sin embargo, podemos asignarle un valor numérico como `4`, tanto en su inicialización, como en un futuro si fuera `let` o `var`. Cuando controlamos una pequeña base de código, esto no supone ningún problema, pero existen dos casos en los que es más probable que empiecen a surgir incoherencias o errores:
+> **Nota:** lo que vamos a explicar sobre `propTypes` nos ayuda a la hora de programar. A nuestras usuarias finales no les aporta nada.
 
-- Cuando nuestra base de código es o va a ser muy grande (escalabilidad)
-- Cuando nuestro código será usado por otras personas (amabilidad, ;)
+JavaScript no tiene un sistema de tipado fuerte, lo que significa que nuestras variables pueden almacenar cualquier tipo de valor.
 
-Existen algunas variantes de JavaScript como [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html) o [Flow](https://flow.org/en/docs/getting-started/) que resuelven este problema añadiendo tipos a todo nuestro código. Estas opciones resuelven el primer punto de arriba, pero no el segundo.
+Podemos declarar una variable `const nameOfAPerson` que debería almacenar una `string` y, sin embargo, podemos asignarle un valor numérico como `4`, tanto en su inicialización, como en un futuro si fuera `let`.
+
+Cuando trabajamos en un código pequeño, esto no supone ningún problema, pero existen dos casos en los que es más probable que empiecen a surgir incoherencias o errores:
+
+- Cuando nuestro código es o va a ser muy grande (escalabilidad)
+- Cuando nuestro código será usado por otras personas (amabilidad, legibilidad, elegancia, saber estar... ;)
+
+> **Nota:** existen algunas variantes de JavaScript como [TypeScript](https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html). Se puede decir que CSS es a Sass lo que JS a TypeScript, un preprocesador que nos obliga a trabajar con variables que no pueden cambiar su tipo.
 
 Afortunadamente, React tiene un sistema de comprobación de tipos para las `props` de nuestros componentes que nos permitirá que sean más robustos, las `propTypes`. Se utiliza muy parecido a las `defaultProps`, salvo que tendremos que instalar e importar el paquete `prop-types` de `npm` primero. Lo instalaremos en nuestro proyecto desde un terminal:
 
@@ -319,7 +379,7 @@ También podemos declarar tipos más complejos:
 - `PropTypes.instanceOf(Class)` para una instancia de una clase; en este ejemplo, `Class`
 - `PropTypes.arrayOf(PropTypes.number)` para arrays que contengan solo un tipo básico; en este ejemplo, números
 - `PropTypes.oneOf(['apple', 'pear', 'lemon', 'orange'])` para valores limitados a los del array especificado
-- Y más. La lista completa está en los [enlaces externos][sección-recursos-externos]
+- Y más. La lista completa está en los [enlaces externos][sección-recursos-externos].
 
 Además de todo esto, podemos obligar a que se le pase valor a la `prop` añadiendo `.isRequired` a cualquiera de los tipos:
 
@@ -354,7 +414,7 @@ Button.defaultProps = {
 
 [&rtrif; Validar `props` de React en Codepen][codepen-props-typechecking]
 
-Podemos combinar `propTypes` con `children` también, y obligar a que nuestro componente tenga un solo hijo/a, por ejemplo:
+Podemos combinar `propTypes` con `children` también, y obligar a que nuestro componente tenga un solo a, por ejemplo:
 
 ```js
 import React from 'react';
@@ -370,6 +430,13 @@ VerticalCenter.propTypes = {
   children: PropTypes.element.isRequired
 };
 ```
+
+Si pasamos a un componente hija una `prop` que no cumple esta validación o comprobación de `propTypes` React mostrará un **warning** en consola, pero la aplicación seguirá funcionando.
+
+Esto es muy útil para:
+
+- Documentar el componente: con `propTypes` estamos diciendo qué `props` recibe el componente y de qué tipo son.
+- Si creamos un componente que va a ser usado por otras personas de la empresa o de la otra parte del mundo, les estaremos mostrando un warning si no usan bien nuestro componente. Por ello facilitamos la vida a otras personas y mejoramos la calidad del código.
 
 #### EJERCICIO 4
 

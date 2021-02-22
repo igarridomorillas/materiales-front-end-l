@@ -17,7 +17,7 @@
 
 [react]: https://reactjs.org/
 
-En esta sesión vamos a seguir aprendiendo cómo funciona la librería [React.js][react]. En concreto, vamos a ver que está basada en componente y cómo crear un componentes personalizable.
+En esta sesión vamos a seguir aprendiendo cómo funciona la librería [React.js][react]. En concreto, vamos a ver que está basada en componentes y cómo crear un componente personalizable.
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
@@ -57,13 +57,13 @@ class RandomCat extends React.Component {
 }
 ```
 
-> ¿Nos suena esta estructura? ¡Claro que sí! Es la misma que hemos aprendido en las clases de JS.
-
 Crearemos nuestros componentes siempre con **mayúscula inicial**, independientemente de si usamos componentes de clase o funcionales. Así los diferenciaremos de los componentes en JSX que representan etiquetas de HTML.
 
-Los componentes de clase tienen un método `render()` que devuelve un elemento de JSX para que React lo pinte. Así que sobrescribiremos ese método (es decir, que declararemos un método con ese nombre):
+Los componentes de clase tienen un método (o función) llamado `render()` que devuelve una etiqueta de HTML para que React lo pinte. Así que sobrescribiremos ese método (es decir, que declararemos un método con ese nombre):
 
 ```js
+import React from "react";
+
 class RandomCat extends React.Component {
   render() {
     return (
@@ -73,6 +73,8 @@ class RandomCat extends React.Component {
     );
   }
 }
+
+export default RandomCat;
 ```
 
 _¡Ya está!_ Ahora para ver el resultado tendremos que decirle a React que lo pinte. Vamos a ver que para trabajar en React es buena idea utilizar `App.js` como componente principal que monte toda nuestra aplicación y llamar al resto de componentes desde ahí, así que para usar nuestro componente `RandomCat.js` en `App.js`, tendremos que importar nuestro componente del módulo, naturalmente. Escribiremos arriba:
@@ -89,6 +91,8 @@ import RandomCat from "./RandomCat";
 Solo falta el paso final: es tan fácil como llamar a nuestro componente dentro del `return` de `App.js`:
 
 ```js
+import React from "react";
+
 class App extends React.Component {
   render() {
     return (
@@ -98,6 +102,8 @@ class App extends React.Component {
     );
   }
 }
+
+export default App;
 ```
 
 **Y voilá!** Nos debería quedar así:
@@ -141,7 +147,7 @@ export default App;
 
 #### EJERCICIO 1
 
-Vamos a partir del ejercicio 1 (o del 2) de la sesión anterior. Vamos a crear un nuevo componente `MediaCard` encargado de pintar una tarjeta social para un usuario. Vamos a cargar ese nuevo componente en nuestro componente principal`App.js`.
+Vamos a partir del ejercicio 1 (o del 2) de la sesión anterior. Vamos a crear un nuevo componente `MediaCard` encargado de pintar una tarjeta social para un usuario. Vamos a cargar ese nuevo componente en nuestro componente principal `App.js`.
 
 \_\_\_\_\_\_\_\_\_\_
 
@@ -149,7 +155,7 @@ Vamos a partir del ejercicio 1 (o del 2) de la sesión anterior. Vamos a crear u
 
 Ya hemos visto cómo escribir un componente de clase en React, y curiosamente su estructura es igual a la estructura de las clases JS, vamos a ver ahora qué es un componente funcional.
 
-Los componentes funcionales son otro tipo de componentes que utilizan la estructura de una función para definirse y más adelante, cuando veamos el uso de los hooks, aprenderemos que son los que vamos a utilizar en estos casos.
+Los componentes funcionales son otro tipo de componentes que utilizan la estructura de una función para definirse y en próximas lecciones, cuando veamos el uso de los hooks, aprenderemos que son los que vamos a utilizar en estos casos.
 
 Actualmente, y dado que React es una tecnología muy nueva que aún está evolucionando, conviven estos dos tipos de componentes en los proyectos actuales (por eso, cuando habéis instalado React la primera vez habéis visto App.js escrtio en forma de función en lugar de como clase).
 
@@ -160,7 +166,7 @@ import React from "react";
 
 class Greetings extends React.Component {
   render() {
-    return <h1>Hello, {this.props.name}!</h1>;
+    return <h1>Hello, Maricarmen!</h1>;
   }
 }
 
@@ -172,41 +178,36 @@ Ahora echa un vistazo a cómo sería Greeting escrito como componente funcional:
 ```js
 import React from "react";
 
-const Greetings = (props) => {
-  return <h1>Hello, {props.name}!</h1>;
+const Greetings = () => {
+  return <h1>Hello, Maricarmen!</h1>;
 };
 
 export default Greetings;
 ```
 
-> **IMPORTANTE:** Como se puede ver en los dos ejemplos de código anteriores:
->
-> - Las props en un componente de clase se usan con `this.props.name`. Las props están en `this` porque **son un atributo** de una clase de JavaScript.
-> - Las props en un componente funcional se usan con `props.name`. Aquí las props son **el primer argumento de la función** y son un argumento de tipo objeto.
->
-> La única diferencia entre ambas es sintáctica. Por lo demás funcionan exactamente igual.
-
 Si lo combinamos con el _return_ implícito de las _arrow functions_ podríamos incluso hacer una estructura más corta, quedando así:
 
 ```js
 import React from "react";
+
 // "arrow function" sin llaves, con "return" implícito
-const Greetings = (props) => <h1>Hello, {props.name}!</h1>;
+const Greetings = () => <h1>Hello, Maricarmen!</h1>;
 
 export default Greetings;
 ```
 
-Puesto que, como ya hemos visto actualmente nos encontraremos los dos tipos de componentes en proyectos React vamos a potenciar que manejéis el uso de componentes de clase para aquellos que tienen un estado (concepto que ya aprenderemos) y el uso de componentes funcionales si desarrollais con _hooks_ (también os los presentaremos en próximas lecciones).
-
 ### Algunos detalles para tener en cuenta
 
-Los conceptos que manejamos en los dos tipos de componentes, props, eventos, datos... son los mismos. Lo que cambia es la forma de escribirlos.
+Los conceptos que manejamos en los dos tipos de componentes, props, eventos, datos... son los mismos. **Lo que cambia es la forma de escribirlos, es decir, la sintaxis.**
+
 Los componentes de clase son antiguos. React ha decidido utilizar componentes funcionales porque son más sencillos y cómodos.
 Por desgracia, hay muchas empresas que usan los componentes de clase y por ello tenemos que enseñar la versión antigua y la nueva. Puedes trabajar en un proyecto que maneje componentes de clase y es esencial que entiendas cómo se comportan hasta que el uso de hooks y componentes funcionales esté completamente extendido.
 
-### Método render
+### Método render: un solo hijo
 
-Es de suma importancia tener en cuenta que el método render solo puede tener un hijo o contendor directo, y a partir de él sí que puede tener tantos nietos como sea necesario, esto es porque dicho método render contiene un return y solo puede retornar un elemento o contenedor. Por lo tanto algo como lo siguiente NO puede ocurrir, donde podemos observar que hay un return con dos hijos directos:
+Es de suma importancia tener en cuenta que el método render solo puede tener un hijo o etiqueta HTML, y a partir de él sí que puede tener tantos nietos como sea necesario, esto es porque dicho método render contiene un return y solo puede retornar un elemento o etiqueta contenedora.
+
+Por lo tanto algo como lo siguiente NO puede ocurrir, donde podemos observar que hay un return con dos hijos directos:
 
 ```js
 render () {
@@ -217,12 +218,40 @@ render () {
 }
 ```
 
+Si escribimos un componente con dos hijos directos en el `return` React lanzará un error.
+
 ## Las `props` para personalizar un componente
 
-Hasta aquí todo bien, pero ¿y si queremos que `RandomCat` no sea siempre igual? De la misma manera que pasamos atributos a los elementos del DOM, podemos pasar datos a los componentes de React.
+Hasta aquí todo bien, pero ¿y si queremos que `RandomCat` no sea siempre igual?
+
+Recuerdas que JS usamos las funciones para reutilizar código y que gracias a los parámetros y argumentos podemos pasar datos a las funciones para personalizar su comportamiento. Pues las props es exactamente lo mismo. El componente (ya sea de clase o funcional) sería la función de JS (el código reutilizable) y las props serían los parámetros (datos que les pasamos para personalizar su comportamiento).
+
+Otro ejemplo de lo que son las props también serían los partials de HTML que aprendimos en el módulo 1. A los partials les pasábamos datos (lo que aquí son las `props`) a través de los atributos. Dentro del partial usábamos esos datos con el `@@`.
+
+### Props en los componentes de clase
 
 ```js
+// componente madre
+import React from 'react';
+import Greeting from './Greeting'; // importamos el componente hija para usarlo en el render()
+
+class App extends React.Component {
+  render() {
+    return (
+      <Greeting name="María Moliner" />
+    );
+  }
+}
+
+export default App;
+```
+
+```js
+// componente hija
+import React from 'react';
+
 class Greeting extends React.Component {
+  // en this.props recibo las props que me pasa mi madre
   render() {
     return (
       <span>Hello, {this.props.name}!</span> // <span>Hello, María Moliner!</span>
@@ -230,33 +259,38 @@ class Greeting extends React.Component {
   }
 }
 
-const componentToRender = <Greeting name="María Moliner" />;
+export default Greeting;
 ```
 
-Estos datos se llaman `props` y se guardan en un atributo de las instancias del mismo nombre. Podemos acceder a él a través de `this.props`, en el caso de los componentes de clase o directamente usando `props` en el caso de un componente funcional. Es un objeto que contiene las claves y los valores de estos "atributos". Mira este ejemplo de props usadas en un componente de clase.
+Los datos que pasamos de un componente madre a su componente hija los llamamos `props` (properties). En el ejemplo superior `App.js` le pasa a `Greeting.js` las props `{ name: 'María Moliner' }`.
+
+En los componentes de clase React las guarda en `this.props` y podemos usarlas escribiendo `this.props.name` o `this.props.nombreDeLaPropQueQuieroUsar`. `this.props` siempre es un **objeto** que contiene las claves y los valores de estos "atributos". Mira este ejemplo de props usadas en un componente de clase.
+
+Una de las pocas reglas estrictas de React: **no debemos modificar nunca las `props`**. Las props las podmeos leer, añadir al HTML para que se pinten en pantalla, pero no modificarlas. Si necesitamos modificar una `prop` las guardaremos en variables o constantes para evitar modificar la `prop`, como vemos en el siguiente ejemplo.
 
 ```js
-render() {
-  console.log(this.props); // { name: 'María Moliner' }
-  // ...
+// componente hija
+import React from 'react';
+
+class Greeting extends React.Component {
+  render() {
+    console.log(this.props);
+    const upperCaseName = this.props.name.toUpperCase();
+
+    return (
+      <span>Hello, { upperCaseName }!</span> // <span>Hello, MARÍA MOLINER!</span>
+    );
+  }
 }
+
+export default Greeting;
 ```
 
-Una de las pocas reglas estrictas de React: **no debemos modificar nunca las `props`**, puesto que son como los parámetros que se le pasan a una función, o al constructor de una clase. Si queremos calcular con esos datos, podremos hacerlo dentro del `render()` del componente, antes de devolver el JSX:
-
-```js
-render() {
-  const upperCaseName = this.props.name.toUpperCase();
-
-  return (
-    <span>Hello, { upperCaseName }!</span> // <span>Hello, MARÍA MOLINER!</span>
-  );
-}
-```
+> **Nota:** hasta que domines las `props` es una buena práctica escribir `console.log(this.props);` al principio del método `render()` en los componentes de clase.
 
 #### EJERCICIO 2
 
-Vamos a partir del ejercicio 1 (el anterior). Vamos a usar las `props` para personalizar el contenido de una tarjeta social `MediaCard`. En concreto, vamos a personalizar
+Vamos a partir del ejercicio 1. Vamos a usar las `props` para personalizar el contenido de una tarjeta social `MediaCard`. En concreto, vamos a personalizar:
 
 - el nombre del usuario
 - la fecha
@@ -265,11 +299,157 @@ Vamos a partir del ejercicio 1 (el anterior). Vamos a usar las `props` para pers
 - el número de likes
 - si el corazón está o no relleno
 
+Desde `App.js` vamos a pasar props al componente `MediaCard.js`. Este segundo componente debe usarlas.
+
 \_\_\_\_\_\_\_\_\_\_
 
+### Props en los componentes funcionales
+
+Como hemos dicho anteriormente los conceptos que aprendemos sobre componentes de clases son exactamente igual que los que aprendemos en componentes funcionales. La diferencia entre uno y otro es simplemente un **cambio de sintaxis**. Por ello lo que hemos aprendido de `props` en los componentes de clase nos vale igual para los componentes funcionales.
+
+En los componentes funcionales:
+
+- Pasar `props` de un componente madre a un componente hija es exactamente igual.
+- Recibir `props` en un componente hija cambia un poco.
+
+Si pasamos el componente `Greeting` de clase a funcional el código sería el siguiente:
+
+```js
+// componente hija
+import React from 'react';
+
+const Greeting = (props) => { // en los componentes funcionales recibimos las props como único parámetro de la función
+  console.log(props);
+  const upperCaseName = props.name.toUpperCase();
+  return (
+    <span>Hello, { upperCaseName }!</span>
+  );
+}
+
+export default Greeting;
+```
+
+Es decir, los componentes funcionales no son clases y por ello no tienen `this.props`. A cambio un componente funcional (que es una función) recibe las `props` por los parámetros de la función. Por ello, si un componente de clase usábamos `this.props.name` en uno funcional usamos `props.name`.
+
+Los componentes funcionales solo reciben un argumento que es `props`. Los componentes no los ejecutamos nosotras directamente, es React quien los ejecuta y quién decide qué recibimos como parámetros de la función.
+
+> **Nota:** hasta que domines las `props` es una buena práctica escribir `console.log(props);` al principio de la función en los componentes funcionales.
+
+### Props que no existen
+
+Si tenemos estos dos componentes:
+
+```js
+// componente madre
+import React from 'react';
+import Greeting from './Greeting';
+
+class App extends React.Component {
+  render() {
+    return (
+      <Greeting name="María Moliner" />
+    );
+  }
+}
+
+export default App;
+```
+
+```js
+// componente hija
+import React from 'react';
+
+class Greeting extends React.Component {
+  // en this.props recibo las props que me pasa mi madre
+  render() {
+    console.log(this.props)
+    return (
+      <span>Hello, {this.props.title}!</span>
+    );
+  }
+}
+
+export default Greeting;
+```
+
+Podemos ver que el componente hija `Greeting.js` está intentando usar `this.props.title`. Sin embargo el componente madre `App.js` está pasando a su hija el componente `name="María Moliner"`.
+
+Esté código está mal porque desde la madre pasamos la prop `name` y en la hija la intentamos usar como `title`. Es decir, en la hija `this.props.title` es `undefined`.
+
+Por ello cuando pasamos `props` de madres a hijas, nos tenemos que preocupar de dos cosas:
+
+- Que el nombre de la `prop` sea igual en la madre y en la hija.
+- Que el tipo de dato tenga sentido. Si desde la madre pasamos un texto en la hija trabajaremos con una hija. Si desde la madre pasamos un array en la hija deberemos hacer cosas que se puedan hacer con un array como por ejemplo recorrerlas en un bucle.
+
+### Componentes de clase y funcionales trabajando juntos
+
+En un proyecto podemos tener componentes de clase y funcionales trabajando juntos. Cada componente de un proyecto puede ser de un tipo u otro.
+
+**Un componente no sabe de qué tipo es su componente madre, ni sabe de qué tipo son sus componentes hijos.**
 #### EJERCICIO 3
 
 Convierte el componente `MediaCard` del ejercicio anterior en un componente funcional.
+
+### Muchos niveles de componetes
+
+Si tenemos un componente abuela, otro madre y otro nieta podemos pasar `props` de la abuela a la nieta pasando a través de la madre. Aquí tenemos un ejemplo:
+
+```js
+// componente abuela
+import React from 'react';
+import Greeting from './Greeting';
+
+class App extends React.Component {
+  render() {
+    return (
+      <Greeting name="María Moliner" />
+    );
+  }
+}
+
+export default App;
+```
+
+```js
+// componente madre
+import React from 'react';
+import Title from './Title';
+
+class Greeting extends React.Component {
+  // en this.props recibo las props de la abuela
+  render() {
+    console.log(this.props)
+    return (
+      <span>Hello,
+        {/* aqui le paso la prop name de la abuela a la nieta, y se la paso llamándola title */}
+        <Title title={this.props.name} />
+      !</span>
+    );
+  }
+}
+
+export default Greeting;
+```
+
+```js
+// componente nieta
+import React from 'react';
+
+class Title extends React.Component {
+  // en this.props recibo las props de la madre
+  render() {
+    console.log(this.props)
+    return (
+      {/* aqui recibo la prop title de la madre y la nieta, como la madre me pasa la prop title aquí puedo usarla con this.props.title */}
+      <span>{this.props.title}</span>
+    );
+  }
+}
+
+export default Title;
+```
+
+Si nos fijamos el componente madre `Greeting.js` funciona como un componente intermediaria entre la abuela y la nieta.
 
 \_\_\_\_\_\_\_\_\_\_
 
@@ -305,9 +485,7 @@ class CatList extends React.Component {
         <ul className="section-cats_list">
           <li>A cat</li>
           <li>Another cat</li>
-          <li>
-            <i>Moar</i> cats
-          </li>
+          <li>Moar cat</li>
         </ul>
       </section>
     );
@@ -473,8 +651,6 @@ class RandomCat extends React.Component {
 export default RandomCat;
 ```
 
-> **NOTA**: cuando manejamos un listado de componentes hermanos (como en los `li`s del ejemplo anterior), React nos da un _warning_ en la consola indicando que debemos dar un atributo `key` a cada elemento del listado. Este atributo debe ser único para cada elemento de la lista, normalmente se usa el `id` del elemento si viene del servidor aunque si no lo tenemos puede usarse el índice de un `for` o un `map`. Sirve para que React internamente pueda optimizar el pintado de los elementos.
-
 #### EJERCICIO 4
 
 Vamos a partir del ejemplo con un listado de gatos con fotos aleatorias. Usaremos las `props` para pasar el tamaño de la imagen a `RandomCat`. Pasaremos una anchura (`width`) y una altura (`height`), que serán enteros (píxeles). En el caso de que no se pasen `props`, `width` será de `400` y `height` será `200`.
@@ -493,6 +669,13 @@ En nuestra web de tarjetas sociales, vamos a crear un nuevo componente `MediaLis
 
 \_\_\_\_\_\_\_\_\_\_
 
+## Create-react-app y Git
+
+Una cosa que debéis saber. Cuando creamos un proyecto con `create-react-app` puede pasar dos cosas:
+
+- Que estemos creando el nuevo proyecto **fuera** de un repo de Git. En ese momento `create-react-app` creará el `package.json`, el `README.md`, la carpeta `src/`... y también una carpeta `.git`. Esta carpeta `.git` está pensada para ser un repo de Git, pero no está enlazada con ningún repo de GitHub. Por ello la podemos borrar. **Dicho de otra forma, si `create-react-app` nos crea una carpeta `.git` la podemos borrar.**
+- Que estemos creando el proyecto dentro de un proyecto que sí es un repo de Git enlazado con GitHub. En este caso `create-react-app` no nos creará la carpeta `.git`. En este caso no tendremos que hacer nada.
+
 ## Publicar nuestra app React en GitHub Pages
 
 `create-react-app` nos crea un entorno de desarrollo donde empezar a trabajar con React en nuestra máquina. Si queremos enseñar el resultado con GitHub Pages hay que hacer algunas cosillas antes de generar una versión para producción:
@@ -501,16 +684,15 @@ En nuestra web de tarjetas sociales, vamos a crear un nuevo componente `MediaLis
 - necesitaremos una carpeta determinada
 - y, quizás, haya que cambiar algo de `http` a `https`.
 
-> GitHub Pages se sirve como https y "pide" que el resto de recursos externos que pidamos usen el mismo protocolo. Esto se aplica, por ejemplo, a las peticiones a una API o las rutas de las imágenes.
-
 Entraremos por terminal a nuestra carpeta de proyecto y esto es lo que hay que hacer:
 
-1. Modificar `package.json` para que las rutas sean relativas a nuestros archivos: hay que añadir `"homepage": "./",`.
-1. Ya que lo vamos a servir desde GitHub, y usa https, tendremos que cambiar cualquier recurso `http` a `https`: por ejemplo, en un fetch.
-1. Ejecutar `npm run build` para que nos cree la versión para producción en la carpeta **build/**.
-1. GitHub Pages funciona en la carpeta raíz o en la **docs/** de la rama master, así que querremos cambiar la carpeta **build/** por la carpeta **docs/**. Para ello, desde la terminal y colocados en la carpeta raíz del proyecto ejecutaremos `mv build docs`. Es importante saber que este paso lo tendremos que hacer cada vez que hagamos cambios y queramos reflejarnos en nuestra página de GitHub Pages.
+1. Modificar `package.json` para que las rutas sean relativas a nuestros archivos: hay que añadir `"homepage": "./",` en la línea 2. **Esto es importante y siempre se nos olvida.**
+1. Ya que lo vamos a servir desde GitHub, y usa https, tendremos que cambiar cualquier recurso `http` a `https`: por ejemplo, en un fetch. [Más info aquí](../modulo_6/errores_comunes_en_programacion.md#mixed-content-http-vs-https).
+1. Crear la versión de producción:
+   1. Ejecutar `npm run build` para que nos cree la versión para producción en la carpeta **build/**.
+   1. GitHub Pages funciona en la carpeta raíz o en la **docs/** de la rama master, así que querremos cambiar la carpeta **build/** por la carpeta **docs/**. Para ello, desde la terminal y colocados en la carpeta raíz del proyecto ejecutaremos `mv build docs`. Es importante saber que este paso lo tendremos que hacer cada vez que hagamos cambios y queramos reflejarnos en nuestra página de GitHub Pages. Otra opción es cambiarlo a mano desde el explorador de carpetas de nuestro ordenador. Lo importante es que esa carpeta se llame `docs/`.
 1. Add, commit y push.
-1. Casi listo, solo falta activar GitHub Pages para que se sirva desde la carpeta docs de nuestra rama master. Para eso como ya sabéis, desde la página principal del repositorio, podéis ir a la pestaña de Settings y una vez dentro, en la sección GitHub Pages, donde pone _"Source"_ seleccionar _"master branch /docs folder"_
+1. Casi listo, solo falta activar GitHub Pages para que se sirva desde la carpeta docs de nuestra rama master. Para eso como ya sabéis, desde la página principal del repositorio, podéis ir a la pestaña de **Settings** y una vez dentro, en la sección GitHub Pages, donde pone **Source** seleccionar `master branch /docs folder`.
 
 **Y ya estaría.**
 
@@ -520,7 +702,7 @@ Publiquemos la aplicación del último ejercicio en GitHub Pages. ¡A por ello!
 
 \_\_\_\_\_\_\_\_\_\_
 
-## _Debugging_ de aplicaciones en React
+## Debugging de aplicaciones en React
 
 [react-devtools-firefox]: https://addons.mozilla.org/firefox/addon/react-devtools/
 [react-devtools-chrome]: https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi

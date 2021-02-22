@@ -1,10 +1,12 @@
 # Añadir registros de una base de datos: INSERT INTO
 
+`INSERT INTO` nos permite **añadir un registro a una tabla** de la base de datos a través de una query.
+
 Así como leer registros de una tabla no modifica la base de datos, añadir un registro sí que la modifica.
 
 ## Sintaxis de INSERT INTO en SQL y SQLite browser
 
-`INSERT INTO` nos permite **añadir un registro a una tabla** de la base de datos a través de una query. Y la sintaxis es:
+La sintaxis de un `INSERT INTO` es:
 
 ```sql
 INSERT INTO nombre_de_la_tabla (nombre_de_una_columna, nombre_de_otra_columna)
@@ -30,12 +32,12 @@ INSERT INTO users (email, password) VALUES ('celia@gmail.com', 'fas09fn32');
 
 La tabla quedará así:
 
-| id  | email              | password     | name  |
-| --- | ------------------ | ------------ | ----- |
-| 1   | maria@gmail.com    | 987widJYVxyh | María |
-| 2   | lucia@hotmail.com  | qwertyui     | Lucía |
-| 3   | sofia@yahoo.com    | mnbvcdfgu    | Sofía |
-| 4   | celia@gmail.com    | fas09fn32    |       |
+| id  | email               | password      | name  |
+| --- | ------------------- | ------------- | ----- |
+| 1   | maria@gmail.com     | 987widJYVxyh  | María |
+| 2   | lucia@hotmail.com   | qwertyui      | Lucía |
+| 3   | sofia@yahoo.com     | mnbvcdfgu     | Sofía |
+| 4   | **celia@gmail.com** | **fas09fn32** |       |
 
 Al no haber añadido la columna `name` en la query, la usuaria 4 no tiene nombre.
 
@@ -48,13 +50,13 @@ Si a continuación añadimos otro registro con la query:
 INSERT INTO users (email, password, name) VALUES ('tania@gmail.com', '09df34D43', 'Tania');
 ```
 
-| id  | email              | password     | name  |
-| --- | ------------------ | ------------ | ----- |
-| 1   | maria@gmail.com    | 987widJYVxyh | María |
-| 2   | lucia@hotmail.com  | qwertyui     | Lucía |
-| 3   | sofia@yahoo.com    | mnbvcdfgu    | Sofía |
-| 4   | celia@gmail.com    | fas09fn32    |       |
-| 5   | tania@gmail.com    | 09df34D43    | Tania |
+| id  | email               | password      | name  |
+| --- | ------------------- | ------------- | ----- |
+| 1   | maria@gmail.com     | 987widJYVxyh  | María |
+| 2   | lucia@hotmail.com   | qwertyui      | Lucía |
+| 3   | sofia@yahoo.com     | mnbvcdfgu     | Sofía |
+| 4   | celia@gmail.com     | fas09fn32     |       |
+| 5   | **tania@gmail.com** | **09df34D43** | Tania |
 
 ### Orden de las columnas
 
@@ -80,13 +82,15 @@ Lo importante es que **nunca debemos indicar el valor de la columna `id`**.
 
 Si queremos añadir varios registros lo tendremos que hacer en varias queries. Para ello tendremos que hacer un `for` en Node JS ejecutando varias veces la query.
 
+<!-- - Vídeo -->
+
 ## Sintaxis de INSERT INTO en Node JS y Better SQLite 3
 
 Antes de añadir un nuevo registro desde Node JS, deberíamos seguir los pasos que hemos aprendido para trabajar con **Better SQLite 3**:
 
-1. Instalar Better SQLite 3 en el proyecto con `npm install better-sqlite3`.
-1. Importar Better SQLite 3 en el proyecto con `const Database = require('better-sqlite3');`.
-1. Iniciar y configurar la base de datos con `const db = new Database('./src/database.db' });`.
+1. **Instalar Better SQLite 3** en el proyecto con `npm install better-sqlite3`.
+1. **Importar Better SQLite 3** en el proyecto con `const Database = require('better-sqlite3');`.
+1. **Iniciar y configurar la base de datos** con `const db = new Database('./src/database.db' });`.
 
 Una vez hecho esto ya podemos añadir nuevos registros. La forma de trabajar es igual que con `SELECT`:
 
@@ -120,7 +124,7 @@ app.post('/users', (req, res) => {
 
 ### query.run()
 
-En estas queries no estamos leyendo datos de la tabla, por ello no utilizamos `query.all()` ni `query.get()`. En esta query utilizamos `query.run()` porque lo que queremos es añadir registros. Los creadores de Better SQLite 3 han elegido esta forma de trabajar porque les ha apetecido.
+En estas queries no estamos leyendo datos de la tabla, por ello no utilizamos `query.all()` ni `query.get()`. En esta query utilizamos `query.run()` porque lo que queremos es añadir registros. Los creadores de Better SQLite 3 han elegido esta forma de trabajar porque les ha apetecido, pero si lo piensas tiene bastante sentido.
 
 ### Información retornada por query.run()
 

@@ -95,7 +95,7 @@ React no puede controlar los eventos de la ventana, así que los siguiente event
 
 **Odio la cebolla**
 
-Vamos a crear un componente `OnionHater` que consta de un `textarea`. Escucharemos los evento de cambio del valor del `textarea` de forma que, si el texto escrito contiene la palabra 'cebolla' hagamos un `alert` diciendo 'ODIO LA CEBOLLA'.
+Vamos a crear un componente `OnionHater` que consta de un `textarea`. Escucharemos los evento de cambio del valor del `textarea` de forma que, si el texto escrito contiene la palabra 'cebolla' hagamos un `alert()` diciendo 'ODIO LA CEBOLLA'.
 
 > PISTA: para acceder al valor del `textarea` lo podemos hacer desde el objeto evento, el parámetro de la función escuchadora, con `ev.target.value`
 
@@ -107,7 +107,7 @@ Vamos a crear un componente `OnionHater` que consta de un `textarea`. Escucharem
 
 **Elige tu destino**
 
-Vamos a crear un componente `Destiny` que contiene un `select` con un listado de ciudades: Buenos Aires, Sydney, Praga, Boston y Tokio. Al cambiar el valor del `select`, haremos aparecer un `alert` que diga 'Tu destino es viajar a XXX', siendo XXX la ciudad seleccionada.
+Vamos a crear un componente `Destiny` que contiene un `select` con un listado de ciudades: Buenos Aires, Sydney, Praga, Boston y Tokio. Al cambiar el valor del `select`, haremos aparecer un `alert()` que diga 'Tu destino es viajar a XXX', siendo XXX la ciudad seleccionada.
 
 \_\_\_\_\_\_\_\_\_\_
 

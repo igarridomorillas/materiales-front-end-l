@@ -5,7 +5,7 @@
 Ya sabemos que hay muchos tipos bases de datos:
 
 - Bases de datos que guardan los datos en **colecciones de tipo JSON**.
-- Bases de datos que guardan los datos en **tablas tipo excel**.
+- Bases de datos que guardan los datos en **tablas tipo Excel**.
 - Otros tipos de bases de datos.
 
 En Adalab os vamos a enseñar a trabajar con bases de datos de **tipo tabla**. Dentro de este tipo, hay muchas bases de datos. La más famosa y usada por más empresas es **SQL** (Structured Query Language).
@@ -67,43 +67,47 @@ Ahora que ya tenemos instalado **SQLite browser** abre la aplicación desde tu o
 
 > **Nota:** si sigues los pasos de este vídeo borra la base de datos que está en `./src/dababase.db` que hay en el ejercicio, para crearla tú desde cero.
 
-- Partiendo del ejercicio intro a SQL vamos a ver cómo funciona
-- Ya tenemos instalado SQLite Browser, lo abrimos
-- Tengo aquí preparado un ejercicio (enseño y explico el ejercicio)
-   - Con este ejercicio vamos a gestionar una base de datos de usuarios registrados
-   - Creo una base de datos
-      - Creo la tabla
-      - Creo los campos
-         - Añadimos el id, el id es el DNI de este registro. Utilizamos un id creado por nosotros identificar de manera única cada registro.
-         - Marcamos estas tres opcioens, más tarde explicaremos los que son
-         - Añadimos los campos y el tipo
-      - Aquí puedo ver los registros que tiene la base de datos
-      - Puedo añadir uno, no debo añadir el id, la base de datos lo añadirá por mí
-      - Después de hacer cualquier cambio tengo que guardar
-   - Por cierto la tabla sqlite_sequence es una tabla especial que necesita la base de datos para hacer sus cosas.
-      - Debemos ignorarla y no modificarla nunca.
-   - Navegador
-      - Con este formulario enviamos un email y contraseña al servidor
-   - Servidor
-      - Así se configura la base de datos
-         - Indicamos el fichero donde está la base de datos
-         - Indicamos `verbose: console.log para que todas las llamadas que se hagan a la base de datos se muestren en consola
-      - Con el endpoint
-         - Obtenemos la fecha actual, esto es para que veamos que puedo añadir datos creados en el servidor o modificar los datos que nos vienen desde la web
-         - Obtenemos los datos de la petición
-         - Insertamos un nuevo registro en base de datos con la fecha, el email y el password
-   - Hacemos una prueba
-      - Vemos que se ha creado
-- Como véis las tablas de SQL son como tablas de Excel
-- En seguida veremos que se pueden crear muchas tablas dentro de una base de datos
+<!-- - Vídeo:
+   - Partiendo del ejercicio intro a SQL vamos a ver cómo funciona
+   - Ya tenemos instalado SQLite Browser, lo abrimos
+   - Tengo aquí preparado un ejercicio (enseño y explico el ejercicio)
+      - Con este ejercicio vamos a gestionar una base de datos de usuarios registrados
+      - Creo una base de datos
+         - Creo la tabla
+         - Creo los campos
+            - Añadimos el id, el id es el DNI de este registro. Utilizamos un id creado por nosotros identificar de manera única cada registro.
+            - Marcamos estas tres opcioens, más tarde explicaremos los que son
+            - Añadimos los campos y el tipo
+         - Aquí puedo ver los registros que tiene la base de datos
+         - Puedo añadir uno, no debo añadir el id, la base de datos lo añadirá por mí
+         - Después de hacer cualquier cambio tengo que guardar
+      - Por cierto la tabla sqlite_sequence es una tabla especial que necesita la base de datos para hacer sus cosas.
+         - Debemos ignorarla y no modificarla nunca.
+      - Navegador
+         - Con este formulario enviamos un email y contraseña al servidor
+      - Servidor
+         - Así se configura la base de datos
+            - Indicamos el fichero donde está la base de datos
+            - Indicamos `verbose: console.log para que todas las llamadas que se hagan a la base de datos se muestren en consola
+         - Con el endpoint
+            - Obtenemos la fecha actual, esto es para que veamos que puedo añadir datos creados en el servidor o modificar los datos que nos vienen desde la web
+            - Obtenemos los datos de la petición
+            - Insertamos un nuevo registro en base de datos con la fecha, el email y el password
+      - Hacemos una prueba
+         - Vemos que se ha creado
+   - Como véis las tablas de SQL son como tablas de Excel
+   - En seguida veremos que se pueden crear muchas tablas dentro de una base de datos -->
 
-> **IMPORTANTE:** os recordamos que cada vez que cambiamos algo en la base de datos desde SQLite browser hay que pulsar en **Guardar datos**.
+> **Importante:** os recordamos que cada vez que cambiamos algo en la base de datos desde SQLite browser hay que pulsar en **Guardar datos**.
 
 ## Diferencias entre base de datos, tablas y registros
 
-- **Una base de datos en un conjunto de tablas**, lo que sería un documento de Excel. Una aplicación de tamaño normal solo tiene una base de datos. Si la aplicación es muy grande puede tener varias y puede combiar bases de datos de diferentes tipos.
-- **Una tabla es un conjunto de columnas y regisros**, lo que sería una hoja de excel. Vamos a tener una tabla por cada una de las cosas que queramos guardar, como por ejemplo en una tienda online tendremos una tabla para usuarios, otra tabla para productos, otra tabla para pedidos...
-- **Un registro es cada una de las filas de una tabla**, lo que sería una fila de una hoja de un documento de excel. Cada registro guarda uno de nuestros usuarios, uno de nuestros productos, uno de nuestros pedidos...
+- **Una base de datos en un conjunto de tablas**, lo que sería un documento de Excel que contiene varias hojas de Excel. Una aplicación de tamaño normal solo tiene una base de datos.
+   - Si la aplicación es muy grande puede tener varias bases de datos.
+   - Si la aplicación es todavía más grande puede combinar bases de datos de diferentes tipos.
+- **Una tabla es un conjunto de columnas y regisros**, lo que sería una hoja de Excel. Vamos a tener una tabla por cada una de las cosas que queramos guardar, como por ejemplo en una tienda online tendremos una tabla para usuarios, otra tabla para productos, otra tabla para pedidos...
+- **Un registro es cada una de las filas de una tabla**, lo que sería una fila de una hoja de un documento de Excel. Cada registro guarda uno de nuestros usuarios, uno de nuestros productos, uno de nuestros pedidos... En cada columna guardamos un dato de cada registro, en la tabla de usuarios en una columna guardamos el email, en otra la contraseña, en otra el nombre...
+- **Un campo en cada dato o de un registro**, lo que sería una celda de una fila de una hoja de un documento de Excel. Para cada campo o celda podemos configurar qué tipo de dato guarda: texto, número entero, número con decimales, booleano...
 
 Cada vez que hacemos una **consulta** a base de datos para leer o escribir lo llamamos **hacer una query**.
 

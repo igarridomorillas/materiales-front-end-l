@@ -2,13 +2,15 @@
 
 ## Múltiples tablas de una base de datos
 
-Lo normal es tener muchas tablas dentro de una base de datos porque queremos guardar muchos tipos de datos.
+Lo normal es tener muchas tablas dentro de una base de datos porque queremos guardar muchos tipos de información.
 
 Por ejemplo en una tienda virtual vamos a tener una base de datos para los usuarios registrados, otra para los productos, otra para los pedidos, otra para las direcciones de entrega de los pedidos.
 
-Cada tipo de datos lo creamos en una tabla diferente con sus diferentes campos.
+Cada tipo de información lo creamos en una tabla diferente con sus diferentes campos.
 
-## Relaciones entre los registros de las tablas
+**A estos tipos de información les llamamos entidades o entities.** Una tabla guarda entidades del mismo tipo, por ejemplo usuarios. Y cada columna define las características de una entidad, como el nombre, email, password...
+
+## Relaciones entre los registros de dos tablas
 
 Una base de datos suele tener muchas tablas. A menudo nos interesa relacionar unos registros de una tabla con los registros de otra tabla.
 
@@ -16,9 +18,9 @@ Por ejemplo en una tienda virtual tenemos una tabla para almacenar las diferente
 
 Por ello queremos relacionar cada dirección con su usuario.
 
-Para relacionar los registros vamos a usar los campos `id`.
+Para relacionar los registros vamos a usar los campos `id` ya que son identificadores únicos que nunca van a cambiar.
 
-Por este motivo SQL se define como una base de datos relacional.
+**Por este motivo SQL se define como una base de datos relacional.**
 
 ## Relaciones 1 a N
 
