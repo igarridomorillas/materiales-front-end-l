@@ -1,4 +1,4 @@
-# 5. SQL: Relaciones 1 a N
+# Relaciones 1 a N
 
 ## Múltiples tablas de una base de datos
 
@@ -26,17 +26,18 @@ Para relacionar los registros vamos a usar los campos `id` ya que son identifica
 
 Vamos a empezar por explicar las relaciones 1 a N que son las más fáciles de entender:
 
-- SQL es una base de datos relacional
-   - Esto significa que vamos a tener muchas tablas dentro de nuestra base de datos
-   - Cada registro de una tabla se relaciona con otro registro de otra tabla gracias a los ids
-- Esta podría ser la base de datos de una tienda online
-   - Abrir la tabla usuarios
-   - Si yo quiero guardar en base de datos la dirección de entrega del usuario puedo añadir más campos para el país, provincia...
-   - Pero y si quiero guardar dos direcciones del usuario o tres o 30
-   - No puedo saber cuantas direcciones va a añadir el usuario
-   - Por ello lo que hago es crear otra tabla para las direcciones
-   - Con el userId indico a qué usuario pertenece esta dirección
-   - Así el usuario puede crear tantas direcciones como quiera
-   - Así relaciono unas cosas con otras
-- Esto es una relación 1 a N porque cada 1 usuario puede tener N direcciones
-- Si nos damos cuenta es como si el usuario tuviese un array de direcciones
+<!-- - Vídeo
+   - SQL es una base de datos relacional
+      - Esto significa que vamos a tener muchas tablas dentro de nuestra base de datos
+      - Cada registro de una tabla se relaciona con otro registro de otra tabla gracias a los ids
+   - Esta podría ser la base de datos de una tienda online
+      - Abrir la tabla usuarios
+      - Si yo quiero guardar en base de datos la dirección de entrega del usuario puedo añadir más campos para el país, provincia...
+      - Pero y si quiero guardar dos direcciones del usuario o tres o 30
+      - No puedo saber cuantas direcciones va a añadir el usuario
+      - Por ello lo que hago es crear otra tabla para las direcciones
+      - Con el userId indico a qué usuario pertenece esta dirección
+      - Así el usuario puede crear tantas direcciones como quiera
+      - Así relaciono unas cosas con otras
+   - Esto es una relación 1 a N porque cada 1 usuario puede tener N direcciones
+   - Si nos damos cuenta es como si el usuario tuviese un array de direcciones -->

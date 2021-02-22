@@ -107,6 +107,9 @@
   - [4.4.6 Insert](modulo_4/4_4_6_sql_insert.md)
   - [4.4.7 Delete](modulo_4/4_4_7_sql_delete.md)
   - [4.5.1 Tipos de campos](modulo_4/4_5_1_sql_fields_types.md)
+  - [4.5.2 Relaciones 1 a N](modulo_4/4_5_2_sql_relations_1_n.md)
+  - [4.5.3 Relaciones 1 a 1](modulo_4/4_5_3_sql_relations_1_1.md)
+  - [4.5.4 Relaciones N a N](modulo_4/4_5_4_sql_relations_n_n.md)
 
 ## Módulo 5: Apoyo a la búsqueda de empleo
 

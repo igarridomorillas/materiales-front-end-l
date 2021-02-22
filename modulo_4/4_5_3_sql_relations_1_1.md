@@ -1,5 +1,4 @@
-
-# SQL: Relaciones 1 a 1
+# Relaciones 1 a 1
 
 - Ahora que ya sabemos cómo hacer relaciones 1 a N vamos a explicar las relaciones 1 a 1
 - Si yo quiero guardar en la base de datos mucha información sobre un usuario lo lógico sería añadir muchos campos a la tabla
