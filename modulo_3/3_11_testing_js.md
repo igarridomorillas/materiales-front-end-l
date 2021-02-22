@@ -9,6 +9,7 @@
 - [EJERCICIO 3](#ejercicio-3)
 - [EJERCICIO 4](#ejercicio-4)
 - [EJERCICIO 5](#ejercicio-5)
+- [EJERCICIO BONUS 6](#ejercicio-6)
 
 <!-- /TOC -->
 
@@ -350,6 +351,25 @@ Usando TDD, desarrollamos una función Fizzbuzz que toma como parámetro un núm
 - el mismo número si no se da ninguno de los casos anteriores
 
 Este ejercicio es equivalente a la kata del ejercicio 3, pero vamos a hacerla usando la metodoogía de TDD, es decir, escribiendo los tests primero.
+
+\_\_\_\_\_\_\_\_\_\_
+
+## BONUS: ¿Y ahora qué? A refactorizar...
+
+Como ya sabemos, _Refactorizar_ código consiste en modificar un código para mejorar su estructura pero sin añadir nuevas funcionalidades. En esta sección vamos a usarla íntegramente para practicar refactorización de código usando una _kata_.
+
+Se pueden aprender muchas estrategias de cómo refactorizar y son temas avanzados, por ejemplo, usar _patrones de diseño de software_ para mejorar nuestro código. Además, se necesita experiencia para aprender a distinguir código bueno de código mejorable. Normalmente, cuando un código nos parece que puede mejorarse es que detectamos un _olor de código_ (en inglés _code smell_) que nos indica que algo no está hecho de la manera más simple y semántica. Algunos ejemplos de _code smells_ son
+
+- duplicidad: si veo trozos de código que son casi iguales
+- usar _números mágicos_ (_magic numbers_): que es usar números en nuestro código sin explicar lo que son (mejor definirlos en una variable para darles un nombre)
+- funciones muy largas con muchos parámetros
+- mal nombrado de variables y funciones
+
+Esta parte de refactorización requeriría todo un curso en sí misma. Pero lo que sí queremos que entiendas es la importancia de tener tests para refactorizar, porque nos permiten cambiar cosas comprobando que nuestra aplicación sigue funcionando (no se rompe). Haremos un ejercicio específico para demostrar esta afirmación.
+
+#### EJERCICIO BONUS 6
+
+Para comprobar que se refactoriza mucho mejor con tests, os pasamos un ejercicio que ya tiene tests pero un código malísimo. Nuestro objetivo es mejorar el código que nos dan sin modificar el comportamiento (refactorizar) y que los tests sigan pasando. Se trata de la famosa [kata _Gilded Rose_ con JavaScript](https://github.com/gootyfer/gilded-rose-js-with-tests).
 
 \_\_\_\_\_\_\_\_\_\_
 

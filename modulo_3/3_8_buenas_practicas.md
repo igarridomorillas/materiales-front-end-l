@@ -1,5 +1,7 @@
 # Buenas prácticas en React
 
+[codepen-lifting-state-up]: https://codepen.io/adalab/pen/xpzBYz?editors=0010
+
 ## Contenidos
 
 <!-- TOC -->
@@ -16,11 +18,222 @@
 
 ## Introducción
 
-Hemos visto ya las funcionalidades más básicas de la librería. En esta sesión nos centraremos en repasar lo ya visto e introducir buenas prácticas en el uso de React.
+Hemos visto ya las funcionalidades más básicas de la librería. En esta sesión nos centraremos en repasar lo ya visto e introducir buenas prácticas en el uso de React y sobre cómo organizar nuestras aplicaciones (estructurar componentes, uso del estado, servicios que no son componentes,...)
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
-Para poder escribir un código de React más legible y usando el "React way", es decir, haciéndolo de la forma en que lo hacen los desarrolladores de React.
+Ya sabemos que existen un montón de formas de hacer las cosas en programación, y con React no es una excepción. Pero hay algunas formas que funcionan mejor que otras para construir frontales basados en componentes.
+
+En esta sesión vamos a proponeros una arquitectura concreta para **trabajar con componentes web con estado**. También cómo **estructurar una aplicación React** que trabaja tanto con componentes como con _servicios_, es decir, partes de código JS que no son componentes visuales.
+
+También nos servirá para ver **prácticas de programación** muy comunes que nos permiten escribir un código de React más legible y usando el **"React way"**, es decir, haciéndolo de la forma en que lo hacen los desarrolladores de React.
+
+## Arquitectura de software
+
+Hay montones de definiciones de qué es la _arquitectura de software_ (con permiso de las arquitectas 😉). Una de ellas es que la arquitectura es tanto la estructura de nuestro proyecto (carpetas/ficheros, componentes y cómo se relacionan, etc.) como los _patrones_ que usamos para recoger, procesar y almacenar información en esa estructura.
+
+Mencionamos también los _patrones de software_, que no son más que recetas de cómo estructurar el código y los datos, que nos han funcionado en un contexto y seguro pueden servirle a alguien más. Podéis leer más sobre patrones típicos de React en los recursos externos.
+
+Como sabemos, React es relativamente reciente así que van apareciendo arquitecturas y patrones de uso constantemente. Porque al final para cada caso de uso (aplicación) va a funcionar mejor una forma de estructurarlo que otra. En la visión de Dan Abramov, uno de los ingenieros que trabaja en el proyecto de React, [no existe la arquitectura perfecta que valga para todo](http://react-file-structure.surge.sh/).
+
+![Dan Abramov tweet](assets/images/3_10_dan-abramov.png)
+
+### Arquitectura de componentes con estado
+
+Cuando trabajamos en aplicaciones React con varios componentes, la gestión de estado se vuelve compleja. Cuando desde un componente necesito unos datos que están en otro, primero tendré que identificar en cuál están y luego acceder a ellos, ya sea por _props_ o _lifting_. Para manejar esta situación, existen distintas arquitecturas de componentes. En esta sesión os proponemos una concreta con la que trabajar que, aunque no es la única ni vale para todas las situaciones, sí que os va a ayudar a estructurar mejor vuestra aplicación React.
+
+A pesar de que todos los componentes pueden tener estado, a la hora de hacer aplicaciones web con React, preferiremos **agrupar todos los estados en el componente raíz**. El resto de componentes serán _dummies_ (títeres), que significa que no tendrán estado. Podemos referirnos al estado del componente raíz como **estado de la aplicación** o **estado global**.
+
+_¿Por qué hacemos esto?_ En los estados guardaremos diferentes datos, algunos de los cuales habremos recibido de servidores: una lista de artículos en venta, sus precios y un booleano de si mostramos el IVA o no, por ejemplo. El mejor sitio para guardar esos datos es siempre el componente raíz, porque es el sitio desde el que cualquier componente hijo podrá acceder a ellos.
+
+_¿Y cómo lo haremos?_ Como vimos en la sesión anterior podemos pasar datos de hijos a padres/madres **mediante _lifting_**. Recordemos que la técnica de _lifting_ consistía en pasar una función definida en el padre/madre a un componente hijo mediante las `props`. Esa función puede modificar a la madre. Ahora que hemos visto los estados, podemos ver un nuevo uso del _lifting_: **actualizar estados de los padres/madres desde los hijos**.
+
+```js
+const ENDPOINT = 'https://...';
+
+class AppRoot extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      reasonsStore: []
+    };
+
+    this.fetchNewReasons = this.fetchNewReasons.bind(this);
+  }
+
+  fetchNewReasons() {
+    fetch(ENDPOINT)
+      .then(response => response.json())
+      .then(data => {
+        this.setState({
+          reasonsStore: data.reasons
+        });
+      });
+  }
+
+  render() {
+    const { reasonsStore } = this.state;
+
+    return (
+      <section>
+        <ReasonsList reasons={reasonsStore} />
+        <UpdateButton updateList={this.fetchNewReasons} />
+      </section>
+    );
+  }
+}
+
+class UpdateButton extends React.Component {
+  render() {
+    const { updateList } = this.props;
+
+    return <button onClick={updateList}>Update reasons</button>;
+  }
+}
+```
+
+[&blacktriangleright; _Lifting_ de estados en Codepen][codepen-lifting-state-up]
+
+> **NOTA**: En algunos casos una parte del estado tiene sentido que esté en un componente que no sea el raíz. Por ejemplo, para un componente colapsable tiene sentido que la información de si está desplegado o no sea del propio componente y no del raíz. Este tipo de casos específicos vamos a ir identificándolos con la práctica.
+
+## Servicios en módulos externos
+
+Una buena práctica en desarrollo de software en general es desacoplar las distintas partes de una aplicación y que puedan funcionar de forma independiente. Si, por ejemplo, tenemos desacoplado el acceso a un API que nos da información sobre el tiempo, vamos a poder cambiar de proveedor de weather.com a accuweather.com sólo modificando ese módulo. Otro ejemplo: si tenemos un módulo de nuestra aplicación que guarda la información de nuestros usuarios en una base de datos, vamos a poder cambiar el servicio de AWS a Firebase sólo modificando ese módulo.
+
+Siguiendo con el ejemplo anterior, os proponemos usar una carpeta `services` con un servicio `ReasonsService.js` que NO es un componente visual sino simplemente se encarga de hacer las peticiones al API:
+
+**ReasonsService.js**
+
+```js
+const ENDPOINT = 'https://...';
+
+const fetchReasons = () => {
+  return fetch(ENDPOINT).then(response => response.json()); // Devuelve la Promise que genera el fetch
+}
+
+export { fetchReasons };
+```
+
+**App.js**
+
+```js
+import {fetchReasons}  from './services/ReasonsService';
+
+class AppRoot extends React.Component {
+
+  ...
+
+  handleFetch() {
+    fetchReasons()    // Continuamos añadiendo .then() a la Promise del fetch
+      .then(data => {
+        this.setState({
+          reasonsStore: data.reasons
+        });
+      });
+  }
+...
+
+```
+
+A primera vista no parece ninguna mejora, simplemente que nos complica más al tener que tener un nuevo fichero. Pero cuando la aplicación va creciendo, vamos a ver que es muy útil tener esta parte desacoplada de los componentes de React.
+
+## Loader
+
+Un patrón común en React, y en general en las aplicaciones web, es usar loaders, es decir, indicadores de que algo está cargando para mantener informado al usuario. En React normalmente tendremos un componente `Loader` que será un texto o una imagen de un spinner, y que mostraremos hasta que tengamos los datos y podamos mostrarlos. Normalmente usaremos un patrón habitual de React, _conditional rendering_, que consiste en pintar un componente u otro dependiendo de una condición. Habitualmente usaremos ternarios para hacer esta comprobación directamente en el método render del componente principal.
+
+Vamos a ver un ejemplo con Murrays. Definimos una clase `Loader` con nuestro mensaje de cargando. En nuestro componente principal tenemos en nuestro estado un booleano para saber si se han terminado de cargar los datos, que por defecto es falso. Cuando terminen de cargarse, lo pondremos a verdadero. Finalmente pintamos en el método render el `Loader` o los datos, dependiendo del valor del estado.
+
+```js
+class Loader extends React.Component {
+  render() {
+    return <p>Loading...</p>;
+  }
+}
+
+class MurrayList extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      loading: true
+    };
+    
+    // Nos aseguramos de que este callback se ejecute siempre sobre el componente enlazándolo a la instancia con "bind"
+    this.handleClick = this.handleClick.bind(this);
+    
+    // Simulamos que los datos se han cargado tras 2 segundos
+    setTimeout(() => this.setState({ loading: false }), 2000);
+  }
+
+  handleClick() {
+    this.setState({loading: true})
+    setTimeout(() => this.setState({loading: false}), 2000);
+    // Se ejecutará el método `render()` de MurrayList, que hará a su vez que se ejecute de nuevo el método `render()` de los hijos
+  }
+
+  render() {
+    const { handleClick } = this;
+
+    return (
+      <section className='section-murrays'>
+        <h1>
+          All <del>Cats</del> Murrays Are Beautiful
+        </h1>
+
+        {this.state.loading ? (
+          <Loader />
+        ) : (
+          <ul className='section-murrays_list'>
+            <li>
+              <RandomMurray />
+            </li>
+            <li>
+              <RandomMurray />
+            </li>
+            <li>
+              <RandomMurray />
+            </li>
+          </ul>
+        )}
+
+        {/* pasamos handleClickAndReload al hijo como prop */}
+        <ReloadButton actionToPerform={handleClick} label='More murrays' />
+      </section>
+    );
+  }
+}
+```
+
+&rtrif; [Puedes jugar con el ejemplo en Codepen](https://codepen.io/adalab/pen/qLrZJz?editors=0010).
+
+#### EJERCICIO 1
+
+**Directorio**
+
+En este ejercicio vamos a realizar un directorio de personas, al estilo de LinkedIn, con unos filtros que permiten seleccionar las personas que aparecen. Para ello vamos a partir de un array de datos de gente aleatoria generado por https://randomuser.me/. Por ejemplo, un listado de 50 personas con datos aleatorios: https://randomuser.me/api/?results=50
+
+Vamos a mostrar de cada persona
+
+- su nombre
+- foto
+- ciudad
+- edad
+
+Vamos a poder filtrar por
+
+- ciudad
+- género
+
+El resultado debe ser parecido a este diseño de LinkedIn:
+
+![Faceted search](assets/images/3_9_faceted-search.png)
+
+> **Nota:** os recomendamos hacer este ejercicio con componentes de clase ya que para hacerlo con un componente funcional necesitamos el Hook `useEffect` que lo aprenderemos en los ciclos de vida de los componentes.
+
+**¡Al lío!**
+
+\_\_\_\_\_\_\_\_\_\_
 
 ## Uso de expresiones y programación funcional
 
@@ -43,11 +256,11 @@ En este ejemplo, partimos de un conjunto de números, sobre los que queremos rea
 
 Hemos realizado ambas operaciones encadenando un `map` que añade 1 a cada número con un `filter` para quedarnos solo con los números pares resultado de la operación anterior.
 
-#### EJERCICIO 1
+#### EJERCICIO 2
 
 **Numeritos**
 
-Vamos a crear una aplicación de React que, dado un listado de números como el del ejemplo anterior, los pinta en pantalla (usaremos un `ul` y sus `li`s ¡por supuesto!). Para pintarlos vamos a usar la función `.map` para pasar de un listado de números a un listado de elementos de JSX.
+Vamos a crear una aplicación de React que, dado un listado de números como el del ejemplo anterior (`const numbers = [1, 4, 6, 8, 45, 89];`), los pinta en pantalla (usaremos un `ul` y sus `li`s ¡por supuesto!). Para pintarlos vamos a usar la función `.map` para pasar de un listado de números a un listado de elementos de JSX.
 
 a) Vamos a añadir un formulario a la página, que contiene un input donde podemos introducir un número. Si ponemos, por ejemplo un 6, se mostrarán en pantalla solo los números mayores de 6. Usaremos `filter` y el patrón _chaining_ para conseguirlo.
 
@@ -91,9 +304,9 @@ return data && <p>Bienvenido, {data.name || 'invitado'}</p>;
 
 En este ejemplo dejamos la primera comprobación de que `data` no sea null; y luego, si el nombre no está definido, usamos el valor de `'invitado'`.
 
-### `null` no pinta nada
+### `null` y `undefined` no pintan nada
 
-Para terminar estos ejemplos sencillos de pintado condicional, debemos saber que si una expresión dentro de JSX devuelve `null` no se pintará nada en pantalla.
+Para terminar estos ejemplos sencillos de pintado condicional, debemos saber que si una expresión dentro de JSX devuelve `null`, o ponemos una variable que no tiene valor (contendrá `undefined`) o una función/método que no tiene return (devolverá `undefined` por defecto) no se pintará nada en la página:
 
 ```js
 const { quixoteFan } = this.state;
@@ -101,55 +314,19 @@ const { quixoteFan } = this.state;
 return quixoteFan ? <p>En un lugar de La Mancha ...</p> : null;
 ```
 
-#### EJERCICIO 2
+```js
+let index;
+
+return <em>Está en la posición <span>{index}</span></em>;
+```
+
+#### EJERCICIO 3
 
 **Colapsables**
 
 Vamos a partir de nuestro ya [querido JSON con un listado de paletas](https://beta.adalab.es/ejercicios-extra/js-ejercicio-de-paletas/data/palettes.json), para pintar un listado de colapsables. Vamos a pintar el nombre de la paleta y la flechita del colapsable por cada una. Al desplegar un colapsable, se muestra su contenido, que es simplemente el campo `from` del JSON.
 
 > NOTA: Recordad que debemos guardar en el estado del colapsable de React si el colapsable está o no desplegados.
-
-\_\_\_\_\_\_\_\_\_\_
-
-## Listados y keys
-
-Cuando manejamos listados de datos en React, normalmente convertimos estos arrays en arrays de elementos JSX para poder pintarlos. Para ayudar a que la librería de React tenga mejor rendimiento, es importante indicar un atributo `key` que sea único en los listado de componentes JSX. De hecho, seguramente ya te habrás topado con errores en la consola que React advierte por este motivo.
-
-Para solucionarlo, debemos indicar un atributo `key` que sea único en ese array (no en la página).
-
-```js
-const fruits = ['orange', 'pear', 'apple'];
-
-return (
-  <ul>
-    {fruits.map(fruit => (
-      <li key={fruit}>{fruit}</li>
-    ))}
-  </ul>
-);
-```
-
-Cuando no tenemos un identificador único, como último recurso podemos hacer uso del índice del elemento dentro del array.
-
-```js
-const fruits = ['orange', 'pear', 'apple', 'orange'];
-
-return (
-  <ul>
-    {fruits.map((fruit, index) => (
-      <li key={index}>{fruit}</li>
-    ))}
-  </ul>
-);
-```
-
-#### EJERCICIO 3
-
-**Keys or not keys**
-
-a) Para terminar, vamos a repasar los ejercicios anteriores y comprobar que no tenemos errores en la consola debidos a la ausencia de keys.
-
-b) En el ejercicio anterior vamos a extraer un nuevo componente llamado `ColapsiblePalette`. ¿Dónde hay que poner el `key` ahora?
 
 \_\_\_\_\_\_\_\_\_\_
 
@@ -402,7 +579,7 @@ Voilà!
 
 **Destructurando props y estado**
 
-Vamos a partir del ejercicio **Formulario para pelis** de la sesión **Estado en React 2** y a hacer destructuring de los objetos `this.props` y `this.state`.
+Vamos a partir del ejercicio **Formulario para pelis** (ejercicio 1) de la sesión **3.7 Formularios en React** y a hacer destructuring de los objetos `this.props` y `this.state`.
 
 \_\_\_\_\_\_\_\_\_\_
 
@@ -418,6 +595,20 @@ En el ejercicio anterior ¿localizas algún otro objeto dónde hacer destructuri
 
 ## Recursos externos
 
+### Egghead
+
+Serie de clases en vídeo que introduce y explora los fundamentos básicos de React (en inglés).
+
+- [Componentes de orden superior (con lógica) o contenedores](https://egghead.io/lessons/react-react-fundamentals-higher-order-components-replaces-mixins)
+
+### React patterns
+
+- [React patterns](https://reactpatterns.com/)
+
+### ReactJS
+
 - [Conditional Rendering](https://reactjs.org/docs/conditional-rendering.html)
-- [Lists and keys](https://reactjs.org/docs/lists-and-keys.html)
+
+### MDN
+
 - [Destructuring assignment](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)

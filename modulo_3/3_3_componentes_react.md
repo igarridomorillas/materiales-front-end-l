@@ -454,3 +454,11 @@ Documentación oficial de React (en inglés).
 - [Validar propiedades con `propTypes` y valores por defecto](https://reactjs.org/docs/typechecking-with-proptypes.html):
   - [Lista completa de tipos y validadores con `PropTypes`](https://reactjs.org/docs/typechecking-with-proptypes.html#proptypes)
   - [Valores por defecto](https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values)
+- [Lists and keys](https://reactjs.org/docs/lists-and-keys.html)
+- [Fragments](https://reactjs.org/docs/fragments.html)
+
+### Egghead
+
+Serie de clases en vídeo que introduce y explora los fundamentos básicos de React.
+
+- [Cómo usar componentes como `children` de otros componentes en React](https://egghead.io/lessons/react-use-react-components-as-children-for-other-components)
