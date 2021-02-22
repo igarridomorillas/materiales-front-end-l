@@ -23,7 +23,7 @@ Hasta ahora hemos usado los componentes prácticamente como plantillas HTML que 
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
-El **estado** de una interfaz son sencillamente los datos que necesitamos para representarla. Por ejemplo, vamos a fijarnos en la interfaz de entrada a GMail. Los datos que necesitamos para poder pintarla son muchos más de los que pensamos a priori. Por un lado, necesitamos los datos concretos de email: el nombre de remitente, asunto, el texto inicial del email y la fecha. Pero también necesitamos conocer si un correo está marcado como favorito para mostrar la estrella rellana o vacía. O, al marcar algún correo con un check, hay opciones nuevas que aparecen. Por tanto, todos estos datos que necesito para poder pintar la interfaz son el estado.
+El **estado** de una interfaz son sencillamente los datos que necesitamos para representarla. Por ejemplo, vamos a fijarnos en la interfaz de entrada a GMail. Los datos que necesitamos para poder pintarla son muchos más de los que pensamos a priori. Por un lado, necesitamos los datos concretos de email: el nombre de remitente, asunto, el texto inicial del email y la fecha. Pero también necesitamos conocer si un correo está marcado como favorito para mostrar la estrella rellana o vacía. O si al marcar algún correo con un check, hay mostrar opciones nuevas. Por tanto, **todos estos datos que necesito para poder pintar la interfaz son el estado**.
 
 ![New GMail cover](assets/images/3_8_new-gmail-web-cover.jpg)
 
@@ -33,11 +33,13 @@ React es especialmente bueno manejando los pequeños cambios que se necesitan en
 
 El estado de un componente es la memoria **en cada momento** que tiene la instancia de un componente que se está mostrando en pantalla. Se trata de un atributo de la instancia parecido a las `props`, al que podremos acceder con `this.state`. Al contrario que las `props`, el **estado varía** durante el tiempo en que el componente aparece pintado en la pantalla. Es decir, las `props` no podemos cambiarlas desde dentro del componente, pero los estados, sí, aunque de cierta manera. En la siguiente sección (_¿Qué pasa cuando hay un cambio de estado?_) veremos cómo afecta esto a nuestro componente.
 
-Por defecto, el estado de un componente está vacío. Hay dos momentos y maneras distintas de darle valor: en el `constructor()` del componente, y en cualquier otro momento con `setState()`.
+Por defecto, el estado de un componente está vacío. Hay dos momentos y maneras distintas de darle valor:
+- A iniciar el componente, es decir, en el `constructor()`.
+- En cualquier otro momento con `setState()`. Casi siempre vamos a cambiar los datos del componente después de un evento de la usuaria.
 
 ### Asignar el estado inicial en el `constructor()`
 
-En el `constructor()` podemos definir el estado que tendrá el componente en el primer momento en que se muestre en pantalla. En otras palabras, el estado inicial del componente. Lo haremos asignando a `this.state` un objeto con los valores iniciales de **todos los estados** que vaya a tener el componente:
+En el `constructor()` podemos definir el estado que tendrá el componente en el primer momento en que se muestre en pantalla. En otras palabras, los datos iniciales o el estado inicial del componente. Lo haremos asignando a `this.state` un objeto con los valores iniciales de **todos los estados** que vaya a tener el componente:
 
 ```jsx
 const generateRandomInteger = maxValue => Math.floor(Math.random() * maxValue);
@@ -58,13 +60,13 @@ class RandomInteger extends React.Component {
 }
 ```
 
-> Nota: El `constructor` es el **único lugar** donde podremos asignar directamente un valor a `this.state`. En el resto, debemos usar `setState()`
-
-Como en este ejemplo el estado nunca cambia, puede parecer que esto no sirve de mucho comparado con las `props`, pero en realidad ya hemos delegado la responsabilidad de generar el número aleatorio al propio componente. El componente ahora es independiente y ningún componente padre o madre debe mandarle qué número mostrar. Hemos declarado un componente con identidad propia (y quizá adolescente, :P ).
+> Nota: El `constructor` es el **único lugar** donde podremos asignar directamente un valor a `this.state`. En el resto, debemos usar `setState()`.
 
 ### Actualizar el estado: el método `setState()`
 
-Ahora bien, hemos dicho que podemos cambiar el estado del componente, por ejemplo cuando la usuaria pulse en un botón o escriba en un campo de texto. Sin embargo, tenemos que hacerlo de cierta manera. Sabemos que los componentes en React son declarativos: no decimos _cómo_ se hace un componente, sino el _qué_, y React es quien se encarga del _cómo_. A la hora de cambiar los valores del estado, **no podremos asignar directamente los valores a `this.state`** o cualquiera de sus propiedades, sino que utilizaremos el método `setState()` del componente: React se encargará del resto.
+Ahora bien, hemos dicho que podemos cambiar el estado del componente, por ejemplo cuando la usuaria pulse en un botón o escriba en un campo de texto. Sin embargo, tenemos que hacerlo de cierta manera. Sabemos que los componentes en React son declarativos: no decimos _cómo_ se hace un componente, sino el _qué_, y React es quien se encarga del _cómo_.
+
+A la hora de cambiar los valores del estado, **no podremos asignar directamente los valores a `this.state`** o cualquiera de sus propiedades, sino que utilizaremos el método `setState()` del componente: React se encargará del resto.
 
 Podemos llamar a `setState()` de varias maneras. La más común y sencilla de ellas es pasarle un **objeto literal** con las claves (nombres) del estado que queremos cambiar y sus valores. Es decir, si tenemos tres estados `a`, `b` y `c`, pero solo queremos cambiar el valor de `c`, pasaremos un objeto `{ c: 'nuevo valor' }`, sin incluir `a` ni `b`. React lo mezclará con el estado actual y solo cambiará las propiedades que deba cambiar.
 
@@ -103,7 +105,11 @@ class BipolarButton extends React.Component {
 
 ### Actualizar el estado con el estado previo
 
-Utilizaremos la forma del objeto literal **cuando el nuevo valor no dependa del anterior** o de ningún otro estado del componente actual. Como React no asegura que los cambios de estado se ejecuten en el momento (los agrupa en lotes), si usamos el valor de un estado actual para calcular otro podemos estar usando un estado que no tiene el valor que pretendemos. Eso es una fuente de errores. Para esos casos existe otra manera de llamar a `setState()`, esta vez le pasamos una función, un `callback`. El `callback` recibe como parámetros el estado que modificaremos (`prevState`), y las `props` del componente, y devolverá un objeto literal con las claves (nombres) de los estados que queremos cambiar. Es más fácil verlo que contarlo:
+Utilizaremos la forma del objeto literal **cuando el nuevo valor no dependa del anterior** o de ningún otro estado del componente actual.
+
+React no asegura que los cambios de estado se ejecuten en el momento (los agrupa en lotes), si usamos el valor de un estado actual para calcular otro podemos estar usando un estado que no tiene el valor que pretendemos. Eso es una fuente de errores.
+
+Para esos casos existe otra manera de llamar a `setState()`, esta vez le pasamos una función, un `callback`. El `callback` recibe como parámetros el estado que modificaremos (`prevState`), y las `props` del componente, y devolverá un objeto literal con las claves (nombres) de los estados que queremos cambiar. Es más fácil verlo que contarlo:
 
 ```js
 class BipolarButton extends React.Component {
@@ -168,7 +174,7 @@ Vamos a partir de una web sencilla con un input de tipo texto y un párrafo vac�
 
 Vamos a crear una página con un cuadrado de tamaño fijo (por ejemplo un `div`) con un color de fondo azul. Vamos a hacer que al hacer clic sobre el cuadrado, su color de fondo cambie a rojo. Si volvemos a hacer clic, pasa de nuevo a azul, y así sucesivamente. Implementaremos este cuadrado parpadeante usando el estado del componente (podemos almacenar el color como un string o un booleano).
 
-> PISTA: Al escuchar el evento de clic para comprobar de qué color estaba anteriormente el cuadrado, usaremos la versión anterior del estado que toma el  parámetro el `prevState` de la función callback que le pasamos a `setState` 
+> PISTA: Al escuchar el evento de clic para comprobar de qué color estaba anteriormente el cuadrado, usaremos la versión anterior del estado que toma el  parámetro el `prevState` de la función callback que le pasamos a `setState`
 
 \_\_\_\_\_\_\_\_\_\_
 
@@ -200,7 +206,9 @@ Crearemos un componente cuentaovejas (`SheepCounter`) que mostrará un número e
 
 Como hemos visto varias veces arriba, React no asegura que los cambios de estado se ejecuten al momento. Vamos a ver cómo hace React los cambios de estado, de manera simplificada.
 
-Un cambio de estado no solo cambia los valores de `this.state`. Lo más importante que hace es **volver a llamar al método `render()`** del componente después. Recordemos que podemos usar valores del estado en nuestro JSX como texto, para calcular otros valores que utilizaremos o como `props` para otros componentes hijo, por ejemplo. Cuando el estado cambia, el componente se tiene que re-`render`izar de nuevo, y si las `props` de los hijos cambian, esos componentes hijos también tienen que re-`render`izarse, y sus hijos a su vez. Así que cambiar el estado es costoso, porque hace que vuelvan a `render`izarse varios componentes **en cadena**.
+Un cambio de estado no solo cambia los valores de `this.state`. Lo más importante que hace es **volver a llamar al método `render()`** del componente después.
+
+Recordemos que podemos usar valores del estado en nuestro JSX como texto, para calcular otros valores que utilizaremos o como `props` para otros componentes hijo, por ejemplo. Cuando el estado cambia, el componente se tiene que re-`render`izar de nuevo, y si las `props` de los hijos cambian, esos componentes hijos también tienen que re-`render`izarse, y sus hijos a su vez. Así que cambiar el estado es costoso, porque hace que vuelvan a `render`izarse varios componentes **en cadena**.
 
 > **NOTA**: a partir de ahora tenemos que recordar que, para que un componente vuelva a pintarse, es decir, se ejecute su método `render` puede ser por 2 motivos: 1) por un cambio en el estado (`this.state`) o 2) por un cambio en las `props` que le llegan del componente madre.
 
