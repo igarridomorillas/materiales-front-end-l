@@ -262,7 +262,7 @@ Los motivos por el cual una query se hace en dos pasos (primero preparar la quer
 - Para poder crear una query una única vez y ejecutarla muchas veces con muchos datos diferentes.
 - Para que sea más difícil equivocarnos al hacer una query ya que es fácil olvidarse de unas comillas, una coma...
 
-{% embed url="https://www.youtube.com/watch?v=" %}
+{% embed url="https://www.youtube.com/watch?v=87KvwNxLWRA" %}
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-3-sql-select)
 

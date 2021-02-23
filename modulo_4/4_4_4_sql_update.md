@@ -64,7 +64,9 @@ Con `UPDATE` y `WHERE` podemos actualizar uno o varios registros en una sola que
 
 Anteriormente hemos hablado que el campo `id` es como el DNI del registro. Por ello, aunque se puede, no debemos modificarlo, nos puede dar muchos problemas.
 
-<!-- - Vídeo -->
+{% embed url="https://www.youtube.com/watch?v=Gofz_fiOqHw" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-4-sql-update)
 
 ## Sintaxis de UPDATE en Node JS y Better SQLite 3
 
@@ -121,4 +123,6 @@ La información retornada por `query.run()` en el código anterior la estamos co
 }
 ```
 
-<!-- - Vídeo -->
+{% embed url="https://www.youtube.com/watch?v=jQH3j5huZSY" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-4-sql-update)
