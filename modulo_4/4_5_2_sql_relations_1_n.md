@@ -2,13 +2,13 @@
 
 ## Múltiples tablas de una base de datos
 
-Lo normal es tener muchas tablas dentro de una base de datos porque queremos guardar muchos tipos de información.
+Lo normal es tener **muchas tablas dentro de una base de datos** porque queremos guardar muchos tipos de información.
 
 Por ejemplo en una tienda virtual vamos a tener una base de datos para los usuarios registrados, otra para los productos, otra para los pedidos, otra para las direcciones de entrega de los pedidos.
 
 Cada tipo de información lo creamos en una tabla diferente con sus diferentes campos.
 
-**A estos tipos de información les llamamos entidades o entities.** Una tabla guarda entidades del mismo tipo, por ejemplo usuarios. Y cada columna define las características de una entidad, como el nombre, email, password...
+**A estos tipos de información les llamamos entidades o entities.** Una tabla guarda entidades del mismo tipo, por ejemplo usuarios. Y cada columna define las características de una entidad, como el nombre, email, password... del usuario.
 
 ## Relaciones entre los registros de dos tablas
 
@@ -16,7 +16,7 @@ Una base de datos suele tener muchas tablas. A menudo nos interesa relacionar un
 
 Por ejemplo en una tienda virtual tenemos una tabla para almacenar las diferentes direcciones de entrega donde se deben enviar los pedidos. Pero necesitamos saber qué dirección de entrega pertenece a un usuario concreto.
 
-Por ello queremos relacionar cada dirección con su usuario.
+**Por ello queremos relacionar cada dirección con su usuario.**
 
 Para relacionar los registros vamos a usar los campos `id` ya que son identificadores únicos que nunca van a cambiar.
 
@@ -24,7 +24,7 @@ Para relacionar los registros vamos a usar los campos `id` ya que son identifica
 
 ## Relaciones 1 a N
 
-Vamos a empezar por explicar las relaciones 1 a N que son las más fáciles de entender:
+En siguientes lecciones explicaremos las relaciones 1 a 1 y las relaciones N a N. Ahora vamos a empezar por explicar las relaciones 1 a N que son las más fáciles de entender:
 
 <!-- - Vídeo
    - SQL es una base de datos relacional
