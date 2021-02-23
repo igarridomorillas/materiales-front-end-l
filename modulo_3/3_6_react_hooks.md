@@ -40,6 +40,7 @@ Vamos a recordar cómo escribíamos hasta ahora un componente de clase con estad
 
 ```jsx
 import React from 'react';
+import RandomInteger from './RandomInteger';
 
 class App extends React.Component {
   constructor(props) {
@@ -68,7 +69,9 @@ class App extends React.Component {
       </div>
     );
   }
-}
+};
+
+export default App;
 ```
 
 Bien, hasta aquí es terreno conocido, y ahora ¿cómo podríamos pasar App.js a componente funcional utilizando hooks? La respuesta es sencilla por medio de nuestro nuevo mejor amigo `useState`. Echa un vistazo a cómo quedaría App.js con hooks:
@@ -77,6 +80,7 @@ Bien, hasta aquí es terreno conocido, y ahora ¿cómo podríamos pasar App.js a
 
 ```jsx
 import React, { useState } from 'react';
+import RandomInteger from './RandomInteger';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -91,7 +95,9 @@ const App = () => {
       <RandomInteger getRandom={handleRandomInteger} randomNumber={number}/>
     </div>
   );
-}
+};
+
+export default App;
 ```
 
 Como puedes ver, y aunque explicaremos más adelante este primer hook, con `useState`, el tamaño y la complejidad del componente se ha reducido. Además, se ha eliminado la posible confusión que generan el uso de componentes de clase.
@@ -150,6 +156,7 @@ Mira el componente App.js que hemos utilizado al inicio:
 
 ```jsx
 import React, { useState } from 'react';
+import RandomInteger from './RandomInteger';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -164,7 +171,9 @@ const App = () => {
       <RandomInteger getRandom={handleRandomInteger} randomNumber={number}/>
     </div>
   );
-}
+};
+
+export default App;
 ```
 
 Como puedes ver es nuestro ya conocido componente principal que renderiza a su vez un componente llamado RandomInteger.
@@ -186,7 +195,9 @@ const RandomInteger = props => {
         <button type='button' onClick={getRandomNumber}>Dame random</button>
     </div>
   );
-}
+};
+
+export default RandomInteger;
 ```
 
 RandomInteger recibe el valor del estado actual de `number` a través de las props, también recibe una función para ejecutar por lifting y actualizar el valor de `number`.
@@ -201,6 +212,7 @@ Así nuestro componente App.js quedaría así:
 
 ```jsx
 import React, { useState } from 'react';
+import RandomInteger from './RandomInteger';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -210,7 +222,9 @@ const App = () => {
       <RandomInteger getRandom={handleRandomInteger} randomNumber={number}/>
     </div>
   );
-}
+};
+
+export default App;
 ```
 
 Pero claro, como hemos visto nuestro componente RandomInteger consta de un botón para generar un número aleatorio, es decir, actualizar o setear de nuevo el estado de `{number}` ¿cómo lo hacemos?. Pues de esta manera:
@@ -229,6 +243,7 @@ En nuestra función manejadora del click ejecutamos la función que setea el nue
 
 ```jsx
 import React, { useState } from 'react';
+import RandomInteger from './RandomInteger';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -243,7 +258,9 @@ const App = () => {
       <RandomInteger getRandom={handleRandomInteger} randomNumber={number}/>
     </div>
   );
-}
+};
+
+export default App;
 ```
 
 #### EJERCICIO 1
