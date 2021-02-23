@@ -63,40 +63,11 @@ Para saber que lo has instalado bien abre desde tu ordenador SQLite browser y ve
 
 Ahora que ya tenemos instalado **SQLite browser** abre la aplicación desde tu ordenador para que puedas seguir los pasos que damos en este vídeo.
 
-> [Ejercicio del vídeo]()
-
 > **Nota:** si sigues los pasos de este vídeo borra la base de datos que está en `./src/dababase.db` que hay en el ejercicio, para crearla tú desde cero.
 
-<!-- - Vídeo:
-   - Partiendo del ejercicio intro a SQL vamos a ver cómo funciona
-   - Ya tenemos instalado SQLite Browser, lo abrimos
-   - Tengo aquí preparado un ejercicio (enseño y explico el ejercicio)
-      - Con este ejercicio vamos a gestionar una base de datos de usuarios registrados
-      - Creo una base de datos
-         - Creo la tabla
-         - Creo los campos
-            - Añadimos el id, el id es el DNI de este registro. Utilizamos un id creado por nosotros identificar de manera única cada registro.
-            - Marcamos estas tres opcioens, más tarde explicaremos los que son
-            - Añadimos los campos y el tipo
-         - Aquí puedo ver los registros que tiene la base de datos
-         - Puedo añadir uno, no debo añadir el id, la base de datos lo añadirá por mí
-         - Después de hacer cualquier cambio tengo que guardar
-      - Por cierto la tabla sqlite_sequence es una tabla especial que necesita la base de datos para hacer sus cosas.
-         - Debemos ignorarla y no modificarla nunca.
-      - Navegador
-         - Con este formulario enviamos un email y contraseña al servidor
-      - Servidor
-         - Así se configura la base de datos
-            - Indicamos el fichero donde está la base de datos
-            - Indicamos `verbose: console.log para que todas las llamadas que se hagan a la base de datos se muestren en consola
-         - Con el endpoint
-            - Obtenemos la fecha actual, esto es para que veamos que puedo añadir datos creados en el servidor o modificar los datos que nos vienen desde la web
-            - Obtenemos los datos de la petición
-            - Insertamos un nuevo registro en base de datos con la fecha, el email y el password
-      - Hacemos una prueba
-         - Vemos que se ha creado
-   - Como véis las tablas de SQL son como tablas de Excel
-   - En seguida veremos que se pueden crear muchas tablas dentro de una base de datos -->
+{% embed url="https://www.youtube.com/watch?v=l34svW5Amf4" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-2-sql-intro)
 
 > **Importante:** os recordamos que cada vez que cambiamos algo en la base de datos desde SQLite browser hay que pulsar en **Guardar datos**.
 

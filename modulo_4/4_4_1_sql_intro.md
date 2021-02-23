@@ -18,7 +18,7 @@ La base de datos de una aplicación **se está ejecutando en todo momento en nue
 
 Cuando reiniciamos nuestro ordenador, si volvemos a arrancar una aplicación de **Node JS se ejecuta como si fuera la primera vez**. Es decir no guarda nada de una ejecución a otra.
 
-Cuando trabajamos con una base de datos, los cambios que hacemos sobre ella **se guardan en ficheros especiales**. Por ello si reiniciamos el ordenador y volvemos a abrir la base de datos, esta mantiene los datos que tenía la última vez que se ejecutó. Por ello, **las bases de datos nos permiten guardar datos de forma permanente.**
+Pero cuando trabajamos con una base de datos, los cambios que hacemos sobre ella **se guardan en ficheros especiales**. Por ello si reiniciamos el ordenador y volvemos a abrir la base de datos, esta mantiene los datos que tenía la última vez que se ejecutó. Por ello, **las bases de datos nos permiten guardar datos de forma permanente.**
 
 ## ¿Cómo accedemos a una base de datos?
 
@@ -99,7 +99,7 @@ Ahora supongamos que queremos guardar los datos de las alumnas de Adalab en una 
 
 Como véis esto es muy parecido a guardar los datos en un documento de Excel.
 
-### Principales características de las bases de datos de tipo tabla
+### Principales características de las bases de datos de tipo tabla o SQL
 
 - Los datos se guardan en **tablas, es decir filas y columnas**.
 - **Todas las filas o registros de una tabla tienen que tener los mismos campos**, aunque algunos puedan estar vacíos.
