@@ -1,6 +1,5 @@
 # El router de React
 
-[session-3-10-stateful-components-architecture]: 3_10_arquitectura_estado.md#arquitectura-de-componentes-con-estado
 [react-router-site]: https://reacttraining.com/react-router/
 [mdn-history-api]: https://developer.mozilla.org/en-US/docs/Web/API/History_API
 [codepen-react-router-basic]: https://codepen.io/adalab/pen/MrZQpE?editors=0010
@@ -34,7 +33,7 @@ React Router es una librería compatible con React (aunque no desarrollada por e
 
 React Router se aprovecha de la separación de la interfaz en componentes que hace React. La lógica básica de cómo funciona es simple: dependiendo de la ruta de la página en la que estemos, se pinta un componente u otro. Por ejemplo, podríamos decirle que si estamos en la ruta `/` renderice el componente `<Home />` en la página, pero si estamos en la ruta `/about`, que renderice el componente `<About />`.
 
-Una de las características de las SPAs es que también mantienen el estado entre pantallas de nuestra página. Con React Router y la [arquitectura de componentes con estado que vimos en la sesión 3.10][session-3-10-stateful-components-architecture] esto se puede observar en el estado de nuestro componente principal, que normalmente se llamará algo parecido a `<App />`. `<App />` tiene el estado relativo a todos los componentes incluídos dentro de sí, y aunque cambiemos un componente dentro de él dependiendo de la ruta, seguimos conservando los datos del estado que tenemos en `<App />`.
+Una de las características de las SPAs es que también mantienen el estado entre pantallas de nuestra página. Con React Router y la [arquitectura de componentes con estado que vimos en la sesión 3.10](./3_8_buenas_practicas.md#arquitectura-de-componentes-con-estado) esto se puede observar en el estado de nuestro componente principal, que normalmente se llamará algo parecido a `<App />`. `<App />` tiene el estado relativo a todos los componentes incluídos dentro de sí, y aunque cambiemos un componente dentro de él dependiendo de la ruta, seguimos conservando los datos del estado que tenemos en `<App />`.
 
 ## Uso básico del router para navegar entre pantallas de nuestra SPA
 
