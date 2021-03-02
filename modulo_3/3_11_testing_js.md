@@ -7,7 +7,7 @@
 - [EJERCICIO 5](#ejercicio-5)
 - [EJERCICIO 6](#ejercicio-6)
 - [EJERCICIO 7](#ejercicio-7)
-- [EJERCICIO BONUS 8](#ejercicio-8)
+- [EJERCICIO BONUS 8](#ejercicio-bonus-8)
 
 ## Contenidos
 
@@ -442,7 +442,7 @@ Algunas indicaciones a la hora de practicar TDD:
     Espero que el resultado sea ESTE
 ```
 
-#### EJERCICIO 5
+#### EJERCICIO 7
 
 **Kata Fizzbuzz**
 
