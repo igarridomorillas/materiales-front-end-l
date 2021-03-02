@@ -1,17 +1,16 @@
 # Introducción al testing con JavaScript
 
-## Contenidos
-
-<!-- TOC depthFrom:4 depthTo:4 -->
-
 - [EJERCICIO 1](#ejercicio-1)
 - [EJERCICIO 2](#ejercicio-2)
 - [EJERCICIO 3](#ejercicio-3)
 - [EJERCICIO 4](#ejercicio-4)
 - [EJERCICIO 5](#ejercicio-5)
-- [EJERCICIO BONUS 6](#ejercicio-6)
+- [EJERCICIO 6](#ejercicio-6)
+- [EJERCICIO 7](#ejercicio-7)
+- [EJERCICIO BONUS 8](#ejercicio-8)
 
-<!-- /TOC -->
+## Contenidos
+
 
 ## Introducción
 
@@ -47,9 +46,10 @@ Dado que en esta sesión vamos a hablar de tests automáticos, vamos a dar una d
 
 Existen muchas clasificaciones de testing, pero aquí hemos elegido una de las más aceptadas que clasifica los tests por su nivel de granularidad en:
 
-- **tests unitarios**: prueban un trozo de código (pieza) que solo hace una cosa (unidad), por ejemplo, una función
-- **tests de integración**: prueban que varias piezas de código funcionan bien juntas, por ejemplo, una función que llama a otras funciones; podemos juntar tantas piezas como queramos, hasta llegar a la aplicación completa
-- **tests de aceptación o _end-to-end_**: son un tipo especial de tests de integración que están relacionados con los criterios de aceptación definidos por el cliente, es decir, que prueban algo que tiene valor a nivel de negocio; por ejemplo, que un usuario puede crear una tarea nueva en nuestra aplicación de gestión de tareas
+- **tests unitarios**: prueban un trozo de código (pieza) que solo hace una cosa (unidad), por ejemplo, una función.
+- **tests de integración**: prueban que varias piezas de código funcionan bien juntas, por ejemplo, una función que llama a otras funciones; podemos juntar tantas piezas como queramos, hasta llegar a la aplicación completa.
+- **test de regresión**: son un tipo de test que comprueba que las nuevas funcionalidades desarrolladas, no rompen las funcionalidades anteriores.
+- **tests de aceptación o _end-to-end_**: son un tipo especial de tests de integración que están relacionados con los criterios de aceptación definidos por el cliente, es decir, que prueban algo que tiene valor a nivel de negocio; por ejemplo, que un usuario puede crear una tarea nueva en nuestra aplicación de gestión de tareas.
 
 En el front-end normalmente vamos a tener muchos tests de integración puesto que estamos continuamente interactuando con componentes externos a nuestro código. Por ejemplo, serán tests de integración los que comprueban que algo se pinta bien en el DOM, guardan algo en LocalStorage o hacen una petición a un API.
 
@@ -98,72 +98,195 @@ Los test unitarios se definen una serie de características
 
 De nuevo, existe un acrónimo en inglés para recordar estas característica: _FIRST - Fast, Isolated, Repeatable, Self verifying, Timely_.
 
-## Testing en JavaScript
+## Testing en JavaScript y React
 
 Ahora que ya tenemos unos conocimientos básicos de testing, vamos a ver qué herramientas tenemos para poder hacer testing de nuestra aplicación en JavaScript. Hay montones de herramientas disponibles, pero vamos a centrarnos en una que está muy ampliamente adoptada en la comunidad de React: Jest. Esta herramienta nos proporciona mucha funcionalidad, pero vamos a centrarnos en lo más básico.
 
 ### Instalación
 
-Para instalar Jest en nuestro proyecto lo hacemos usando `npm`. Para eso, tenemos que tener un fichero `package.json` que gestione las dependencias de nuestra aplicación.
+Crea un proyecto nuevo con `npm create-react-app` (no utilices tu `react-starter-kit`). Una vez creado el proyecto abre VS Code con ese proyecto y arráncalo.
+
+> **Nota:** si quieres puedes borrar los ficheros que no vayas a utilizar y puedes recolocar cada fichero dentro de su carpeta, ya sabes `App.js` dentro de la carpeta `components`, los estilos dentro de la carpeta `stylesheets/`...
+>
+> Pero no borres los ficheros `setupTests.js` ni `App.test.js` ya que los vamos a utilizar para el testing.
+
+A continuación vamos a arrancar los tests en una terminal y cada vez que cambiemos cualquier fichero de nuestro proyecto, se van a ejecutar los tests para comprobar en todo momento si nuestro código pasa los tests.
+
+¿Cómo sabe Jest qué fichero es un test y qué fichero es un fichero normal de nuestra aplicación? pues porque los ficheros de test tienen la extensión `.test.js`. Por ejemplo el fichero `App.test.js` es el test del fichero `App.js`.
 
 #### EJERCICIO 1
 
-**Instalación de Jest**
+**Testeando componentes de React**
 
-En primer lugar tenemos que crear un proyecto nuevo, pero no usaremos create-react-app ni Adalab Starter Kit. Vamos a crearlo siguiendo los pasos descritos a continuación. En nuestro ordenador creamos una carpeta `intro-testing` y nos movemos a ella desde la terminal. Después tenemos que ejecutar estos comandos:
+`create-react-app` nos crea muchos ficheros y entre ellos un test llamado `App.test.js` para testear el componente `App.js`. Sigue los siguientes pasos para saber cómo funciona.
 
-```
-npm init
-```
+1. Ya sabemos que con `npm start` arrancamos la aplicación, con `npm run build` (o `npm run docs`) generamos los ficheros para subirlos a GitHub Pages. Pues bien, ejecuta `npm run test` en una terminal de VS Code para arrancar los tests.
+1. Abre el fichero `App.js` y mira lo que tiene.
+1. Abre el fichero `App.test.js`.
+   1. En la línea `import { render, screen } from '@testing-library/react';` importamos `render` y `screen` que nos ayuda a testear cosas de React.
+   1. En la línea `import App from './App';` importamos el componente que queremos testear.
+   1. Ojo: si hemos movido `App.js` a la carpeta `components/` deberemos poner algo como `import App from '../components/App';`
+   1. Dentro `test(...)` tenemos:
+      1. La línea `render(<App />);` que nos renderiza el componente `App`. Aquí estamos preparando el test, es la fase **Arrange**.
+      1. La línea `const linkElement = screen.getByText(/learn react/i);` busca dentro de `App` y obtiene la etiqueta HTML que contenga el texto `learn react`. Aquí estamos actuando, es la fase **Act**.
+      1. La línea `expect(linkElement).toBeInTheDocument();` comprueba el valor de `linkElement` y mira si está en el documento, es decir, dentro de la página. Es la fase **Assert**.
+      1. Básicamente lo que hemos hecho es buscar una etiqueta HTML en el componente `App` y comprobar si existe. Si existe el test pasará. Si no existe el test no pasa y nos muestra un error en la terminal.
 
-Vamos rellenando los datos y al final se crea nuestro `package.json`. Cuando nos pida el comando para ejecutar los tests, ponemos `jest` (si lo olvidamos, siempre podemos modificar a mano el `package.json` en la sección de `scripts`).
+Supongamos que ahora nos viene la diseñadora y nos pide que en nuestra página no ponga **Learn React**, sino que ponga **Aprendiendo React**.
 
-```
-npm install --save-dev jest
-```
+1. Edita `App.js` para que en la página ponga **Aprendiendo React**.
+1. Arranca el proyecto con `npm start`.
+1. Arranca los tests en otra terminal con `npm run test`.
+1. Verás que el test está fallando. Hemos roto los tests, porque nuestra aplicación ha cambiado. Cada vez que hacemos un cambio en la aplicación debemos volver a ejecutar los tests para ver si fallan y si fallan hay que arreglarlos. ¿Qué debes cambiar en `App.test.js` para que el test vuelva a funcionar.
 
-Ya hemos instalado Jest en el proyecto como dependencia de desarrollo (normalmente en producción no lo vamos a necesitar).
+> **Nota:** normalmente hacemos testing con dos terminales abiertas, una para tener el proyecto arrancado y otra para tener los tests corriendo. Y siempre miramos la terminal para estar atentas a ver si los tests se rompen.
 
-Como vamos a hacer control de versiones, ejecutamos también `git init` para inicializar nuestro repo con Git.
+> **Nota:** los errores que aparecen en la terminal nos dan mucha información. Lo lógico es leer detenidamente dicha información pasar qué está fallando, en qué línea, en qué fichero...
 
-Ahora vamos a crear 2 ficheros JavaScript:
+\_\_\_\_\_\_\_\_\_\_
 
-- `index.js`: donde estará el código de nuestro programa. Como prueba, vamos a crear una función sencilla de suma, y que exportamos al final del fichero.
+### Matchers
+
+En el ejercicio anterior hemos visto la línea:
 
 ```js
-function sum(a, b) {
-  return a + b;
-}
-module.exports = sum;
+expect(linkElement).toBeInTheDocument();
 ```
 
-- `index.test.js`: donde estará el código de los tests. Al comienzo importamos la función del fichero anterior, y luego hacemos un test que prueba la función de suma.
+Con esta línea lo que estamos diciendo es que yo como programadora de test estoy esperando o suponiendo que `linkElement` va a estar en el documento (toBeInTheDocument).
+
+`.toBeInTheDocument()` es un matcher. Es decir es lo que comprueba que lo que estoy esperando se ha cumplido.
+
+- Si `linkElement` no está en el documento, no se cumple lo que yo suponía y el test falla.
+- Si `linkElement` sí está en el documento se cumple lo que yo estaba esperando y el test ha funcionado.
+
+Jest nos ofrece un montón de matchers para comparar el resultado de nuestra actuación con el resultado esperado.
+
+El más típico es `toBe()`, que lo que hace es comparar con `===` si el valor que espero es exactamente igual al valor que obtengo. Por ejemplo se pondría así:
 
 ```js
-const sum = require('./index');
+import area from './services/area';
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('check square area', () => {
+  // arrange
+  const squareBase = 3;
+  // act
+  const squareArea = area.getSquareArea(squareBase);
+  // assert
+  expect(squareArea).toBe(9);
 });
 ```
 
-> NOTA: fíjate que estamos usando `require` y `module.exports` para manejar módulos en lugar del `import` / `export` que usábamos en React, puesto que aún no funciona hasta las últimas versiones de Node.js
+Aquí el valor que espero es 9 y el valor que obtengo de la función `area.getSquareArea` está en `squareArea`.
 
-Normalmente tendremos un fichero de test por cada fichero JavaScript del código de nuestra aplicación. El nombre del fichero de test será similar al de la aplicación pero metiendo `.test` o `.spec` antes de la extensión del archivo (`.js` en este caso).
+En Jest hay muchísimos matchers:
 
-Para ver si todo está funcionando, ejecutaremos `npm test` en la terminal. Tras hacerlo se ejecutará el script de test que hemos configurado en `package.json`. Si hasta ahora hemos seguido los pasos correctamente, obtendremos como resultado que el test está correcto.
+- `toEqual()` para comparar el contenido de 2 objetos o arrays
+- `toBeGreaterThan()` para comparar que un número es mayor que otro
+- `toContain()` para comprobar que un array contiene un valor
 
-![Resultado de ejecutar los tests en la terminal](./assets/images/3_14_tests_resultado.png)
+Puedes encontrar en resto de matchers y algunos tutoriales en la [documentación de Jest sobre matchers](https://facebook.github.io/jest/docs/en/using-matchers.html).
 
-> NOTA: si no queremos estar ejecutando `npm test` continuamente para comprobar el resultado de nuestros tests, existe la opción de configurar `jest --watch` en nuestro `package.json` que estará ejecutando los tests continuamente según guardemos los ficheros. PARA USAR ESTO NECESITAREMOS ESTAR EN UN REPO GIT, escribir `git init` en la consola bastará ;)
+Si en algún momento queremos hacer una comparación muy compleja, por ejemplo que el número que espero sea mayor de 10 y menor de 20 y que sea impar y que no sea un número primo... podemos hacer dos cosas:
 
-![Resultado de ejecutar los tests en la terminal con watch](./assets/images/3_14_tests_resultado_watch.png)
+- Poner varios expects y matchers:
+   ```js
+   expect(expectedNumber).toBeGreaterThan(10); // compruebo si es mayor de 10
+   expect(expectedNumber).toBeLessThan(20); // compruebo si es menor de 20
+   ...
+   ```
+- Y / o progamar nosotras las comprobaciones que queramos y luego comprobarlas con un `.toBe()`;
+   ```js
+   const isOdd = expectedNumber % 2 === 1;
+   expect(isOdd).toBe(true); // compruebo si es impar
+   ```
+
+#### EJERCICIO 2
+
+**Testear el tipo de la etiqueta**
+
+En el ejercicio 1 hemos visto que el test comprueba si hay una etiqueta HTML que tiene el texto **Aprendiendo React**. Pues bien ahora vamos a testear de qué tipo es esa etiqueta HTML, si es un link, un párrafo, una cabecera...
+
+1. Añade a `App.test.js` un nuevo test con el siguiente código:
+   ```js
+   test('check if "Aprendiendo React" is a link', () => {
+     // arrange
+     render(<App />);
+     // act
+     const linkElement = screen.getByText(/aprendiendo react/i);
+     console.log(linkElement.nodeName); // esto consolea A porque los links se crean con <a href="...">texto</a>
+     const linkTagName = linkElement.nodeName;
+     // assert
+     // expect(linkTagName)...
+   });
+   ```
+1. Descomenta la línea `expect(linkElement)...` y complétala para que el test pase correctamente.
+
+\_\_\_\_\_\_\_\_\_\_
+
+#### EJERCICIO 3
+
+**Testear el href del link**
+
+Partiendo del ejericio anterior vamos a comprobar si el href del link es `https://reactjs.org`.
+
+1. Crea un nuevo test en `App.test.js`.
+1. Pon una buena descripción dentro de `test('Descripción del test', ...)`.
+1. Añade la línea `render(...)` para preparar el test.
+1. Añade la línea `screen(...)` para ejecutar o actuar el test.
+1. Añade un `expect(...)` con un matcher para que comprobemos que el href del link es `https://reactjs.org`.
+
+Como ves podemos testear todo nuestro código JSX. React también nos da herramientas para testear el resto de funcionalidad de React como las props, eventos, estado...
+
+La pregunta del millón es: ¿Cuántas cosas queremos testear de cada componente?
+
+\_\_\_\_\_\_\_\_\_\_
+
+#### EJERCICIO 4
+
+**Testar JS**
+
+Hasta ahora hemos testeado cosas de React y JSX. Ahora vamos a testear código JS puro y duro. Sobre el ejercicio anterior:
+
+1. Crea el fichero en `src/services/area.js`:
+   1. Este fichero debe tener una función llamada `getSquareArea()` que retorna el área de un cuadrado.
+   1. Este fichero debe tener otra función llamada `getSquareTriangle()` que retorna el área de un triángulo.
+   1. Este fichero debe exportar un objeto con las dos funciones dentro.
+   1. Si quieres puedes usar estas funciones desde tu `App.js`, tampoco es que sea necesario para lo que queremos hacer en este ejercicio.
+1. Crea el fichero en `src/area.test.js`:
+   1. En este fichero debes importar el fichero a testear con `import area from '../services/area';`.
+   1. Crea un test que compruebe que si le pasamos a la función `getSquareArea()` un 3 esta nos devuelve un 9.
+   1. Crea otro test que compruebe que si le pasamos a la función `getSquareTriangle()` un 3 esta nos devuelve un 4.5.
+
+Ahora mismo se me pasa por la cabeza una pregunta: ¿Qué debe hacer la función `getSquareArea()` si no le pasamos ningún argumento? ¿Debería dar un katakroker? ¿Devería devolver `undefined`, `null`, `false`...? ¿Debería devolver `0`?
+
+Si da un katakroker mal asunto. Cuando terminemos de programar una aplicación, nunca debería haber katakrokers en la terminal.
+
+Estas preguntas nos surgen cuando testeamos nuestro código, antes no habíamos pensado en ello. Es decir, el testing nos ayuda a replantearnos nuestro código desde otro punto de vista. Nos ayuda a pensar en todos los posibles errores que se pueden producir.
+
+Pues ahora que te has hecho estas preguntas haz lo siguiente:
+
+1. Edita la función `getSquareArea()` para que si el parámetro que recibe es `undefined` devuelva algo.
+   1. Si recuerdas, cuando una función espera un parámetro y al ejecutarla no se le pasa ese parámetro, dentro de la función recibimos el parámetro como `undefined`.
+   1. ¿Qué debería devolver la función en este caso? un `undefined`, `null`, `false` o `0`, lo que tú quieras, lo que consideres que es el comportamiento adecuado de esta función.
+1. Añade un test más a `src/area.test.js` para que también comprobemos qué ejecutamos la función `getSquareArea()` sin argumentos, esta devuelva lo que tú hayas decidido que devuelva.
+
+Y así hasta el infinito, nos debemos preguntar ¿Qué pasa si la función recibe parámetros pero no son números, son arrays, objetos, textos, booleanos...? Siempre que programemos una función debemos hacernos estas preguntas:
+
+- ¿Quiero hacer un código tan robusto que la función `getSquareArea()` pueda recibir cualquier cosa?
+- ¿Voy a ejecutar yo esa función simpre?
+- ¿Desde donde se ejecuta la función hay posibilidad de pasar como argumentos algo que no sea un número?
+- ¿La función va a ser ejecutada tras un evento de la usuaria y esta no tiene ni idea si en el campo de texto tiene que poner un número u otra cosa?
+- ¿Tendría que hacer estas comprobaciones dentro de mi función o en el manejador del evento que es desde donde ejecutando mi función?
+- ...
+
+Según que respondas a esto deberemos hacer más o menos robusto nuestro código. Y según añadas más funcionalidad a tu código más código deberías testear.
 
 \_\_\_\_\_\_\_\_\_\_
 
 ### Definiendo tests y test suites
 
-Ya tenemos Jest funcionando. Ahora vamos a ver cómo lo usamos para escribir nuestros tests. En primer lugar, vamos a recordar el ejemplo inicial de un test sencillo:
+Ya tenemos Jest funcionando. Ahora vamos a ver cómo lo usamos para escribir nuestros tests. En primer lugar, vamos a poner el ejemplo de un test sencillo:
 
 ```js
 test('fizzbuzz returns 1 when the input is 1', () => {
@@ -177,8 +300,8 @@ test('fizzbuzz returns 1 when the input is 1', () => {
 
 En el ejemplo, usamos la función `test` (también puede usarse `it` que funciona igual) para definir un nuevo test, y les pasamos 2 parámetros
 
-- un string con la descripción del test
-- una función con el contenido del test
+- Un string con la descripción del test.
+- Una función con el contenido del test.
 
 En esta función ejecutamos el código para realizar la prueba. Recordamos las partes: preparación, actuación y aserción. No siempre vamos a tener las 3 partes, por ejemplo, la de preparación no es obligatoria y a veces pueden mezclarse actuación y aserción en la misma línea. Preparación y actuación usan código JavaScript normal, pero en la aserción usamos otra función auxiliar de Jest `expect` que sirve para hacer la comprobación de nuestro test. A `expect` le pasamos el valor que queremos comprobar, en este caso el valor de la variable `result`. Después encadenamos un _matcher_, es decir, el tipo comprobación que queremos hacer sobre el resultado. En este caso usamos el matcher `toBe` y le pasamos un 1, es decir, que estamos comprobando que el valor de la variable `result` sea 1.
 
@@ -206,27 +329,7 @@ describe('Fizzbuzz', () => {
 });
 ```
 
-### Matchers
-
-Jest nos ofrece un montón de matchers para comparar el resultado de nuestra actuación con el resultado esperado. Antes hemos usado `toBe` que equivale a comparar con un `===`. Para la mayoría de los casos nos servirá con `toBe`, pero existen otros, por ejemplo:
-
-- `toEqual` para comparar el contenido de 2 objetos o arrays
-- `toBeGreaterThan` para comparar que un número es mayor que otro
-- `toContain` para comprobar que un array contiene un valor
-
-Puedes encontrar en resto de matchers y algunos tutoriales en la [documentación de Jest sobre matchers](https://facebook.github.io/jest/docs/en/using-matchers.html).
-
-#### EJERCICIO 2:
-
-Partiendo del código del ejercicio 1, vamos a:
-
-- añadir un test que pruebe que la función `sum` es capaz de sumar números positivos y negativos
-- añadir un test que pruebe que la función `sum` es capaz de sumar números decimales
-- meter todos los test en un test suite con la descripción `Sum App`
-
-\_\_\_\_\_\_\_\_\_\_
-
-#### EJERCICIO 3
+#### EJERCICIO 5
 
 **Kata Padding**
 
@@ -252,7 +355,7 @@ En primer lugar, desarrollad el código de la función `paddingLeft` en un fiche
 
 \_\_\_\_\_\_\_\_\_\_
 
-#### EJERCICIO 4
+#### EJERCICIO 6
 
 **ES6 katas**
 
@@ -367,7 +470,7 @@ Se pueden aprender muchas estrategias de cómo refactorizar y son temas avanzado
 
 Esta parte de refactorización requeriría todo un curso en sí misma. Pero lo que sí queremos que entiendas es la importancia de tener tests para refactorizar, porque nos permiten cambiar cosas comprobando que nuestra aplicación sigue funcionando (no se rompe). Haremos un ejercicio específico para demostrar esta afirmación.
 
-#### EJERCICIO BONUS 6
+#### EJERCICIO BONUS 8
 
 Para comprobar que se refactoriza mucho mejor con tests, os pasamos un ejercicio que ya tiene tests pero un código malísimo. Nuestro objetivo es mejorar el código que nos dan sin modificar el comportamiento (refactorizar) y que los tests sigan pasando. Se trata de la famosa [kata _Gilded Rose_ con JavaScript](https://github.com/gootyfer/gilded-rose-js-with-tests).
 
