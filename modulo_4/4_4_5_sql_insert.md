@@ -82,7 +82,9 @@ Lo importante es que **nunca debemos indicar el valor de la columna `id`**.
 
 Si queremos añadir varios registros lo tendremos que hacer en varias queries. Para ello tendremos que hacer un `for` en Node JS ejecutando varias veces la query.
 
-<!-- - Vídeo -->
+{% embed url="https://www.youtube.com/watch?v=werAmQ1DUXk" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-5-sql-insert)
 
 ## Sintaxis de INSERT INTO en Node JS y Better SQLite 3
 
@@ -138,3 +140,7 @@ Este `id` es retornado por `query.run()`. Por ello el console del código anteri
   "lastInsertRowid": 6 // el id del registro añadido es 6, porque hasta ahora había 5 registros en la tabla
 }
 ```
+
+{% embed url="https://www.youtube.com/watch?v=xwaaJFUGxhY" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-5-sql-insert)
