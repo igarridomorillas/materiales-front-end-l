@@ -42,7 +42,9 @@ La condición `WHERE` no es obligatoria, pero no se nos debe olvidar nunca a no 
 
 Con `DELETE` y `WHERE` podemos borrar uno o varios registros en una sola query. Todo depende de la condición que pongamos en el `WHERE`.
 
-<!-- - Vídeo -->
+{% embed url="https://www.youtube.com/watch?v=saWe-yLwwyw" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-6-sql-delete)
 
 ## Sintaxis de DELETE en Node JS y Better SQLite 3
 
@@ -110,4 +112,6 @@ Si en la tabla no hubiese ningún registro con el `id` 2, `query.run()` nos reto
 
 Lo que significa que no hemos modificado la tabla de la base de datos.
 
-<!-- - Vídeo -->
+{% embed url="https://www.youtube.com/watch?v=92F1D59UeB0" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-6-sql-delete)
