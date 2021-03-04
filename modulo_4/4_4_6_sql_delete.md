@@ -42,7 +42,7 @@ La condición `WHERE` no es obligatoria, pero no se nos debe olvidar nunca a no 
 
 Con `DELETE` y `WHERE` podemos borrar uno o varios registros en una sola query. Todo depende de la condición que pongamos en el `WHERE`.
 
-{% embed url="https://www.youtube.com/watch?v=14qK-nAaMlE" %}
+https://www.youtube.com/watch?v=14qK-nAaMlE
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-6-sql-delete)
 
