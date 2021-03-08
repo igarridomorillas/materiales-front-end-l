@@ -2,37 +2,6 @@
 
 `DELETE` nos permite **borrar uno o varios registros de una tabla** de la base de datos a través de una query.
 
-Así como leer registros de una tabla no modifica la base de datos, borrar uno o varios registros sí que la modifica.
-
-## Sintaxis de DELETE en SQL y SQLite browser
-
-La sintaxis de un `DELETE` es:
-
-```sql
-DELETE FROM nombre_de_la_tabla WHERE condicion_que_cumplen_los_registros_a_borrar
-```
-
-Supongamos que tenemos esta tabla llamada `users`:
-
-| id  | email              | password     | name  |
-| --- | ------------------ | ------------ | ----- |
-| 1   | maria@gmail.com    | 987widJYVxyh | María |
-| 2   | lucia@hotmail.com  | qwertyui     | Lucía |
-| 3   | sofia@yahoo.com    | mnbvcdfgu    | Sofía |
-
-Con la query:
-
-```sql
--- Borrar un registro indicando indicando el id del registro a borrar
-DELETE FROM users WHERE id = 2;
-```
-
-La tabla quedará así:
-
-| id  | email              | password     | name  |
-| --- | ------------------ | ------------ | ----- |
-| 1   | maria@gmail.com    | 987widJYVxyh | María |
-| 3   | sofia@yahoo.com    | mnbvcdfgu    | Sofía |
 
 ### DELETE sin WHERE igual a muerte, destrucción y caos!!!
 
@@ -44,8 +13,7 @@ Con `DELETE` y `WHERE` podemos borrar uno o varios registros en una sola query. 
 
 {% embed url="https://www.youtube.com/watch?v=14qK-nAaMlE" %}
 
-# PoC
-
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-6-sql-delete)
 
 ## Sintaxis de DELETE en Node JS y Better SQLite 3
 
