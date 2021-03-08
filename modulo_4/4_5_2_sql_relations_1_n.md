@@ -37,3 +37,35 @@ En siguientes lecciones explicaremos las relaciones 1 a 1 y las relaciones N a N
 **Las relaciones 1 a N son aquellas relacionan un registro de una tabla con varios registros de otra tabla.**
 
 En este caso estamos relacionando una usuaria de la tabla `users` con N direcciones de la tabla `addresses`.
+
+## Ejercicios
+
+### 1. Categorías de libros
+
+Partiendo del ejericio 1 de la lección `SQL DELETE` vamos a añadir una nueva tabla a nuestra base de datos para añadir categorías de libros. Vamos a suponer que un libro solo puede pertener a una categoría.
+
+Si 1 libro puede perpetener a una categoría y una categoría puede tener muchos libros significa que la relación entre los libros y categorías es de 1 a N.
+
+Para ello:
+
+1. Crea una nueva tabla en la base de datos llamada `categories`.
+   - Esta tabla tiene que tener un `id` y un título.
+   - Añade varias categorías a esta tabla con las categorías: **Historia**, **Novela** y **Ensayo**.
+1. ¿Debes crear algo en la tabla `books` para indicar a qué categoría pertenece cada libro?
+1. Crea un endpoint de tipo `GET` que devuelva un libro con su categoría y:
+   - Reciba por URL params el `id` del libro a seleccionar.
+   - Responda con un objeto del tipo:
+   ```json
+   {
+     "title": "Don Quijote de la Mancha",
+     "author": "Miguel de Cervantes",
+     "price": 10,
+     "categoryId": 2,
+     "categoryName": "Novela"
+   }
+   ```
+   ¿Cuántas queries tienes que hacer a la base de datos para obtener toda la información? ¿Cómo puedes combinar dicha información para devolverla en un solo objeto?
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

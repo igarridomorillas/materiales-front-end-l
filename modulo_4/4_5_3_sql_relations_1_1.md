@@ -52,3 +52,7 @@ Y ahora que tenemos tablas separadas tenemos que relacionarlas unas con otras. A
 {% embed url="https://www.youtube.com/watch?v=bwA541uhLHI" %}
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-5-3-sql-relations-1-1)
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.
