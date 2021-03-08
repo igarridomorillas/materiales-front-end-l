@@ -44,6 +44,8 @@ Con `DELETE` y `WHERE` podemos borrar uno o varios registros en una sola query. 
 
 [Vídeo de DELETE en SQLite browser](https://www.youtube.com/watch?v=saWe-yLwwyw)
 
+{% embed url="https://www.youtube.com/watch?v=saWe-yLwwyw" %}
+
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-6-sql-delete)
 
 ## Sintaxis de DELETE en Node JS y Better SQLite 3
