@@ -126,3 +126,7 @@ Las base de datos SQL sí tienen una estructura fija, por ello son más estricta
 ## ¿Qué base de datos usar en mi proyecto?
 
 Cuando trabajéis en una empresa y tengáis que elegir una base de datos u otra tenéis que analizar qué tipos de datos vais a guardar, y en función de ello elegir.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

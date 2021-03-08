@@ -113,3 +113,16 @@ Lo que significa que no hemos modificado la tabla de la base de datos.
 {% embed url="https://www.youtube.com/watch?v=92F1D59UeB0" %}
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-6-sql-delete)
+
+## Ejercicios
+
+### 1. Borrando libros
+
+Partiendo del ejercicio 1 de la lección `SQL INSERT`, añade nuevos endpoints a tu API para borrar libros de la base de datos:
+
+- Crea un endpoint de tipo `DELETE` que borra el libro cuyo `id` llegue por URL params.
+- Crea un endpoint de tipo `DELETE` que borra todos los libros que sean físicos y no tengan stock.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

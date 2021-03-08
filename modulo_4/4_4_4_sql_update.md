@@ -126,3 +126,27 @@ La información retornada por `query.run()` en el código anterior la estamos co
 {% embed url="https://www.youtube.com/watch?v=jQH3j5huZSY" %}
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-4-sql-update)
+
+## Ejercicios:
+
+### 1. Actualizando libros
+
+Partiendo del ejericio 2 de la lección de **SQL SELECT**, añade nuevos endpoints a tu API para que hagan los siguientes cambios en la tabla `books`:
+
+- Crea un endpoint de tipo `PATCH` que modifique el título de un libro y:
+   - Reciba por URL params el `id` del libro a modificar.
+   - Reciba por body params el nuevo título del libro.
+- Crea un endpoint de tipo `PATCH` que cambie la cantidad de stock de todos los libros y:
+   - Reciba por body params el nuevo valor del stock.
+- Modifica el endpoint anterior para que solo se modifiquen la cantidad de stock de los libros que son físicos. Piensa que los ebooks no tienen stock.
+- Crea un endpoint de tipo `PUT` que cambie todos los datos de un libro y:
+   - Reciba por URL params el `id` del libro a cambiar.
+   - Reciba por body params todos los datos del libro a cambiar.
+
+Revisa qué la ruta de los endpoints sea coherente con lo que hacen.
+
+> **Nota:** puedes acceder a tu API directamente desde Postman.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

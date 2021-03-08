@@ -309,3 +309,64 @@ Como hemos comentado cuando tengas cualquier duda sobre cómo realizar una query
 - ...
 
 Es decir, no busques por SQLite, sino por SQL, ya que ambos tienen la misma sintaxis pero en Internet hay muchas más páginas que hablan sobre SQL en general que sobre SQLite en particular.
+
+## Ejercicios
+
+### 1. El blog: tabla de artículos
+
+Vamos a suponer que tenemos que crear una base de datos para gestionar un blog. Entre las muchas tablas que tendría la base de datos nos toca crear una para almacenar los artículos escritos por la autora:
+
+1. Crea un proyecto de Node JS, si quieres puedes utilizar el ejercicio del vídeo de esta sección.
+1. Instala (si no lo has hecho ya) SQLite browser.
+1. Crea una base de datos a través SQLite browser dentro del proyecto.
+1. Crea una tabla llamada articles con las siguientes columnas:
+   1. Título del artículo.
+   1. Cuerpo del artículo.
+   1. URL de la imagen principal.
+   1. Fecha de publicación.
+   1. Borrador o publicado.
+   1. Pon cualquier otro campo que te parezca bien.
+1. Antes de continuar:
+   1. Revisa qué tipos y opciones le has puesto a cada columna.
+   1. ¿Has puesto alguna columna para identificar cada artículo?
+1. Crea 3 artículos rellenando todas las columnas. Haz que dos de ellos tengan la palabras **bases de datos** en el título.
+1. Desde el editor SQL de SQLite browser ejecuta las siguientes queries:
+   1. Selecciona todos los artículos.
+   1. Selecciona el artículo con el artículo que tiene el `id = 2`.
+   1. Selecciona todos los artículos que tengan en el título la palabra **datos**. Te ayudará buscar en Internet [**SQL like**](https://www.google.com/search?q=sql+like&oq=sql+like&aqs=chrome.0.69i59j0l9.3481j0j7&sourceid=chrome&ie=UTF-8).
+
+Después de cada consulta comprueba que los resultados que muestra SQLite browser tienen sentido.
+
+### 2. La tienda online: tabla de libros
+
+Ahora vamos a suponer que tenemos que crear una base de datos para una tienda online de teléfonos libros. Sobre el proyecto del ejercicio anterior o sobre uno nuevo:
+
+1. Crea una nueva tabla para guardar tus libros a la venta para guardar la siguiente información:
+   1. Nombre del libro.
+   1. Autora del libro.
+   1. Resumen del libro.
+   1. Precio del libro.
+   1. Stock del libro.
+   1. ¿Es un libro descargable como un ebook o es un libro físico que debemos enviar por mensajería?
+1. Crea 5 libros.
+1. Crea un API en Node JS que devuelva la siguiente información en diferentes endpoints:
+   1. Un array con todos los libros ordenados de menor a mayor precio.
+   1. Un array con los libros con precio superior a 5 €.
+   1. Un array con los libros con stock.
+   1. Un array con los libros físicos y en stock.
+   1. Un objeto con el libro con `id = 1`.
+   1. Un array con los 3 primeros libros ordenados alfabéticamente por nombre.
+   1. Un array con los 3 siguientes libros ordenados alfabéticamente por nombre.
+
+Todos los endpoints que hagas deben:
+
+- Ser con el método `GET`.
+- Recibir la información necesaria para hacer la petición por query params.
+
+Revisa qué la ruta de los endpoints sea coherente con lo que hacen.
+
+> **Nota:** puedes acceder a tu API directamente desde Postman.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.

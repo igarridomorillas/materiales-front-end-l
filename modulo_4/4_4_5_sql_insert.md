@@ -144,3 +144,22 @@ Este `id` es retornado por `query.run()`. Por ello el console del código anteri
 {% embed url="https://www.youtube.com/watch?v=xwaaJFUGxhY" %}
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-5-sql-insert)
+
+## Ejercicios
+
+### 1. Añdiendo nuevos libros
+
+Partiendo del ejercicio 1 de la lección `SQL UPDATE`, añade nuevos endpoints a tu API para añadir nuevos libros a la base de datos:
+
+- Crea un endpoint de tipo `POST` que añada un nuevo libro:
+   - Y que reciba por body params todos los datos del nuevo libro.
+   - Y que responda con el `id` del libro creado.
+- Prueba en SQLite browser qué pasa si desde Postman atacas a ese endpoint sin pasar alguno de los datos del libro.
+- Modifica el endpoint anterior hacer que algunos campos sean obligatorios:
+   - Los campos obligatorios son el título y la autora.
+   - Si el endpoint no recibe alguno de esos datos o están vacíos debes responder a la petición con el código de [error 400](https://developer.mozilla.org/es/docs/Web/HTTP/Status/400) y el mensaje `{ error: 'Invalid input data }`.
+   - Si el endpooint recibe el título y la autora pero no recibe algún otro dato, debés poner por defecto los campos que vengan vacíos, por ejemplo, el valor por defecto del stock es 0.
+
+##### ¿Te ha gustado?
+
+Por favor rellena este [formulario](https://adalab.typeform.com/to/Rc0bft9x) para darnos feedback sobre la calidad de esta mini lección.
