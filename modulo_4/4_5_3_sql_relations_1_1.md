@@ -1,6 +1,6 @@
 # Relaciones 1 a 1
 
-SQL es una base de datos relacional. Lo que nos permite relacionar registros de una tabla con los registros de otra tabla.
+SQL es una base de datos relacional. Lo que nos permite **relacionar registros de una tabla con los registros de otra tabla**.
 
 Supongamos en una tienda virtual tenemos una tabla de usuarios donde guardamos la siguiente información:
 
@@ -37,7 +37,7 @@ Aquí nos surge un problema. Tendríamos la tabla `users` con muchísimas column
 
 Ya sabes que cuando tenemos un fichero de código con muchísimas líneas lo intentamos dividir en ficheros más pequeños, para mejorar la legibilidad, reducir errores, separar responabilidades...
 
-Pues con las tablas vamos a hacer lo mismo, vamos a dividir una tabla grande en otras tablas más pequeñas. Normalmente solemos trabajar en una única tabla y cuando vemos que crece mucho es cuando tomamos la decisión de dividirla en tablas más pequeñas.
+Pues con las tablas vamos a hacer lo mismo, **vamos a dividir una tabla grande en otras tablas más pequeñas**. Normalmente solemos trabajar en una única tabla y cuando vemos que crece mucho es cuando tomamos la decisión de dividirla en tablas más pequeñas.
 
 Siguiendo el ejemplo de la tabla `users` de la tienda virtual de arriba podríamos dividirla en las siguientes tablas:
 
@@ -49,14 +49,6 @@ Siguiendo el ejemplo de la tabla `users` de la tienda virtual de arriba podríam
 
 Y ahora que tenemos tablas separadas tenemos que relacionarlas unas con otras. Así que vamos a explicar lo que son las relaciones 1 a 1.
 
-<!-- - Vídeo
-  - Ahora que ya sabemos cómo hacer relaciones 1 a N vamos a explicar las relaciones 1 a 1
-  - Si yo quiero guardar en la base de datos mucha información sobre un usuario lo lógico sería añadir muchos campos a la tabla
-  - Por ejemplo si quiero saber si un usuario es premium, cuánto ha pagado por ser premium, desde cuándo lo es y hasta cuando lo va a ser lo que puedo hacer es añadir más campos o columnas a la tabla users.
-  - Si además quiero guardar si un usuario quiere recibir nuestra newsletter, si quiere recibir info sobre nuevos productos y / o nuevas promociones, y cada cuanto tiempo quiere recibir la newsletter lo que también haré será añadir más campos a la base de datos users.
-  - El problema es que cuando tenemos muchas cosas que guardar, la tabla users puede crecer hasta el infinito.
-  - La solución es separar la tabla users en otras tablas.
-  - Las llamo userYLoQueSea
-  - Las relaciono con el userId, y así sé que el usuario X ha decicido recibir notificaciones y si es un usuario premium
-  - Las ventajas de dividir una tabla grande en varias tablas pequeñas es que guardamos menos info, porque si un usuario no es premium no va a tener su correspondiente registro en la tabla premium
-  - Para SQL es más fácil escribir, leer y buscar si las tablas son pequeñas a si son grandes. -->
+{% embed url="https://www.youtube.com/watch?v=bwA541uhLHI" %}
+
+> [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-5-3-sql-relations-1-1)
