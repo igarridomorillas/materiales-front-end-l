@@ -449,7 +449,7 @@ const dataForServer = {
   one: 1,
   two: 2
 };
-fetch('https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/', {
+fetch('https://awesome-profile-cards.herokuapp.com/', {
   method: 'POST',
   body: JSON.stringify(dataForServer),
   headers: {

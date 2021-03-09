@@ -71,7 +71,7 @@ La respuesta que da el API tiene el siguiente formato si todo ha ido bien:
 ```json
 {
   "success": true,
-  "cardURL": "https://us-central1-awesome-cards-cf6f0.cloudfunctions.net/card/${cardId}"
+  "cardURL": "https://awesome-profile-cards.herokuapp.com/card/${cardId}"
 }
 ```
 
