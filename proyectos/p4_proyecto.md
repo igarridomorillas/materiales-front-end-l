@@ -11,7 +11,7 @@
 
 En este proyecto vamos a desarrollar nuestro primer servidor web. Durante el módulo 3 hemos desarrollado una web que usaba un servidor creado por las profesoras de Adalab, que para nosotras es una caja negra. **Hasta ahora no sabíamos cómo funcionaba por dentro.**
 
-Ahora queremos que crear un servidor que tenga la misma funcionalidad que el servidor creado por las profesoras de Adalab. **Al finalizar el desarrollo podremos utilizar la página del módulo 2 o 3 con el servidor realizado en este módulo.**
+Ahora queremos crear un servidor que tenga la misma funcionalidad que el servidor creado por las profesoras de Adalab. **Al finalizar el desarrollo podremos utilizar la página del módulo 2 o 3 con el servidor realizado en este módulo.**
 
 Para saber que el nuevo servidor está bien programado, **este debe responder con exactamente los mismos datos y ficheros con los que responde el servidor creado por las profesoras de Adalab**.
 
@@ -41,14 +41,14 @@ La web envía una petición con datos al servidor para crear una tarjeta. La inf
 - Comprobar que los datos recibidos desde el navegador son correctos.
 - En caso de que los datos **no** sean correctos, el servidor debe devolver una respuesta de error.
 - En caso de que los datos **sí** sean correctos, el servidor debe:
-   - Guardar los datos en base de datos.
+   - Guardar los datos en una base de datos.
    - Generar un id o uuid único para la nueva tarjeta.
    - Generar una URL con el id o uuid para que cuando se acceda a ella se visualice la tarjeta creada por la usuaria.
    - Devolver una respuesta al navegador con esta URL.
 
 ### Visualizar una tarjeta existente a través del motor de plantillas
 
-Cada vez que desde la web se crea una tarjeta, el servidor asocia una URL a cada tarjeta.
+Cada vez que se crea una tarjeta desde la web, el servidor asocia una URL a cada tarjeta.
 
 Una URL de ejemplo creada por el servidor de Adalab es https://awesome-profile-cards.herokuapp.com/card/19591613152820696. Una URL de ejemplo creada por vuestro servidor debería ser algo como https://url-de-nuestro-servidor/card/19591613152820696.
 
@@ -62,7 +62,7 @@ Cuando se accede a esta URL el servidor debe mostrar una página con los datos d
 
 En el módulo 3 estamos utilizando el servidor GitHub Pages para publicar nuestras web. Ahora vamos a crear nuestro propio servidor. No tiene sentido utilizar GitHub Pages para la parte front y otro servidor para la parte de back, por ello lo vamos a unificar todo en nuestro propio servidor.
 
-- Una vez acabado nuestro servidor debemos poder meter dentro de nuestro servidor los ficheros de nuestra página hecha en el módulo 3 de React.
+- Una vez acabado nuestro servidor debemos meter dentro de nuestro servidor los ficheros de nuestra página hecha en el módulo 3 de React.
 - En la página del módulo 3 solo debemos hacer un cambio en el código:
    - Este cambio es únicamente cambiar la URL del `fetch`.
    - En el módulo 3 la web se comunicaba con el servidor programado por las profesoras de Adalab, es decir, con https://awesome-profile-cards.herokuapp.com.
@@ -85,7 +85,7 @@ En este [repositorio](https://github.com/Adalab/tshirt-eshop-heroku) se explica:
 
 Para la realización de este proyecto trabajaremos en _1 sprint_ (1 iteración) de 5 sesiones. Dedicaremos el primer día a la planificación del sprint (_sprint planning_) y el resto a trabajar en el desarrollo del proyecto. Al final del único sprint haremos un _Sprint Review_ (_demo_) del proyecto para presentar los resultados conseguidos y recoger feedback, al igual que una _retrospectiva_ (_retro_) para evaluar cómo ha ido el sprint, además de valorar vuestro trabajo en equipo de cara a mejorar en futuros sprints.
 
-Por tanto, al final del único sprint tendremos un _Sprint Review_ corto, de no más de 5 minutos, para presentar el resultado del trabajo al resto de las compañeras y profesores. Lo importante es mostrar el sotfware funcionando, sin necesidad de presentación que lo sustente. Siempre se debe mostrar la página funcionando en nuestro servidor de producción de **Heroku**, ya que es un entorno de producción real. No debemos hacer la demostración mostrando la página directamente desde una carpeta de nuestro ordenador.
+Por tanto, al finalizar el único sprint tendremos un _Sprint Review_ corto, de no más de 5 minutos, para presentar el resultado del trabajo al resto de las compañeras y profesoras. Lo importante es mostrar el sotfware funcionando, sin necesidad de presentación que lo sustente. Siempre se debe mostrar la página funcionando en nuestro servidor de producción de **Heroku**, ya que es un entorno de producción real. No debemos hacer la demostración mostrando la página directamente desde una carpeta de nuestro ordenador.
 
 También haremos una _retro_ corta revisando los _working agreements_ que hemos acordado al inicio del proyecto y añadiendo cualquier otro feedback que nos permita mejorar el proyecto.
 
@@ -93,7 +93,7 @@ Al final del curso, haremos una sesión de presentación más completa, más all
 
 ### Historias de usuario
 
-Para la gestión del proyecto, usaremos _historias de usuario_, que es una herramienta para definir las características de un producto que veremos en detalle durante el curso.
+Para la gestión del proyecto, usaremos _historias de usuario_, que es una herramienta para definir las características de un producto que hemos visto en detalle durante el curso.
 
 #### Primera. API
 
@@ -135,7 +135,7 @@ De manera adicional, se deberá enlazar este repositorio con la URL de producci�
 
 En el sprint review se revisará que se hayan solucionado todas las tareas técnicas asociadas a la entrega del sprint.
 
-El día entre la presentación del sprint y la demo final deben ser para hacer retoques y preparar la presentación del proyecto para vendérsela al cliente.
+El día entre la presentación del sprint y la demo final puede usarse para hacer retoques y preparar la presentación del proyecto para vendérsela al cliente.
 
 ## Presentación
 
