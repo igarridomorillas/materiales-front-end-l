@@ -128,4 +128,4 @@
 - [Proyecto 2. Awesome profile-cards](proyectos/p2_proyecto.md)
   - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/p2_anexo.md)
 - [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md)
-- [Proyecto 4.](proyectos/p4_proyecto.md)
+- [Proyecto 4. Servidor del Awesome profile cards](proyectos/p4_proyecto.md)
