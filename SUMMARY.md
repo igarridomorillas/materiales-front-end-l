@@ -99,6 +99,7 @@
 - [4.3.1 Tipos de respuestas](modulo_4/4_3_1_express_response_types.md)
 - [4.3.2 Servidor de estáticos](modulo_4/4_3_2_express_static_server.md)
 - [4.3.3 Motores de plantillas](modulo_4/4_3_3_express_template_engine.md)
+- [4.3.4 API: buenas prácticas](modulo_4/4_3_4_api_good_practices.md)
 - [4.4.1 Intro a bases de datos](modulo_4/4_4_1_sql_intro.md)
 - [4.4.2 SQL y SQLite](modulo_4/4_4_2_sql_sqite.md)
 - [4.4.3 SQL Select](modulo_4/4_4_3_sql_select.md)
