@@ -2,8 +2,8 @@
 
 Para esta lección hemos pedido a dos grandes programadoras que nos echen una mano. Ellas son:
 
-- **Débora Gómez** [Linkedin](https://www.linkedin.com/in/deboragomezbertoli/) / [Twitter](https://twitter.com/dgomezdebora): trabaja en MyToys Group como Engineering Lead y ha colaborado en muchas ocaciones con Adalab dando masterclass y siendo mentora de nuestras alumnas.
-- **Esther Pato** [Linkedin](https://www.linkedin.com/in/estherpato/) / [Twitter](https://twitter.com/esther_epg): trabaja en Paradigma digital como Front end developer, es Adalaber de la Promo Dorcas y ha impartido masterclass en Adalab.
+- **Débora Gómez**: trabaja en MyToys Group como Engineering Lead y ha colaborado en muchas ocaciones con Adalab dando masterclass y siendo mentora de nuestras alumnas. [Linkedin](https://www.linkedin.com/in/deboragomezbertoli/) / [Twitter](https://twitter.com/dgomezdebora).
+- **Esther Pato**: trabaja en Paradigma digital como Front end developer, es Adalaber de la Promo Dorcas y ha impartido masterclass en Adalab. [Linkedin](https://www.linkedin.com/in/estherpato/) / [Twitter](https://twitter.com/esther_epg).
 
 Desde Adalab queremos agradecerles esta colaboración para ayudar a las nuevas Adalabers a estar mejor formadas.
 
