@@ -32,7 +32,7 @@ En este vídeo explicamos qué es Node JS y ejecutamos nuestro primer programa:
 
 ## Y tú ¿has utilizado alguna vez Node JS?
 
-&#10230; &#128250; **Echa un vistazo [a este vídeo sobre las veces que has usado Node JS](https://www.youtube.com/watch?v=A54Y8S9pdLI).**
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre las veces que has usado Node JS](https://www.youtube.com/watch?v=dO2cv7OpBGk).**
 
 Recuerda lo que hemos comentado en este vídeo, pulsando **Ctrl+C** en la terminal, puedes forzar que un programa de Node JS finalice.
 

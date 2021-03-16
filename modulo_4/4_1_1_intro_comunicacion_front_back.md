@@ -4,7 +4,7 @@ Ahora mismo eres experta en programación front. Ya que vas a aprender cómo fun
 
 ![](assets/images/comunicacion-entre-front-y-back.svg)
 
-Vamos a ver este [vídeo](https://www.youtube.com/watch?v=knnzF-d0V1I) para entender cómo se comunica el front y el back:
+&#10230; &#128250; **Echa un vistazo [a este vídeo para saber cómo se comunican el front y el back](https://www.youtube.com/watch?v=3rQggXHyjmU).**
 
 ## ¿Qué significa API Rest?
 
