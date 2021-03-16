@@ -6,7 +6,7 @@ En la [documentación de Express JS](https://expressjs.com/en/4x/api.html#res) p
 
 > **Nota:** hasta ahora hemos utilizado `const server = express();` para que sepáis que lo que devuelve la función `express();` es un servidor. Pero normalmente todo el mundo llama a esta constante **app**. Para que os acostumbréis a verlo así, a partir de este vídeo vamos a utilizar `const app = express();`, `app.listen(...)`, `app.get()`...
 
-{% embed url="https://www.youtube.com/watch?v=yxZfpmOURtQ" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre tipos de respuestas](https://www.youtube.com/watch?v=yxZfpmOURtQ).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-response-types/examples)
 
@@ -28,7 +28,7 @@ También te recomendamos leer más información sobre [los códigos HTTP de resp
 
 Responder dos veces a la misma petición:
 
-{% embed url="https://www.youtube.com/watch?v=Tqtn4B4J1YE" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre errores comunes al responder una petición](https://www.youtube.com/watch?v=Tqtn4B4J1YE).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-response-types/error-headers-sent)
 

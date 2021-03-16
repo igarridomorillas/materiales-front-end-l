@@ -24,7 +24,7 @@ Para instalar Postman en tu ordenador:
 
 ## ¿Cómo usar Postman?
 
-{% embed url="https://www.youtube.com/watch?v=CWBF6lgZIGk" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre Postman](https://www.youtube.com/watch?v=CWBF6lgZIGk).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-postman)
 

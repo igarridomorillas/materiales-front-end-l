@@ -82,7 +82,6 @@ Lo importante es que **nunca debemos indicar el valor de la columna `id`**.
 
 Si queremos añadir varios registros lo tendremos que hacer en varias queries. Para ello tendremos que hacer un `for` en Node JS ejecutando varias veces la query.
 
-<!-- {% embed url="https://www.youtube.com/watch?v=werAmQ1DUXk" %} -->
 &#10230; &#128250; **Echa un vistazo [a este video de YouTube sobre la sintaxis de INSERT](https://www.youtube.com/watch?v=werAmQ1DUXk) con DB Browser**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-5-sql-insert)
@@ -142,8 +141,8 @@ Este `id` es retornado por `query.run()`. Por ello el console del código anteri
 }
 ```
 
-<!-- {% embed url="https://www.youtube.com/watch?v=xwaaJFUGxhY" %} -->
-&#10230; &#128250; **Echa un vistazo [a este vídeo de YouTube sobre cómo hacer INSERT desde Node.js](https://www.youtube.com/watch?v=xwaaJFUGxhY).**
+&#10230; &#128250; **Echa un vistazo [a este vídeo de YouTube sobre cómo hacer INSERT desde Node JS
+](https://www.youtube.com/watch?v=xwaaJFUGxhY).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-5-sql-insert)
 

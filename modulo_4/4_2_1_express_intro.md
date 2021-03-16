@@ -8,7 +8,7 @@ Por suerte ya hay alguien que ha creado esa programación, son los creadores de 
 
 Express JS es un módulo de NPM que nos facilita la vida a la hora de programar un servidor, nos ayuda a escuchar las peticiones que se hacen desde el navegador al servidor. También nos ayuda a obtener los datos de dichas peticiones, procesarlos y crear una respuesta que le devolvemos al navegador.
 
-{% embed url="https://www.youtube.com/watch?v=4CRIGOANDMw" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre intro a Express JS](https://www.youtube.com/watch?v=4CRIGOANDMw).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-basic)
 
@@ -37,7 +37,7 @@ Express JS es un módulo de NPM que nos facilita la vida a la hora de programar 
 
 ¿Qué pasa cuando hacemos una petición al servidor y este no responde?
 
-{% embed url="https://www.youtube.com/watch?v=H4qwAfzrsL4" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre errores comunes](https://www.youtube.com/watch?v=H4qwAfzrsL4).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-basic)
 

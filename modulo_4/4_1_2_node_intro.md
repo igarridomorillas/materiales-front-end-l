@@ -26,13 +26,13 @@ En resumen, nos interesa aprender de Node JS aquellos conocimientos que son úni
 
 En este vídeo explicamos qué es Node JS y ejecutamos nuestro primer programa:
 
-{% embed url="https://www.youtube.com/watch?v=3rQggXHyjmU" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre qué es Node JS](https://www.youtube.com/watch?v=3rQggXHyjmU).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/intro)
 
 ## Y tú ¿has utilizado alguna vez Node JS?
 
-{% embed url="https://www.youtube.com/watch?v=dO2cv7OpBGk" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre las veces que has usado Node JS](https://www.youtube.com/watch?v=A54Y8S9pdLI).**
 
 Recuerda lo que hemos comentado en este vídeo, pulsando **Ctrl+C** en la terminal, puedes forzar que un programa de Node JS finalice.
 
@@ -44,7 +44,7 @@ Vamos a ver varios ejemplos de cómo se usa:
 
 ### Leer ficheros
 
-{% embed url="https://www.youtube.com/watch?v=gHf6SXXdi_0" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre leer ficheros Node JS](https://www.youtube.com/watch?v=gHf6SXXdi_0).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/fs-read-file)
 
@@ -52,19 +52,19 @@ Vamos a ver varios ejemplos de cómo se usa:
 
 ### Leer ficheros JSON
 
-{% embed url="https://www.youtube.com/watch?v=A54Y8S9pdLI" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre leer ficheros de Node JS](https://www.youtube.com/watch?v=A54Y8S9pdLI).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/fs-read-file-json)
 
 ### Escribir en ficheros
 
-{% embed url="https://www.youtube.com/watch?v=YE09MWJcVLA" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre escribir ficheros de Node JS](https://www.youtube.com/watch?v=YE09MWJcVLA).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/fs-write-file)
 
 ### Leer y escribir en ficheros
 
-{% embed url="https://www.youtube.com/watch?v=yfsCFBGjQuc" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre leer y escribir ficheros de Node JS](https://www.youtube.com/watch?v=yfsCFBGjQuc).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-1-node-intro/fs-read-and-write-file)
 

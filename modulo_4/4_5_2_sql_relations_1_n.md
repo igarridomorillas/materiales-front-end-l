@@ -30,7 +30,8 @@ Para relacionar los registros vamos a usar los campos `id`, `userId`... ya que s
 
 En siguientes lecciones explicaremos las relaciones 1 a 1 y las relaciones N a N. Ahora vamos a empezar por explicar las relaciones 1 a N que son las más fáciles de entender:
 
-{% embed url="https://www.youtube.com/watch?v=gokEW7ivt1s" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre cómo hacer relaciones 1 a N desde Node JS
+](https://www.youtube.com/watch?v=gokEW7ivt1s).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-5-2-sql-relations-1-n)
 

@@ -2,7 +2,7 @@
 
 En esta lección vamos a explicar cómo enviar datos a través de body params. Es exactamente lo mismo que enviar datos con query params, pero por otro sitio.
 
-{% embed url="https://www.youtube.com/watch?v=3qyVgwQ2I58" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre body params](https://www.youtube.com/watch?v=3qyVgwQ2I58).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-request-body-params)
 

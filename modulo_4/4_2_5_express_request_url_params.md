@@ -2,7 +2,7 @@
 
 En esta lección vamos a explicar cómo enviar datos a través de URL params. Es exactamente lo mismo que enviar datos con query params o body params, pero por otro sitio.
 
-{% embed url="https://www.youtube.com/watch?v=1VbJqdFYk6Y" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre URL params](https://www.youtube.com/watch?v=1VbJqdFYk6Y).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-request-url-params)
 

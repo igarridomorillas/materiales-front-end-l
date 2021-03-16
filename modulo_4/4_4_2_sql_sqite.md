@@ -65,7 +65,7 @@ Ahora que ya tenemos instalado **SQLite browser** abre la aplicación desde tu o
 
 > **Nota:** si sigues los pasos de este vídeo borra la base de datos que está en `./src/dababase.db` que hay en el ejercicio, para crearla tú desde cero.
 
-{% embed url="https://www.youtube.com/watch?v=l34svW5Amf4" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre introducción a SQLite](https://www.youtube.com/watch?v=l34svW5Amf4).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-2-sql-intro)
 

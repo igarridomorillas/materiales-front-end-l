@@ -39,7 +39,7 @@ Express JS divide la funcionalidad de los motores de plantillas en **dos partes*
 
 ### Ejemplo básico
 
-{% embed url="https://www.youtube.com/watch?v=6Q2PjHavDYA" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre motores de plantillas](https://www.youtube.com/watch?v=6Q2PjHavDYA).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-3-express-template-engine/template-basic)
 
@@ -56,7 +56,7 @@ En el vídeo hemos visto:
 
 ### Ejemplo con condicionales
 
-{% embed url="https://www.youtube.com/watch?v=mhu-Wa5oMjY" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre motores de plantillas con if](https://www.youtube.com/watch?v=mhu-Wa5oMjY).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-3-express-template-engine/template-if)
 
@@ -73,7 +73,7 @@ En el vídeo hemos visto:
 
 ### Ejemplo con bucles
 
-{% embed url="https://www.youtube.com/watch?v=V5LoZpgi3Yo" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre motores de plantillas con forEach](https://www.youtube.com/watch?v=V5LoZpgi3Yo).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-3-express-template-engine/template-for)
 

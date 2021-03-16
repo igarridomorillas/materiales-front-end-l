@@ -13,7 +13,8 @@ Si pensamos en una tienda virtual la relación entre productos y pedidos es la s
 
 Vamos a verlo con un ejercicio de verdad:
 
-{% embed url="https://www.youtube.com/watch?v=j_8GJLentuQ" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre cómo hacer relaciones N a N desde Node JS
+](https://www.youtube.com/watch?v=j_8GJLentuQ).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-5-4-sql-relations-n-n)
 

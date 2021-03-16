@@ -14,7 +14,7 @@ Por ejemplo, si yo entro en https://amazon.com/pedidos.html, el servidor cogerá
 
 Vamos a crear un servidor de ficheros estáticos usando [express.static()](http://expressjs.com/en/4x/api.html#express.static).
 
-{% embed url="https://www.youtube.com/watch?v=uEr3B_F8eaE" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre servidores de estáticos](https://www.youtube.com/watch?v=uEr3B_F8eaE).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-3-express-static-server)
 

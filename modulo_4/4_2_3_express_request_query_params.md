@@ -22,7 +22,7 @@ Hay 4 formas de enviar datos desde el navegador al servidor:
 
 Con este vídeo vamos a aprender cómo se envían datos a través de **query params**. En las próximas lecciones veremos cómo se envían el resto de tipos.
 
-{% embed url="https://www.youtube.com/watch?v=D7brnaBc6hM" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre query params](https://www.youtube.com/watch?v=D7brnaBc6hM).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-2-express-request-query-params)
 

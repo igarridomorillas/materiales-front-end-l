@@ -147,7 +147,6 @@ Nuestro trabajo cuando leemos datos de una tabla es combinar `SELECT`, `FROM`, `
 
 **Comentarios:** todos los lenguajes de programación tiene caracteres para indicar comentarios. En JS ponemos `// mi comentario` o `/* mi comentario */`. En SQL los comentarios se ponen con dos guiones `--` al principio de la query.
 
-<!-- {% embed url="https://www.youtube.com/watch?v=c_phy5dfWAE" %} -->
 &#10230; &#128250; **Echa un vistazo [a este video de YouTube sobre la sintaxis de SELECT](https://www.youtube.com/watch?v=c_phy5dfWAE)-**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-3-sql-select)
@@ -263,8 +262,8 @@ Los motivos por el cual una query se hace en dos pasos (primero preparar la quer
 - Para poder crear una query una única vez y ejecutarla muchas veces con muchos datos diferentes.
 - Para que sea más difícil equivocarnos al hacer una query ya que es fácil olvidarse de unas comillas, una coma...
 
-<!-- {% embed url="https://www.youtube.com/watch?v=87KvwNxLWRA" %} -->
-&#10230; &#128250; **Echa un vistazo [a este vídeo de YouTube sobre cómo hacer queries desde Node.js](https://www.youtube.com/watch?v=87KvwNxLWRA).**
+&#10230; &#128250; **Echa un vistazo [a este vídeo de YouTube sobre cómo hacer queries desde Node JS
+](https://www.youtube.com/watch?v=87KvwNxLWRA).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-4-3-sql-select)
 

@@ -49,7 +49,8 @@ Siguiendo el ejemplo de la tabla `users` de la tienda virtual de arriba podríam
 
 Y ahora que tenemos tablas separadas tenemos que relacionarlas unas con otras. Así que vamos a explicar lo que son las relaciones 1 a 1.
 
-{% embed url="https://www.youtube.com/watch?v=bwA541uhLHI" %}
+&#10230; &#128250; **Echa un vistazo [a este vídeo sobre cómo hacer relaciones 1 a 1 desde Node JS
+](https://www.youtube.com/watch?v=bwA541uhLHI).**
 
 > [Ejercicio del vídeo](https://github.com/Adalab/ejercicios-de-los-materiales/tree/main/promo-l/4-5-3-sql-relations-1-1)
 
