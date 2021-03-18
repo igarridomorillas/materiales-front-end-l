@@ -54,9 +54,9 @@ La webapp deberá tener las siguientes nuevas características:
 
 Para la realización de este proyecto trabajaremos en _2 sprints_ (2 iteraciones) de 7 sesiones cada uno. Siguiendo los principios ágiles estableceremos pequeños ciclos iterativos de forma que al final de cada uno generemos valor perceptible por nuestros usuarios (los visitantes de la web). Dedicaremos el primer día a la planificación del sprint (_sprint planning_) y el resto a trabajar en el desarrollo del proyecto. Al final de cada sprint haremos una _demo_ del proyecto para presentar los resultados conseguidos, y una _retrospectiva_ (_retro_) para evaluar nuestro trabajo en equipo y mejorar en el siguiente sprint.
 
-Al final del primer sprint haremos una demo corta de 10 minutos (incluidas preguntas) para presentar el resultado del trabajo al resto de las compañeras y a las profesoras. También haremos una retro corta revisando los _working agreements_ que hemos acordado al inicio del proyecto.
+Al final del primer sprint haremos una demo corta de 5 minutos (incluidas preguntas) para presentar el resultado del trabajo al resto de las compañeras y a las profesoras. También haremos una retro corta revisando los _working agreements_ que hemos acordado al inicio del proyecto.
 
-Al final del segundo sprint (final del proyecto), haremos una demo de 10 minutos más preguntas, y una retrospectiva usando una dinámica similar a las usadas en los equipos de desarrollo que usan Scrum.
+Al final del segundo sprint (final del proyecto), haremos una demo de 5 minutos más preguntas, y una retrospectiva usando una dinámica similar a las usadas en los equipos de desarrollo que usan Scrum.
 
 ### Historias de usuario
 
@@ -111,7 +111,7 @@ De manera adicional, se deberá activar "GitHub Pages" en el proyecto para que e
 
 - **Entrega del primer sprint (sprint review):** 24 de febrero
 - **Entrega del segundo sprint (sprint review):** 4 de marzo
-- **Demo del proyecto (presentación final módulos 3 y 4):** 18 de marzo 
+- **Demo del proyecto (presentación final módulos 3 y 4):** 18 de marzo
 
 En las sprint review se revisarán que se hayan solucionado todas las tareas técnicas asociadas a la entrega de esos sprints, si algo quedara pendiente se arrastraría al siguiente sprint.
 

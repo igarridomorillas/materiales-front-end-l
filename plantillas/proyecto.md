@@ -48,7 +48,7 @@ Por ejemplo, el nombre de la primera promoción de Adalab fue "Ada". Si un grupo
 
 De manera adicional, se deberá activar "GitHub Pages" en el proyecto para que este pueda ser visualizado como una web, es decir, que en el caso anterior, si alguien introdujese la dirección "adalab.github.io/web-hopper/" en un navegador web, este mostraría la web que se genera con el código del repositorio.
 
-Por último, para acompañar a la entrega del proyecto, el equipo realizará una presentación de 10 minutos mostrando la web y explicando los siguientes puntos:
+Por último, para acompañar a la entrega del proyecto, el equipo realizará una presentación de 5 minutos mostrando la web y explicando los siguientes puntos:
 
 - Cómo está estructurada la web y el contenido y el por qué de cada cosa
 - Cómo se ha diseñado
