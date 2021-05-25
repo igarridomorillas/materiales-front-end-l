@@ -24,9 +24,7 @@
   - [Agile](guias/agile.md)
   - [Scrum](guias/scrum.md)
 
-## Módulo 1: HTML y CSS
-
-- Maquetación web
+- Módulo 1: HTML y CSS
   - [1.1 Intro a la web](modulo_1/1_1_intro_a_la_web.md)
   - [1.2 Mi primera página web](modulo_1/1_2_mi_primera_web.md)
   - [1.3 Modelo de caja y herramientas](modulo_1/1_3_modelo_de_caja_y_herramientas.md)
@@ -42,9 +40,7 @@
   - [1.12 Animaciones CSS](modulo_1/1_12_animaciones_CSS.md)
   - [Repaso final](modulo_1/1_repaso.md)
 
-## Módulo 2: Programando la web
-
-- JavaScript
+- Módulo 2: JavaScript
   - [2.1 Intro a la programación](modulo_2/2_1_intro_a_la_programacion.md)
   - [2.2 Intro a la programación 2](modulo_2/2_2_intro_a_la_programacion_2.md)
   - [2.3 Condicionales](modulo_2/2_3_condicionales.md)
@@ -64,8 +60,7 @@
   - [Sintaxis de JavaScript](modulo_2/2_sintaxis_de_js.md)
   - [Ejercicio: tienda de camisetas](modulo_2/2_ejercicio_global_tienda_de_camisetas.md)
 
-## Módulo 3: React
-- JS Framework
+- Módulo 3: React
   - [3.1 Intro a React](modulo_3/3_1_intro_react.md)
   - [3.2 Intro a React II](modulo_3/3_2_intro_react_2.md)
   - [3.3 Componentes en React](modulo_3/3_3_componentes_react.md)
@@ -82,8 +77,7 @@
   - [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md)
 
 
-## Módulo 4: Back end
-- Back end
+- Módulo 4: Node, Express y SQL
   - [4.0 Introducción al módulo](modulo_4/4_0_intro.md)
   - [4.1.1 Comunicación entre front y back](modulo_4/4_1_1_intro_comunicacion_front_back.md)
   - [4.1.2 Introducción a Node JS](modulo_4/4_1_2_node_intro.md)
@@ -114,18 +108,15 @@
 
 - [Apoyo a la búsqueda de empleo](modulo_5/apoyo_a_la_busqueda_de_empleo.md)
 
-## Módulo 6: Después del curso
-
-- [Después de acabar el curso](modulo_6/despues_de_acabar_el_curso.md)
+- Módulo 6: [Después de acabar el curso](modulo_6/despues_de_acabar_el_curso.md)
   - [Preguntas de entrevista](modulo_6/preguntas_de_entrevista.md)
   - [Git stash](modulo_6/git_stash.md)
   - [Errores comunes en programación](modulo_6/errores_comunes_en_programacion.md)
 
-## Proyectos
-
-- [Proyecto 1. Web grupal](proyectos/p1_proyecto.md)
-  - [Anexo. Diseña tu web desde cero](proyectos/p1_anexo.md)
-- [Proyecto 2. Awesome profile-cards](proyectos/p2_proyecto.md)
-  - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/p2_anexo.md)
-- [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md)
-- [Proyecto 4. Servidor del Awesome profile cards](proyectos/p4_proyecto.md)
+- Proyectos
+  - [Proyecto 1. Web grupal](proyectos/p1_proyecto.md)
+    - [Anexo. Diseña tu web desde cero](proyectos/p1_anexo.md)
+  - [Proyecto 2. Awesome profile-cards](proyectos/p2_proyecto.md)
+    - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/p2_anexo.md)
+  - [Proyecto 3. Un caso de código heredado](proyectos/p3_proyecto.md)
+  - [Proyecto 4. Servidor del Awesome profile cards](proyectos/p4_proyecto.md)
