@@ -3,7 +3,6 @@
 ## Información de interés
 
 - [Antes de empezar el curso](instalacion/antes_de_empezar_el_curso.md)
-
   - [Instalación de ordenadores](instalacion/instalacion_de_ordenadores.md)
   - [Instalación de VS Code](instalacion/instalacion_de_vscode.md)
   - [Instalación de la terminal](instalacion/instalacion_de_la_terminal.md)
@@ -12,7 +11,6 @@
   - [Instalación de Zoom](instalacion/instalacion_de_zoom.md)
   - [Instalación de Chrome](instalacion/instalacion_de_chrome.md)
   - [Instalación de Slack](instalacion/instalacion_de_slack.md)
-
 - [Guías](guias/intro.md)
   - [Código de conducta en Adalab](guias/codigo_de_conducta.md)
   - [Guía para enfrentarse a problemas técnicos de manera autónoma](guias/busqueda_de_soluciones.md)
@@ -23,7 +21,6 @@
   - [Git / GitHub: avanzado](guias/git_github_avanzado.md)
   - [Agile](guias/agile.md)
   - [Scrum](guias/scrum.md)
-
 - Módulo 1: HTML y CSS
   - [1.1 Intro a la web](modulo_1/1_1_intro_a_la_web.md)
   - [1.2 Mi primera página web](modulo_1/1_2_mi_primera_web.md)
@@ -59,7 +56,6 @@
   - [Repaso final](modulo_2/2_repaso.md)
   - [Sintaxis de JavaScript](modulo_2/2_sintaxis_de_js.md)
   - [Ejercicio: tienda de camisetas](modulo_2/2_ejercicio_global_tienda_de_camisetas.md)
-
 - Módulo 3: React
   - [3.1 Intro a React](modulo_3/3_1_intro_react.md)
   - [3.2 Intro a React II](modulo_3/3_2_intro_react_2.md)
@@ -75,8 +71,6 @@
   - [3.11 Testing con JavaScript](modulo_3/3_11_testing_js.md)
   - [Repaso final](modulo_3/3_repaso.md)
   - [Ejercicio: GMail](modulo_3/3_ejercicio_global_gmail.md)
-
-
 - Módulo 4: Node, Express y SQL
   - [4.0 Introducción al módulo](modulo_4/4_0_intro.md)
   - [4.1.1 Comunicación entre front y back](modulo_4/4_1_1_intro_comunicacion_front_back.md)
@@ -103,16 +97,11 @@
   - [4.5.2 SQL Relaciones 1 a N](modulo_4/4_5_2_sql_relations_1_n.md)
   - [4.5.3 SQL Relaciones 1 a 1](modulo_4/4_5_3_sql_relations_1_1.md)
   - [4.5.4 SQL Relaciones N a N](modulo_4/4_5_4_sql_relations_n_n.md)
-
-## Módulo 5: Apoyo a la búsqueda de empleo
-
-- [Apoyo a la búsqueda de empleo](modulo_5/apoyo_a_la_busqueda_de_empleo.md)
-
+- Módulo 5: [Apoyo a la búsqueda de empleo](modulo_5/apoyo_a_la_busqueda_de_empleo.md)
 - Módulo 6: [Después de acabar el curso](modulo_6/despues_de_acabar_el_curso.md)
   - [Preguntas de entrevista](modulo_6/preguntas_de_entrevista.md)
   - [Git stash](modulo_6/git_stash.md)
   - [Errores comunes en programación](modulo_6/errores_comunes_en_programacion.md)
-
 - Proyectos
   - [Proyecto 1. Web grupal](proyectos/p1_proyecto.md)
     - [Anexo. Diseña tu web desde cero](proyectos/p1_anexo.md)
